@@ -1,0 +1,751 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+*
+	margin: 0
+	padding: 0
+
+
+
+h1
+	font-family: PlayfairDisplayBlack, sans-serif
+	font-size: 32px
+h2
+	font-family: PlayfairDisplay, sans-serif
+	font-weight: 600
+	font-size: 22px
+	text-transform: uppercase
+	margin-bottom: 25px
+h3
+	font-family: RobotoBlack, sans-serif
+	font-family: -moz-sans-serif
+	font-size: 16px
+	text-transform: uppercase
+	margin: 25px 0
+
+p
+	font-family: Roboto, sans-serif
+	font-weight: 400
+	font-size: 14px
+	margin-bottom: 30px
+
+
+
+button
+	margin-top: 50px
+	padding: 8px 15px 6px 15px
+	color: $blue
+	border: 1px solid $blue
+	border-radius: 2px
+	background-color: transparent
+	font-family: HammersmithOneRegular, sans-serif
+	text-transform: uppercase
+	cursor: pointer
+button:hover
+	-webkit-box-shadow: 0px 0px 40px -9px $blue
+	-moz-box-shadow: 0px 0px 40px -9px $blue
+	box-shadow: 0px 0px 40px -9px $blue
+	background-color: rgba(0, 224, 208, 0.5)
+	color: white
+button:active
+	transform: translate(1px, 1px)
+
+// Remove outline on the forms and links
+button:active, button:hover, button:focus
+  outline: none
+
+
+// Humburger menu - Start
+.hamburger
+	z-index: 10
+	display: none
+	position: fixed
+	top: 20px
+	right: 0
+	transition: 0.3s
+
+.blackout
+	z-index: 15
+	display: none
+	opacity: 0
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(000, 000, 000, 0.5)
+	transition: 0.3s
+
+.sidebar_main-menu
+	z-index: 20
+	display: block
+	position: fixed
+	top: 0
+	right: -38%
+	width: 38%
+	height: 100vh
+	transition: 0.3s
+	.box_sidebar_main-menu
+		flex-direction: column
+		width: 100%
+		height: 100%
+		background-image: url(/img/teams.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+		ul
+			display: flex
+			flex-direction: column
+			text-align: center
+			width: 100%
+			margin: 0
+			padding: 0
+			font-family: RobotoBlack, sans-serif
+			text-transform: uppercase
+			font-size: 16px
+			list-style-type: none
+			li
+				background-color: grey
+				border-radius: 3px
+				margin: 10px
+				cursor: pointer
+			li:hover
+				background-color: $blue
+			a
+				display: block
+				color: white
+				text-decoration: none
+// Humburger menu - End
+
+
+
+// Scroll to top - Start
+.scrollTop
+	z-index: 10
+	position: fixed
+	display: block
+	width: 50px
+	height: 50px
+	top: 90%
+	transition: 0.5s
+	.scrollTop_box
+		position: absolute
+		width: 100%
+		height: 100%
+		background-color: grey
+		border-radius: 50%
+		opacity: 0.5
+		border-right: 25px
+		text-decoration: none
+		cursor: pointer
+	.scrollTop_link
+		display: block
+		position: absolute
+		width: 50px
+		height: 50px
+		text-align: center
+		.fa-angle-double-up
+			color: white
+	.scrollTop_link:hover
+		opacity: 0.5
+// Scroll to top - End
+
+
+
+
+
+.remove
+	display: none
+
+.row
+	max-width: 950px
+	margin: auto
+	padding: 70px 15px
+	height: 100%
+
+body
+	font-size: 16px
+	// min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	.header
+		position: relative
+		// width: 100%
+		height: 100vh
+		.row
+			display: flex
+			padding: 0 15px
+			.top-line
+				width: 100%
+				height: 50px
+				margin-top: 20px
+				display: flex
+				justify-content: space-between
+				.logo_text
+					vertical-align: middle
+					display: inline
+					margin-left: 10px
+					color: $blue
+					font-family: Roboto, sans-serif
+					font-weight: 100
+					font-size: 30px
+				.main-menu
+					display: flex
+					align-items: center
+					ul
+						display: flex
+						width: 530px
+						justify-content: space-between
+						margin: 0
+						padding: 0
+						font-family: RobotoBlack, sans-serif
+						text-transform: uppercase
+						font-size: 13px
+						list-style-type: none
+						a
+							color: white
+							text-decoration: none
+						a:hover
+							color: $blue
+			.welcome
+				margin: 0 auto
+				text-align: center
+				h1::after
+					content: ''
+					display: block
+					width: 50px
+					margin: 25px auto
+					border-top: 1px solid $blue
+				p
+					max-width: 770px
+					font-family: Roboto, sans-serif
+					font-weight: 300
+					font-size: 14px
+
+	.about
+		.row
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.about-logo
+				margin: 0 auto
+			.about-out_story
+				width: 57%
+				h2
+					color: black
+				p
+					color: $text2
+				button
+					margin: 0
+				button:hover
+					background-color: $blue
+
+
+	.watch_our_story
+		position: relative
+		width: 100%
+		height: 550px
+		display: flex
+		justify-content: center
+		align-items: center
+		.arrow_video
+			position: absolute
+			left: calc(50% - 80px)
+			width: 160px
+			height: 160px
+			text-align: center
+			cursor: pointer
+			transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+			z-index: 5
+			svg
+				fill: white
+				width: 100px
+		.arrow_video:hover
+			svg
+				fill: $blue
+			h3
+				color: $blue
+		.video-container
+			align-items: center
+			z-index: 1
+			position: absolute
+			height: 100%
+			margin-left: 200%
+			transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+			.video_WatchOurStory
+				margin: auto
+				height: 100%
+			.videoClose
+				position: absolute
+				z-index: 5
+				top: 10px
+				left: 10px
+				svg
+					fill: grey
+					width: 30px
+					cursor: pointer
+				svg:hover
+					fill: red
+
+
+
+
+	.expertise
+		.row
+			.contain
+				display: flex
+				flex-wrap: wrap
+				width: 100%
+				div
+					width: 33.3%
+					text-align: center
+					padding: 30px 30px
+					img
+						margin: auto
+					h3
+						color: black
+						font-size: 14px
+					p
+						color: $text2
+						margin: 0
+				div:nth-child(1), div:nth-child(2)
+					border-bottom: 1px solid #F3F3F3
+				div:nth-child(3)
+					border-bottom: 1px solid #F3F3F3
+				div:nth-child(5), div:nth-child(2)
+					border-left: 1px solid #F3F3F3
+					border-right: 1px solid #F3F3F3
+
+
+
+
+	.title
+		width: 100%
+		text-align: center
+		margin-bottom: 40px
+		h2
+			color: black
+			margin: 0
+		p
+			color: $text3
+			margin: 0
+			font-family: PlayfairDisplay, sans-serif
+			font-weight: 400
+			font-size: 14px
+		p::after
+			content: ''
+			display: block
+			border-top: 1px solid $text3
+			width: 50px
+			margin: auto
+			margin-top: 10px
+
+
+
+	.teams
+		.row
+			padding-top: 70px
+			padding-bottom: 70px
+			margin-bottom: 0
+			.title
+				h2
+					color: white
+			.contain
+				width: 100%
+				display: flex
+				justify-content: space-between
+				.item
+					flex: 0 0 220px
+					height: 300px
+					border: 1px solid $text3
+					.teams_img
+						height: 230px
+						margin: 0
+					.sign
+						text-align: center
+						padding: 12px
+						border-top: 1px solid $text3
+						h3, p
+							margin: 0
+						h3
+							font-size: 14px
+						p
+							font-family: Roboto, sans-serif
+							font-weight: 300
+							font-size: 13px
+							color: $text3
+			.team-footer
+				margin: auto
+				text-align: center
+				button
+					margin: 0
+				p
+					margin-top: 60px
+					color: $text3
+
+
+
+	.works
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.row
+			width: 100%
+			.works-title
+				width: 100%
+				display: flex
+				justify-content: space-between
+				color: black
+				align-items: center
+				h2
+					margin: 0
+				div
+					display: flex
+					a
+						margin: auto
+						color: black
+						font-family: Roboto, sans-serif
+						font-weight: 300
+						font-size: 14px
+						display: block
+					img
+						margin: auto
+						display: block
+						height: 12px
+						color: $text3
+						padding-left: 8px
+		.popup-gallery
+			.popup-gallery__list
+				display: flex
+				flex-wrap: wrap
+				cursor: pointer
+				list-style-type: none
+				.popup-gallery__list-item
+					width: 16.66%
+					cursor: pointer
+					img
+						width: 100%
+		.lightbox
+			display: none
+			z-index: 10
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			.lightbox__overlay
+				z-index: -1
+				position: absolute
+				width: 100%
+				height: 100%
+				background-color: rgba(0, 0, 0, .8)
+			.lightbox__figure
+				position: absolute
+				display: flex
+				flex-direction: column
+				justify-content: center
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				.lightbox__image
+					width: 100%
+					border: 3px solid white
+				.lightbox__span
+					text-align: center
+					cursor: pointer
+					.lightbox__prev, .lightbox__next
+						padding: 0 5px
+					.lightbox__prev:hover, .lightbox__next:hover
+						color: $blue
+			.lightbox__figure-width
+				height: 80%
+			.lightbox__figure-height
+				width : 80%
+		button
+			margin: auto
+		button:hover
+			background-color: $blue
+
+
+
+
+	.people-say
+		.row
+			max-width: 750px
+			display: flex
+			flex-direction: column
+			align-items: center
+			.quote
+				display: block
+				height: 150px
+				margin: 20px auto
+				font-family: PlayfairDisplay, sans-serif
+				font-size: 16px
+				text-align: center
+				display: flex
+				align-items: center
+				q
+					transition: 0.4s
+					opacity: 0
+				q::after, q::before
+					content: ''
+			.slider-name
+				margin-bottom: 40px
+				text-align: center
+				transition: 0.4s
+				h3, p
+					margin: 0
+				h3
+					font-size: 14px
+				p
+					font-family: Roboto, sans-serif
+					font-weight: 300
+					font-size: 13px
+					text-transform: uppercase
+					color: $text3
+			.ps_slider_and_arrow
+				height: 70px
+				position: relative
+				.ps_slider_control
+					position: absolute
+					font-size: 50px
+					top: calc(50% - 50px)
+					svg
+						fill: #C1C0C8
+						cursor: pointer
+						width: 20px
+						height: 20px
+						transition: 0.2s
+					svg:hover
+						fill: $blue
+						transform: scale(1.5)
+				.ps_slider_control_right
+					right: -20px
+				.ps_slider_control_left
+					left: -20px
+
+				.ps_slider
+					margin: 0 auto
+					width: 350px
+					height: 100%
+					overflow: hidden
+					.ps_slider_wrapper
+						width: 350px
+						height: 100%
+						display: flex
+						flex-wrap: wrap
+						flex-direction: column
+						transition: 1s
+						.ps_slider_item
+							display: flex
+							// align items vertically and horizontal
+							justify-content: center
+							align-items: center
+							width: 70px
+							height: 70px
+							div
+								height: 46px
+								width: 46px
+								background-position: center
+								background-size: 50px
+								background-repeat: no-repeat
+								border-radius: 30px
+								transition: 1s
+						.ps_slider_item_center
+							div
+								width: 70px
+								height: 70px
+								background-position: center
+								background-size: 70px
+								background-repeat: no-repeat
+								border-radius: 40px
+								transition: 1s
+
+
+
+
+
+	.form
+		width: 100%
+		height: 660px
+		.row
+			display: flex
+			flex-wrap: nowrap
+			justify-content: space-between
+			.form_title
+				display: flex
+				flex-direction: column
+				flex: 0 0 450px
+				align-items: left
+				h2
+					color: black
+				button
+					margin: 0
+					width: 120px
+					height: 40px
+				button:hover
+					background-color: $blue
+				form
+					width: 100%
+					height: 100%
+					input, textarea
+						width: 100%
+						height: 45px
+						margin-bottom: 20px
+						padding-left: 20px
+						border: 1px solid #E5E5E5
+						font-family: Roboto, sans-serif
+						font-weight: 300
+						font-size: 14px
+						color: $text3
+					textarea
+						height: 200px
+						margin-bottom: 15px
+						padding-top: 10px
+					input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+  					color: $text3
+					input::-moz-placeholder, textarea::-moz-placeholder
+					  color: $text3
+					input:-ms-input-placeholder, textarea::-ms-input-placeholder
+					  color: $text3
+					input:-moz-placeholder, textarea::-moz-placeholder
+					  color: $text3
+			.form_logo
+				display: flex
+				flex: 0 0 400px
+				flex-direction: column
+				h2
+					color: black
+				.form_items
+					display: flex
+					flex-wrap: wrap
+					flex-direction: column
+					align-items: center
+					justify-content: space-between
+					align-content: space-between
+					img
+						margin: 20px 0
+						font-weight: nowrap
+
+	.footer
+		.row
+			.footer_wrapper
+				width: 100%
+				.footer_contain
+					width: 100%
+					display: flex
+					justify-content: space-between
+					.footer_item
+						display: flex
+						flex-basis: 31%
+						flex-direction: column
+						align-items: flex-start
+						div
+							margin-bottom: 15px
+							.logo_text
+								vertical-align: middle
+								display: inline
+								margin-left: 10px
+								color: $blue
+								font-family: Roboto, sans-serif
+								font-weight: 100
+								font-size: 30px
+						h3
+							margin: 13px 0 25px
+							font-size: 15px
+						p
+							font-weight: 300
+							margin: 0
+						.address
+							display: flex
+							img
+								margin-right: 10px
+								margin-bottom: 5px
+						.phone
+							display: flex
+							img
+								margin-right: 10px
+								margin-bottom: 10px
+							a
+								font-weight: 300
+								font-size: 14px
+								color: white
+								text-decoration: none
+						form
+							input
+								width: 210px
+								height: 45px
+								padding: 15px
+								background-color: transparent
+								border-color: #9A94AD
+								font-size: 14px
+								color: #9A94AD
+							input::-webkit-input-placeholder
+		  					color: #9A94AD
+							input::-moz-placeholder
+								color: #9A94AD
+							input:-ms-input-placeholder
+								color: #9A94AD
+							input:-moz-placeholdercolor
+								color: #9A94AD
+							button
+								background-color: #9A94AD
+								border: none
+								border-radius: 0
+								width: 70px
+								height: 45px
+								margin: auto
+								padding: 0
+								opacity: 0.8
+							button:hover
+								box-shadow: none
+								opacity: 1
+						.social_link
+							display: flex
+							margin-top: 25px
+							.curcle
+								display: flex
+								justify-content: center
+								align-items: center
+								width: 35px
+								height: 35px
+								border: 1px solid white
+								border-radius: 18px
+								margin-right: 8px
+			.footer_menu
+				display: flex
+				justify-content: space-between
+				.main-menu
+					ul
+						width: 300px
+						display: flex
+						justify-content: space-between
+						list-style-type: none
+						margin: 0
+						a
+							color: white
+							font-size: 14px
+						a:hover
+							text-decoration: none
+							color: $blue
+
+
+
+@import "media" // Always at the end

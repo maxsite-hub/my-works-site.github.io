@@ -1,0 +1,294 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+// @media only screen and(max-width: 1200px)
++media-breakpoint-down(lg)
+  body
+    .works
+      .popup-gallery
+        .popup-gallery__list
+          justify-content: center
+          .popup-gallery__list-item
+            width: 20%
+      .lightbox
+        .lightbox__figure
+          // height: 80%
+
+// ≥992px
++media-breakpoint-down(md)
+  body
+    .teams
+      .row
+        .contain
+          flex-wrap: wrap
+          margin: 0 100px
+          .item
+            flex: 0 0 220px
+            margin-top: 40px
+            margin-right: 40px
+          .item:nth-child(1), .item:nth-child(2)
+            margin-top: 0
+          .item:nth-child(2n)
+            margin-right: 0
+
+    .watch_our_story
+      height: 450px
+
+    .works
+      .popup-gallery
+        .popup-gallery__list
+          .popup-gallery__list-item
+            width: 25%
+
+    .form
+      .row
+        .form_title
+          flex: 0 0 350px
+        .form_logo
+          flex: 0 0 350px
+
+    .footer
+      .row
+        .footer_wrapper
+          .footer_contain
+            .footer_item
+              form
+                input
+                  width: 190px
+                button
+                  width: 60px
+
+// ≥768px
++media-breakpoint-down(sm)
+  body
+    .scrollTop
+      display: none
+    .header
+      .hamburger--arrow-r
+        display: block
+      .row
+        .top-line
+          .main-menu
+            display: none
+
+    .watch_our_story
+      height: 350px
+      .video-container
+        height: 90%
+
+    .expertise
+      .row
+        .contain
+          div
+            width: 50%
+          div:nth-child(2n-1)
+            border-right: 1px solid #F3F3F3
+            border-bottom: none
+          div:nth-child(3), div:nth-child(4)
+            border-top: 1px solid #F3F3F3
+            border-bottom: 1px solid #F3F3F3
+          div:nth-child(2)
+            border: none
+          div:nth-child(5)
+            border-left: none
+
+    .teams
+      .row
+        .contain
+          flex-wrap: wrap
+          margin: 0 100px
+
+    .works
+      .popup-gallery
+        .popup-gallery__list
+          .popup-gallery__list-item
+            width: 33.33%
+
+    .form
+      height: 100%
+      .row
+        justify-content: flex-start
+        flex-direction: column
+        .form_title
+          flex: 0 0 550px
+        .form_logo
+          margin-top: 70px
+          justify-content: flex-start
+          align-items: flex-start
+          flex: 0 0 60%
+          .form_items
+            flex-direction: row
+            margin: 0 60px
+            div
+              padding: 0 40px 40px 0
+
+    .footer
+      .row
+        .footer_wrapper
+          .footer_contain
+            flex-direction: column
+            .footer_item
+              margin-bottom: 20px
+          .footer_menu
+            flex-direction: column
+            .main-menu
+              margin-bottom: 30px
+            .footer_copyright
+              font-size: 14px
+
+
+
+// ≥576px
++media-breakpoint-down(sm2)
+  body
+
+    .header
+      button
+        margin-top: 10px
+
+    .about
+      .row
+        flex-direction: column
+        .about-logo
+          img
+            width: 150px
+        .about-out_story
+          width: 100%
+          margin-top: 20px
+
+    .watch_our_story
+      height: 250px
+      .video_WatchOurStory
+        height: 100%
+
+    .teams
+      .row
+        .contain
+          margin: 0 50px
+          .item
+            flex: 0 0 160px
+            height: 270px
+            margin-top: 40px
+            .teams_img
+              height: 200px
+          .item:nth-child(1), .item:nth-child(2)
+            margin-top: 0
+          .item:nth-child(2n)
+            margin-right: 0
+
+    .people-say
+      .row
+        .quote
+          height: 200px
+        .ps_slider_and_arrow
+          .ps_slider_control_right
+            right: -30px
+          .ps_slider_control_left
+            left: -30px
+          .ps_slider
+            width: 70px
+            .ps_slider_wrapper
+              .ps_slider_item
+                div
+                  width: 70px
+                  height: 70px
+                  background-size: 70px
+                  border-radius: 40px
+
+
+    .works
+      .works_gellary
+        .works_gellary_item
+          width: 50%
+
+
+
+// ≥480px
++media-breakpoint-down(xs)
+  body
+    h1
+      font-size: 20px
+    .header
+      .row
+        display: flex
+        flex-direction: column
+        .top-line
+        .welcome
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          margin-top: 0
+          flex-basis: 80%
+          text-align: center
+          button
+            margin-top: 5px
+
+    .watch_our_story
+      height: 230px
+      .video-container
+        width: 100%
+
+    .expertise
+      .row
+        .contain
+          div
+            width: 100%
+          div:nth-child(2n-1)
+            border: none
+          div:nth-child(3), div:nth-child(4)
+            border: none
+          div:nth-child(2)
+            border: none
+
+    .teams
+      .row
+        .contain
+          justify-content: center
+          .item
+            flex: 0 0 220px
+            height: 300px
+            margin-top: 40px
+            margin-right: 0
+            .teams_img
+              height: 230px
+          .item:first-child
+            margin-top: 0
+          .item:nth-child(2)
+            margin-top: 40px
+          .item:nth-child(3)
+
+    .form
+      .row
+        .form_title
+          align-items: center
+        .form_logo
+          align-items: center
+          .form_items
+            margin: 0
+            div
+              padding: 0 0 20px 0
+              img
+                margin: 0
+                width: 130px
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
