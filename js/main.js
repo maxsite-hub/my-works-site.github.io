@@ -211,7 +211,7 @@ $(function () {
         nextArrow: '<img class="slier-work_right" src="img/instagram/BTN_arrow_forward.svg" alt="">',
     });
 
-    /*var reviews = $('.reviews');
+    var reviews = $('.reviews');
     var reviewsTop = reviews.offset().top;
     $(window).bind('scroll', function () {
         var windowTop = $(this).scrollTop();
@@ -219,7 +219,7 @@ $(function () {
             $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A92129f50b1cd10763a8cf0c08080a76500473fcfc1be9aac6cc5b9156ecb7ec9&amp;width=716&amp;height=460&amp;lang=ru_RU&amp;scroll=false"></script>');
             $(window).unbind('scroll');
         }
-    });*/
+    });
 
     //phone number
     $('input[type="tel"]').mask("+7 (999) 999-99-99");
