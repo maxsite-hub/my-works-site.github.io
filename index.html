@@ -1,59 +1,566 @@
 <!DOCTYPE html>
-<!-- saved from url=(0028)http://lazy-load.itgid.info/ -->
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
- <link rel="stylesheet" href="css/style.css">
- <link rel="stylesheet" href="js/function.js">
+  <title>студия делового портрета</title>
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="img/Vector.png" />
+  <meta name="theme-color" content="#58BFE8" />
+  <meta name="msapplication-navbutton-color" content="#333">
+  <meta name="apple-mobile-web-status-bar-style" content="#333">
 </head>
 
 <body>
-  <div class="container">
-    <div class="left">
-      <h1 class="text-center">Lazy Load</h1>
-      <div class="container">
-        <img src="img/JD-13-512.webp" alt="" data="https://cdn0.iconfinder.com/data/icons/famous-character-vol-1-colored/48/JD-13-512.png">
-        <img src="img/JD-06-512.png" alt="" data="https://cdn0.iconfinder.com/data/icons/famous-character-vol-1-colored/48/JD-06-512.png">
-        <img src="img/JD-41-512.png" alt="" data="https://cdn0.iconfinder.com/data/icons/famous-character-vol-1-colored/48/JD-41-512.png">
-        <img src="img/JD-15-512.png" alt="" data="https://cdn0.iconfinder.com/data/icons/famous-character-vol-1-colored/48/JD-15-512.png">
-        <img src="img/JD-26-512.webp" alt="" data="https://cdn0.iconfinder.com/data/icons/famous-character-vol-1-colored/48/JD-26-512.png">
-        <img src="img/JD-26-512.webp" alt="" data="https://cdn0.iconfinder.com/data/icons/famous-character-vol-1-colored/48/JD-26-512.png">
-      </div>
-
-
-
-    </div>
-    <div class="right">
-      <a href="https://js.itgid.info/">
-        <div class="course-js">
-          <h3>онлайн курс</h3>
-          <div class="bg">
-            <h2>Практический<br>Javascript</h2>
-          </div>
-          <p>Здесь проверяют домашки!</p>
-          <h4>js.itgid.info</h4>
-        </div>
-      </a>
-      <a href="https://html.itgid.info/">
-        <div class="course-js green">
-          <h3>онлайн курс</h3>
-          <div class="bg-green">
-            <h2>Практическая верстка HTML+CSS</h2>
-          </div>
-          <p>Верстаем реальные проекты!</p>
-          <h4>html.itgid.info</h4>
-        </div>
-      </a>
-    </div>
+ <div class="preloader" id="preloader">
+    <div class="pulse"></div>
   </div>
 
-  <script src="js/function.js"></script>
+  <div class="page">
+    <header class="header" id="header">
+      <div class="container">
 
+        <div class="header__inner">
+          <div class="logo" data-scroll="#intro">
+            <img src="img/Logo.svg" alt="logo">
+          </div>
+
+          <nav class="nav" id="nav">
+            <a class="nav__link" href="#about" data-scroll="#about">о студии</a>
+            <a class="nav__link" href="#gallery" data-scroll="#gallery">галерея</a>
+            <a class="nav__link" href="#cost" data-scroll="#cost">цены</a>
+            <a class="nav__link" href="#contacts" data-scroll="#contacts">контакты</a>
+            <a class="nav__icon" href="tel:+7900626-73-36">
+              <img class="img" src="img/phone-alt-solid.svg" style="width: 26px; height: 26px;" alt="phone">
+            </a>
+            <a class="nav__link phone" href="tel:+7900626-73-36">+7 900 626-73-36</a>
+            <a class="nav__link nav__link-btn" href="#" data-modal="#modal-form">забронировать</a>
+          </nav>
+         <button class="menu-link" type="button">
+            <span class="menu-link__item"> <a href="#menu"></a></span>
+          </button>
+       
+        </div>
+      </div>
+    </header>
+
+    <div class="intro" id="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <div class="intro__title">студия делового портрета</div>
+          <div class="intro__subtitle">ваши деловые фотографии</div>
+
+          <div class="intro__aside">
+            <div class="intro__links">
+              <a class="intro__link" href="#">
+                <img src="img/social/Instagram_main.svg" alt="instagram">
+              </a>
+              <a class="intro__link" href="#">
+                <img src="img/social/VK_main.svg" alt="VK">
+              </a>
+              <a class="intro__link" href="#">
+                <img src="img/social/Telegram_main.svg" alt="Telegram">
+              </a>
+              <a class="intro__link" href="#">
+                <img src="img/social/WhatsApp_Main.svg" alt="WhatsApp">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="header__slider">
+        <div class="header__slider_item" style="background-image: url(img/bg-img/header-bg-1.jpg);"></div>
+        <div class="header__slider_item" style="background-image: url(img/bg-img/header-bg-2.jpg);"></div>
+        <div class="header__slider_item" style="background-image: url(img/bg-img/header-bg-3.jpg);"></div>
+        <div class="header__slider_item" style="background-image: url(img/bg-img/header-bg-4.jpg);"></div>
+      </div>
+      <div class="container">
+        <div class="slider-dots">
+
+          <div class="slider-dots__item">
+            <div class="dots-box">
+              <div class="dots-box__title">Деловой портрет</div>
+              <div class="dots-box__subtitle">стильные фотографии помогут в продвижении в твоем Instagram, web сайте, в
+                печатных и онлайн СМИ</div>
+            </div>
+          </div>
+          <div class="slider-dots__item">
+            <div class="dots-box">
+              <div class="dots-box__title">Имиджевые фотосессии </div>
+              <div class="dots-box__subtitle">создай свой личный бренд эксперта, предпринимателя, руководителя,
+                топ-менеджера</div>
+            </div>
+          </div>
+          <div class="slider-dots__item">
+            <div class="dots-box">
+              <div class="dots-box__title">Красивые снимки сотрудников</div>
+              <div class="dots-box__subtitle">твои профессиональные снимки на сайте и в рекламе создают доверие клиентов
+              </div>
+            </div>
+          </div>
+          <div class="slider-dots__item">
+            <div class="dots-box">
+              <div class="dots-box__title">Бизнес-фото для продвижения</div>
+              <div class="dots-box__subtitle">стильные фотографии привлекают больше внимания работодателей и эйчаров
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about__left">
+            <img src="img/Photo.jpg" alt="">
+            <div class="about__name">сергей матюнин</div>
+            <div class="about__prof">фотограф</div>
+          </div>
+          <div class="about__right">
+            <div class="about__right_block">
+              <h3 class="about__header">обо мне</h3>
+              <p class="about__right_subtitle">В мире современных коммуникаций ваш бизнес-портрет должен работать 24
+                часа
+                в сутки, привлекая внимание потенциальных клиентов или будущих партнеров. От того, насколько точно и
+                правильно выстроен ваш образ, зависит решение, которое клиенты примут в вашу пользу. Деловой портрет
+                должен транслировать Доверие, Открытость и Уверенность. Мы знаем, как этого достичь. </p>
+            </div>
+            <div class="about__right_block">
+              <h3 class="about__header">о студии</h3>
+              <div class="about__right_subtitle">
+                <p>Я профессиональный фотограф, работающий в Санкт-Петербурге, занимаюсь
+                  коммерческой фотосъемкой уже больше 8 лет.
+                </p>
+                <p>Работа сводит меня с предпринимателями, медийными персонами, экспертами в разных сферах деятельности.
+                  Многие возвращаются, потому что знают: время пройдет с пользой, снимки будут качественными.
+                </p>
+                <p> Показать себя в кадре умеет не каждый. Но я знаю, как раскрыть человека, показать его лучшие стороны
+                  с помощью своих умений, правильного света и профессиональной фототехники</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="slider__studio">
+        <div class="slider__studio__item"><img src="img/studio/studio_1.jpg" alt=""> </div>
+        <div class="slider__studio__item"><img src="img/studio/studio_2.jpg" alt=""> </div>
+        <div class="slider__studio__item"><img src="img/studio/studio_3.jpg" alt=""> </div>
+        <div class="slider__studio__item"><img src="img/studio/studio_4.jpg" alt=""> </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="skills">
+
+        <ul class="skills__items">
+          <li class="skill__item">
+            <img src="img/skills/3000+.svg" alt="">
+            <p class="skills__text">Провел более 3000 съемок</p>
+          </li>
+          <li class="skill__item">
+            <img src="img/skills/Time.svg" alt="">
+            <p class="skills__text"> Срочность - фотографии могут быть готовы на следующий день </p>
+          </li>
+          <li class="skill__item">
+            <img src="img/skills/Cloud.svg" alt="">
+            <p class="skills__text">Бессрочное хранение фотографий </p>
+          </li>
+          <li class="skill__item">
+            <img src="img/skills/Image.svg" alt="">
+            <p class="skills__text">Сделаю от 3 до 300 фотографий </p>
+          </li>
+        </ul>
+
+        <ul class="skills__items">
+          <li class="skill__item">
+            <img src="img/skills/Posing.svg" alt="">
+            <p class="skills__text">Помощь в позировании.
+              Подберу лучшие позы, ракурсы и жесты для съемки</p>
+          </li>
+          <li class="skill__item">
+            <img src="img/skills/Palette.svg" alt="">
+            <p class="skills__text"> Деликатная ретушь. Естественные цвета и сохранение текстуры кожи </p>
+          </li>
+          <li class="skill__item">
+            <img src="img/skills/Card.svg" alt="">
+            <p class="skills__text"> Работаю с организациями. Договор, безналичный расчет, закрывающие документы </p>
+          </li>
+          <li class="skill__item">
+            <img src="img/skills/Tie.svg" alt="">
+            <p class="skills__text"> Меня выбирают известные бизнесмены, политики и артисты </p>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <section class="gallery_section" id="gallery">
+      <h2 class="section__header">
+        Галерея работ
+      </h2>
+      <div class="gallery">
+        <!--.gallery__item.grid[style="background-image: url(img/gallery/$.jpg);"]*14-->
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_2.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_1.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_3.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_4.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_5.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_9.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_6.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_7.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_8.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_10.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_11.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_12.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_2.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_13.jpg);"></div>
+        
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_14.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_3.jpg);"></div>
+       
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_1.jpg);"></div>
+        <div class="gallery__item grid" style="background-image: url(img/gallery/Photo_15.jpg);"></div>
+      </div>
+      <!--<a href="#" class="btn btn-grid">Смотреть больше</a>-->
+    </section>
+
+    <section class="services_section" id="cost">
+      <h2 class="section__header">стоимость фотосъемки</h2>
+      <div class="services">
+        <div class="services__item">
+          <p class="services__title">
+            экспресс-фотосессия в студии
+          </p>
+          <p class="services__currency">1500 р</p>
+          <p class="services__time">15-20 минут</p>
+          <p class="services__text">3 фото в ретуши</p>
+        <button class="btn btn-services"> <a data-modal="#modal-form">забронировать</a></button>
+        </div>
+        <div class="services__item">
+          <p class="services__title">
+            Фотосессия
+            "Бизнес-портрет"
+          </p>
+          <p class="services__currency">3500 р</p>
+          <p class="services__time">1 час</p>
+          <p class="services__text">3 фото в ретуши</p>
+          <button class="btn btn-services"> <a data-modal="#modal-form">забронировать</a></button>
+        </div>
+        <div class="services__item">
+          <p class="services__title">
+            Выездная фотосъемка
+            для 1 человека
+          </p>
+          <p class="services__currency">2000 р</p>
+          <p class="services__time">15-20 минут</p>
+          <p class="services__text">3 фото в ретуши</p>
+          <button class="btn btn-services"> <a data-modal="#modal-form">забронировать</a></button>
+        </div>
+        <div class="services__item">
+          <p class="services__title">
+            Фотосъемка
+            сотрудников компании
+          </p>
+          <p class="services__currency">500 р/ портрет</p>
+          <p class="services__time">15-20 минут</p>
+          <p class="services__text">3 фото в ретуши</p>
+          <button class="btn btn-services"> <a data-modal="#modal-form">забронировать</a></button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section__header">дополнительные услуги</h2>
+      <div class="pseudo">
+        <div class="pseudo__services_item">
+          <img class="pseudo__icon" src="img/skills/pseudo/Box.svg" alt="present">
+          <p class="pseudo__description">Подарочный сертификат
+            Фотосъемка в подарок
+            для друзей и коллег</p>
+          <p class="pseudo__currency">от 1500р</p>
+        </div>
+        <div class="pseudo__services_item">
+          <img class="pseudo__icon" src="img/skills/pseudo/photo-camera.svg" alt="camera">
+          <p class="pseudo__description">Сопровождение
+            Ассистирование на съемке
+            Второй фотограф</p>
+          <p class="pseudo__currency">2500 р</p>
+        </div>
+        <div class="pseudo__services_item">
+          <img class="pseudo__icon" src="img/skills/pseudo/laptop.svg" alt="notepad">
+          <p class="pseudo__description">Ускоренная обработка
+            Готовые фотографии
+            за 1 сутки или более</p>
+          <p class="pseudo__currency">2000 р</p>
+        </div>
+        <div class="pseudo__services_item">
+          <img class="pseudo__icon" src="img/skills/pseudo/Brush.svg" alt="brush">
+          <p class="pseudo__description">Подготовка к фотосессии
+            Макияж, укладка с учетом
+            делового образа</p>
+          <p class="pseudo__currency">от 3500 р</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="stages__bg" style="background-image: url(img/stages_phone.jpg);">
+      <h2 class="section__header">Этапы работы</h2>
+      <div class="stages">
+        <div class="stages__item">
+          <img src="img/stages/ic_1.svg" alt="">
+          <p class="stages__text">
+            Консультации.
+            Подбор примеров</p>
+        </div>
+        <div class="stages__item">
+          <img src="img/stages/ic_2.svg" alt="">
+          <p class="stages__text">Работа
+            с визажистом
+            (по желанию)</p>
+        </div>
+        <div class="stages__item">
+
+          <img src="img/stages/ic_3.svg" alt="">
+
+          <p class="stages__text">Съемка</p>
+        </div>
+        <div class="stages__item">
+
+          <img src="img/stages/ic_4.svg" alt="">
+
+          <p class="stages__text">Выбор лучших
+            фото для обработки</p>
+        </div>
+        <div class="stages__item">
+
+          <img src="img/stages/ic_5.svg" alt="">
+
+          <p class="stages__text">Ретушь</p>
+        </div>
+        <div class="stages__item">
+
+          <img src="img/stages/ic_6.svg" alt="">
+
+          <p class="stages__text">Правки по вашим
+            замечаниям</p>
+        </div>
+      </div>
+      <h3 class="content__header">работаем до дельного результата</h3>
+    </section>
+
+    <section class="section">
+
+      <div class="reviews">
+
+        <div class="container">
+          <h2 class="section__header">отзывы</h2>
+          <div class="reviews__slider">
+            <div class="reviews__block">
+              <img class="reviews__icon" src="img/other/quotes.png" alt="">
+              <div class="reviews__text">Сергей, спасибо большое за отличную деловую фотосессию. Получились стильные,
+                качественные бизнес-фотографии для сайта, как и задумывалось. Еще раз благодарю, будем вас
+                рекомендовать!
+              </div>
+              <div class="reviews__user"><img class="reviews__photo" src="img/other/Ellipse.png" alt="">
+                <p class="reviews__name">Саша Cаенко</p>
+              </div>
+            </div>
+            <div class="reviews__block">
+              <img class="reviews__icon" src="img/other/quotes.png" alt="">
+
+              <div class="reviews__text">
+                Сергей не только провёл крайне продуктивную работу в экстремальных условиях (25 человек, которых нужно
+                организовать, собрать, настроить), но и выполнил всю работу по обработке строго в обозначенные сроки.
+              </div>
+              <div class="reviews__user"><img class="reviews__photo" src="img/other/Ellipse.png" alt="">
+                <p class="reviews__name">Саша Cаенко</p>
+              </div>
+            </div>
+            <div class="reviews__block">
+              <img class="reviews__icon" src="img/other/quotes.png" alt="">
+
+              <div class="reviews__text">Спасибо большое за крутые фото. Сергей - замечательный человек и профессионал
+                высочайшего класса. Пунктуальный, обратный, обязательный. Прекрасно видит хороший кадр в любом месте.
+                Работать с ним одно удовольствие</div>
+              <div class="reviews__user"><img class="reviews__photo" src="img/other/Ellipse.png" alt="">
+                <p class="reviews__name">Саша Cаенко</p>
+              </div>
+            </div>
+            <div class="reviews__block">
+              <img class="reviews__icon" src="img/other/quotes.png" alt="">
+
+              <div class="reviews__text">Спасибо большое за крутые фото. Сергей - замечательный человек и профессионал
+                высочайшего класса. Пунктуальный, обратный, обязательный. Прекрасно видит хороший кадр в любом месте.
+                Работать с ним одно удовольствие</div>
+              <div class="reviews__user"><img class="reviews__photo" src="img/other/Ellipse.png" alt="">
+                <p class="reviews__name">Саша Cаенко</p>
+              </div>
+            </div>
+            <div class="reviews__block">
+              <img class="reviews__icon" src="img/other/quotes.png" alt="">
+
+              <div class="reviews__text">Спасибо большое за крутые фото. Сергей - замечательный человек и профессионал
+                высочайшего класса. Пунктуальный, обратный, обязательный. Прекрасно видит хороший кадр в любом месте.
+                Работать с ним одно удовольствие</div>
+              <div class="reviews__user"><img class="reviews__photo" src="img/other/Ellipse.png" alt="">
+                <p class="reviews__name">Саша Cаенко</p>
+              </div>
+            </div>
+            <div class="reviews__block">
+              <img class="reviews__icon" src="img/other/quotes.png" alt="">
+
+              <div class="reviews__text">Спасибо большое за крутые фото. Сергей - замечательный человек и профессионал
+                высочайшего класса. Пунктуальный, обратный, обязательный. Прекрасно видит хороший кадр в любом месте.
+                Работать с ним одно удовольствие</div>
+              <div class="reviews__user"><img class="reviews__photo" src="img/other/Ellipse.png" alt="">
+                <p class="reviews__name">Саша Cаенко</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="container">
+      <h2 class="section__header">меня выбрали</h2>
+      <div class=" logos marquee">
+
+        <img class="logos__img" src="img/logoitps/log_1.png" alt="">
+
+
+        <img class="logos__img" src="img/logoitps/log_2.png" alt="">
+
+
+        <img class="logos__img" src="img/logoitps/log_3.png" alt="">
+
+
+        <img class="logos__img" src="img/logoitps/log_4.png" alt="">
+
+
+        <img class="logos__img" src="img/logoitps/log_5.png" alt="">
+
+      </div>
+    </div>
+
+    <section class="section">
+      <h2 class="section__header">больше работ в Instagram</h2>
+      <div class="work">
+        <div class="work__inner">
+          <img src="img/instagram/insta.jpg" alt="">
+        </div>
+        <div class="work__inner">
+          <img src="img/instagram/insta_2.jpg" alt="">
+        </div>
+        <div class="work__inner">
+          <img src="img/instagram/insta_3.jpg" alt="">
+        </div>
+        <div class="work__inner">
+          <img src="img/instagram/insta_4.jpg" alt="">
+        </div>
+        <div class="work__inner">
+          <img src="img/instagram/insta_5.jpg" alt="">
+        </div>
+        <div class="work__inner">
+          <img src="img/instagram/insta_6.jpg" alt="">
+        </div>
+        <div class="work__inner">
+          <img src="img/instagram/insta.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contacts">
+      <div class="footer__inner">
+        <div class="footer__col" id="map">
+          
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__header">Будем на связи!</h2>
+          <p class="footer__text">Санкт-Петербург, Литейный проспект, д. 59, 2 этаж</p>
+
+          <p class="footer__text" href="tel:+7900626-73-36">Звоните: +7 (900) 626-73-36</p>
+          <p class="footer__text">Пишите: info@photocrew.ru</p>
+
+          <span class="footer__text">Часы работы:</span>
+          <p class="footer__text">Ежедневно с 9:00 до 20:00 (по предварительной записи)</p>
+          <p class="footer__text_foot">Добавляйтесь в мессенджерах:</p>
+          <div class="footer__icons">
+            <div class="footer__icon">
+              <img src="img/social/Telegram_footer.svg" alt="Telegram">
+            </div>
+            <div class="footer__icon">
+              <img src="img/social/WhatsApp_footer.svg" alt="WhatsApp">
+            </div>
+            <div class="footer__icon">
+              <img src="img/social/Instagram_footer.svg" alt="Instagram">
+            </div>
+            <div class="footer__icon">
+              <img src="img/social/VK_footer.svg" alt="VK">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="copyright"><span>© 2020 JUST sBUSINESS | Студия делового портрета | дизайн сайта</span> Зиновьева
+        Марина
+      </div>
+    </footer>
+
+    <!--Modal-->
+    <section>
+      <div class="modal" id="modal-form" title="Закрыть" >
+        <div class="modal__dialog">
+          <a class="modal__close" type="button" data-close>
+            <img src="img/close.svg" alt="close">
+          </a>
+          <div class="modal__dialog_title">Остались вопросы?</div>
+          <div class="modal__dialog_suptitle">Оставьте ваше сообщение, и я обязательно отвечу </div>
+          <form class="modal__dialog_form" action="/" method="post">
+
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Студия делового портрета">
+            <input type="hidden" name="admin_email" value="143paddington@gmail.com">
+            <input type="hidden" name="form_subject" value="Modal form">
+            <!-- END Hidden Required Fields -->
+
+            <input name="Имя" type="text" placeholder="Ваше имя">
+            <input name="email" type="email" placeholder="Ваш email">
+            <input name="Телефон" type="tel" placeholder="Ваш телефон">
+            <textarea name="Сообщение" placeholder="Ваше сообщение"></textarea>
+            <button type="submit" class="btn btn__form">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="topbtn active" id="topbtn" title="Наверх" data-scroll="#intro"><img src="img/TopArrows.svg" alt="topbutton"> </div>
+  </div>
+
+ 
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
 
 </body>
 
