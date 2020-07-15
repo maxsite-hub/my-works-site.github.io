@@ -3,6 +3,8 @@
 @import "fonts";
 @import "global";
 
+/* Header
+===================*/
 .header {
   width: 100%;
   position: absolute;
@@ -75,7 +77,8 @@
       }
     }
   }
-
+/* Nav
+===================*/
   .nav {
     display: flex;
     align-items: center;
@@ -133,7 +136,8 @@
   }
 
 }
-
+/* menu-link
+===================*/
 .menu-link {
   outline: none;
 
@@ -206,7 +210,8 @@
   }
 
 }
-
+/* Intro
+===================*/
 .intro {
   display: flex;
   flex-direction: column;
@@ -240,7 +245,8 @@
     }
   }
 }
-
+/* Offer
+===================*/
 .offer_section {
   padding-top: 120px;
   margin-bottom: 50px;
@@ -283,7 +289,8 @@
     }
   }
 }
-
+/* Servicess
+===================*/
 .services_section {
   padding-top: 160px;
 }
@@ -343,7 +350,8 @@
     }
   }
 }
-
+/* About
+===================*/
 .about_section {
   position: relative;
 
@@ -409,6 +417,8 @@
     }
   }
 }
+/* Footer
+===================*/
 
 .footer {
   padding: 40px 0 0 0;
@@ -460,7 +470,8 @@
     }
   }
 }
-
+/* Modal
+===================*/
 
 .modal {
   display: none;
@@ -546,7 +557,8 @@
   color: $dark;
   font-weight: 400;
 }
-
+/* Form
+===================*/
 form {
   padding: 10px;
   position: relative;

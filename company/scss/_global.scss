@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/*
+
 body::-webkit-scrollbar {
   width: 15px;
 }
@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
 
   border-radius: 15px;
 }
-*/
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -39,6 +39,7 @@ body {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 

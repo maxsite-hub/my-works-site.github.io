@@ -39,7 +39,8 @@
       transition: right .6s;
     }
   }
-
+/* menu-link
+===================*/
   .menu-link {
     display: block;
   }
@@ -51,7 +52,8 @@
       }
     }
   }
-
+  /* Offer
+===================*/
   .offer_section {
     &::after {
       width: 355px;
@@ -62,7 +64,8 @@
       display: none;
     }
   }
-
+/* Footer
+===================*/
   .footer {
     &__col {
       .logo_footer {
@@ -91,7 +94,8 @@
       }
     }
   }
-
+/* Offer
+===================*/
   .offer__slider {
     &_container {
       .offer__slider-box {
@@ -104,10 +108,7 @@
             margin-bottom: 50px;
           }
         }
-
-
       }
-
     }
 
     .offer__slider-img {
@@ -117,7 +118,8 @@
       }
     }
   }
-
+/* Services
+===================*/
   .services {
     &__item {
       max-width: 49.38555%;
@@ -128,7 +130,8 @@
     }
   }
 
-  
+  /* About
+===================*/
 .about {
   flex-direction: column;
  
@@ -146,7 +149,8 @@
   }
 }
 
-
+/* Footer
+===================*/
   .footer {
     &__col {
 
@@ -176,7 +180,8 @@
 }
 
 @media (max-width: 600px) {
-
+/* Header
+===================*/
   .header {
     &__inner {
 
@@ -188,7 +193,8 @@
       }
     }
   }
-
+/* Offer
+===================*/
   .offer__slider-img {
     img {
       display: none;
