@@ -1,0 +1,211 @@
+@media (max-width: 875px) {
+
+
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    padding-top: 140px;
+    right: 100%;
+    top: 20px;
+    z-index: -1;
+
+    transition: right .6s;
+    background-color: rgba(38, 38, 40, 1);
+
+    &__link {
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 30px 20px;
+      letter-spacing: 6px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, .4);
+      }
+
+      &.phone {
+        display: none;
+      }
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &.active {
+      right: 0;
+      display: block;
+      transition: right .6s;
+    }
+  }
+
+  .menu-link {
+    display: block;
+  }
+
+  .intro {
+    &__inner {
+      .intro__title {
+        font-size: 50px;
+      }
+    }
+  }
+
+  .offer_section {
+    &::after {
+      width: 355px;
+      height: 561px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .footer {
+    &__col {
+      .logo_footer {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 775px) {
+
+  .section_header {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .intro {
+    &__inner {
+      padding: 30px 10px;
+
+      .intro__title {
+        font-size: 40px;
+        line-height: 45px;
+      }
+    }
+  }
+
+  .offer__slider {
+    &_container {
+      .offer__slider-box {
+        padding: 20px 150px 0 0;
+
+        .offer_text {
+          max-width: 445px;
+
+          .offer__text {
+            margin-bottom: 50px;
+          }
+        }
+
+
+      }
+
+    }
+
+    .offer__slider-img {
+      img {
+        height: 70%;
+        padding: 33px 0 0 0px;
+      }
+    }
+  }
+
+  .services {
+    &__item {
+      max-width: 49.38555%;
+    }
+
+    .services__title {
+      font-size: 16px;
+    }
+  }
+
+  
+.about {
+  flex-direction: column;
+ 
+  &__left {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  &__right {
+    justify-content: center;
+    .right__img{
+     &.none {
+       display: none;
+     }
+    }
+  }
+}
+
+
+  .footer {
+    &__col {
+
+      .container {
+        flex-direction: column;
+      }
+
+      .container {
+
+        .footer__text_block {
+          text-align: center;
+          margin-bottom: 10px;
+
+          .footer__text {
+            color: #fff;
+            margin-bottom: 10px;
+
+            &.dark {
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .header {
+    &__inner {
+
+      &_block {
+
+        .logo_header {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .offer__slider-img {
+    img {
+      display: none;
+    }
+  }
+
+  .slider-studio_right {
+    top: 70%;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+  .services {
+    &__item {
+      max-width: 100%;
+    }
+  }
+}
