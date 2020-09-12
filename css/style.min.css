@@ -689,16 +689,16 @@ figure.effect-steve:hover p {
     left: -20px;
   }
 }
-@media (max-width: 424px) {
-  .grid .work__inner {
-    width: 510px;
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+
+@media (max-width: 456px) {
+  .info {
+    display: none;
   }
 }
+
+
+
+
 
 
 #stars {
