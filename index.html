@@ -11,6 +11,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+    function trim(string) { return string.replace (/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, ''); }
+    var init=0;
+    var startDate;
+    var clocktimer;
+   
+    function clearFields() {
+     init = 0;
+     clearTimeout(clocktimer);
+     document.clockform.clock.value='00:00:00.00';
+     document.clockform.label.value='';
+    }
+   
+    function clearALL() {
+     clearFields();
+     document.getElementById('marker').innerHTML = '';
+    }
+   
+    function startTIME() { 
+     var thisDate = new Date();
+     var t = thisDate.getTime() - startDate.getTime();
+     var ms = t%1000; t-=ms; ms=Math.floor(ms/10);
+     t = Math.floor (t/1000);
+     var s = t%60; t-=s;
+     t = Math.floor (t/60);
+     var m = t%60; t-=m;
+     t = Math.floor (t/60);
+     var h = t%60;
+     if (h<10) h='0'+h;
+     if (m<10) m='0'+m;
+     if (s<10) s='0'+s;
+     if (ms<10) ms='0'+ms;
+     if (init==1) document.clockform.clock.value = h + ':' + m + ':' + s + '.' + ms;
+     clocktimer = setTimeout("startTIME()",10);
+    }
+   
+    function findTIME() {
+     if (init==0) {
+      startDate = new Date();
+      startTIME();
+      init=1;
+     } 
+     else {
+      var str = trim(document.clockform.label.value);
+      document.getElementById('marker').innerHTML = (str==''?'':str+': ') + 
+       document.clockform.clock.value + '<br>' + document.getElementById('marker').innerHTML;
+      clearFields();
+     }
+    }
+   </script>
+  
+   <script type="text/javascript">
+    function trim(string) { return string.replace (/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, ''); }
+    var init=0;
+    var startDate,thisDate,tdiff;
+    var clocktimer;
+    var sum=0;
+   
+    function clearFields() {
+     init = 0;
+     clearTimeout(clocktimer);
+     document.clockform.clock.value='00:00:00.00';
+     document.clockform.label.value='';
+    }
+   
+    function clearALL() {
+     clearFields();
+     document.getElementById('marker').innerHTML = '';
+     sum = 0;
+     document.getElementById('markerSum').innerHTML = '';
+    }
+   
+    function timeToStr (t) {
+     var ms = t%1000; t-=ms; ms=Math.floor(ms/10);
+     t = Math.floor (t/1000);
+     var s = t%60; t-=s;
+     t = Math.floor (t/60);
+     var m = t%60; t-=m;
+     t = Math.floor (t/60);
+     var h = t%60;
+     if (h<10) h='0'+h;
+     if (m<10) m='0'+m;
+     if (s<10) s='0'+s;
+     if (ms<10) ms='0'+ms;
+     return h + ':' + m + ':' + s + '.' + ms;
+    }
+   
+    function startTIME() { 
+     thisDate = new Date();
+     tdiff = thisDate.getTime() - startDate.getTime();
+     var str = timeToStr (tdiff);
+     if (init==1) document.clockform.clock.value = str;
+     clocktimer = setTimeout("startTIME()",10);
+    }
+   
+    function findTIME() {
+     if (init==0) {
+      startDate = new Date();
+      startTIME();
+      init = 1;
+     } 
+     else {
+      sum += tdiff;
+      var str = trim(document.clockform.label.value);
+      document.getElementById('marker').innerHTML = (str==''?'':str+': ') + 
+       document.clockform.clock.value + '<br>' + document.getElementById('marker').innerHTML;
+      document.getElementById('markerSum').innerHTML = 'Всего: ' + timeToStr(sum); 
+      clearFields();
+     }
+    }
+   </script>
+
 </head>
 
 
@@ -22,6 +135,21 @@
   <div id='stars'></div>
   <div id='stars2'></div>
   <div id='stars3'></div>
+
+
+  <form name="clockform">
+    <p>Время: 
+    <input name="clock" size="12" maxlength="12" value="00:00:00.00">
+    Метка: 
+    <input name="label" size="12" maxlength="40" value="">
+    <input name="starter" type="button" value="Старт/Стоп" onclick="findTIME()"> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input name="clearer" type="button" value="Сбросить всё" onclick="clearALL()">
+    </p>
+    <p id="markerSum"></p>
+    <p id="marker"></p>
+   </form>
+
   <section class="works" id="work">
     <!-- Works -->
     <div class="container">
