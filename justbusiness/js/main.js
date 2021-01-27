@@ -134,15 +134,14 @@ $(function () {
         speed: 500,
         fade: true,
         cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 3000,
+       
         asNavFor: '.slider-dots',
     });
 
     $('.slider-dots').slick({
         focusOnSelect: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         asNavFor: '.header__slider',
     });
 
