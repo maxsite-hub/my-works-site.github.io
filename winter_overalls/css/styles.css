@@ -700,7 +700,7 @@ h2 {
 }
 
 .order_info_section .wrapper {
-  padding: 0 80px 0 640px;
+  padding: 0 80px 0 540px;
 }
 
 .order_info_section .product {
@@ -708,9 +708,9 @@ h2 {
 }
 
 .order_info_section h2 {
-  margin: 0 0 35px;
+  margin: 0 0 15px;
   text-align: left;
-  font-size: 34px;
+  font-size: 30px;
 }
 
 .order_info_section h2:after {
@@ -1023,8 +1023,8 @@ h2 {
 }
 .modal__content--sm .products_section h4 {
   font-size: 22px;
-  line-height: 34px;
-
+  line-height: 44px;
+text-align: center;
 }
 
 .modal .products_section .item .owl-next {
@@ -1086,8 +1086,9 @@ h2 {
   padding: 0 10px 10px;
 }
 
-.products_section .wrapper .products-text-block ul {
-  margin: 0 auto;
+.products_section .wrapper .products-text-block ul li{
+ display: flex;
+ justify-content: space-between;
 }
 
 .products_section .price_block {
@@ -1421,6 +1422,6 @@ h2 {
 }
 @media screen and (max-width: 300px) {
   .slider-icon_right-top {
-    top: 24%;
+    top: 23%;
   }
 }

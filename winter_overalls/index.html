@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="RU">
   <head>
-    <script
-      src="js/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
+  
 
     <title>Интернет-магазин FashionShop. Распродажа зимних комбинезонов</title>
     <meta
@@ -18,6 +14,7 @@
       rel="stylesheet"
       href="fonts/MuseoSans/MuseoSans.css"
     />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="js/slider/owlCarousel-2.2.1/owl.carousel.min.css"
@@ -39,6 +36,10 @@
 
     <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
     <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script src="js/blazy.min.js"></script>
+    <script src="js/slider/owlCarousel-2.2.1/owl.carousel.min.js"></script>
+    <script src="js/slider/fancybox-3/jquery.fancybox.min.js"></script>
+    
     <script type="text/javascript">
       $jsonData = {
         RU: {
@@ -74,27 +75,37 @@
             <div class="logo">
               <img src="images/logo_.png" alt="" />
             </div>
-            <script
-              src="js/date.min.js"
-              integrity="sha512-/n/dTQBO8lHzqqgAQvy0ukBQ0qLmGzxKhn8xKrz4cn7XJkZzy+fAtzjnOQd5w55h4k1kUC+8oIe6WmrGUYwODA=="
-              crossorigin="anonymous"
-            ></script>
+           
 
             <script>
-              $(document).ready(function () {
-                date = Date.today().addDays(-7);
-                date_2 = Date.today();
-
-                date = date.toString("dd.MM.yyyy");
-                date_2 = date_2.toString("dd.MM.yyyy");
-
-                $(".date_1").html(date);
-                $(".date_2").html(date_2);
-              });
+              function clock() {
+          var d = new Date();
+          var month_num = d.getMonth() + 1;
+          var day = d.getDate() - 7;
+          var day_two = d.getDate();
+          var hours = d.getHours();
+          var minutes = d.getMinutes();
+          var seconds = d.getSeconds();
+          
+          if (month_num  <= 9) month_num  = "0" + month_num ;
+          if (day <= 9) day = "0" + day;
+          if (day_two <= 9) day_two = "0" + day_two;
+          if (hours <= 9) hours = "0" + hours;
+          if (minutes <= 9) minutes = "0" + minutes;
+          if (seconds <= 9) seconds = "0" + seconds;
+          
+          date_time = day + "." + month_num + "." + d.getFullYear() + " - " + day_two + "." + month_num + "." + d.getFullYear();
+          if (document.layers) {
+           document.layers.doc_time.document.write(date_time);
+           document.layers.doc_time.document.close();
+          }
+          else document.getElementById("doc_time").innerHTML = date_time;
+           setTimeout("clock()", 1000);
+          }
             </script>
             <div class="info-action">СУПЕР РАСПРОДАЖА ОСТАТКОВ!</div>
             <h1>
-              <span class="date_1"></span> - <span class="date_2"></span> <br />
+              <span id="doc_time"></span> <br />
               <b
                 >Любой комбинезон всего за
                 <x-newprice class="productsum"></x-newprice>
@@ -182,7 +193,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -225,7 +236,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -348,7 +359,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -391,7 +402,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -514,7 +525,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -557,7 +568,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -680,7 +691,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -723,7 +734,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -846,7 +857,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -889,7 +900,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1012,7 +1023,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1055,7 +1066,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1178,7 +1189,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1221,7 +1232,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1344,7 +1355,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1387,7 +1398,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1510,7 +1521,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1553,7 +1564,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1676,7 +1687,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1719,7 +1730,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1842,7 +1853,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -1885,7 +1896,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2008,7 +2019,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2051,7 +2062,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2174,7 +2185,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2217,7 +2228,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2340,7 +2351,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2383,7 +2394,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2506,7 +2517,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2549,7 +2560,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2672,7 +2683,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2715,7 +2726,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2838,7 +2849,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -2881,7 +2892,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3004,7 +3015,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3047,7 +3058,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3170,7 +3181,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3213,7 +3224,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3336,7 +3347,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3379,7 +3390,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3502,7 +3513,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3545,7 +3556,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3668,7 +3679,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3711,7 +3722,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3834,7 +3845,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -3877,7 +3888,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4000,7 +4011,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4043,7 +4054,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4166,7 +4177,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4209,7 +4220,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4332,7 +4343,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4375,7 +4386,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4498,7 +4509,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4541,7 +4552,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4664,7 +4675,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -4707,7 +4718,7 @@
                   src="https://www.flaticon.com/svg/static/icons/svg/753/753318.svg"
                   alt=""
                 />
-                <b> 14 дней: </b> на обмен/возврат
+                <b> Обмен / возврат:  </b>  60 дней
               </div>
               <div class="prod_info">
                 <img
@@ -6817,10 +6828,9 @@
         text-align-last: center;
       }
     </style>
-
-    <script src="js/blazy.min.js"></script>
-    <script src="js/slider/owlCarousel-2.2.1/owl.carousel.min.js"></script>
-    <script src="js/slider/fancybox-3/jquery.fancybox.min.js"></script>
+ <script type="text/javascript">
+  clock();
+ </script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
