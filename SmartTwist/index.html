@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>SmartTwist</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 4450,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">Умный электрический штопор</div>
+          <h1>SmartTwist</h1>
+        </div>
+
+        <div class="s1-block">
+          <p>
+            Откроет<br />
+            без усилий<br />
+            <span>за <span class="bg-red">3</span> секунды!</span>
+          </p>
+          <div class="s1-block-arrow">
+            <div class="icon-arrow">
+              <img src="img/icon-arrow-1.png" alt="" />
+            </div>
+            <div class="icon-arrow">
+              <img src="img/icon-arrow-2.png" alt="" />
+            </div>
+            <div class="icon-arrow">
+              <img src="img/icon-arrow-3.png" alt="" />
+            </div>
+          </div>
+          <div class="s1-block-gif">
+            <img src="gif/1.gif" alt="" />
+          </div>
+          <div class="s1-block-img">
+            <img src="img/icon-text.png" alt="" />
+          </div>
+        </div>
+
+        
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Удобный и лёгкий</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Прост в использовании</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Стильный дизайн</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="form-wrapper-promo">
+              Активирована скидка 60% по промокоду
+              <span class="color-red">VINE21</span>
+            </div>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Обычная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-line"></div>
+
+                  <div class="price-new">
+                    <div>Цена по акции:</div>
+                    <span class="price-new-val productsum color-pink"></span>
+                  </div>
+                </div>
+
+                <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1"></span> <span>-</span>
+                  <span class="date_2"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img" src="img/s2-bg-top.jpg" alt="" />
+        <div class="container">
+          <h2>Обычные столовые штопоры:</h2>
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-1.png" alt="" />
+              </div>
+              <p class="s2-text">
+                Требуют больших <span class="color-red">усилий</span>
+              </p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-2.png" alt="" />
+              </div>
+              <p class="s2-text">
+                <span class="color-red">Пачкают</span> одежду и мебель
+              </p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-3.png" alt="" />
+              </div>
+              <p class="s2-text">
+                <span class="color-red"> Опасны<br /> </span>
+                в использовании
+              </p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-4.png" alt="" />
+              </div>
+              <p class="s2-text">
+                <span class="color-red"> Долго</span> открывают бутылку
+              </p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-5.png" alt="" />
+              </div>
+              <p class="s2-text">
+                Быстро <span class="color-red"> ломаются </span>
+              </p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-6.png" alt="" />
+              </div>
+              <p class="s2-text">
+                <span class="color-red">Ломают</span> пробку
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <img class="img" src="img/s3-bg-top.jpg" alt="" />
+        <h2>Теперь это в прошлом!</h2>
+        <div class="s3-item">
+          <div class="s3-item-list">
+            <img src="img/s3-2.jpg" alt="" />
+            <p>
+              Умный электрический штопор
+              <span
+                >SmartTwist позволит без труда открыть любую бутылку вина</span
+              >
+              в считанные секунды!
+            </p>
+          </div>
+          <div class="s3-item-list">
+            <img class="gif" src="gif/2.gif" alt="" />
+            <p>
+              При этом от вас не требуется совершенно никаких усилий:
+              <span
+                >просто нажмите кнопку и умный штопор сам сделает свое
+                дело!</span
+              >
+            </p>
+          </div>
+        </div>
+        <img src="img/s3-3.jpg" alt="" />
+      </section>
+
+      <section class="s4">
+        <h2>Особенности умного штопора SmartTwist</h2>
+        <div class="s4-item">
+          <div class="s4-item-list">
+            <div class="s4-block">
+              <div class="s4-title">Безопасность</div>
+              <div class="s4-text">
+                Невозможно поранить руку об остриё штопора
+              </div>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-block">
+              <div class="s4-title">Простота использования</div>
+              <div class="s4-text">
+                Вам больше не нужно прилагать усилия для открытия бутылки
+              </div>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-block">
+              <div class="s4-title">Скорость работы</div>
+              <div class="s4-text">Всего 3 секунды и бутылка вина открыта!</div>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-block">
+              <div class="s4-title">Премиальные материалы</div>
+              <div class="s4-text">
+                Умный штопор SmartTwist будет элегантно смотреться в любом
+                интерьере
+              </div>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-block">
+              <div class="s4-title">Мощная батарея</div>
+              <div class="s4-text">
+                Одного заряда штопора хватит на открытие 120 бутылок!
+              </div>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-block">
+              <div class="s4-title">Быстрая зарядка</div>
+              <div class="s4-text">Штопор заряжается всего за 5 минут</div>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-block">
+              <div class="s4-title">Легкий и портативный</div>
+              <div class="s4-text">
+                Поместится в сумочку, если вы соберетесь к друзьям или на
+                вечеринку
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <img class="gif" src="gif/3.gif" alt="" />
+        </div>
+      </section>
+
+      <section class="s5">
+        <img class="img" src="img/s5-top.jpg" alt="" />
+        <h2><span>Внимание!</span> Остерегайтесь подделок!</h2>
+        <div class="s5-item">
+          <div class="s5-block-text">
+            <p>
+              Обратите внимание, что
+              <span
+                >подделки зачастую выполнены из некачественных материалов</span
+              >
+              и их использование может быть опасно!
+            </p>
+          </div>
+          <div class="s5-item-list">
+            <img class="s5-img" src="img/s5-1.jpg" alt="" />
+          </div>
+          <div class="s5-item-text">Осторожно! Подделки!</div>
+          <div class="s5-item-list">
+            <img class="s5-img" src="img/s5-2.jpg" alt="" />
+          </div>
+
+          <div class="s5-item-footer">
+            <div class="s5-item-block">
+              <img src="img/icon-spin.png" class="s5-item-img" />
+              <p>
+                Оригинальный умный штопор можно приобрести
+                <span>только здесь</span> на официальном сайте партнера компании
+                SmartTwist
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="form-wrapper-promo">
+              Активирована скидка 60% по промокоду
+              <span class="color-red">VINE21</span>
+            </div>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+              <div class="form-count">
+                *акция действует:
+                <span class="date_1"></span> <span>-</span>
+                <span class="date_2"></span>
+              </div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <img src="img/s6.png" alt="" />
+                <div class="price">
+                  <div class="price-old">
+                    <div>Обычная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-line"></div>
+
+                  <div class="price-new">
+                    <div>Цена по акции:</div>
+                    <span class="price-new-val productsum color-pink"></span>
+                  </div>
+                </div>
+
+                <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+              </form>
+              <div class="limit">
+                *цена действует на распродажу лимитированной партии 500шт.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <img src="img/s7.jpg" alt="" />
+        <div class="container">
+          <h2>Использование умного штопора всего в 3 шага</h2>
+
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <div class="s7-img"><img src="img/s7-1.png" alt="" /></div>
+
+              <p>
+                <span>Шаг 1 </span><br />
+                Удалите защитную этикетку с бутылки и плотно наденьте умный
+                штопор
+              </p>
+            </div>
+
+            <div class="s7-item-list">
+              <div class="s7-img"><img src="img/s7-2.png" alt="" /></div>
+              <p>
+                <span>Шаг 2 </span><br />
+                Чтобы достать пробку из бутылки, нажмите кнопку "Вниз"
+              </p>
+            </div>
+
+            <div class="s7-item-list">
+              <div class="s7-img"><img src="img/s7-3.png" alt="" /></div>
+              <p>
+                <span>Шаг 2</span><br />
+
+                Нажмите кнопку "Вверх" для извлечения пробки из умного штопора
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <img class="img" src="img/s8.jpg" alt="" />
+
+        <div class="container">
+          <h2>Отзывы наших покупателей</h2>
+
+          <div class="reviews__slider">
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s8-1.jpg" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Ольга</p>
+                    </div>
+                    <span> г. Томск</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Меня всегда пугал процесс открытия вина штопором - того и гляди
+                он сорвется и проткнет тебе руку. С умным штопором от SmartTwist
+                таких страхов больше не возникает. Спасибо больше за это чудо
+                техники!
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s8-2.jpg" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar-2.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Светлана</p>
+                    </div>
+                    <span> г. Москва</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Это просто необходимая вещь для каждого любителя вина! Больше не
+                нужно тратить силы на открытие бутылок - достаточно лишь нажать
+                кнопку и через 3 секунды вы уже наслаждаетесь вкусным напитком.
+                Очень удобно!
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s8-3.jpg" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar-3.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Михаил</p>
+                    </div>
+                    <span> г. Хабаровск</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Я очень люблю вино. Нравится по вечером открыть бутылку и сидя с
+                любимой женой выпить ее под интересные разговоры и приятную
+                музыку. Электроштопор от SmartTwist безумно упростил тяжёлый
+                процесс открытия бутылок и теперь ничто не отвлекает меня от
+                приятного проведения времени. Благодарю вас!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s9">
+        <img class="img" src="img/s9.jpg" alt="" />
+        <h2>Как сделать заказ?</h2>
+        <div class="s9-item">
+          <div class="s9-item-list">
+            <div class="s9-block">
+              <div class="s9-title">Заявка</div>
+              <div class="s9-text">
+                Оставьте заявку на нашем сайте, заполнив форму заказа
+              </div>
+            </div>
+          </div>
+          <div class="s9-item-list">
+            <div class="s9-block">
+              <div class="s9-title">Подтверждение</div>
+              <div class="s9-text">
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар
+              </div>
+            </div>
+          </div>
+
+          <div class="s9-item-list">
+            <div class="s9-block">
+              <div class="s9-title">Получение</div>
+              <div class="s9-text">
+                Оплатите вашу посылку при получении у курьера или на почте
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">Умный электрический штопор</div>
+          <h1>SmartTwist</h1>
+        </div>
+
+        <div class="s1-block">
+          <p>
+            Откроет<br />
+            без усилий<br />
+            <span>за <span class="bg-red">3</span> секунды!</span>
+          </p>
+          <div class="s1-block-arrow">
+            <div class="icon-arrow">
+              <img src="img/icon-arrow-1.png" alt="" />
+            </div>
+            <div class="icon-arrow">
+              <img src="img/icon-arrow-2.png" alt="" />
+            </div>
+            <div class="icon-arrow">
+              <img src="img/icon-arrow-3.png" alt="" />
+            </div>
+          </div>
+          <div class="s1-block-gif">
+            <img src="gif/1.gif" alt="" />
+          </div>
+          <div class="s1-block-img">
+            <img src="img/icon-text.png" alt="" />
+          </div>
+        </div>
+
+        
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Удобный и лёгкий</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Прост в использовании</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Стильный дизайн</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="form-wrapper-promo">
+              Активирована скидка 60% по промокоду
+              <span class="color-red">VINE21</span>
+            </div>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Обычная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-line"></div>
+
+                  <div class="price-new">
+                    <div>Цена по акции:</div>
+                    <span class="price-new-val productsum color-pink"></span>
+                  </div>
+                </div>
+                <div class="form-item" id="form">
+                  <select
+                    name="country"
+                    class="countryselect form-control location"
+                  >
+                    <option selected value="RU">Россия</option>
+                    <option selected value="RU">Выберите вашу страну</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="name"
+                    class="field form-control userneme"
+                    placeholder="Введите ваше имя"
+                    value=""
+                  />
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="phone"
+                    class="field form-control phone"
+                    placeholder="Введите ваш телефон"
+                    value=""
+                  />
+                </div>
+
+                <input
+                  type="hidden"
+                  name="productsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="delivery" value="0 руб." />
+                <input
+                  type="hidden"
+                  name="totalsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="user" value="1" />
+                <input
+                  type="hidden"
+                  name="address"
+                  value="Уточнить у покупателя"
+                />
+
+                <div class="reolader form-item">
+                  <button
+                    type="submit"
+                    class="form-btn mm_button"
+                    onclick="checkFields(event, this);"
+                  >
+                    Заказать сейчас
+                  </button>
+                  <div class="ajax_loader_block">
+                    <img
+                      class="ajax_loader"
+                      src="img/ajax-loader.gif"
+                      alt="Идет отправка данных"
+                    />
+                    <span class="ajax_loader">Идет отправка данных</span>
+                  </div>
+                </div>
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1"></span> <span>-</span>
+                  <span class="date_2"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        now = new Date();
+        var perem = (24 - now.getHours()) * 3600;
+        $(".el-timer").attr("data-timer", perem);
+        $(".el-timer").TimeCircles({
+          animation: "smooth",
+          text_size: 0.0679,
+          bg_width: 0.902,
+          fg_width: 0.042,
+          use_background: true,
+          circle_bg_color: "#eaedf8",
+          time: {
+            Days: {
+              text: "Days",
+              color: "#efbb94",
+              show: false,
+            },
+            Hours: {
+              text: "часов",
+              color: "#efbb94",
+              show: true,
+              circle_bg_color: "#000000",
+            },
+            Minutes: {
+              text: "минут",
+              color: "#efbb94",
+              show: true,
+            },
+            Seconds: {
+              text: "секунд",
+              color: "#efbb94",
+              show: true,
+            },
+          },
+        });
+        $(".reviews__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-reviews_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-reviews_right" src="img/icon-arrow-right.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>
