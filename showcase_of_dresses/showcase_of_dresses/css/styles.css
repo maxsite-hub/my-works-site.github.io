@@ -196,7 +196,7 @@ footer {
 .wrap-nopad{
   
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 20px 80px;
 }
 
 .clearfix:after {
@@ -830,6 +830,8 @@ h2 {
 .rev-block-v3 .slick-next{
   position: absolute;
     right: -16px;
+    top: 50%;
+    margin: -50px 0 0;
     z-index: 10;
 }
 
