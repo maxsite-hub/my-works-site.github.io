@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>SmartTwist</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 4450,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">
+            Супергеройские<br />
+            часы-трансформеры
+          </div>
+          <h1 class="s1-title-block">
+            <span class="s1-title-left">Robot</span>
+            <span class="s1-title-right">Watch</span>
+          </h1>
+          <div class="s1-title-footer">
+            Полезная игрушка для вашего ребенка!
+          </div>
+        </div>
+
+        <div class="s1-block">3в1</div>
+        <div class="s1-discount">Скидка 60%</div>
+
+        <div class="s1-list-top">
+          <div class="s1-list-top-text">Часы</div>
+          <div class="s1-list-top-text">Игрушка</div>
+          <div class="s1-list-top-text">Проектор</div>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Для мальчиков и девочек</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Легкие и ударопрочные</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>6 цветов на выбор</p>
+          </div>
+        </div>
+
+        <div class="form-wrapper-promo">
+          <span class="color-orange"> 60% СКИДКА</span> ПО ПРОМОКОДУ
+          <span class="color-green"><u>WATCH21</u></span>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Обычная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-line"></div>
+
+                  <div class="price-new">
+                    <div>Цена по акции:</div>
+                    <span class="price-new-val productsum color-orange"></span>
+                  </div>
+                </div>
+
+                <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1 color-orange"></span>
+                  <span class="color-orange">-</span>
+                  <span class="date_2 color-orange"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+      
+        <div class="container">
+          <h2>Обычные игрушки:</h2>
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-1.png" alt="" />
+              </div>
+              <p class="s2-text">
+                Быстро <br />
+                ломаются
+              </p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-2.png" alt="" />
+              </div>
+              <p class="s2-text">Скучны и однообразны</p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-3.png" alt="" />
+              </div>
+              <p class="s2-text">Стоят дорого</p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-4.png" alt="" />
+              </div>
+              <p class="s2-text">Часто теряются</p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-5.png" alt="" />
+              </div>
+              <p class="s2-text">Содержат мелкие детали</p>
+            </div>
+            <div class="s2-item-list">
+              <div class="s2-img">
+                <img src="img/s2-6.png" alt="" />
+              </div>
+              <p class="s2-text">Быстро надоедают ребенку</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <h2>Теперь это <span class="color-orange">в прошлом!</span></h2>
+        <div class="s3-block">
+          <img class="s3-img" src="img/s3-bg.jpg" alt="" />
+        </div>
+      </section>
+
+      <section class="s4">
+        <h2>Часы-трансформеры</h2>
+        <img src="img/s4-1.png" alt="" />
+        <div class="s4-text">
+          <span>RobotWatch –</span> настоящие наручные часы для вашего ребенка,
+          которые могут трансформироваться в крутого робота-трансформера, а
+          также проецировать изображение на любую поверхность!
+        </div>
+        <div class="s4-block">
+          <div class="s4-block-text">
+            Благодаря <span class="color-orange">RobotWatch</span> Ваш ребенок
+            почувствует себя настоящим супергероем!
+          </div>
+          <div class="s4-block-img">
+            <img src="img/s4-2.png" alt="" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="s4-gif">
+            <img src="gif/1.gif" alt="" />
+          </div>
+        </div>
+        <img class="s4-img" src="img/s4-bg.jpg" alt="" />
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>Особенности часов RobotWatch</h2>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-1.png" alt="" />
+              </div>
+              <div class="s5-text">
+                <div class="s5-text-top">Ударопрочный корпус</div>
+                <div class="s5-text-bottom">
+                  Часы RobotWatch не боятся падений и царапин
+                </div>
+              </div>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-2.png" alt="" />
+              </div>
+              <div class="s5-text">
+                <div class="s5-text-top">Защита от воды</div>
+                <div class="s5-text-bottom">
+                  В часах RobotWatch можно купаться, плавать и играть в ванной
+                </div>
+              </div>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-3.png" alt="" />
+              </div>
+              <div class="s5-text">
+                <div class="s5-text-top">Точное время</div>
+                <div class="s5-text-bottom">
+                  А еще будильник, секундомер и таймер
+                </div>
+              </div>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-4.png" alt="" />
+              </div>
+              <div class="s5-text">
+                <div class="s5-text-top">Встроенный проектор</div>
+                <div class="s5-text-bottom">
+                  Проекцию можно использовать как обычный фонарик, так и для
+                  увлекательных супергеройских игр
+                </div>
+              </div>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-5.png" alt="" />
+              </div>
+              <div class="s5-text">
+                <div class="s5-text-top">Мощная батарея</div>
+                <div class="s5-text-bottom">
+                  Часы RobotWatch не потребуют от вас замены батареи долгие годы
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="s5-gif" src="gif/2.gif" alt="" />
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2>Какой цвет нравится вашему ребенку?</h2>
+          <div class="s6-slider">
+            <div class="s6-slide">
+              <img class="s6-slide-img" src="img/s6-1.png" alt="" />
+              <div class="s6-slide-block">
+                <div class="s6-img">
+                  <img src="img/s6-cirlce-1.png" alt="" />
+                </div>
+                <div class="s6-text">Зеленый</div>
+              </div>
+            </div>
+            <div class="s6-slide">
+              <img class="s6-slide-img" src="img/s6-2.png" alt="" />
+              <div class="s6-slide-block">
+                <div class="s6-img">
+                  <img src="img/s6-cirlce-2.png" alt="" />
+                </div>
+                <div class="s6-text">Синий</div>
+              </div>
+            </div>
+            <div class="s6-slide">
+              <img class="s6-slide-img" src="img/s6-3.png" alt="" />
+              <div class="s6-slide-block">
+                <div class="s6-img">
+                  <img src="img/s6-cirlce-3.png" alt="" />
+                </div>
+                <div class="s6-text">Красный</div>
+              </div>
+            </div>
+            <div class="s6-slide">
+              <img class="s6-slide-img" src="img/s6-4.png" alt="" />
+              <div class="s6-slide-block">
+                <div class="s6-img">
+                  <img src="img/s6-cirlce-4.png" alt="" />
+                </div>
+                <div class="s6-text">Розовый</div>
+              </div>
+            </div>
+            <div class="s6-slide">
+              <img class="s6-slide-img" src="img/s6-5.png" alt="" />
+              <div class="s6-slide-block">
+                <div class="s6-img">
+                  <img src="img/s6-cirlce-5.png" alt="" />
+                </div>
+                <div class="s6-text">Оранжевый</div>
+              </div>
+            </div>
+            <div class="s6-slide">
+              <img class="s6-slide-img" src="img/s6-6.png" alt="" />
+              <div class="s6-slide-block">
+                <div class="s6-img">
+                  <img src="img/s6-cirlce-6.png" alt="" />
+                </div>
+                <div class="s6-text">Желтый</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="img/s6-bg-footer.jpg" alt="" />
+      </section>
+
+      <section class="s7">
+        <h2>
+          <span>Внимание!</span>
+          Остерегайтесь подделок!
+        </h2>
+
+        <div class="s7-block-top">
+          Обратите внимание, что подделки зачастую выполнены из некачественных
+          материалов, вследствие чего быстро ломаются и также могут причинить
+          вред здоровью ребенка
+        </div>
+        <div class="s7-block-middle">
+          <div class="s7-middle-img">
+            <img src="img/s7-1.jpg" alt="" />
+          </div>
+          <div class="s7-text">ОСТОРОЖНО! ПОДДЕЛКИ!</div>
+        </div>
+        <div class="s7-block-footer">
+          <img src="img/s7-2.jpg" alt="" />
+        </div>
+      </section>
+
+      <section class="s8">
+        <div class="container">
+          <h2>
+            Оригинальные часы RobotWatch можно приобрести
+            <span class="color-red">только здесь</span> на официальном сайте
+          </h2>
+        </div>
+
+        <div class="s8-item">
+          <div class="form-wrapper-promo">
+            <span class="color-orange"> 60% СКИДКА</span> ПО ПРОМОКОДУ
+            <span class="color-green"><u>WATCH21</u></span>
+          </div>
+
+          <div class="container">
+            <div class="form-wrapper">
+              <div class="timer-cont">
+                <h3>Акция закончится через:</h3>
+                <div class="el-timer"></div>
+              </div>
+
+              <div class="container">
+                <form method="post">
+                  <div class="price">
+                    <div class="price-old">
+                      <div>Обычная цена:</div>
+                      <span class="price-old-val oldproductsum"><s></s></span>
+                    </div>
+
+                    <div class="price-line"></div>
+
+                    <div class="price-new">
+                      <div>Цена по акции:</div>
+                      <span
+                        class="price-new-val productsum color-orange"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <a href="#form" class="form-btn mm_button">
+                    Заказать сейчас
+                  </a>
+
+                  <div class="form-count">
+                    *акция действует:
+                    <span class="date_1 color-orange"></span>
+                    <span class="color-orange">-</span>
+                    <span class="date_2 color-orange"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2>RobotWatch - это настоящий супергеройский гаджет!</h2>
+        <div class="container">
+          <div class="s9-item">
+            <div class="s9-block">
+              <div class="s9-block-top">Наручные</div>
+              <div class="s9-block-footer">Часы</div>
+            </div>
+            <div class="s9-block-2">
+              <div class="s9-block-top">РОБОТ</div>
+              <div class="s9-block-footer">ТРАНСФОРМЕР</div>
+            </div>
+            <div class="s9-block-3">
+              <div class="s9-block-top">световая</div>
+              <div class="s9-block-footer">ПРОЕКЦИЯ</div>
+            </div>
+            <img src="img/s9-bg.png" alt="" />
+          </div>
+        </div>
+
+        <img src="img/s9-footer.jpg" alt="" />
+      </section>
+
+      <section class="reviews">
+        <h2>RobotWatch - это настоящий супергеройский гаджет!</h2>
+        <div class="container">
+          <div class="reviews__slider">
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s10-1.png" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Светлана</p>
+                    </div>
+                    <span> г. Москва</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Дочка подсмотрела у подруг такие часы с тоже захотела себе. Я
+                думала что это только мальчикам интересно будет, но дочь
+                объяснила мне, что эти часы - новый хит среди детей и теперь все
+                их носят! Ну что ж, раз хит - значит надо подарить:) Заказали на
+                этом сайте, пришло через 3 дня. Материалы качественные, дочь в
+                восторге!
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s10-2.png" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar-2.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Иван</p>
+                    </div>
+                    <span> г. Ростов-на-Дону</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Купили сыну на день рождение такие часы-трансформер. Ребенок в
+                восторге! Носит не снимая и постоянно играет с друзьями в
+                супергероев. Отличный получился подарок!
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s10-3.png" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar-3.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Михаил</p>
+                    </div>
+                    <span>Крым</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Прикольные часы! Ребенок доволен, а это главное. Часы
+                разбираются, превращаясь в робота, а еще ярко светят подсветкой.
+                Мне даже как взрослому, стало интересно)) Качество материалов
+                очень понравилось, чувствуется что разбить их можно только
+                пожалуй молотком))
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="s10-block-footer">
+          <img class="s10-img" src="img/s10-bg.jpg" alt="" />
+        </div>
+      </section>
+
+      <section class="s11">
+     
+        <div class="container">
+          <h2>Доставка и оплата</h2>
+
+          <div class="s11-item">
+            <div class="s11-item-list">
+              <div class="s11-img"><img src="img/s11-1.png" alt="" /></div>
+              <p>
+                Доставка почтой в течение 3-10 рабочих дней. Стоимость доставки товара от 350р.
+              </p>
+            </div>
+            <div class="s11-item-list">
+              <div class="s11-img"><img src="img/s11-2.png" alt="" /></div>
+              <p>
+                Оплата заказов осуществляется по факту получения товара на почте или у курьера
+              </p>
+            </div>
+            <div class="s11-item-list">
+              <div class="s11-img"><img src="img/s11-3.png" alt="" /></div>
+              <p>
+                Мы всегда проверяем товар перед отправкой и гарантируем 100% качество
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1 s1-bg-footer">
+        <div class="s1-title">
+          <div class="s1-suptitle">
+            Супергеройские<br />
+            часы-трансформеры
+          </div>
+          <h1 class="s1-title-block">
+            <span class="s1-title-left">Robot</span>
+            <span class="s1-title-right">Watch</span>
+          </h1>
+          <div class="s1-title-footer">
+            Полезная игрушка для вашего ребенка!
+          </div>
+        </div>
+
+        <div class="s1-block">3в1</div>
+        <div class="s1-discount">Скидка 60%</div>
+
+        <div class="s1-list-top">
+          <div class="s1-list-top-text">Часы</div>
+          <div class="s1-list-top-text">Игрушка</div>
+          <div class="s1-list-top-text">Проектор</div>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Для мальчиков и девочек</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Легкие и ударопрочные</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>6 цветов на выбор</p>
+          </div>
+        </div>
+
+        <div class="form-wrapper-promo">
+          <span class="color-orange"> 60% СКИДКА</span> ПО ПРОМОКОДУ
+          <span class="color-green"><u>WATCH21</u></span>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+             
+    <form method="post">
+      <div class="price">
+        <div class="price-old">
+          <div>Обычная цена:</div>
+          <span class="price-old-val oldproductsum"><s></s></span>
+        </div>
+
+        <div class="price-line"></div>
+
+        <div class="price-new">
+          <div>Цена по акции:</div>
+          <span class="price-new-val productsum color-orange"></span>
+        </div>
+      </div>
+      <div class="form-item" id="form">
+        <select
+          name="country"
+          class="countryselect form-control location"
+        >
+          <option selected value="RU">Россия</option>
+          <option selected value="RU">Выберите вашу страну</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <input
+          type="text"
+          name="name"
+          class="field form-control userneme"
+          placeholder="Введите ваше имя"
+          value=""
+        />
+      </div>
+      <div class="form-item">
+        <input
+          type="text"
+          name="phone"
+          class="field form-control phone"
+          placeholder="Введите ваш телефон"
+          value=""
+        />
+      </div>
+
+      <input
+        type="hidden"
+        name="productsum"
+        class="productsum"
+        value="1 руб."
+      />
+      <input type="hidden" name="delivery" value="0 руб." />
+      <input
+        type="hidden"
+        name="totalsum"
+        class="productsum"
+        value="1 руб."
+      />
+      <input type="hidden" name="user" value="1" />
+      <input
+        type="hidden"
+        name="address"
+        value="Уточнить у покупателя"
+      />
+
+      <div class="reolader form-item">
+        <button
+          type="submit"
+          class="form-btn mm_button"
+          onclick="checkFields(event, this);"
+        >
+          Заказать сейчас
+        </button>
+        <div class="ajax_loader_block">
+          <img
+            class="ajax_loader"
+            src="img/ajax-loader.gif"
+            alt="Идет отправка данных"
+          />
+          <span class="ajax_loader">Идет отправка данных</span>
+        </div>
+      </div>
+      <div class="form-count">
+        *акция действует:
+        <span class="date_1 color-orange"></span> <span class="color-orange">-</span>
+        <span class="date_2 color-orange"></span>
+      </div>
+    </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        now = new Date();
+        var perem = (24 - now.getHours()) * 3600;
+        $(".el-timer").attr("data-timer", perem);
+        $(".el-timer").TimeCircles({
+          animation: "smooth",
+          text_size: 0.0759,
+          bg_width: 0.902,
+          fg_width: 0.042,
+          use_background: true,
+          circle_bg_color: "#7a5bbf",
+          time: {
+            Days: {
+              text: "Days",
+              color: "#9ec12f",
+              show: false,
+            },
+            Hours: {
+              text: "часов",
+              color: "#9ec12f",
+              show: true,
+              circle_bg_color: "#000000",
+            },
+            Minutes: {
+              text: "минут",
+              color: "#9ec12f",
+              show: true,
+            },
+            Seconds: {
+              text: "секунд",
+              color: "#9ec12f",
+              show: true,
+            },
+          },
+        });
+
+        $(".s6-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="s6-slider-reviews_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="s6-slider-reviews_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".reviews__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-reviews_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-reviews_right" src="img/icon-arrow-right.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>
