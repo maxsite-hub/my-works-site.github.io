@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>WALKER</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 4450,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+           .ajax_loader {
+        display: none;
+      }
+
+      .icon-phone-img {
+        border-radius: 50%;
+        animation: pulse 1s infinite;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(63, 42, 255, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(4, 0, 255, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(4, 0, 255, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(74, 42, 255, 0.7);
+          box-shadow: 0 0 0 0 rgba(48, 51, 255, 0.7);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 12px rgba(25, 0, 255, 0);
+          box-shadow: 0 0 0 12px rgba(0, 38, 255, 0);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(55, 0, 255, 0);
+          box-shadow: 0 0 0 0 rgba(17, 0, 255, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="container">
+          <img class="logo" src="img/logo.png" alt="" />
+          <div class="s1-title">
+            <div class="s1-suptitle">Сумка-рюкзак</div>
+            <h1 class="color-blue">WALKER</h1>
+          </div>
+
+          <div class="s1-phone-block">
+            <a href="#form">
+              <div class="icon-phone">
+                <img class="icon-phone-img" src="img/icon-phone.png" alt="" />
+              </div>
+              <p class="phone-text">
+                Принимаем заказы
+                <span>24/7</span>
+              </p>
+            </a>
+          </div>
+
+          <div class="discount">
+            <div class="num">-50%</div>
+            <div class="name color-blue">скидка</div>
+          </div>
+        </div>
+        <ul class="list">
+          <li>Стильный и функциональный</li>
+          <li>Карманы с защитой от кражи</li>
+          <li>Вместительный и удобный</li>
+        </ul>
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="form-wrapper-block">
+              <div class="price">
+                <div class="price-new">
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-blue"></span>
+                </div>
+              </div>
+              <div class="timer">
+                <div class="timer-title color-pink">-50%</div>
+
+                <div class="countbox"></div>
+                <div class="timer-body">
+                  <div class="timer-item">
+                    <div class="timer-val">
+                      <div class="timer-num">0</div>
+                      <div class="timer-num">0</div>
+                    </div>
+                    <div class="timer-name">ч</div>
+                  </div>
+                  <div class="timer-separate"></div>
+                  <div class="timer-item">
+                    <div class="timer-val">
+                      <div class="timer-num">0</div>
+                      <div class="timer-num">0</div>
+                    </div>
+                    <div class="timer-name">м</div>
+                  </div>
+                  <div class="timer-separate"></div>
+                  <div class="timer-item">
+                    <div class="timer-val">
+                      <div class="timer-num">0</div>
+                      <div class="timer-num">0</div>
+                    </div>
+                    <div class="timer-name">с</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+            <div class="form-count">
+              Акция проходит:
+              <span class="date_1 color-blue"></span>
+              <span class="color-blue">-</span>
+              <span class="date_2 color-blue"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <h2>Доступен <br />в двух цветах!</h2>
+        <div class="s2-item">
+          <div class="s2-item-list">
+            <span class="s2-item-text"> Синий </span>
+            <img src="img/s2-1.png" alt="" />
+          </div>
+          <div class="s2-item-list">
+            <span class="s2-item-text black"> Черный </span>
+            <img src="img/s2-2.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <h2>Стильный и эффектный мужской аксессуар</h2>
+        <img class="gif" src="gif/1-min.gif" alt="" />
+        <div class="container">
+          <h3>Для тех, кто ценит стиль и практичность</h3>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+        <img src="img/s3-footer.jpg" alt="" />
+      </section>
+
+      <section class="s4">
+        <h2>Богатая функциональность</h2>
+        <img class="img" src="img/s4-top.jpg" alt="" />
+        <div class="s4-item">
+          <div class="s4-item-list">
+            <div class="s4-list-img">
+              <img class="s4-img" src="img/s4-1.jpg" alt="" />
+            </div>
+            <div class="s4-list-text">100% защита от влаги</div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-list-text">
+              Мембрана Gore-Tex Pro
+              <span>с неограниченным сроком службы</span>
+            </div>
+            <div class="s4-list-img">
+              <img class="s4-img" src="img/s4-2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-list-img">
+              <img class="s4-img" src="img/s4-3.jpg" alt="" />
+            </div>
+            <div class="s4-list-text">Регулируемые ремешки</div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-list-text">Специальный карман для телефона</div>
+            <div class="s4-list-img">
+              <img class="s4-img" src="img/s4-4.jpg" alt="" />
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-list-img">
+              <img class="s4-img" src="img/s4-5.jpg" alt="" />
+            </div>
+            <div class="s4-list-text">Карман для зонта</div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-list-text">
+              Внутренние карманы с защитой от кражи
+            </div>
+            <div class="s4-list-img">
+              <img class="s4-img" src="img/s4-6.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <img src="img/s4-footer.jpg" alt="" />
+      </section>
+
+      <section class="s5">
+        <h2>
+          <span>Компактный снаружи,</span><br />
+          бездонный внутри
+        </h2>
+        <img src="img/s5.jpg" alt="" />
+        <div class="s5-item">
+          <div class="s5-item-list">
+            <div class="s5-item-img">
+              <img src="img/icon-50kg.png" alt="" />
+            </div>
+            <div class="s5-item-text">
+              <p>Рюкзак способен <span>выдержать вес до 50 кг! </span></p>
+            </div>
+          </div>
+          <div class="s5-item-list">
+            <div class="s5-item-img">
+              <img src="img/icon-laptop.png" alt="" />
+            </div>
+            <div class="s5-item-text">
+              <p>
+                В основное отделение легко поместится
+                <span>даже 16-дюймовый ноутбук!</span>
+              </p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+        <img src="img/s5-footer.jpg" alt="" />
+      </section>
+
+      <section class="s6">
+        <h2>Характеристики рюкзака</h2>
+        <img class="s6-img" src="img/s6.jpg" alt="" />
+
+        <div class="s6-list">
+          <table cellpadding="5">
+            <tr>
+              <td colspan="2"><b>Цвет: </b><span>синий, черный </span></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b> Материал: </b><span> рециклированная экокожа </span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Каркас: </b><span> твердый </span></td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Кожа: </b><span> мягкая </span></td>
+            </tr>
+            <tr>
+              <td colspan="2"><b>Мембрана: </b><span>Gore-Tex Pro </span></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b> Вместимость: </b><span> 16-дюймовый ноутбук </span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b> Карманы:</b
+                ><span
+                  >для мобильного телефона,<br />
+                  внутренние карманы, карманы <br />на застежках</span
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <img src="img/s6-footer.jpg" alt="" />
+      </section>
+
+      <section class="s7">
+        <h2>Задайте свой уникальный стиль</h2>
+        <div class="s7-item">
+          <img src="img/s7-1.jpg" alt="" />
+          <img src="img/s7-2.jpg" alt="" />
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h2>Отзывы <br>покупателей</h2>
+        <div class="container">
+          <div class="reviews__slider">
+            <div class="reviews-block white-block">
+              <div class="block-name">
+                <img src="img/icon-avatar.png" alt="" />
+                <div class="name">
+                  <p><b>Дмитрий </b> | 33 года <br />г. Москва</p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Очень крутой рюкзак. Нравится, что он складывается и закрывается
+                на застежку, т.е. внутренние отделения оказываются в
+                безопасности от воды и снега. Таскаю в нем ноут, ни разу ничего
+                не протекло. А в остальном, просто стильный и приятный
+                аксессуар, дополнение к образу, так сказать. Часто беру с собой,
+                даже, когда нечего в него положить)
+              </p>
+              <img class="reviews-img" src="img/s8-1.jpg" alt="" />
+            </div>
+            <div class="reviews-block white-block">
+              <div class="block-name">
+                <img src="img/icon-avatar-2.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Борис </b> | 43 года <br />
+                    г. Нижний Новгород
+                  </p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Я несмотря на то, что на машине уже 20 лет, очень много хожу
+                пешком. И на природе, и в путешествиях, и по городу часто. Так
+                что, цену хорошего и удобного рюкзака знаю. До этого у меня
+                много лет был WENGER. Очень хороший швейцарский рюкзак, но годы
+                взяли свое, он протерся, потерял форму, одна лямка оторвалась. И
+                вот на 23 февраля дочь вручила мне нового друга. Я долго
+                присматривался, ведь он сильно отличается от того, к чему я
+                привык. Но ничего, спустя пару походов с ним, я могу сказать,
+                что этот рюкзак в плане удобства и практичности ничем не
+                уступает своему швейцарскому собрату. И вместительный, и
+                водонепроницаемый, и материал добротный. А выглядит, если честно
+                даже лучше. Так что, могу смело рекомендовать!
+              </p>
+              <img class="reviews-img" src="img/s8-1.jpg" alt="" />
+            </div>
+            <div class="reviews-block white-block">
+              <div class="block-name">
+                <img src="img/icon-avatar-3.png" alt="" />
+                <div class="name">
+                  <p><b>Валерий </b> | 39 лет <br />г. Санкт-Петербург</p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Жена подарила на День рождения. Я доволен, как слон! До этого
+                был тряпочный рюкзак, но он совсем не практичный, по сравнению с
+                этим. В городе почти с ним не расстаюсь. И на работу, и в
+                магазин, везде пригождается. И выглядит современно и интересно.
+                Мембрана защищает от дождя - удобно ноутбук возить. Очень
+                доволен покупкой!
+              </p>
+              <img class="reviews-img" src="img/s8-1.jpg" alt="" />
+            </div>
+            <div class="reviews-block white-block">
+              <div class="block-name">
+                <img src="img/icon-avatar-4.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Василий </b> | 37 лет <br />
+                    г. Курск
+                  </p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Рюкзак просто неубиваемый, ношу и в городе, и в поездках почти
+                без перерыва. Сколько раз в нем что-то проливалось, сколько я
+                его ронял, ездил с ним в забитом транспорте, а он почти как
+                новый. Очень легко стирается, кстати и без последствий.
+                Практичное приобретение, как я люблю. И выглядит он солидно, я
+                на встречи с клиентами не стесняюсь брать, очень удобно положить
+                ноутбук и документы. У меня черный.
+              </p>
+              <img class="reviews-img" src="img/s8-1.jpg" alt="" />
+            </div>
+            <div class="reviews-block white-block">
+              <div class="block-name">
+                <img src="img/icon-avatar-5.png" alt="" />
+                <div class="name">
+                  <p><b>Дмитрий </b> | 33 года <br />г. Москва</p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Очень крутой рюкзак. Нравится, что он складывается и закрывается
+                на застежку, т.е. внутренние отделения оказываются в
+                безопасности от воды и снега. Таскаю в нем ноут, ни разу ничего
+                не протекло. А в остальном, просто стильный и приятный
+                аксессуар, дополнение к образу, так сказать. Часто беру с собой,
+                даже, когда нечего в него положить)
+              </p>
+              <img class="reviews-img" src="img/s8-1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2>
+          Доставка <br />
+          и оплата
+        </h2>
+        <div class="container">
+          <div class="s9-list">
+            <div class="s9-list-item">
+              <img src="img/s9-1.jpg" alt="" />
+              <span class="s9-text">Заявка</span>
+              <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+            </div>
+            <div class="s9-list-item">
+              <img src="img/s9-2.jpg" alt="" />
+              <span class="s9-text">Подтверждение</span>
+              <p>
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар
+              </p>
+            </div>
+            <div class="s9-list-item">
+              <img src="img/s9-3.jpg" alt="" />
+              <span class="s9-text">Получение</span>
+              <p>Оплатите вашу посылку при получении на почте или у курьера</p>
+            </div>
+          </div>
+        </div>
+        <div class="s9-footer">
+          <p>
+            <span>100% гарантия качества</span><br />
+            Перед отправкой каждый рюкзак проходит тщательную проверку. Все
+            рюкзаки надежно упаковываются и защищены от повреждений.
+          </p>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="container">
+          <img class="logo" src="img/logo.png" alt="" />
+          <div class="s1-title">
+            <div class="s1-suptitle">Сумка-рюкзак</div>
+            <h1 class="color-blue">WALKER</h1>
+          </div>
+
+          <div class="s1-phone-block">
+            <a href="#form">
+              <div class="icon-phone">
+                <img class="icon-phone-img" src="img/icon-phone.png" alt="" />
+              </div>
+              <p class="phone-text">
+                Принимаем заказы
+                <span>24/7</span>
+              </p>
+            </a>
+          </div>
+
+          <div class="discount">
+            <div class="num">-50%</div>
+            <div class="name color-blue">скидка</div>
+          </div>
+        </div>
+        <ul class="list">
+          <li>Стильный и функциональный</li>
+          <li>Карманы с защитой от кражи</li>
+          <li>Вместительный и удобный</li>
+        </ul>
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="form-wrapper-block">
+              <div class="price">
+                <div class="price-new">
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-blue"></span>
+                </div>
+              </div>
+              <div class="timer">
+                <div class="timer-title color-pink">-50%</div>
+
+                <div class="countbox"></div>
+                <div class="timer-body">
+                  <div class="timer-item">
+                    <div class="timer-val">
+                      <div class="timer-num">0</div>
+                      <div class="timer-num">0</div>
+                    </div>
+                    <div class="timer-name">ч</div>
+                  </div>
+                  <div class="timer-separate"></div>
+                  <div class="timer-item">
+                    <div class="timer-val">
+                      <div class="timer-num">0</div>
+                      <div class="timer-num">0</div>
+                    </div>
+                    <div class="timer-name">м</div>
+                  </div>
+                  <div class="timer-separate"></div>
+                  <div class="timer-item">
+                    <div class="timer-val">
+                      <div class="timer-num">0</div>
+                      <div class="timer-num">0</div>
+                    </div>
+                    <div class="timer-name">с</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-item" id="form">
+              <select
+                name="country"
+                class="countryselect form-control location"
+              >
+                <option selected value="RU">Россия</option>
+                <option selected value="RU">Выберите вашу страну</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                name="name"
+                class="field form-control userneme"
+                placeholder="Введите ваше имя"
+                value=""
+              />
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                name="phone"
+                class="field form-control phone"
+                placeholder="Введите ваш телефон"
+                value=""
+              />
+            </div>
+
+            <input
+              type="hidden"
+              name="productsum"
+              class="productsum"
+              value="1 руб."
+            />
+            <input type="hidden" name="delivery" value="0 руб." />
+            <input
+              type="hidden"
+              name="totalsum"
+              class="productsum"
+              value="1 руб."
+            />
+            <input type="hidden" name="user" value="1" />
+            <input
+              type="hidden"
+              name="address"
+              value="Уточнить у покупателя"
+            />
+
+            <div class="reolader form-item">
+              <button
+                type="submit"
+                class="form-btn mm_button"
+                onclick="checkFields(event, this);"
+              >
+                Заказать сейчас
+              </button>
+              <div class="ajax_loader_block">
+                <img
+                  class="ajax_loader"
+                  src="img/ajax-loader.gif"
+                  alt="Идет отправка данных"
+                />
+                <span class="ajax_loader">Идет отправка данных</span>
+              </div>
+            </div>
+          
+            <div class="form-count">
+              Акция проходит:
+              <span class="date_1 color-blue"></span>
+              <span class="color-blue">-</span>
+              <span class="date_2 color-blue"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+  
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+        
+        $(".reviews__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-reviews_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-reviews_right" src="img/icon-arrow-right.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>
