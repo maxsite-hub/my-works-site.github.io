@@ -1,0 +1,147 @@
+// main: ../style.less
+
+.slider-dots {
+  display: flex;
+  justify-content: space-between;
+  .slick-current {
+    .slider-dots__item {
+            opacity: 1;
+    }
+}
+}
+
+.slider-dots__item {
+  cursor: pointer;
+  margin-right: 57px;
+  font-size: 18px;
+  color: #fff;
+  opacity: .5;
+
+  @media @tablet {
+    font-size: 16px;
+  }
+
+  @media @mobail {
+    font-size: 13px;
+    margin-right: 40px;
+  }
+
+  @media @mobail-sm {
+    margin-right: 17px;
+  }
+}
+
+.slider-dots__item:last-child {
+  margin-right: 0;
+}
+
+.dots-box {
+  margin: 0 10px;
+}
+
+.dots-box__title {
+  font-size: 21px;
+  font-weight: 700;
+
+  @media @mobail {
+    font-size: 15px;
+  }
+  @media @mobail-sm {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+
+
+.dots-box__title:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+
+  @media @tablet {
+    height: 2px;
+  }
+
+  @media @mobail-sm {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.dots-box__subtitle {
+  @media @mobail-sm {
+    display: none;
+  }
+}
+
+.slider__text_sm {
+  display: none;
+
+  @media @mobail-sm {
+    font-size: 10px;
+    line-height: 11px;
+    display: block;
+  }
+}
+
+/*.slick-current {
+  background-color: tomato;
+}*/
+
+.slider__img_item {
+  height: 900px;
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media @tablet {
+    height: 600px;
+  }
+
+  @media @mobail-sm {
+    height: 421px;
+  }
+}
+
+
+
+/*.slider_img-dots {
+  position: absolute;
+
+  top: 370px;
+  left: -30px;
+  z-index: 1000;
+
+  display: block;
+
+  @media @notebook {
+    display: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  button {
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 24px;
+
+    color: rgba(255, 253, 253, 0.7);
+    background-color: inherit;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: rgba(255, 253, 253, 0.7);
+    }
+  }
+}*/

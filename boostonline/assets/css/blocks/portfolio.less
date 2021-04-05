@@ -1,0 +1,22 @@
+// main: ../style.less
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -30px;
+}
+
+.portfolio__col {
+  flex-basis: 33.33333%;
+  color: @black;
+  padding: 30px;
+
+  @media @mobail {
+    flex-basis: 50%;
+  }
+
+  @media @mobail-sm {
+    flex-basis: 100%;
+  }
+
+}

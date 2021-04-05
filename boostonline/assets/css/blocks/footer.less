@@ -1,0 +1,83 @@
+// main: ../style.less
+.footer {
+  padding: 82px 188px;
+
+  height: auto;
+  background: url(../images/form.png) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  @media @notebook {
+    padding: 82px 130px;
+  }
+
+  @media @tablet {
+    padding: 82px 74px;
+  }
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .logo {
+    img {
+     width: 40px;
+    }
+  }
+
+  div {
+    text-align: center;
+  }
+
+  .all_rights {
+    margin-top: 60px;
+
+    @media @mobail-sm {
+      margin-top: 10px;
+    }
+  }
+
+  a {
+    color: fade(white, 70%);
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    padding-left: 6px;
+  }
+
+  .left {
+    font-size: 0;
+  }
+
+  @media @tablet {
+    .logo {
+      display: none;
+    }
+
+    .left {
+      font-size: 15px;
+    }
+
+    .left_two {
+      font-size: 0;
+    }
+  }
+  @media @mobail-sm {
+    display: block;
+    text-align: center;
+  }
+
+
+
+}
+
+
+
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}

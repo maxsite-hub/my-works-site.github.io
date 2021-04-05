@@ -1,0 +1,131 @@
+// main: ../style.less
+
+.form__cost {
+  padding: 68px 145px;
+
+  height: 100%;
+  background: url(../images/form_1.png) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  @media @tablet {
+    padding: 35px 70px;
+  }
+  @media @mobail {
+    padding: 40px 55px;
+  }
+  @media @mobail-sm {
+    padding: 40px 0px;
+  }
+}
+
+.form__costing {
+  form {
+
+    textarea {
+      padding: 12px;
+      height: 157px;
+      width: 430px;
+      resize: none;
+      margin-bottom: 57px;
+
+      position: absolute;
+      top: -1%;
+      right: 0;
+      z-index: 2;
+      border: 1px solid #fff;
+
+      @media @notebook {
+        width: 300px;
+      }
+
+      @media @tablet {
+        width: 300px;
+      }
+
+      @media @mobail {
+        position: static;
+        width: 273px;
+        height: 123px;
+      }
+    }
+  }
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media @mobail {
+    align-items: center;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 55px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    height: 38px;
+    display: block;
+    width: 360px;
+    padding: 0 12px;
+
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: rgba(255, 251, 251, 0.5);
+
+    @media @notebook {
+      width: 280px;
+    }
+
+    @media @tablet {
+      width: 240px;
+    }
+
+    @media @mobail {
+      margin-bottom: 31px;
+    }
+  }
+
+  textarea {
+    padding: 12px;
+    height: 215px;
+    width: 360px;
+    resize: none;
+
+    position: absolute;
+    top: 10%;
+    right: 0;
+    z-index: 2;
+    border: 1px solid #fff;
+
+    @media @notebook {
+      width: 300px;
+    }
+
+    @media @mobail {
+      position: static;
+      width: 273px;
+      height: 123px;
+    }
+  }
+
+
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: rgba(255, 251, 251, 0.5);
+
+  @media @tablet {
+    font-size: 12px;
+  }
+}

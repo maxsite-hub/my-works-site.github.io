@@ -1,0 +1,1018 @@
+<?php require_once 'inc/functions.php'; ?>
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>boostonline</title>
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="compan">
+              <div class="compan__name" data-scroll="#about">
+                <div class="logo">
+                  <img src="assets/images/logo.png" alt="" />
+                </div>
+              </div>
+
+              <div class="compan__phone">
+                <img src="assets/images/icons_phone.svg" alt="" />
+                <a href="tel:+77777777777">+7-777-777-77-77</a>
+              </div>
+            </div>
+            <nav class="nav" id="nav">
+              <a href="#about" class="nav__link" data-scroll="#about"
+                >Выберите игру</a
+              >
+              <a href="#clients" class="nav__link" data-scroll="#clients"
+                >Отзывы</a
+              >
+             
+              <a href="#port" class="nav__link" data-scroll="#port"
+                >О нас</a
+              >
+              <a href="#quest" class="nav__link" data-scroll="#quest"
+                >Вопросы</a
+              >
+              <a href="#footer" class="nav__link" data-scroll="#footer"
+                >Контакты</a
+              >
+            </nav>
+
+            <button class="nav__toggle" id="nav_toggle" type="button">
+              <span class="nav__toggle_item">Menu</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="intro active" id="intro">
+        <div class="container">
+          <div class="intro__inner">
+            <div class="intro__content">
+              <h1 class="intro__suptitle">
+                мы прокачиваем <span>аккауты</span>
+              </h1>
+              <a class="btn btn__look" href="#about" data-scroll="#about"
+                >Выберите игру</a
+              >
+            </div>
+
+            <div class="intro__description">
+              <div class="description__text">
+                <p>boostonline</p>
+                <span
+                  >это мультиигровой сервис, помогающий людям в онлайн-играх, у
+                  которых недостаточно времени для достижения комфортных условий
+                  для игры.</span
+                >
+              </div>
+            </div>
+            <a class="btn btn__transparent" href="#about" data-scroll="#about">Выберите игру</a>
+          </div>
+
+          <div class="slider-dots">
+            <div class="slider-dots__item">
+              <div class="dots-box">
+                <div class="dots-box__title">МЫ МОЖЕМ ВСЁ</div>
+                <div class="dots-box__subtitle">
+                  Настоящие профессионалы в играх.
+                </div>
+                <span class="slider__text_sm"
+                  >Настоящие профессионалы в играх.
+                </span>
+              </div>
+            </div>
+            <div class="slider-dots__item">
+              <div class="dots-box">
+                <div class="dots-box__title">РАБОТАЕМ БЫСТРО</div>
+                <div class="dots-box__subtitle">
+                  Выполним заказ в оговоренный срок.
+                </div>
+                <span class="slider__text_sm">
+                  Выполним заказ в оговоренный срок.</span
+                >
+              </div>
+            </div>
+            <div class="slider-dots__item">
+              <div class="dots-box">
+                <div class="dots-box__title">БЕЗОПАСНО И НАДЁЖНО</div>
+                <div class="dots-box__subtitle">
+                  Гарантируем конфиденциальность.
+                </div>
+                <div class="slider__text_sm">
+                  Гарантируем конфиденциальность.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slider-top">
+        <div class="slider_img">
+          <div
+            class="slider__img_item"
+            style="background-image: url(assets/images/fon.jpg)"
+          ></div>
+          <div
+            class="slider__img_item"
+            style="background-image: url(assets/images/fon_2.jpg)"
+          ></div>
+          <div
+            class="slider__img_item"
+            style="background-image: url(assets/images/fon_3.jpg)"
+          ></div>
+        </div>
+      </section>
+
+      <div class="sectionFaq" id="about">
+        <!-- faq start -->
+        <section class="faq" data-target="faq">
+          <h2 class="faq__ttl">Выберите игру</h2>
+
+          <div class="faq__list">
+            <div class="faq__item">
+              <button class="faq__btn" type="button">
+                <span>Дота 2 Буст</span> <span class="btn">Заказать</span>
+              </button>
+              <div class="faq__answer">
+                <span>
+                  <span style="font-size: 14pt">
+                    <div class="section__header">
+                      <h2 class="section__title">Заполните форму</h2>
+                      <h3 class="section__suptitle">
+                        Напишите нам! Менеджер свяжется с Вами в ближайшее время
+                        чтобы обсудить условия
+                      </h3>
+                    </div>
+                    <form method="POST">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Ваше Имя"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Ваш e-mail"
+                        required
+                      />
+
+                      <input placeholder="Ваш discord" name="discord" />
+
+                      <div>
+                        <select
+                          class="input"
+                          data-placeholder="Выбранная игра"
+                          name="product"
+                          aria-required="$_POST"
+                        >
+                          <option value="Дота 2 Буст">Дота 2 Буст</option>
+                        </select>
+                      </div>
+
+                      <textarea
+                        class="block-text"
+                        placeholder="Опишите что вы хотите?"
+                        name="question"
+                        required
+                      ></textarea>
+                      <button type="submit" class="btn btn__form">
+                        Отправить
+                      </button>
+                    </form>
+                  </span>
+                  <div class="faq__answer-img">
+                    <img src="assets/images/advantages/01.png" alt="" />
+                  </div>
+                  <div>
+                    <span style="font-size: 14pt"
+                      >Что такое буст аккаунтов в Доте 2? Буст аккаунтов в Дота
+                      2 - это услуга, когда профессиональные игроки (драйвера)
+                      занимаются прокачкой Вашего аккаунта по приобретенной
+                      услуге. Классическая и самая востребованная услуга в
+                      области прокачки Дота 2, это буст ММР, в результате
+                      которого, мы повышаем рейтинг ММР на Вашем аккаунте.
+                      Наименьшее количество рейтинга для заказа - от 100 ММР,
+                      предела по максимальному заказу нет. </span
+                    ><br />
+                    <span style="font-size: 14pt">
+                      Также, если у Вас возникнут вопросы, то всегда можете
+                      задать его нашему оператору по discord или любым удобным
+                      способом. Мы предоставляем возможность приостановки заказа
+                      в любой момент, если у Вас были планы поиграть с друзья,
+                      это не проблема. Возобновите буст аккаунта, когда будет
+                      удобно и процесс повышения рейтинга будет продолжен. Где
+                      еще вы найдете такую ​​возможность?</span
+                    ><br />
+                  </div>
+                  <br />
+                </span>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__btn" type="button">
+                <span>Прокачка аккаунта в World of Tanks </span>
+                <span class="btn">Заказать</span>
+              </button>
+              <div class="faq__answer">
+                <span>
+                  <span style="font-size: 14pt">
+                    <div class="section__header">
+                      <h2 class="section__title">Заполните форму</h2>
+                      <h3 class="section__suptitle">
+                        Напишите нам! Менеджер свяжется с Вами в ближайшее время
+                        чтобы обсудить условия
+                      </h3>
+                    </div>
+                    <form method="POST">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Ваше Имя"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Ваш e-mail"
+                        required
+                      />
+
+                      <input placeholder="Ваш discord" name="discord" />
+
+                      <div>
+                        <select
+                          class="input"
+                          data-placeholder="Выбранная игра"
+                          name="product"
+                          aria-required="$_POST"
+                        >
+                          <option value="Прокачка аккаунта в World of Tanks">
+                            Прокачка аккаунта в World of Tanks
+                          </option>
+                        </select>
+                      </div>
+
+                      <textarea
+                        class="block-text"
+                        placeholder="Опишите что вы хотите?"
+                        name="question"
+                        required
+                      ></textarea>
+                      <button type="submit" class="btn btn__form">
+                        Отправить
+                      </button>
+                    </form>
+                  </span>
+                  <div class="faq__answer-img">
+                    <img src="assets/images/advantages/02.png" alt="" />
+                  </div>
+                  <div>
+                    <span style="font-size: 14pt">
+                      В WoT ранговые бои - это соревновательный режим, в котором
+                      игроки сражаются между собой за награду. Такой
+                      соревновательный режим доступен только тем игрокам,
+                      которые владеют танками от 10 уровня и выше.
+                    </span>
+                    <br />
+                    <span style="font-size: 14pt">
+                      Основная цель ранговых боёв - попасть к концу сезона в
+                      Бронзовую, Серебряную или Золотую лигу. Однако для этого
+                      каждому игроку необходимо пройти несколько этапов -
+                      Квалификация ранговых боёв, нужно сыграть 20 боёв; -
+                      Прохождение 3-х дивизионов, в каждом из которых по 5
+                      рангов). - Попадание в таблицу ранговых боёв.
+                    </span>
+                    <br />
+                    <span style="font-size: 14pt">
+                      Для перехода на новый ранг, нужно зарабатывать шевроны в
+                      ранговых боях. В случае проигрыша в бою, Вы можете
+                      потерять не только шеврон, но иногда и свой текущий ранг.
+                    </span>
+                    <br />
+                    <span style="font-size: 14pt">
+                      Получение новых достижений, множества наград и других
+                      преимуществ после участия в ранговых боях - желание многих
+                      игроков World of Tanks. Однако здесь стать победителем и
+                      что-то выиграть очень сложно. Именно поэтому мы предлагаем
+                      вам нашу услугу - прохождение Ранговых боёв. Если Вам не
+                      хочется постоянно следить за расписание ранговых боёв и
+                      под страивать свои ежедневные дела под него и в процессе
+                      прохождения тратить нервы, то просто можно купить Ранговые
+                      бои у нас.
+                    </span>
+                    <br />
+                    <span style="font-size: 14pt">
+                      Вы можете не только добиться желаемых результатов, но и
+                      сэкономить время и силы для приятной игры. Достичь
+                      наивысшей награды в сложных соревнованиях - предмет
+                      гордости для многих игроков.
+                    </span>
+                    <br />
+                  </div>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__btn" type="button">
+                <span>Прокачка аккаунта в World of Warships</span>
+                <span class="btn">Заказать</span>
+              </button>
+              <div class="faq__answer">
+                <span>
+                  <span style="font-size: 14pt">
+                    <div class="section__header">
+                      <h2 class="section__title">Заполните форму</h2>
+                      <h3 class="section__suptitle">
+                        Напишите нам! Менеджер свяжется с Вами в ближайшее время
+                        чтобы обсудить условия
+                      </h3>
+                    </div>
+                    <form method="POST">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Ваше Имя"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Ваш e-mail"
+                        required
+                      />
+
+                      <input placeholder="Ваш discord" name="discord" />
+
+                      <div>
+                        <select
+                          class="input"
+                          data-placeholder="Выбранная игра"
+                          name="product"
+                          aria-required="$_POST"
+                        >
+                          <option value="Прокачка аккаунта в World of Warships">
+                            Прокачка аккаунта в World of Warships
+                          </option>
+                        </select>
+                      </div>
+
+                      <textarea
+                        class="block-text"
+                        placeholder="Опишите что вы хотите?"
+                        name="question"
+                        required
+                      ></textarea>
+                      <button type="submit" class="btn btn__form">
+                        Отправить
+                      </button>
+                    </form>
+                  </span>
+                  <div class="faq__answer-img">
+                    <img src="assets/images/advantages/03.png" alt="" />
+                  </div>
+                  <div>
+                    <span style="font-size: 14pt">
+                      Ранговые бои WoWs - это один из типов сражений, в которых
+                      игроки командами соревнуются друг с другом. В ранговых
+                      боях командная работа должна быть приоритетом, чтобы иметь
+                      наилучшие шансы на победу. Победа в таком бою помогает
+                      поднять ранг, но любое поражение может его понизить. В
+                      каждом сезоне ранговых боёв к участию допускаются корабли
+                      только определенных уровней. Иногда сезоны проходят на
+                      разных уровнях в зависимости от ранга, в котором Вы
+                      участвуете.
+                    </span>
+                    <br />
+
+                    <span style="font-size: 14pt">
+                      Награды Мы поможем Вам пройти ранговые бои и получить
+                      отличные награды, среди которых: Сталь, которую можно
+                      использовать для покупки уникальных премиальных кораблей
+                      или уникальных премиальных кораблей (например, премиальный
+                      эсминец USA Black 9 уровня), доступно только за сталь;
+                      Множество боевых, экономических и специальных флагов;
+                      Премиум камуфляжи с различными бонусами; Множество других
+                      игровых ценностей (дублоны, уникальные модернизации,
+                      флаги, уголь, контейнеры и др.).
+                    </span>
+                    <br />
+                  </div>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__btn" type="button">
+                <span>Path of Exile Буст</span>
+                <span class="btn">Заказать</span>
+              </button>
+              <div class="faq__answer">
+                <span>
+                  <span style="font-size: 14pt">
+                    <div class="section__header">
+                      <h2 class="section__title">Заполните форму</h2>
+                      <h3 class="section__suptitle">
+                        Напишите нам! Менеджер свяжется с Вами в ближайшее время
+                        чтобы обсудить условия
+                      </h3>
+                    </div>
+                    <form method="POST">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Ваше Имя"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Ваш e-mail"
+                        required
+                      />
+
+                      <input placeholder="Ваш discord" name="discord" />
+
+                      <div>
+                        <select
+                          class="input"
+                          data-placeholder="Выбранная игра"
+                          name="product"
+                          aria-required="$_POST"
+                        >
+                          <option value="Path of Exile Буст">
+                            Path of Exile Буст
+                          </option>
+                        </select>
+                      </div>
+
+                      <textarea
+                        class="block-text"
+                        placeholder="Опишите что вы хотите?"
+                        name="question"
+                        required
+                      ></textarea>
+                      <button type="submit" class="btn btn__form">
+                        Отправить
+                      </button>
+                    </form>
+                  </span>
+                  <div class="faq__answer-img">
+                    <img src="assets/images/advantages/04.png" alt="" />
+                  </div>
+                  <div>
+                    <span style="font-size: 14pt">
+                      «Настоящая» игра в Path of Exile начинается примерно с
+                      68-го уровня, когда у Вас уже есть необходимое
+                      оборудование и усилены основные таланты, необходимые для
+                      сборки. Что делать дальше? После того, как Вы выполните
+                      все сюжетные квесты, вам будут доступны карты, специальные
+                      локации на которых содержат более сильных монстров и
+                      экипировку более высокого уровня по сравнению с «сюжетной»
+                      частью игры. Всего карт 16 уровней, чем выше уровень - тем
+                      сильнее монстры и тем больше шансов получить хорошую
+                      добычу. Если Вы хотите фармить самых сложных боссов в
+                      игре, то нужно выжать максимум из своего персонажа,
+                      высокий уровень персонажа даст дополнительные очки
+                      талантов, которые значительно увеличат ваш урон и
+                      выживаемость. С каждой смертью вы теряете 10% опыта
+                      персонажа, на высоких уровнях 10% прокачка мощности
+                      занимает около 20-30 минут, что делает потерю опыта
+                      особенно болезненной :(
+                    </span>
+                    <br />
+                    <span style="font-size: 14pt">
+                      Самый эффективный способ улучшить своего персонажа - это
+                      заказать прокачку аккаунта Path of Exile на нашем сервисе
+                      Вам не нужно будет тратить лишнее время и нервы на
+                      прокачку, потому что наши специалисты могут это сделать
+                      вместо Вас, мы прокачали более сотни персонажей в Path of
+                      Exile и готовы помочь Вашему персонажу достичь новых
+                      высот. При прокачке персонажа уровня 70+ упор делается на
+                      максимально быструю и безопасную чистку карт 9-15 уровней.
+                      Мы не используем ботов, читы, баги и другие запрещенные
+                      методы для прокачки персонажей. Все заказы выполняются
+                      профессионалами вручную.
+                    </span>
+                  </div>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__btn" type="button">
+                <span>Прокачка в Diablo</span>
+                <span class="btn">Заказать</span>
+              </button>
+              <div class="faq__answer">
+                <span>
+                  <span style="font-size: 14pt">
+                    <div class="section__header">
+                      <h2 class="section__title">Заполните форму</h2>
+                      <h3 class="section__suptitle">
+                        Напишите нам! Менеджер свяжется с Вами в ближайшее время
+                        чтобы обсудить условия
+                      </h3>
+                    </div>
+                    <form method="POST">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Ваше Имя"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Ваш e-mail"
+                        required
+                      />
+
+                      <input placeholder="Ваш discord" name="discord" />
+
+                      <div>
+                        <select
+                          class="input"
+                          data-placeholder="Выбранная игра"
+                          name="product"
+                          aria-required="$_POST"
+                        >
+                          <option value="Прокачка в Diablo">
+                            Прокачка в Diablo
+                          </option>
+                        </select>
+                      </div>
+
+                      <textarea
+                        class="block-text"
+                        placeholder="Опишите что вы хотите?"
+                        name="question"
+                        required
+                      ></textarea>
+                      <button type="submit" class="btn btn__form">
+                        Отправить
+                      </button>
+                    </form>
+                  </span>
+                  <div class="faq__answer-img">
+                    <img src="assets/images/advantages/05.png" alt="" />
+                  </div>
+                  <div>
+                    <span style="font-size: 14pt">
+                      Прокачка в Diablo 3 включает: Продолжительность прокачки в
+                      Diablo 3 длится до 1 часа.
+                    </span>
+                    <br />
+                    <span style="font-size: 14pt">
+                      Прокачка персонажа в Diablo 3 - довольно утомительная
+                      процедура, поэтому мы предлагаем вам невероятно быструю
+                      прокачку. Вам просто нужно выбрать режим и вариант
+                      прокачки для Вашего заказа: 1-70 Softcore; 1-70 Сезонный
+                      Softcore; 1-70 Hardcore; 1-70 Сезонный Hardcore.
+                    </span>
+                  </div>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__btn" type="button">
+                <span>LineAge 2 Буст</span>
+                <span class="btn">Заказать</span>
+              </button>
+              <div class="faq__answer">
+                <span>
+                  <span style="font-size: 14pt">
+                    <div class="section__header">
+                      <h2 class="section__title">Заполните форму</h2>
+                      <h3 class="section__suptitle">
+                        Напишите нам! Менеджер свяжется с Вами в ближайшее время
+                        чтобы обсудить условия
+                      </h3>
+                    </div>
+                    <form method="POST">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Ваше Имя"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Ваш e-mail"
+                        required
+                      />
+
+                      <input placeholder="Ваш discord" name="discord" />
+
+                      <div>
+                        <select
+                          class="input"
+                          data-placeholder="Выбранная игра"
+                          name="product"
+                          aria-required="$_POST"
+                        >
+                          <option value="LineAge 2 Буст">LineAge 2 Буст</option>
+                        </select>
+                      </div>
+
+                      <textarea
+                        class="block-text"
+                        placeholder="Опишите что вы хотите?"
+                        name="question"
+                        required
+                      ></textarea>
+                      <button type="submit" class="btn btn__form">
+                        Отправить
+                      </button>
+                    </form>
+                  </span>
+                  <div class="faq__answer-img">
+                    <img src="assets/images/advantages/06.png" alt="" />
+                  </div>
+                  <div>
+                    <span style="font-size: 14pt">
+                      L2 Essence - еще одна вариация известной MMORPG, на этот
+                      раз ориентированная на PvP и более дружелюбная для
+                      новичков. К неоспоримым достоинствам этой игры можно
+                      отнести автофарм под полным баффом и, как следствие,
+                      сокращение времени и энергии на прокачку героя. Казалось
+                      бы, о чем еще мечтать в ситуации, когда персонаж
+                      самодостаточен в получении опыта, есть ускоренная
+                      прокачка, а подавляющая часть игрового процесса посвящена
+                      увлекательным и динамичным сражениям игроков друг с
+                      другом? Конечно, как и во всех частях L2, игровая валюта -
+                      адена играет очень важную роль. Ведь всё еще нужно
+                      покупать различную экипировку, уники и колоссальное
+                      количество Адены нужно на улучшения.
+                    </span>
+                    <br />
+
+                    <span style="font-size: 14pt">
+                      Хотя по сути действительно намного меньше сложностей в
+                      развитии персонажа по сравнению с классической версией
+                      Lineage 2, но это не значит, что их совсем нет. И если вы
+                      пришли к нему только ради PvP, то покупка адены Lineage 2
+                      Essence - это эффективный способ обеспечить себе не только
+                      мощный старт, но и последующий достойный игровой процесс
+                      без рутины. А boostonline поможет вам приобрести валюту l2
+                      Essence в необходимом количестве по реальному рыночному
+                      курсу.
+                    </span>
+                    <br />
+                  </div>
+                  <br />
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- faq end -->
+      </div>
+      <!-- /.advantages -->
+
+   
+
+      <div class="clients" id="clients">
+        <div class="container">
+          <div class="section__header">
+            <h2>отзывы наших клиентов</h2>
+          </div>
+          <div class="reviews">
+            <div data-slider>
+              <div class="reviews__slide">
+                <div class="reviews__item">
+                  <img
+                    class="reviews__photo"
+                    src="assets/images/clients/clients_1.png"
+                    alt=""
+                  />
+                  <div class="reviews__textblock">
+                    <div class="reviews__author">
+                   
+                      <p>Екатерина</p>
+                    </div>
+                    <div class="reviews__text">
+                    Здравствуйте . Первое , что я хочу , так это порекомендовать этот товар ,меня всё устроило . Правда , я очень долго сомневалась , обманка это или нет ( но самое главное , что всё получилось ). Перед тем , как заказать я посоветовалась со знакомыми , которых касалась эта ситуация . ВСЕ МНЕ СКАЗАЛИ : - Светик , не пожалеешь) Ну и я последовала их совету ! Всё вышло так , как должно было быть . Всё отлично ! Всё это прошло без обмана ! Ребята , попробуйте , советую
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reviews__item">
+                  <img
+                    class="reviews__photo"
+                    src="assets/images/clients/clients_2.png"
+                    alt=""
+                  />
+                  <div class="reviews__textblock">
+                    <div class="reviews__author">
+                    
+                      <p>Константин</p>
+                    </div>
+                    <div class="reviews__text">
+                    Заказал прокачку у этих ребят. Сделали все быстро и качественно, как и обещали. Цена/качество соответствует норме. Буду рекомендовать своим знакомым. Вам ребята успехов в ваше деятельности. Ставлю 5 балов
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reviews__item">
+                  <img
+                    class="reviews__photo"
+                    src="assets/images/clients/clients_3.png"
+                    alt=""
+                  />
+                  <div class="reviews__textblock">
+                    <div class="reviews__author">
+                     
+                      <p>Вика</p>
+                    </div>
+                    <div class="reviews__text">
+                    Долго искала подобный проект ! Меня обрадовала, в первую очередь приемлемая цена, это клево ! Да и наткнуться на обман вполне легко, а тут создатели об этом позаботились, все по честному, без обмана. Обязательно посоветую своим знакомым ! =))
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reviews__item">
+                  <img
+                    class="reviews__photo"
+                    src="assets/images/clients/clients_4.png"
+                    alt=""
+                  />
+                  <div class="reviews__textblock">
+                    <div class="reviews__author">
+                   
+                      <p>Саша</p>
+                    </div>
+                    <div class="reviews__text">
+                    великолепный буст, купил, все чесно и качественно, успехов вам!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sectionFaq">
+          <!-- faq start -->
+          <section class="faq" data-target="faq">
+            <h2 class="faq__ttl">Часто задаваемые вопросы</h2>
+
+            <div class="faq__list">
+              <div class="faq__item" >
+                <button class="faq__btn" type="button">
+                  Что такое прокачка аккаунта или буст?
+                </button>
+                <div class="faq__answer">
+                  <span
+                    ><div>
+                      <span style="font-size: 14pt"
+                        >В игровых комьюнити этот термин используется по-разному
+                        и, как правило, связан с апгрейдом или повышением уровня
+                        персонажа и аккаунта, выполняемая&nbsp;опытными и
+                        профессиональными игроками.</span
+                      ><br />
+                      <span style="font-size: 14pt">
+                        Например: повышение различных уровней, рейтингов и
+                        репутации, которые необходимы для покупки снаряжения,
+                        навыков и выполнения заданий. Иногда такие достижения
+                        сложно заработать самостоятельно, поэтому можно оплатить
+                        услуги по прокачке, которые помогут Вам добиться
+                        необходимых результатов с минимальными временными
+                        затратами.</span
+                      ><br />
+                    </div>
+                    <br
+                  /></span>
+                </div>
+              </div>
+              <div class="faq__item">
+                <button class="faq__btn" type="button">
+                  Безопасно ли заказывать буст? Может ли кто-нибудь украсть
+                  учетную запись или личную информацию?
+                </button>
+                <div class="faq__answer">
+                  <span
+                    ><span style="font-size: 14pt"
+                      >Вы можете не беспокоиться за безопасность Вашего аккаунта
+                      и личной информации, заказав услугу в нашем сервисе. При
+                      выполнении заказов по прокачке, мы соблюдаем все меры
+                      предосторожности. Также мы всегда заботимся о том, чтобы
+                      наши клиенты оставались довольны, мы заинтересованы в том,
+                      чтобы клиенты снова обращались к нам за услугами,
+                      безопасность аккаунта клиента один из наших главных
+                      приоритетов.&nbsp;Но Вам также не стоит пренебрегать
+                      безопасностью своей учетной записи. Не стоит хранить
+                      данные от аккаунта в свободном доступе или делиться ими с
+                      друзьями, также Вы можете привязать номер телефона к своей
+                      учетной записи, тогда никто не сможет украсть вашу учетную
+                      запись. Многие игры теперь имеют двойную
+                      аутентификацию.<br /> </span
+                    ><span style="font-size: 14pt"><br /> </span
+                  ></span>
+                </div>
+              </div>
+              <div class="faq__item" >
+                <button class="faq__btn" type="button">
+                  Если я оплатил заказ, но потом обстоятельства изменились или я
+                  передумал и хочу отменить заказ, могу ли я вернуть деньги?
+                </button>
+                <div class="faq__answer">
+                  <span
+                    ><span style="font-size: 14pt"
+                      >Да, конечно, у нашего сервиса есть политика возврата. Вы
+                      можете вернуть деньги. Иногда бывает, что клиент поздно
+                      сказал, что хочет вернуть деньги или когда мы уже начали
+                      прокачку, то деньги возвращаются пропорционально
+                      выполненной работе.</span
+                    ></span
+                  >
+                </div>
+              </div>
+            
+              <div class="faq__item" >
+                <button class="faq__btn btn" type="button">
+                  У Вас есть вопрос?
+                </button>
+                <div class="faq__answer form__costing">
+                  <span
+                    ><span style="font-size: 14pt">
+                    <div class="section__header">
+            <h2 class="section__title">сотрудничайте с лучшими</h2>
+            <h3 class="section__suptitle">
+              Есть вопросы? Напишите нам! Менеджер свяжется с Вами в ближайшее
+              время.
+            </h3>
+          </div>
+          <form method="POST">
+            <input
+              type="text"
+              name="name"
+              placeholder="Ваше Имя"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Ваш e-mail"
+              required
+            />
+
+            <input placeholder="Ваш discord" name="discord" />
+
+            <div>
+              <select
+                class=" input input-footer"
+                data-placeholder="Ваш вопрос"
+                name="product"
+                aria-required="$_POST"
+              >
+                <option value="Ваш вопрос">Ваш вопрос</option>
+              </select>
+            </div>
+
+            <textarea
+              class="block-text"
+              placeholder="Ваш вопрос"
+              name="question"
+              required
+            ></textarea>
+            <button type="submit" class="btn btn__form">
+              Отправить
+            </button>
+          </form></span
+                    ></span
+                  >
+                </div>
+              </div>
+            
+            </div>
+          </section>
+
+          <!-- faq end -->
+        </div>
+
+      <section class="about" id="port"> 
+        <div class="container">
+          <div class="section__header">
+            <h2>о нас</h2>
+          </div>
+          <div class="about_box">
+            <div class="about__box_info">
+              <div class="about__box_text">
+                <p>
+                  Мы предоставляем наши услуги для разных игр. Вы можете
+                  посмотреть их в главом меню. В каждой игре мы предлагаем
+                  несколько различных видов повышения: звание, значки, убийство,
+                  победа, уровень и многое другое. Вы также можете создать
+                  индивидуальный заказ на случай, если вы хотите смешивать и
+                  сочетать услуги.
+                </p>
+                <p>
+                  Благодаря выполненным тысячам заказов, 31 активному ускорителю
+                  и среднему времени выполнения заказа 9 часов мы гарантируем,
+                  что вы останетесь довольны своими результатами!
+                </p>
+
+              </div>
+            </div>
+
+            <div class="about__box_images">
+              <img src="assets/images/our.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer" id="footer">
+        <div class="container">
+          <div class="section__header_white">
+            <h2 class="section__title">сотрудничайте с лучшими</h2>
+            <h3 class="section__suptitle">
+              Есть вопросы? Напишите нам! Менеджер свяжется с Вами в ближайшее
+              время.
+            </h3>
+          </div>
+          <form method="POST">
+            <input
+              type="text"
+              name="name"
+              placeholder="Ваше Имя"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Ваш e-mail"
+              required
+            />
+
+            <input placeholder="Ваш discord" name="discord" />
+
+            <div>
+              <select
+                class=" input input-footer"
+                data-placeholder="Ваш вопрос"
+                name="product"
+                aria-required="$_POST"
+              >
+                <option value="Ваш вопрос">Ваш вопрос</option>
+              </select>
+            </div>
+
+            <textarea
+              class="block-text"
+              placeholder="Ваш вопрос"
+              name="question"
+              required
+            ></textarea>
+            <button type="submit" class="btn btn__form">
+              Отправить
+            </button>
+          </form>
+          <div class="footer__content">
+            <div class="logo">
+              <img src="assets/images/logo.png" alt="" />
+            </div>
+            <a class="left" href="mailto:studio@boostonline.pro"
+              >studio@boostonline.pro</a
+            >
+            <div class="all_rights">2020 © Все права защищены</div>
+            <div class="footer__contacts">
+              <a class="left_two" href="mailto:studio@boostonline.pro"
+                >studio@boostonline.pro</a
+              >
+              <a href="tel:+77777777777">+7-777-777-77-77</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./footer -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/function.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+// main: ../style.less
+.about_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  @media @mobail {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.about__box_text {
+  max-width: 513px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  @media @tablet {
+    font-size: 15px;
+  }
+
+  @media @mobail {
+      max-width: 595px;
+    }
+}
+
+.about__box_images {
+  overflow: hidden;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    height: 100%;
+
+    @media @mobail {
+      height: auto;
+    }
+  }
+
+}

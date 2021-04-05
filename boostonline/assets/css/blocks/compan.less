@@ -1,0 +1,47 @@
+// main: ../style.less
+
+.compan {
+  display: flex;
+  text-align: center;
+}
+
+.compan__name {
+  display: flex;
+  .logo {
+   img {
+    width: 40px;
+   }
+  }
+
+  @media @mobail-sm {
+    img {
+      width: 70px;
+      height: 35px;
+    }
+  }
+}
+
+.compan__phone {
+  align-items: center;
+  display: flex;
+  padding-left: 65px;
+
+  a {
+    color: fade(white, 70%);
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    padding-left: 6px;
+  }
+
+  @media @tablet {
+    padding-left: 50px;
+  }
+
+  @media @mobail-sm {
+    img {
+      display: none;
+    }
+    padding-left: 10px;
+  }
+}

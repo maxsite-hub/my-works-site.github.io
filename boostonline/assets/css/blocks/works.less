@@ -1,0 +1,51 @@
+// main: ../style.less
+
+.works {
+  padding: 40px;
+}
+
+.works__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.works__nav_link {
+
+    color: fade(@black, 70%);
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-right: 20px;
+
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: @green;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        transition: width 0.2s linear;
+    }
+
+    &:hover {
+
+        &:after {
+           width: 100%;
+        }
+    }
+
+    &:last-child {
+            margin-right: 0px;
+        }
+  @media @mobail-sm {
+    margin-right: 0;
+  }
+}

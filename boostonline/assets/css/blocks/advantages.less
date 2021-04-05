@@ -1,0 +1,101 @@
+// main: ../style.less
+
+.advantages {
+  padding-top: 40px;
+  @media @mobail-sm {
+    padding-top: 30px;
+  }
+}
+
+.advantages_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 86px;
+
+  @media @mobail-sm {
+    flex-wrap: wrap;
+  }
+
+  @media @mobail-sm {
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__box_info {
+  max-width: 490px;
+  color: #000;
+
+  margin-left: 20px;
+  @media @mobail {
+    margin-left: 20px;
+  }
+
+  @media @mobail-sm {
+    order: 1;
+    margin-left: 0;
+  }
+}
+
+.advantages__box_title span {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 59px;
+  margin-right: 15px;
+
+  color: @ligthgray;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+
+  @media @tablet {
+    font-size: 47px;
+  }
+
+  @media @mobail {
+    font-size: 34px;
+  }
+
+  @media @mobail-sm {
+    margin-right: 10px;
+    font-size: 22px;
+  }
+}
+
+.advantages__box_title {
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 28px;
+  color: @gray;
+  padding-bottom: 15px;
+
+  @media @tablet {
+    font-size: 22px;
+    justify-content: left;
+    align-items: center;
+  }
+  @media @mobail-sm {
+    font-size: 20px;
+    line-height: 22px;
+    padding-bottom: 3px;
+  }
+}
+
+.advantages__box_text {
+  font-size: 20px;
+  line-height: 28px;
+
+  @media @tablet {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.advantages__box_images img {
+  max-width: 100%;
+
+  border: 1px solid rgba(0, 0, 0, 0.5);
+
+  @media @tablet {
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.2);
+  }
+}

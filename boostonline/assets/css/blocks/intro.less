@@ -1,0 +1,87 @@
+// main: ../style.less
+
+.intro {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+}
+
+.intro__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+  margin-bottom: 140px;
+
+  @media @tablet {
+    margin-bottom: 50px;
+    padding-top: 100px;
+  }
+
+  @media @mobail-sm {
+    margin-bottom: 15px;
+    padding-top: 60px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.intro__content {
+  margin-right: 10px;
+}
+
+.intro__suptitle {
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 94px;
+  margin-bottom: 50px;
+
+  
+  @media @tablet {
+    font-size: 49px;
+    line-height: 60px;
+  }
+
+  @media @mobail-sm {
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 43px;
+  }
+}
+
+.intro__suptitle span {
+  color: @green;
+}
+
+.intro__description {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.description__text {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  @media @tablet {
+    font-size: 15px;
+  }
+
+  @media @mobail-sm {
+    font-size: 10xp;
+  }
+}
+
+.description__text span {
+  font-size: 18px;
+
+  @media @tablet {
+    font-size: 15px;
+  }
+
+  @media @mobail-sm {
+    font-size: 10xp;
+  }
+}

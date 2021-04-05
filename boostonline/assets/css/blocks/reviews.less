@@ -1,0 +1,156 @@
+// main: ../style.less
+
+.reviews {
+  position: relative;
+}
+
+.reviews__slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.reviews__item {
+  padding-left: 268px;
+  margin: 0 15px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media @notebook {
+    padding-left: 227px;
+    width: 200px;
+  }
+
+  @media @tablet {
+    padding-left: 190px;
+    margin: 0 -18px;
+  }
+  @media @mobail-sm {
+    padding-left: 155px;
+  }
+}
+
+.reviews__photo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  @media @notebook {
+    width: 200px;
+    left: 28px;
+  }
+
+  @media @tablet {
+    height: 310px;
+    width: 165px;
+  }
+
+  @media @mobail-sm {
+    height: 210px;
+    width: 130px;
+  }
+}
+
+.reviews__textblock {
+  width: 268px;
+  height: 384px;
+  color: #000;
+  padding: 35px 20px 0 40px;
+  background: rgba(120, 207, 160, 0.3);
+
+  @media @notebook {
+    height: 285px;
+    width: 215px;
+    padding: 10px 15px 0 20px;
+  }
+
+  @media @tablet {
+    width: 188px;
+    padding: 5px 20px 0 10px;
+  }
+
+  @media @mobail-sm {
+    height: 210px;
+  }
+}
+
+.reviews__name {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.reviews__text {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+
+  @media @tablet {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media @mobail-sm {
+    font-size: 11px;
+    line-height: 12px;
+  }
+}
+
+.reviews__author {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+
+  @media @mobail-sm {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.slick-arrow {
+  display: block;
+  font-size: 0;
+  color: transparent;
+
+  border: 0;
+  background: none;
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.slick-arrow:focus {
+  outline: 0;
+}
+
+.slick-arrow:after {
+  position: fixed;
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.slick-prev {
+  left: -10px;
+  transform: rotate(-45deg);
+}
+
+.reviews__btn--next,
+.slick-next {
+  right: -10px;
+  transform: rotate(135deg);
+}

@@ -1,0 +1,92 @@
+// compress: true
+@import "vars";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.page {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.input {
+  width: 360px;
+  -ms-appearance: none;
+  appearance: none !important;
+  display: block;
+  font-size: 16px;
+  border: 0;
+  border-bottom: 1px solid #222;
+  
+  padding: 12px 14px;
+  background: inherit;
+  margin-bottom: 22px;
+  color: #000;
+  outline: none;
+  box-sizing: border-box;
+  &.input-footer {
+    display: none;
+    
+  }
+}
+
+.select-placeholder {
+  position: absolute;
+  font-size: 1.8rem;
+  left: 18px;
+  top: 28px;
+  color: #999;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/*BLOCK_Contauner*/
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/compan";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/slider";
+@import "blocks/btn";
+@import "blocks/advantages";
+@import "blocks/works";
+@import "blocks/work";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/footer";
+@import "blocks/form";
+@import "blocks/section";
+@import "blocks/reviews";
+@import "blocks/faq";
+@import "blocks/wrap";
+@import "blocks/typeFarm";
+
+/*helpers*/
+@import "helpers";

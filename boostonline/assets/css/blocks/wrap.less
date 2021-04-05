@@ -1,0 +1,454 @@
+
+// main: ../style.less
+
+.wrapMw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    -webkit-box-shadow: 0 5px 20px #fe9900;
+    box-shadow: 0 5px 20px #fe9900;
+    border-radius: 18px;
+    display: none;
+    z-index: 100;
+    width: 100%;
+}
+
+
+
+.mw {
+    position: relative;
+    padding: 37px 57px 41px 47px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+.mw p {
+    color: #000;
+    font-weight: 600;
+}
+
+.wrapData {
+    margin: 0 0 19px;
+    width: 100%;
+}
+
+.label {
+    color: #ffffff;
+    display: block;
+    line-height: 1;
+    margin: 0 0 9px;
+    font-size: 1.6rem;
+    font-family: 'ProxNov400', sans-serif;
+}
+.label_error {
+    color: red;
+}
+.field {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ffffff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.field.error {
+    border: 2px solid red;
+}
+.fieldComment {
+    height: 110px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.mw__title {
+    color: #152030;
+    font-family: 'ProxNovBlack', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 .65em;
+}
+.mw__content {
+    color: #000;
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+.wrapMw_login, .wrapMw_signup {
+    max-width: 370px;
+}
+.wrapMw_editStatus {
+    max-width: 310px;
+}
+.wrapMw_сhangeAvatar {
+    max-width: 400px;
+}
+.wrapMw_successPass {
+    max-width: 500px;
+}
+.wrapMw_PayCashback {
+    max-width: 500px;
+}
+.wrapMw_faq, .wrapMw_review, .wrapMw_vacancy, .wrapMw_editInfo, .wrapMw_editPass, .wrapMw_funds  {
+    max-width: 654px;
+}
+.wrapMw_login .label,
+.wrapMw_signup .label,
+.wrapMw_faq .label,
+.wrapMw_vacancy .label,
+.wrapMw_review .label,
+.wrapMw_editStatus .label,
+.wrapMw_editInfo .label,
+.wrapMw_editPass .label,
+.wrapData_funds .label,
+.wrapMw_сhangeAvatar .label {
+    color: #152030;
+}
+.wrapData_funds .label{
+    margin: 0 11px 0 0;
+}
+.wrapMw_сhangeAvatar .field {
+    color: #000;
+}
+.wrapMw_login .field,
+.wrapMw_signup .field,
+.wrapMw_faq .field,
+.wrapMw_vacancy .field,
+.wrapMw_review .field,
+.wrapMw_editStatus .field,
+.wrapMw_editInfo .field,
+.wrapMw_editPass .field,
+.wrapData_funds .field{
+    border: 2px solid #bbc0c8;
+}
+.wrapData_funds{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0 0 13px;
+}
+.wrapData_funds .field{
+    max-width: 266px;
+    width: 266px;
+    margin: 0 0 10px;
+}
+.wrapMw_editInfo .fieldDesc{
+    color: #8c9197;
+    font-family: 'ProxNov400', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin: 6px 0 0;
+}
+.wrapData_funds .fieldDesc{
+    color: #162938;
+    font-family: 'ProxNov400', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    margin: 0 0 0 10px;
+}
+.wrapMw_funds .payMethod__ttl{
+    color: #152030;
+    font-family: 'ProxNov400', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+.wrapData_editStatus{
+    display: flex;
+    align-items: center;
+    margin: 0 0 4px;
+}
+.wrapData_editStatus .label{
+    width: 50%;
+    padding: 0 5px 0 0;
+    box-sizing: border-box;
+    margin: 0 0 10px;
+}
+.wrapData_editStatus .field{
+    width: 50%;
+    margin: 0 0 10px;
+}
+.wrapAuth {
+    border-top: 1px solid #d7d9db;
+    padding: 13px 0 0;
+}
+.wrapMw_editStatus .mw {
+    padding: 37px 38px 41px 33px;
+}
+.wrapMw_editInfo .mw {
+    padding: 37px 49px 41px 39px;
+}
+.wrapMw_editPass .mw {
+    padding: 37px 46px 14px 39px;
+}
+.wrapMw_funds .mw {
+    padding: 37px 30px 14px 30px;
+}
+.wrapChekbox_editInfo .cartChek_2___txt {
+    color: #152030;
+    font-family: 'ProxNov400', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+.wrapData .review-error{
+    padding: 0;
+}
+.wrapChekbox_editInfo {
+    margin: 0 0 24px;
+}
+.auth__ttl {
+    color: #152030;
+    display: block;
+    line-height: 1;
+    margin: 0 0 9px;
+    font-size: 1.5rem;
+    font-family: 'ProxNov400', sans-serif;
+}
+.form_editInfo, .form_editPass {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.wrapData_editInfo, .wrapData_editPass {
+    max-width: calc(50% - 17px);
+    width: calc(50% - 17px);
+    flex: none;
+}
+
+.wrapData_editPass:first-of-type {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 calc(50% + 17px) 0 0;
+    box-sizing: border-box;
+}
+.btnSend {
+    color: #000;
+    font-family: 'ProxNov700', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    -webkit-box-shadow: 0 2px 7px rgba(254, 153, 0, 0.75);
+    box-shadow: 0 2px 7px rgba(254, 153, 0, 0.75);
+    padding: 17px 26px 15px 25px;
+    border-radius: 25px;
+    background: #fe9900;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.btnSend:hover, .btnSend:focus {
+    background: #000;
+    color: #fff;
+}
+
+.wrapBtnMwClose {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    width: 24px;
+    height: 24px;
+}
+
+.btnMwClose {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    padding: 0;
+    display: block;
+}
+
+.btnMwClose .l1,
+.btnMwClose .l2 {
+    height: 2px;
+    display: block;
+    background: #b4b7bc;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 0;
+    top: 11px;
+    left: -2px;
+    width: 29px;
+}
+
+.btnMwClose .l2 {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.auth__socNet a, .auth__socNet a:visited {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+.auth__socNet {
+    overflow: hidden;
+}
+
+.auth__socNet .vk {
+    background: url(../image/design/ic_4.png) no-repeat;
+}
+
+.auth__socNet .fb {
+    background: url(../image/design/ic_5.png) no-repeat;
+}
+
+.auth__socNet .tw {
+    background: url(../image/design/ic_29.png) no-repeat;
+}
+
+.auth__socNet .ins {
+    background: url(../image/design/ic_30.png) no-repeat;
+}
+
+.auth__socNet .yt {
+    background: url(../image/design/ic_28.png) no-repeat;
+}
+
+.form {
+    width: 100%;
+}
+
+.form_login .wrapData:nth-of-type(2) {
+    margin: 0 0 12px;
+}
+
+.wrapData_forgotPassword {
+    position: relative;
+}
+
+.forgotPassword, .forgotPassword:visited {
+    color: #fe9900;
+    font-family: 'ProxNov700', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.forgotPassword:hover, .forgotPassword:focus {
+    text-decoration: none;
+}
+
+.star {
+    color: #ff172d;
+}
+
+.form_faq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.wrapData_faq_1, .wrapData_faq_2 {
+    max-width: calc(50% - 18px);
+    width: calc(50% - 18px);
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.wrapData_faq_3, .wrapData_faq_4 {
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.wrapData_faq_3 {
+    margin: 0 0 22px;
+}
+
+.wrapData_review_5 .cartChek_2___txt {
+    color: #152030;
+    font-family: 'ProxNov400', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.wrapData_review_5 .cartChek_2__lbl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.form_review {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.explanation_review {
+    color: #152030;
+    font-family: 'ProxNov400', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.wrapData_review_5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.wrapData_review_5 .wrapChekbox {
+    margin: 0 5px;
+}
+
+.wrapMw_review .mw, wrapMw_vacancy .mw {
+    padding: 37px 49px 34px 39px;
+}
+
+.wrapData_review_1, .wrapData_review_2 {
+    width: calc(50% - 17px);
+}

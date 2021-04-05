@@ -1,0 +1,97 @@
+// main: ../style.less
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px 40px;
+
+  border-radius: 15px;
+
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #fe9900;
+  transition: background .1s linear, color .1s linear;
+  box-shadow: 0 2px 7px rgb(254, 153, 0);
+
+  @media @tablet {
+    font-size: 18px;
+    padding: 14px 24px;
+    font-weight: normal;
+  }
+
+  @media @mobail-sm {
+    padding: 9px 19px;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 20px;
+  }
+}
+
+.btn:hover {
+  background: #000;
+color: #fff;
+  box-shadow: 0 2px 7px rgb(254 153 0 / 75%);
+
+}
+
+.btn__look {
+  @media @mobail-sm {
+    display: none;
+  }
+}
+
+.btn__transparent {
+  display: none;
+
+  @media @mobail-sm {
+    display: inline-block;
+  }
+}
+
+.btn__form {
+  text-transform: none;
+  padding: 20px 30px;
+  margin: 0 auto;
+  border: 0;
+  margin-bottom: 47px;
+
+  @media @mobail {
+    width: 233px;
+    font-size: 15px;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.48);
+    order: 1;
+  }
+}
+
+.btn__cost {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 15px 25px;
+
+  position: absolute;
+  top: 60%;
+  right: 30%;
+  z-index: 2;
+
+  @media @notebook {
+    right: 20%;
+  }
+
+  @media @tablet {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 19px 24px;
+    right: 20%;
+  }
+
+  @media @mobail {
+    position: static;
+  }
+
+}
