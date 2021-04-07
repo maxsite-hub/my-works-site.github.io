@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>«Yamaguchi Oxygen Mini»</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: " \u0440\u0443\u0431.",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-block-title">
+          <h1 class="s1-title">
+            <span class="s1-title-top">Очиститель воздуха</span>
+            <span class="s1-title-bottom">«Yamaguchi Oxygen Mini»</span>
+          </h1>
+          <div class="s1-subtitle">
+            Дышите свободно, где бы вы ни находились!
+          </div>
+        </div>
+        <div class="s1-block-img">
+          <img src="img/s1-bg.png" alt="" />
+          <div class="discount-top">СКИДКА <span>50%</span></div>
+          <div class="discount-bottom"><span>ХИТ</span> продаж!</div>
+        </div>
+
+        <ul class="list">
+          <li>Очищает воздух от вирусов, бактерий и аллергенов</li>
+          <li>Обслуживает помещение до 12 кв.м</li>
+          <li>Компактный, помещается в кармане</li>
+        </ul>
+
+        <div class="form-wrapper">
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">секунд</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-price">
+            <div class="price">
+              <div class="price-block">
+                <div class="price-text">Обычная цена:</div>
+                <div class="price-old">
+                  <div class="price-old-val oldproductsum"></div>
+                </div>
+              </div>
+
+              <div class="price-discount">скидка <span>50%</span></div>
+
+              <div class="price-block">
+                <div class="price-text">Новая цена:</div>
+                <div class="price-new">
+                  <span class="price-new-val productsum"></span>
+                </div>
+              </div>
+            </div>
+            <p class="timer-date">
+              <span>Акция проходит: </span>
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </p>
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <h2>Что такое Yamaguchi?</h2>
+        <div class="s2-item">
+          <div class="s2-item-list">
+            <img src="gif/1.gif" alt="" />
+            <div class="s2-text">
+              Yamaguchi Oxygen Mini — это первый очиститель воздуха, который
+              можно носить с собой и использовать там, где удобно именно вам.
+            </div>
+          </div>
+          <div class="s2-item-list">
+            <img src="img/s2.jpg" alt="" />
+            <div class="s2-text">
+              Устройство, разработанное в Японии, без труда помещается в кармане
+              и весит всего 200 г, при этом его возможностей достаточно для
+              обслуживания помещения площадью до 12 кв. м.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s3">
+        <h2>Зачем нужен очиститель воздуха?</h2>
+        <div class="s3-item">
+          <div class="s3-item-list">
+            <div class="s3-text">
+              Городской воздух содержит более 1000000 патогенныхсоединений и
+              вирусов, которые провоцируют заболевания дыхательных путей,
+              снижают иммунитет, негативно сказываются на общем тонусе
+              организма.
+            </div>
+            <img src="gif/2.gif" alt="" />
+
+            <div class="s3-text">
+              А весной и летом к ним добавляются пыльца растений, грибковые
+              споры и прочие аллергены органического происхождения, которые
+              также ослабляют организм.
+            </div>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-1.jpg" alt="" />
+            <div class="s3-text">
+              Не говоря уже о неприятных запахах и сухом воздухе, которые
+              преследуют человека постоянно, где бы он ни находился.
+            </div>
+          </div>
+
+          <div class="s3-item-bottom">
+            <div class="s3-text">
+              Вместе с Yamaguchi Oxygen Mini вы сможете дышать свежим воздухом
+              горных Альп в любом месте!
+            </div>
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <h2>Как работает Yamaguchi?</h2>
+        <div class="s4-item">
+          <div class="s4-item-list">
+            <div class="s4-text">
+              Oxygen Mini снабжен ультрафиолетовым санитайзером, который
+              уменьшает вероятность заражения респираторными инфекциями, а также
+              очищает атмосферу от аллергенов и неприятных запахов органического
+              происхождения.
+            </div>
+            <img src="gif/3.gif" alt="" />
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-text">
+              Oxygen Mini оснащен фирменной системой двухступенчатой фильтрации
+              Air Protect. Волоконный HEPA-фильтр стандарта H-11 задерживает
+              споры грибков и пыльцу растений. Картридж с активированным углем
+              служит для связывания газообразных загрязнений, таких как метан,
+              угарный газ и формальдегид.
+            </div>
+            <img src="img/s4-1.jpg" alt="" />
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-text">
+              А встроенный увлажнитель воздуха поможет справитьсяс сухостью кожи
+              и слизистых оболочек, облегчит дыхание, улучшит состояние глаз,
+              волос, кожи и ногтей.
+            </div>
+            <img class="img" src="img/s4-2.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="s5">
+        <h2>Подробнее на видео!</h2>
+        <iframe
+          width="480"
+          height="270"
+          src="https://www.youtube.com/embed/HlkAtK8xb8U"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <div class="reolader form-item">
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s6">
+        <h2>Кому показано использование очистителя?</h2>
+        <div class="container">
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <div class="s6-text">Жителям мегаполисов</div>
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-text">Жителям районов с плохой экологией</div>
+              <img src="img/s6-2.png" alt="" />
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-text">Пожилым людям</div>
+              <img src="img/s6-3.png" alt="" />
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-text">Детям</div>
+              <img src="img/s6-4.png" alt="" />
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-text">Астматикамв</div>
+              <img src="img/s6-5.png" alt="" />
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-text">Аллергикам</div>
+              <img src="img/s6-6.png" alt="" />
+            </div>
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>Особенности Yamaguchi</h2>
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <img src="img/s7-1.png" alt="" />
+              <p class="s7-title">Низкий уровень шума</p>
+              <p class="s7-text">
+                Благодаря тщательной аэродинамической проработке конструкции
+                уровень шума не превышает 32 дБ — очиститель не потревожит сон и
+                не будет отвлекать от работы.
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <img src="img/s7-2.png" alt="" />
+              <p class="s7-title">Долговечность</p>
+              <p class="s7-text">
+                Ресурс светодиодной лампы, работающей в спектре UV-C («жесткий»
+                ультрафиолет) составляет 50 000 часов — более 5 лет непрерывной
+                работы.
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <img src="img/s7-3.png" alt="" />
+              <p class="s7-title">Автономная система питания</p>
+              <p class="s7-text">
+                Современный литий-ионный аккумулятор мощностью 2000 мАч
+                обеспечивает беспрерывную работу Oxygen Mini на протяжении 6
+                часов.
+              </p>
+            </div>
+            <img class="img" src="img/s7-4.png" alt="" />
+            <div class="s7-item-bottom">
+              <div class="s7-text">
+                Кроме того, аккумулятор очистителя можно использовать как
+                пауэрбанк для подзарядки мобильных устройств!
+              </div>
+              <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <h2>Кому показано использование очистителя?</h2>
+        <div class="container">
+          <div class="s8-item">
+            <div class="s8-item-list">
+              <div class="s8-text">Дома</div>
+              <img src="img/s8-1.png" alt="" />
+            </div>
+            <div class="s8-item-list">
+              <div class="s8-text">На работе</div>
+              <img src="img/s8-2.png" alt="" />
+            </div>
+            <div class="s8-item-list">
+              <div class="s8-text">На тренировке</div>
+              <img src="img/s8-3.png" alt="" />
+            </div>
+            <div class="s8-item-list">
+              <div class="s8-text">В транспорте</div>
+              <img src="img/s8-4.png" alt="" />
+            </div>
+            <div class="s8-item-list">
+              <div class="s8-text">В общепите</div>
+              <img src="img/s8-5.png" alt="" />
+            </div>
+            <div class="s8-item-list">
+              <div class="s8-text">На учебе</div>
+              <img src="img/s8-6.png" alt="" />
+            </div>
+            <div class="s8-item-list">
+              <div class="s8-text">В детской коляске</div>
+              <img src="img/s8-7.png" alt="" />
+            </div>
+            <div class="s8-item-list">
+              <div class="s8-text">В местах ожидания</div>
+              <img src="img/s8-8.png" alt="" />
+            </div>
+
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2>Мнение специалиста</h2>
+        <div class="container">
+          <div class="s9-item">
+            <img class="s9-img" src="img/s9.png" alt="" />
+            <p class="s9-name">Грач Сергей Викторович</p>
+            <p class="s9-prof">
+              Терапевт общей практики, вирусолог Стаж работы - 32 года
+            </p>
+            <div class="s9-item-list">
+              В наше непростое время наибольшую угрозу жизни и здоровью человека
+              представляет именно окружающая среда. То, чем человек дышит, с чем
+              соприкасается. В городском воздухе содержится более 1000000
+              соединений, оказывающих негативное влияние на здоровье и
+              иммунитет. Это и угарный газ, и грибковые споры, и другие
+              техногенные примеси, не говоря уже об аллергенах и вирусах,
+              которые общеизвестны. Все эти проблемы очень хорошо решает
+              очиститель воздуха Yamaguchi Oxygen Mini. Благодаря сочетанию
+              ультрафиолетового санитайзера и системы двухступенчатой
+              фильтрации, он не уступает по эффективности профессиональным
+              медицинским очистителям, которые стоят у нас в центре. Компактный
+              размер и цена, позволяют использоватьего повсеместно, не боясь
+              заразиться. Я рекомендую к покупке всем своим пациентам. А пожилым
+              людям и детям иметь его вообще обязательно.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s10">
+        <div class="container">
+          <h2>Характеристики</h2>
+
+          <ul class="list">
+            <li>
+              <p class="title">Тип товара:</p>
+              <p class="text">портативный очиститель воздуха</p>
+            </li>
+            <li>
+              <p class="title">Производит-ть:</p>
+              <p class="text">до 15 куб. м/ч</p>
+            </li>
+            <li>
+              <p class="title">Обслуживаемая площадь:</p>
+              <p class="text">до 10 кв. м</p>
+            </li>
+            <li>
+              <p class="title">Материалы корпуса:</p>
+              <p class="text">ABC-пластик, поликарбонат</p>
+            </li>
+            <li>
+              <p class="title">Тип аккумулятора:</p>
+              <p class="text">встроенный, перезаряжаемый, литий-ионный</p>
+            </li>
+            <li>
+              <p class="title">Система фильтрации:</p>
+              <p class="text">
+                двухступенчатая (HEPA-фильтр, угольный картридж)
+              </p>
+            </li>
+            <li>
+              <p class="title">Емкость аккумулятора:</p>
+              <p class="text">2000 мАч</p>
+            </li>
+            <li>
+              <p class="title">Время автономной работы:</p>
+              <p class="text">до 6 часов</p>
+            </li>
+            <li>
+              <p class="title">Спектр работы встроенного санитайзера:</p>
+              <p class="text">250–280 нм (UVC)</p>
+            </li>
+            <li>
+              <p class="title">Разъем питания /подзарядки аккумулятора:</p>
+              <p class="text">USB</p>
+            </li>
+            <li>
+              <p class="title">Уровень шума:</p>
+              <p class="text">не более 32 дБ</p>
+            </li>
+            <li>
+              <p class="title">Размеры:</p>
+              <p class="text">160 х 65 х 65 мм</p>
+            </li>
+            <li>
+              <p class="title">Страна- разработчик:</p>
+              <p class="text">Япония</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="s11">
+        <h2>Комплектация</h2>
+        <div class="s11-item">
+          <ul class="list">
+            <li>Очиститель воздуха</li>
+            <li>Кабель питания</li>
+            <li>Документация</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="s12">
+        <h2>Отзывы покупателей</h2>
+
+        <div class="s12-slider">
+          <div class="s12-block white-block">
+            <img class="s12-img" src="img/s12-1.png" alt="" />
+
+            <span class="block-name"> <b>Давид, 38 лет</b></span> <br />
+
+            <img class="s12-icon-img" src="img/icon-stars.png" alt="" />
+            <p>
+              Работаю таксистом, люди разные попадаются. Кто-то соблюдает режим,
+              кто-то нет. Часто больные садятся. С возрастом здоровья то не
+              прибавляется, сами знаете, так что в последнее время тоже стал
+              часто болеть. В связи с этим, жена купила мне этот ямагучи. Я
+              сначала подумал побрякушка, бросил в машину, но все таки решил
+              попробовать, как она просила. И знаете, я был приятно удивлен.
+              Запахи уходят моментально! Дышать становится легко, свежо. Я вот
+              всю зиму откатал, и больных, и хромых возил, и ни разу ничего не
+              было. Так что, вещь работает, проверено! Всем доброго здоровья.
+            </p>
+          </div>
+          <div class="s12-block white-block">
+            <img class="s12-img" src="img/s12-2.png" alt="" />
+
+            <span class="block-name"> <b>Алена, 28 лет</b></span> <br />
+
+            <img class="s12-icon-img" src="img/icon-stars.png" alt="" />
+
+            <p>
+              Работаю оператором в банке, постоянно с людьми, а время сами
+              знаете какое. У нас в офисе несколько заражений уже. Я же недолго
+              думая заказала этот очиститель, и он всегда со мной теперь стоит
+              на столике. И мне безопаснее, и клиентам спокойнее. Благо, размер
+              у него маленький, выглядит не броско, так что никто не был против.
+              А так, я и на йогу с собой беру, и ребенку на ночь оставляю, так
+              что, применение ему есть всегда, а я сплю теперь спокойно.
+              Спасибо!
+            </p>
+          </div>
+          <div class="s12-block white-block">
+            <img class="s12-img" src="img/s12-3.png" alt="" />
+
+            <span class="block-name"> <b>Евгения, 40 лет</b></span> <br />
+
+            <img class="s12-icon-img" src="img/icon-stars.png" alt="" />
+
+            <p>
+              Я очень пекусь о своем здоровье и с Yamaguchi не расстаюсь ни на
+              минуту. Вот уже год, как я его купила, и с тех пор я вообще ни
+              разу не болела! Хотя до этого два раза в год - стабильно, а то и
+              больше. И кожа стала гораздо лучше, благодаря увлажнителю. Друзья
+              и коллеги поначалу посмеивались, а мне не смешно, это же наше
+              здоровье! А теперь сами половина с очистителями, потому что в наше
+              время без него вообще никуда. В общем, я покупкой довольна, всем
+              советую, рекомендую, агитирую, большое вам спасибо!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s13">
+        <h2>Как заказать товар?</h2>
+        <div class="s13-item">
+          <div class="s13-item-list">
+            <img src="img/s13-1.png" alt="" />
+            <div class="s13-text">
+              <span>ШАГ 1</span><br />
+              Оставьте заявку на заказ через форму ниже
+            </div>
+          </div>
+          <div class="s13-item-list">
+            <div class="s13-text">
+              <span>ШАГ 2</span><br />
+              Мы свяжемся с Вами для подтверждения заказа
+            </div>
+            <img src="img/s13-2.png" alt="" />
+          </div>
+          <div class="s13-item-list">
+            <img src="img/s13-3.png" alt="" />
+            <div class="s13-text">
+              <span>ШАГ 3</span><br />
+              Через несколько дней наш курьер доставит Вам товар
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="s1-block-title">
+          <h1 class="s1-title">
+            <span class="s1-title-top">Очиститель воздуха</span>
+            <span class="s1-title-bottom">«Yamaguchi Oxygen Mini»</span>
+          </h1>
+          <div class="s1-subtitle">
+            Дышите свободно, где бы вы ни находились!
+          </div>
+        </div>
+        <div class="s1-block-img">
+          <img src="img/s1-bg-2.png" alt="" />
+          <div class="discount-top">СКИДКА <span>50%</span></div>
+          <div class="discount-bottom"><span>ХИТ</span> продаж!</div>
+        </div>
+
+        <ul class="list">
+          <li>Очищает воздух от вирусов, бактерий и аллергенов</li>
+          <li>Обслуживает помещение до 12 кв.м</li>
+          <li>Компактный, помещается в кармане</li>
+        </ul>
+
+        <div class="form-wrapper">
+          <div class="block-price">
+            <div class="price">
+              <div class="price-block">
+                <div class="price-text">Обычная цена:</div>
+                <div class="price-old">
+                  <div class="price-old-val oldproductsum"></div>
+                </div>
+              </div>
+
+              <div class="price-discount">скидка <span>50%</span></div>
+
+              <div class="price-block">
+                <div class="price-text">Новая цена:</div>
+                <div class="price-new">
+                  <span class="price-new-val productsum"></span>
+                </div>
+              </div>
+            </div>
+            <p class="timer-date">
+              <span>Акция проходит: </span>
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </p>
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option value="RU" selected disabled>Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Ваше имя..."
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Ваш телефон..."
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Секунд</div>
+              </div>
+            </div>
+          </div>
+          <div class="timer-footer">
+            <u>Политика конфиденциальности</u>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s12-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left" src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right" src="img/BTN_arrow_next.png" alt="">',
+        });
+
+        let filter = $("[data-filter]");
+
+        filter.on("click", function (event) {
+          event.preventDefault();
+
+          let cat = $(this).data("filter");
+
+          $("[data-cat]").each(function () {
+            let workCat = $(this).data("cat");
+
+            if (workCat != cat) {
+              $(this).removeClass("show");
+            } else {
+              $(this).addClass("show");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
