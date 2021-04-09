@@ -1,0 +1,124 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.38;
+  color: #19191b;
+
+  canvas {
+    width: 370px;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+main {
+
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container {
+  padding: 0 30px;
+}
+
+.gif {
+  display: block;
+  width: 100%;
+}
+.img {
+  display: block;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding: 0 175px 0 50px;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.list li {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+
+  margin-bottom: 15px;
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 30px;
+  height: 51px;
+  background: url(../img/icon-box.png) no-repeat;
+}
+
+.color-yellow {
+  color: #ffc000;
+}
+.color-red {
+   color: #e81c2e;
+}
+
+.color-blue {
+  color: #3191f9;
+}
+.color-green {
+ 
+  color: #39b972;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h2,
+h3 {
+  color: #19191b;
+
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+
+  line-height: 1.2;
+}
+
+h2 {
+ 
+position: relative;
+margin-bottom: 33px;
+padding-left: 50px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 30px;
+  height: 68px;
+      background: url(../img/icon-box-2.png) no-repeat;
+    }
+
+ 
+
+}
