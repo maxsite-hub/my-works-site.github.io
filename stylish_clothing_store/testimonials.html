@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru" class>
+  <!--<!
+  [endif]--><head>
+    <meta charset="utf-8" />
+    <title>Магазин стильной одежды</title>
+    <meta name="keywords" content />
+    <meta name="description" content />
+    <meta name="yandex-verification" content />
+    <meta name="google-site-verification" content />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link href="css/css2.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/fancybox27c44.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min86143.css" />
+    <link href="css/cssba3e2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/fonts6c734.css" />
+    <script type="text/javascript">
+      window.timestamp = 1567842790;
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/jquery.fancybox.minc8f17.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/app.min27427.css" />
+    <link rel="stylesheet" href="css/main40cf0.css" />
+
+    <style>
+      * {
+        font-family: "Roboto", sans-serif !important;
+      }
+      a.button24 {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 2em;
+        outline: none;
+        border-width: 2px 0;
+        border-style: solid none;
+        border-color: #fdbe33 #000 #d77206;
+        border-radius: 6px;
+        background: linear-gradient(#f3ae0f, #e38916) #e38916;
+        transition: 0.2s;
+      }
+      a.button24:hover {
+        background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+      }
+      a.button24:active {
+        background: linear-gradient(#f59500, #f5ae00) #f59500;
+      }
+    </style>
+    <script src="js/jquery-3.4.1.js" crossorigin="anonymous"></script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+
+    <!-- LT code insertion -->
+    <!-- /LT code insertion -->
+    <style type="text/css">
+      .fancybox-margin {
+        margin-right: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      $(document).ready(function () {
+        articul = 4000;
+
+        $(".product_article").each(function () {
+          $(this).html("Б" + articul);
+
+          articul = articul + 1;
+        });
+
+        articul2 = 4000;
+
+        $(".articul").each(function () {
+          // var data_art = $(this).attr('data_art');
+          $(this).val("Б" + articul2);
+          // $(data_art).val(articul2);
+          articul2 = articul2 + 1;
+        });
+
+        $(".add_to_cart").click(function () {
+          var art2 = $(this)
+            .parent()
+            .prev()
+            .prev()
+            .find(".product_article")
+            .text();
+          console.log(art2);
+          var art = $(this).attr("data_art");
+          $(".descr").val(art2);
+        });
+      });
+    </script>
+    <header class="first_color">
+      <div class="wrapper row">
+        <div class="contacts">
+          <div class="number">+8 (800) 350-01-31</div>
+          <a href="#">Заявки на сайте 24 часа</a>
+        </div>
+        <div class="logo">
+          <a href="/"
+            >Магазин стильной <br />
+            одежды
+            <span>Магазин №1 в России</span>
+          </a>
+        </div>
+        <ul class="headline">
+          <li>
+            <span>15</span>
+            Более 15 лет успешной работы
+          </li>
+          <li>
+            <span>100 000</span>
+            Уже более 100 000 довольных клиентов
+          </li>
+          <li>
+            <span>3</span>
+            Каждый 3-ий клиент становится постоянным!
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="header_info first_color">
+      <div class="wrapper">
+        <div class="text">Доставка по РФ - от 2-ух дней. 15 лет на рынке</div>
+      </div>
+    </div>
+    <div class="nav_box">
+      <div class="nav_block" id="nav_block">
+        <nav class="nav" id="nav">
+          <a href="/about.html" class="nav__link" target="_blank">О магазине</a>
+          <a href="/index.html" class="nav__link" target="_blank">Каталог</a>
+          <a href="/guarantee.html" class="nav__link" target="_blank"
+            >Гарантия</a
+          >
+          <a href="/testimonials.html" class="nav__link" target="_blank"
+            >Отзывы</a
+          >
+          <a href="/shipping.html" class="nav__link" target="_blank"
+            >Доставка и оплата</a
+          >
+          <a href="/contact.html" class="nav__link" target="_blank">Контакты</a>
+        </nav>
+
+        <button class="nav__toggle" id="nav_toggle" type="button">
+          <p class="nav__toggle_block">
+            Показать каталог <span class="nav__toggle_item"></span>
+          </p>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="testimonials">
+        <h1 class="testimonials_h1">Отзывы</h1>
+        <div class="testimonials_item">
+          <div class="testimonials__item_list">
+            <div class="testimonials_img">
+              <img src="img/testimonials_1.jpg" alt="" />
+            </div>
+            <div class="testimonials_text">
+              <div class="testimonials_com">
+                Костюм великолепный - подходит и для повседневной носки, для
+                работы. Костюм покупала василькового цвета, мне очень
+                понравился, он просто шикарно сидит на фигуре. Украшения сверху
+                смотрятся очень нарядно и торжественно. Я очень довольна
+                покупкой и качеством ткани и пошива.
+              </div>
+              <div class="testimonials_name">Анастасия Павлова,</div>
+              <div class="testimonials_city">Саратов</div>
+            </div>
+          </div>
+          <div class="testimonials__item_list">
+            <div class="testimonials_img">
+              <img src="img/testimonials_2.jpg" alt="" />
+            </div>
+            <div class="testimonials_text">
+              <div class="testimonials_com">
+                Очень долго сомневалась, потому что раньше не покупала в
+                интернет магазинах. А вдруг размер не подойдет, а вдруг ткань не
+                такая как на фото. Но менеджер рассеил все мои сомнения.
+                Покупкой довольна. По фигуре село идеально, доставили быстро.
+                Спасибо магазину за хорошую работу!
+              </div>
+              <div class="testimonials_name">Лариса Николаевна,</div>
+              <div class="testimonials_city">Москва</div>
+            </div>
+          </div>
+          <div class="testimonials__item_list">
+            <div class="testimonials_img">
+              <img src="img/testimonials_3.jpg" alt="" />
+            </div>
+            <div class="testimonials_text">
+              <div class="testimonials_com">
+                Получила костюм, спасибо большое. Качество отменное, цвет яркий,
+                насыщенный. Необычный фасон, сидит прекрасно! И спасибо за
+                оперативность в доставке.
+              </div>
+              <div class="testimonials_name">Светлана Владимировна,</div>
+              <div class="testimonials_city">Краснодар</div>
+            </div>
+          </div>
+          <div class="testimonials__item_list">
+            <div class="testimonials_img">
+              <img src="img/testimonials_4.jpg" alt="" />
+            </div>
+            <div class="testimonials_text">
+              <div class="testimonials_com">
+                Заказывала в данном магазине первый раз-очень понравилось
+                обслуживание-оперативно сформировали и доставили заказ,вежливые
+                приятные менеджеры. Костюм очень понравился,размер
+                соответствует, деловой вариант.Огромное спасибо!
+              </div>
+              <div class="testimonials_name">Наталья Александровна,</div>
+              <div class="testimonials_city">Ростов-на-Дону</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="first_color">
+      <!--    <div style="text-align:center; padding-top:10px;"><a href="#" target="_blank" class="button24">Смотреть больше товара</a></div> -->
+      <div class="wrapper">
+        <div class="logo">
+          <a href="/"
+            >Магазин стильной <br />
+            одежды
+            <span>Магазин №1 в России</span>
+          </a>
+        </div>
+        <div class="info">
+          <div
+            class
+            style="text-align: center; color: #222222; padding: 10px 0"
+          >
+            <p>
+              ООО "Одежда" ОГРН 1042401780728 ИНН 2460034348 Красноярск, улица
+              Красная Площадь, 1
+            </p>
+            <a href="politika.html" target="_blank"
+              >Политика&nbsp;конфиденциальности</a
+            >
+            <a href="agreement.html" target="_blank"
+              >Пользовательское&nbsp;соглашение</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-1.10.2.min78c24.js"></script>
+    <script type="text/javascript" src="js/jquery.formed0dc.js"></script>
+    <!--<script src="files/jquery.ba-outside-events6f19e.js"></script>-->
+    <script src="js/jquery.maskedinput105fb.js"></script>
+    <!--<script src="files/jquery.bxsliderbf39b.js"></script>-->
+    <script src="js/jquery.fancybox.packa6299.js"></script>
+    <script src="js/countdown.min42648.js"></script>
+    <!--<script src="files/lazyload49586.js"></script>-->
+    <script src="js/plugins7525e.js"></script>
+    <!--        <script type="text/javascript" src="files/slick.min9fa5f.js"></script>-->
+    <script src="js/main55af5.js"></script>
+    <script src="js/jquery.cookied5496.js"></script>
+    <script type="text/javascript" src="js/jqueryc32eb.jsonc32eb.js"></script>
+    <script src="js/init29fc26.js"></script>
+    <input type="hidden" value="0" id="checker" />
+
+    <script>
+      //Не забудьте подключить jQuery
+      $(document).ready(function () {
+        var client_time = new Date().getTimezoneOffset();
+        $("#client_time").val(client_time);
+      });
+    </script>
+  </body>
+</html>
