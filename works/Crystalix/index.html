@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Crystalix</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "€",
+          productsum: 39,
+          oldproductsum: 125,
+          delivery: 0,
+          totalsum: "39",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-subtitle">Плохое зрение портит вашу жизнь?</div>
+        <div class="s1-title">
+          <h1>Crystalix</h1>
+          <div class="s1-suptitle">Вернёт вам четкое зрение!</div>
+        </div>
+
+        <div class="discount">-70%</div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Восстановит зрение за 1 курс</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Быстро снимет покраснения и боль</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Оздоровит сетчатку</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Стандартная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-line"></div>
+
+                  <div class="price-new">
+                    <div>Цена со скидкой:</div>
+                    <span class="price-new-val productsum color-blue"></span>
+                  </div>
+                </div>
+
+                <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1"></span> <span>-</span>
+                  <span class="date_2"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <div class="s2-text-block">
+          <img src="img/icon-false.png" alt="" />
+          <p>
+            Ученые доказали:<br />
+            после 40 лет происходит
+          </p>
+          <p class="s2-text">резкое снижение зрения у 93% людей!</p>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>
+            Дальнозоркость
+            <span class="color-orange">может привести к слепоте!</span>
+          </h2>
+        </div>
+        <img src="img/s3.jpg" alt="" />
+        <div class="s3-item">
+          <div class="s3-item-list">
+            <div class="s3-img">
+              <img src="img/s3-1.png" alt="" />
+            </div>
+            <div class="s3-text">
+              <p class="s3-title">1 стадия</p>
+              <p>
+                Раздражение, ощущение песка в глазах, усталость и покраснения -
+                только начало проблем со зрением
+              </p>
+            </div>
+          </div>
+
+          <div class="s3-item-list">
+            <div class="s3-img">
+              <img src="img/s3-2.png" alt="" />
+            </div>
+            <div class="s3-text">
+              <p class="s3-title">2 стадия</p>
+              <p>
+                Катаракта, глаукома, гнойное воспаление - последствия
+                запущенного нарушения зрения
+              </p>
+            </div>
+          </div>
+          <div class="s3-item-list">
+            <div class="s3-img">
+              <img src="img/s3-3.png" alt="" />
+            </div>
+            <div class="s3-text">
+              <p class="s3-title">3 стадия</p>
+              <p>
+                Полная потеря зрения - то, что может произойти, если вовремя не
+                принять меры!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <div class="s4-item">
+            <img class="s4-img" src="img/s4.png" alt="" />
+            <div class="s4-name">Luis Carlos Cordoba</div>
+            <div class="s4-prof">Офтальмолог, стаж работы – 27 лет</div>
+            <div class="s4-text">
+              <p>
+                Плохое зрение - это проблема, от которой страдают около 75%
+                нашего населения. Нельзя преуменьшать риски, которым вы
+                подвергаетесь из-за плохого зрения. Вы находитесь в группе риска
+                серьезных заболеваний: глаукома, катаракта и т.д.
+              </p>
+
+              <p>
+                Натуральный состав комплекса Crystalix неоднократно доказал свою
+                эффективность в профилактике и лечении плохого зрения.
+                Принимайте капсулы 2 раза в день в течение 2 недель, и ваше
+                зрение восстановится.
+              </p>
+
+              <p class="s4-text-footer">
+                Crystalix - современная и доступная альтернатива лазерной
+                коррекции зрения.
+              </p>
+              <img src="img/icon-texture.png" alt="" />
+            </div>
+          </div>
+
+          <div class="s4-item-footer">
+            <img src="img/s4-1.png" alt="" />
+            <p>
+              Верните себе зрение, <span>пока не стало слишком поздно!</span>
+            </p>
+            <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <h2>
+          <span>Crystalix</span>
+          <br />
+          Лучшее средство для восстановления зрения в Латинской америке
+        </h2>
+        <div class="s5-item-top">
+          Комплекс не только снимает неприятные симптомы, но и устраняет саму
+          причину плохого зрения.
+        </div>
+        <div class="s5-item">
+          <div class="s5-item-list">
+            <img src="img/s5-1.png" alt="" />
+            <p>Восстанавливает сосуды и ткани глаза</p>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-2.png" alt="" />
+            <p>Нормализует давление глазного дна</p>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-3.png" alt="" />
+            <p>Укрепляет мышцы глазного яблока</p>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-4.png" alt="" />
+            <p>Снимает воспаление и усталось</p>
+          </div>
+          <div class="s5-item-list-footer">
+            <img src="img/s5-icon-true.png" alt="" />
+            <p>Не имеет противопоказаний</p>
+          </div>
+        </div>
+        <div class="s5-item-footer">
+          <img class="s5-gif" src="gif/1.gif" alt="" />
+        </div>
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2>
+            <span class="color-orange">В чем секрет </span>комплекса Crystalix?
+          </h2>
+        </div>
+        <div class="s6-item">
+          <p>
+            Crystalix - это уникальная запатентованная формула с использованием
+            6 активных компонентов.
+          </p>
+        </div>
+
+        <div class="s6-item-footer">
+          <p>
+            Формула разработана японскими учеными в закрытой лаборатории, где на
+            многократных клинических испытаниях подтвердилось полное
+            восстановление зрения, укрепление стенок сосудов и очищение
+            хрусталика глаза.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="s6-title">
+            <div class="color-blue">100% натуральные</div>
+            ингредиенты
+          </div>
+          <div class="s6-list">
+            <div class="s6-list-item">
+              <img src="img/s6-1.png" alt="" />
+              <p class="s6-list-text">Экстракт листьев гинкго билоба</p>
+              <ul class="list">
+                <li>Природный антиоксидант</li>
+                <li>Укрепляет стенки сосудов глаз</li>
+                <li>Снимает воспаление</li>
+              </ul>
+            </div>
+            <div class="s6-list-item">
+              <img src="img/s6-2.png" alt="" />
+              <p class="s6-list-text">Комплекс витаминов</p>
+              <ul class="list">
+                <li>Оказывает комплексное благотворное воздействие</li>
+              </ul>
+            </div>
+            <div class="s6-list-item">
+              <img src="img/s6-3.png" alt="" />
+              <p class="s6-list-text">Daucus carota</p>
+              <ul class="list">
+                <li>Питает и укрепляет стенки сосудов</li>
+                <li>Профилактика развития катаракты</li>
+              </ul>
+            </div>
+            <div class="s6-list-item">
+              <img src="img/s6-4.png" alt="" />
+              <p class="s6-list-text">Spinacia oleracea</p>
+              <ul class="list">
+                <li>Защищает от ультрафиолета</li>
+                <li>Регенерирует ткани глаз</li>
+              </ul>
+            </div>
+            <div class="s6-list-item">
+              <img src="img/s6-5.png" alt="" />
+              <p class="s6-list-text">Chamaemelum nobile</p>
+              <ul class="list">
+                <li>Снижает глазное давление</li>
+                <li>Нормализует кровообращение</li>
+                <li>Снижает реакцию глаз на внешние раздражители</li>
+              </ul>
+            </div>
+            <div class="s6-list-item">
+              <img src="img/s6-6.png" alt="" />
+              <p class="s6-list-text">Экстракт фенхеля</p>
+              <ul class="list">
+                <li>Улучшает зрение</li>
+                <li>Обновляет сетчатку глаз</li>
+                <li>Устраняет сухость</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img class="img" src="img/s6.jpg" alt="" />
+        <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+      </section>
+
+      <section class="s7">
+        <h2>
+          Представьте, как изменится ваша жизнь,
+          <span class="color-blue"
+            >когда у вас снова будет зрение «единица»</span
+          >
+        </h2>
+        <img src="img/s7.png" alt="" />
+        <div class="container">
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-1.png" alt="" />
+              </div>
+              <div class="s7-text">
+                Больше <b>никаких очков и контактных линз</b>
+              </div>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-2.png" alt="" />
+              </div>
+              <div class="s7-text">
+                Больше <b>никаких морщин</b> от постоянного
+                <b>прищуривания глаз</b> в попытках разглядеть текст
+              </div>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-3.png" alt="" />
+              </div>
+              <div class="s7-text">
+                Глаза <b>не будут воспаляться и уставать</b> после работы
+              </div>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-4.png" alt="" />
+              </div>
+              <div class="s7-text">
+                Вы <b>перестанете</b> тратить деньги на
+                <b>бесполезные капли и дорогостоящие операции</b>
+              </div>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-5.png" alt="" />
+              </div>
+              <div class="s7-text">
+                Вы наконец-то <b>сможете посмотреть </b>на этот мир
+                <b>широко открытыми глазами!</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <h2>
+          <span class="color-orange">Опрос удовлетворенности</span> клиентов,
+          март 2021г., 2740 человек:
+        </h2>
+        <div class="s8-circle-one">
+          <div>Отлично</div>
+          <div class="s8-num">87%</div>
+        </div>
+        <div class="s8-circle-two">
+          <div>Хорошо</div>
+          <div class="s8-num">8%</div>
+        </div>
+        <div class="s8-circle-three">
+          <div>Удовлетворительно</div>
+          <div class="s8-num">3%</div>
+        </div>
+        <div class="s8-circle-four">
+          <div>Неудовлетворительно</div>
+          <div class="s8-num">2%</div>
+        </div>
+        <div class="container">
+          <div class="s8-item">
+            <div class="s8-item-title">Результаты клинических испытаний</div>
+            <img src="img/s8-1.png" alt="" />
+            <p class="s8-item-text">
+              <b>Международная ассоциация офтальмологии</b> в течение 9 месяцев
+              проводила
+              <b
+                >клинические испытания средства Crystalix с участием 15260
+                человек.</b
+              >
+            </p>
+            <div class="s8-item-block">
+              <div class="s8-block">
+                <div class="s8-block-img">
+                  <img src="img/s8-2.png" alt="" />
+                </div>
+                <div class="s8-block-text">Другие средства</div>
+              </div>
+              <div class="s8-block two">
+                <div class="s8-block-text">Crystalix</div>
+              </div>
+            </div>
+            <div class="s8-prof">
+              <div class="s8-prof-title">
+                <p class="p-text one">Восстановление зрения</p>
+              </div>
+              <div class="prof-block">
+                <div class="s8-prof-block">
+                  8%
+                  <div class="prof-block-color one"></div>
+                </div>
+                <div class="s8-prof-block">
+                  <p>99%</p>
+                  <div class="prof-block-color two"></div>
+                </div>
+              </div>
+              <div class="s8-prof-title">
+                <p class="p-text two">Очищение хрусталика</p>
+              </div>
+              <div class="prof-block">
+                <div class="s8-prof-block">
+                  9%
+                  <div class="prof-block-color three"></div>
+                </div>
+                <div class="s8-prof-block four">
+                  <p>96%</p>
+                  <div class="prof-block-color four"></div>
+                </div>
+              </div>
+              <div class="s8-prof-title">
+                <p class="p-text three">Устранение усталости и воспаления</p>
+              </div>
+              <div class="prof-block">
+                <div class="s8-prof-block">
+                  11%
+                  <div class="prof-block-color five"></div>
+                </div>
+                <div class="s8-prof-block four">
+                  <p>98%</p>
+                  <div class="prof-block-color six"></div>
+                </div>
+              </div>
+              <div class="s8-prof-title">
+                <p class="p-text four">Наличие побочных эффектов</p>
+              </div>
+              <div class="prof-block">
+                <div class="s8-prof-block">
+                  <p class="black">84%</p>
+                  <div class="prof-block-color seven"></div>
+                </div>
+                <div class="s8-prof-block four">0%</div>
+              </div>
+            </div>
+            <img src="img/s8-4.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2>
+          Закажите <span class="color-blue">Crystalix</span>сегодня по
+          специальной цене!
+        </h2>
+        <div class="container">
+          <div class="s9-img">
+            <img src="img/s9.png" alt="" />
+          </div>
+          <div class="form-wrapper">
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Стандартная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-line"></div>
+
+                  <div class="price-new">
+                    <div>Цена со скидкой:</div>
+                    <span class="price-new-val productsum color-blue"></span>
+                  </div>
+                </div>
+
+                <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1"></span> <span>-</span>
+                  <span class="date_2"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s10">
+        <div class="container">
+          <h2>
+            Тысячи людей уже вернули зрение с
+            <span class="color-orange">Crystalix!</span>
+          </h2>
+
+          <div class="s10__slider">
+            <div class="s10-block white-block">
+              <p class="s10-text">
+                У меня после аварии и удара головой еще 15 лет назад развился
+                астигматизм и упало зрение. Видел только то, что под носом,
+                носил очки с огромными линзами. Надо ли говорить, что женщины
+                очкариков не очень жалуют. Слепой крот, что уж. Да к тому же,
+                после дня работы в очках вечером трещала голова. Мучили мигрени,
+                приходилось постоянно сидеть на анальгине. На форуме прочитал
+                отзыв о Crystalix, как он помог парню избежать операции на
+                глазах! Заказал себе. Через неделю заметил, что спокойно работаю
+                за компьютером весь день. Да и головные боли исчезли. Через 10
+                дней я понял, что очки слишком сильные, зашел в оптику проверить
+                зрение и был поражен. С -7 зрения восстановилось до -3. Это
+                лучше, чем лазерная коррекция. Продолжаю пить Crystalix. Уж
+                больно хороший результат!
+              </p>
+              <div class="block-name">
+                <img src="img/s10-photo-1.png" alt="" />
+                <p class="name">
+                  <b>Julio Ojeda </b><br /><span> 39 лет</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="s10-block white-block">
+              <p class="s10-text">
+                У меня уже 6 лет проблемы со зрением. Кристаликс спас меня,
+                когда зрение стало стремительно падать, а в операции мне
+                отказали. Через 2 недели приема, моё зрение улучшилось на 2
+                единицы. Заказала еще для своей мамы, у нее тоже давно проблемы
+                со зрением.
+              </p>
+              <div class="block-name">
+                <img src="img/s10-photo-2.png" alt="" />
+                <p class="name">
+                  <b>Lourdes Juárez </b><br /><span> 47 лет</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="s10-block white-block">
+              <p class="s10-text">
+                У меня давно были проблемы со зрением. В сумерках видела с
+                трудом, в дороге фонари сливались в одну линию. В сумке
+                постоянно носила 3 пары очков: для чтения, затемняющие от солнца
+                днем и для ночного вождения. Забыть хотя бы одни — равносильно
+                катастрофе! Честно говоря, готовилась к операции по замене
+                хрусталика, но боялась ее до смерти. Все-таки разрез на глазу.
+                Хорошо, что вовремя узнала про КРИСТАЛИКС! Я сразу заметила
+                эффект от средства: стало легче фокусироваться на предметах, а
+                через пару недель с удивлением обнаружила, что зрение в темноте
+                стало значительно лучше. Через месяц с глаз словно спала пелена,
+                я перестала щуриться! Я продолжаю и сейчас пить капсулы и могу
+                сказать, что это лучшее средство из всех, что мне когда-либо
+                назначали!
+              </p>
+              <div class="block-name">
+                <img src="img/s10-photo-3.png" alt="" />
+                <p class="name">
+                  <b>Nieves Moreno </b><br /><span> 60 лет</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s11">
+        <h2>Способ применения</h2>
+        <div class="container">
+          <div class="s11-item">
+            <div class="s11-item-list">
+              <img src="img/s11-1.png" alt="" />
+              <p>Средство необходимо <b>принимать по 1 капсуле</b></p>
+            </div>
+            <div class="s11-item-list">
+              <img src="img/s11-2.png" alt="" />
+              <p>Принимайте <b>2 раза в день</b> за 30-40 минут до еды</p>
+            </div>
+            <div class="s11-item-list">
+              <img src="img/s11-3.png" alt="" />
+              <p>
+                Для надежного закрепления результата, <b>принимайте курсом</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s12">
+        <h2>
+          Как сделать
+          <br />
+          <span class="color-blue"> заказ? </span>
+        </h2>
+        <div class="container">
+          <div class="s12-list">
+            <div class="s12-list-item">
+              <img src="img/s12-1.png" alt="" />
+              <span class="s12-text">Заявка</span>
+              <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+            </div>
+            <div class="s12-list-item">
+              <img src="img/s12-2.png" alt="" />
+              <span class="s12-text">Подтверждение</span>
+              <p>
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар
+              </p>
+            </div>
+            <div class="s12-list-item">
+              <img src="img/s12-3.png" alt="" />
+              <span class="s12-text">Получение</span>
+              <p>Оплатите вашу посылку при получении на почте или у курьера</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+        <section class="s1 footer">
+          <div class="hero__befaf"><img src="img/s1-bg-new.jpg" alt class="before">
+            <div class="after">
+                <div class="after__inner"></div>
+            </div>
+         
+        </div>
+        <div class="s1-title">
+          <h1>Crystalix</h1>
+          <div class="s1-suptitle">Вернёт вам четкое зрение!</div>
+        </div>
+
+        <img src="img/icon-product.png" alt="">
+        <div class="discount">-70%</div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Восстановит зрение за 1 курс</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Быстро снимет покраснения и боль</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Оздоровит сетчатку</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+  
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Обычная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-line"></div>
+
+                  <div class="price-new">
+                    <div>Цена по акции:</div>
+                    <span class="price-new-val productsum color-blue"></span>
+                  </div>
+                </div>
+                <div class="form-item" id="form">
+                  <select
+                    name="country"
+                    class="countryselect form-control location"
+                  >
+                    <option selected value="RU">Россия</option>
+                    <option selected value="RU">Выберите вашу страну</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="name"
+                    class="field form-control userneme"
+                    placeholder="Введите ваше имя"
+                    value=""
+                  />
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="phone"
+                    class="field form-control phone"
+                    placeholder="Введите ваш телефон"
+                    value=""
+                  />
+                </div>
+
+                <input
+                  type="hidden"
+                  name="productsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="delivery" value="0 руб." />
+                <input
+                  type="hidden"
+                  name="totalsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="user" value="1" />
+                <input
+                  type="hidden"
+                  name="address"
+                  value="Уточнить у покупателя"
+                />
+
+                <div class="reolader form-item">
+                  <button
+                    type="submit"
+                    class="form-btn mm_button"
+                    onclick="checkFields(event, this);"
+                  >
+                    Сделать заказ
+                  </button>
+                  <div class="ajax_loader_block">
+                    <img
+                      class="ajax_loader"
+                      src="img/ajax-loader.gif"
+                      alt="Идет отправка данных"
+                    />
+                    <span class="ajax_loader">Идет отправка данных</span>
+                  </div>
+                </div>
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1"></span> <span>-</span>
+                  <span class="date_2"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+     
+      </header>
+    
+    </main>
+<!--<div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Восстановит зрение за 1 курс</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Быстро снимет покраснения и боль</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Оздоровит сетчатку</p>
+          </div>
+        </div>
+   
+-->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        now = new Date();
+        var perem = (24 - now.getHours()) * 3600;
+        $(".el-timer").attr("data-timer", perem);
+        $(".el-timer").TimeCircles({
+          animation: "smooth",
+          text_size: 0.0679,
+          bg_width: 0.902,
+          fg_width: 0.042,
+          use_background: true,
+          circle_bg_color: "#e5e5ef",
+          time: {
+            Days: {
+              text: "Days",
+              color: "#efbb94",
+              show: false,
+            },
+            Hours: {
+              text: "часов",
+              color: "#fe7b30",
+              show: true,
+              circle_bg_color: "#000000",
+            },
+            Minutes: {
+              text: "минут",
+              color: "#fe7b30",
+              show: true,
+            },
+            Seconds: {
+              text: "секунд",
+              color: "#fe7b30",
+              show: true,
+            },
+          },
+        });
+
+        $(".s6-list").slick({
+          dots: false,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="s6-slider_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="s6-slider_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".s10__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="slider-s10_left" <img src="img/icon-arrow-left-blue.png" alt="">',
+          nextArrow:
+            '<img class="slider-s10_right" src="img/icon-arrow-right-blue.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>

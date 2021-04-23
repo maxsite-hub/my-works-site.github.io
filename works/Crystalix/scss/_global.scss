@@ -1,0 +1,124 @@
+body {
+  font-family: 'Ubuntu', sans-serif; 
+ font-weight: 500;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #222222;
+
+  canvas {
+    width: 370px;
+  }
+}
+
+p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+main {
+
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container {
+  padding: 0 30px;
+}
+
+
+
+.list {
+ display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 30px;
+ 
+}
+
+.list li {
+  display: inline;
+  font-size: 15px;
+  position: relative;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-true.png) no-repeat;
+}
+
+.color-yellow {
+  color: #ffc000;
+}
+.color-pink {
+  color: #ff5070;
+}
+
+.color-blue {
+ color: #239fff;
+}
+
+.color-red {
+  color: #c02e39;
+}
+
+.color-orange {
+  color: #fe7b30;
+}
+
+.orange-bg {
+  padding: 4px 12px;
+  color: #fff;
+  border-radius: 9px;
+  background-image: linear-gradient(to right, #ff1e41, #ff4f08);
+}
+
+.color-turquoise {
+  color: #f2f7ff;
+}
+
+
+
+h2,
+h3 {
+  font-family: 'Ubuntu', sans-serif; 
+  color: #222;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0;
+
+  line-height: 1.2;
+}
+
+.s6-slider_left {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  z-index: 100;
+}
+.s6-slider_right {
+  position: absolute;
+  top: 95px;
+  right: 0;
+  z-index: 100;
+}
