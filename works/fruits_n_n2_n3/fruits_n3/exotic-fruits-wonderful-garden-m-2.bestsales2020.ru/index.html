@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>«Дивный Сад»</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <script
+      src="../code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+
+    <script
+      type="text/javascript"
+      src="../bestsales2020.ru/static/js/lt_landing_valid_form.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../bestsales2020.ru/static/js/lt_landing_script.js"
+    ></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: " \u0440.",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990.00",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+      .ajax_loader_block {
+        text-align: center;
+      }
+      .ajax_loader_block img {
+        margin: 0 auto;
+      }
+      select,
+      button,
+      img,
+      input {
+        outline: none;
+      }
+      a,
+      button,
+      select {
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- LT code insertion -->
+    <!-- /LT code insertion -->
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">Гибридные мини-деревья</div>
+          <h1>«Дивный Сад»</h1>
+        </div>
+
+        <div class="s1-text-block">
+          <p>Экзотические фрукты у вас на подоконнике!</p>
+        </div>
+
+      
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Не требуют особого ухода</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Растут на балконе и подоконнике</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>До 120 кг сочных фруктов в год!</p>
+            </div>
+          </div>
+      
+        <img class="s1-bg-footer" src="img/s1-bg-footer.png" alt="" />
+
+        <h2>
+          <span class="color-green"> Вырастите экзотический сад <br></span> в
+          квартире или<br />
+          на даче!
+        </h2>
+        <img class="s1-bg-2" src="img/s1-bg-2.png" alt="" />
+        <div class="container">
+          <div class="form-wrapper">
+            <h3>
+              Сделайте свой первый заказ <br />
+              <b>и получите 50% скидку</b>
+            </h3>
+            <div class="timer">
+              <div class="timer-title">До конца акции:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">ч</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">м</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">с</div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <!--Container-->
+
+              <div class="">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Цена со скидкой:</div>
+                  </div>
+                  <div class="price-new">
+                    <span class="price-new-val"
+                      ><span class="productsum"></span></span
+                    >
+                    <div>Cтандартная цена: <s class="oldproductsum"></s></div>
+                  </div>
+                </div>
+
+                <a href="#form">
+                  <button type="button" class="form-btn">
+                    Заказать сейчас
+                  </button>
+                </a>
+              </div>
+
+              <div class="form-count">
+                Акция проходит:
+                <span class="date_1"></span> - <span class="date_2"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <h2>
+          <span class="color-green"> На радость  </span>всей
+          семье!
+        </h2>
+
+        <div class="s2-item">
+          <div class="s2-item-list">
+            <div class="s2-img"><img src="img/s2-1.jpg" alt="" /></div>
+            <div class="s2-item-list-block">
+              <p>
+                Еще никогда домашнее выращивание 
+                <br />
+                <span class="color-pink"
+                  >не было таким простым</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="s2-item-list">
+            <div class="s2-item-list-block">
+              <p>
+                Деревья растут сами.
+               
+                <span class="color-pink">
+                    Всего 5 минут в день на уход</span
+                >
+              </p>
+            </div>
+            <div class="s2-img"><img src="img/s2-2.jpg" alt="" /></div>
+          </div>
+
+          <div class="s2-item-list">
+            <div class="s2-img"><img src="img/s2-3.jpg" alt="" /></div>
+            <div class="s2-item-list-block">
+              <div class="s2-item-list-block">
+                <p>
+                    Свежий урожай сладких фруктов каждый месяц и круглый год.
+                  <span class="color-pink"
+                    ><br />
+                    Только успевайте есть!
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>
+            Натуральные фрукты
+            <span class="color-green">«Дивный сад»</span>
+          </h2>
+          <div class="s3-item">
+            <img class="s3-img-top" src="img/s3.jpg" alt="" />
+            <div class="s3-item-list">
+              <div class="s3-img"><img src="img/s3-1.png" alt="" /></div>
+              <p>
+                Кладезь витаминов и минералов: они богаты кальцием, магнием,
+                железом, цинком и витаминами А, С, Е и К.
+              </p>
+            </div>
+            <div class="s3-item-list">
+              <div class="s3-img"><img src="img/s3-2.png" alt="" /></div>
+              <p>Нормализуют обмен веществ и стабилизируют работу ЖКТ</p>
+            </div>
+            <div class="s3-item-list">
+              <div class="s3-img"><img src="img/s3-3.png" alt="" /></div>
+              <p>
+                Благотворно влияют на сердечно-сосудистую и мочеполовую системы
+              </p>
+            </div>
+            <div class="s3-item-list">
+              <div class="s3-img"><img src="img/s3-4.png" alt="" /></div>
+              <p>Укрепляют иммунитет и улучшают самочувствие</p>
+            </div>
+            <div class="s3-item-list">
+              <div class="s3-img"><img src="img/s3-5.png" alt="" /></div>
+              <p>Способствуют борьбе с лишним весом</p>
+            </div>
+            <div class="s3-item-footer">
+              <img class="img" src="img/s3-footer.jpg" alt="" />
+              <ul class="list">
+                <li>
+                    Вкусные, спелые и сочные!
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="s4-item">
+          <h3>Виды фруктов:</h3>
+          <div class="s4-slide">
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-1.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Манго</div>
+              <ul class="list true">
+                <li>Высота дерева: от 80 до 150 см</li>
+                <li>Урожайность: 4 кг каждые 3 месяца</li>
+                <li>Витамины: В1, В2, В5, В6, В9, A, C, D</li>
+                <li>
+                  Свойства: помогает при заболеваниях, связанных с
+                  репродуктивной и мочеполовой системами
+                </li>
+                <li>Стоимость в магазинах: 1200 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-2.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Авокадо</div>
+              <ul class="list true">
+                <li>Высота дерева: от 50 до 100 см</li>
+                <li>Урожайность: 3 кг каждые 2 месяца</li>
+                <li>Витамины: K, C, B5, B6, E</li>
+                <li>
+                  Свойства: снижает уровень холестерина, повышает сексуальное
+                  влечение
+                </li>
+                <li>Стоимость в магазинах: 600 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-3.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Маракуйя</div>
+              <ul class="list true">
+                <li>Высота дерева: от 60 до 120 см</li>
+                <li>Урожайность: 2 кг каждые 2 месяца</li>
+                <li>Витамины: А, В2, В3, В6, В9, С</li>
+                <li>
+                  Свойства: способствует работе кишечника, усиливает иммунитет,
+                  снижает жар при простуде
+                </li>
+                <li>Стоимость в магазинах: 1200 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-4.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Папайя</div>
+              <ul class="list true">
+                <li>Высота дерева: от 70 до 130 см</li>
+                <li>Урожайность: 3 кг каждые 2 месяца</li>
+                <li>Витамины: А, C, B</li>
+                <li>
+                  Свойства: стимулирует пищеварение, предотвращает заболевания
+                  почек
+                </li>
+                <li>Стоимость в магазинах: 1000 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-5.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Лонган</div>
+              <ul class="list true">
+                <li>Высота дерева: от 50 до 100 см</li>
+                <li>Урожайность: 3 кг каждые 3 месяца</li>
+                <li>Витамины: С, В1, В2, В3, В6, В12</li>
+                <li>
+                  Свойства: помогает при бессоннице, снимает усталость, очищает
+                  печень, лечит болезни почек
+                </li>
+                <li>Стоимость в магазинах: 1600 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-6.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Пепино</div>
+              <ul class="list true">
+                <li>Высота дерева: от 60 до 120 см</li>
+                <li>Урожайность: 4 кг каждые 3 месяца</li>
+                <li>Витамины: А, В, С, РР</li>
+                <li>
+                  Свойства: эффективен при профилактике заболеваний сердца и
+                  сосудов, а также для снижения кровяного давления
+                </li>
+                <li>Стоимость в магазинах: 1200 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-7.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Карамбола</div>
+              <ul class="list true">
+                <li>Высота дерева: от 80 до 150 см</li>
+                <li>Урожайность: 3 кг каждые 3 месяца</li>
+                <li>Витамины: С, В1, В2 и В5</li>
+                <li>
+                  Свойства: чрезвычайно полезна при авитаминозе, головных болях,
+                  коликах, снимает похмельный синдром
+                </li>
+                <li>Стоимость в магазинах: 1500 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+            <div class="s4-item-slide">
+              <img class="s4-img" src="img/s4-8.png" alt="" />
+              <div class="s4-slide-text">листайте влево/вправо</div>
+              <div class="s4-slide-top">Личи</div>
+              <ul class="list true">
+                <li>Высота дерева: от 50 до 100 см</li>
+                <li>Урожайность: 3 кг каждые 3 месяца</li>
+                <li>Витамины: С, Е, К, группа В, РР, Н</li>
+                <li>
+                  Свойства: улучшает пищеварение, сердечнососудистую систему,
+                  повышает сексуальное влечение
+                </li>
+                <li>Стоимость в магазинах: 1600 р/кг</li>
+              </ul>
+              <a href="#form" class="form-btn"> Заказать сейчас </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>
+            «Дивный сад»<br />
+            <span class="color-green"> – это:</span>
+          </h2>
+        </div>
+        <div class="s5-item">
+          <div class="s5-item-list">
+            <img src="img/s5-1.png" alt="" />
+            <p>Мини-деревья, высотой всего 50-100 см!</p>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-2.png" alt="" />
+            <p>1 дерево = 3кг плодов каждые 3 месяца!</p>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-3.png" alt="" />
+            <p>Растут дома на подоконнике</p>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-4.png" alt="" />
+            <p>Не требуют много света и особого ухода</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>
+            Экзотические фрукты «Дивный сад»<br />
+            <span class="color-green">известны во всём мире!</span>
+          </h2>
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <img src="img/s7-1.jpg" alt="" />
+              <p>
+                <span>Salon du Vegetal 2020 </span><br />
+                Нант, Франция
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <img src="img/s7-2.jpg" alt="" />
+              <p>
+                <span>Gartentraume Berlin 2019</span><br />
+                Берлин, Германия
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <img src="img/s7-3.jpg" alt="" />
+              <p>
+                <span>GrainExpo 2020 </span><br />
+                Киев, Украина
+              </p>
+            </div>
+          </div>
+        </div>
+        <img class="s7-item-img" src="img/s7-4.png" alt="" />
+        <img src="img/s7-bg.jpg" alt="" />
+      </section>
+
+      <section class="s8">
+        <h2>
+          Сочные <br />тропические фрукты
+          <br />
+          <span class="color-green"> вырастут дома всего за 3 месяца! </span>
+        </h2>
+
+        <div class="container">
+          <div class="s8-item-top">
+            <img src="img/s8.jpg" alt="" />
+            <div class="s8-item-top-block">
+              <p>
+                Домашние мини-деревья «Дивный сад» склонны очень быстро расти,
+                поэтому
+                <span>заранее продумайте место для роста и цветения.</span>
+              </p>
+            </div>
+          </div>
+          <div class="s8-item">
+            <div class="s8-item-list">
+              <div class="s8-img"><img src="img/s8-1.png" alt="" /></div>
+
+              <p>
+                <span> Шаг 1</span><br />
+                Вскройте упаковку с семенами и высадите их согласно инструкции в
+                заранее приготовленный грунт
+              </p>
+            </div>
+
+            <div class="s8-item-list">
+              <div class="s8-img"><img src="img/s8-2.png" alt="" /></div>
+              <p>
+                <span>Шаг 2</span><br />
+                Следите за стабильным температурным режимом и умеренным поливом
+                (поливать по мере подсыхания почвы)
+              </p>
+            </div>
+
+            <div class="s8-item-list">
+              <div class="s8-img"><img src="img/s8-3.png" alt="" /></div>
+              <p>
+                <span>Шаг 3</span><br />
+                Соберите первый урожай уже через три месяца после посадки!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2 class="color-yellow">
+          В чем уникальность <br />
+          <span>Дивного сада?</span>
+        </h2>
+        <div class="container">
+          <div class="s9-item">
+            <div class="s9-item-list">
+              <div class="s9-img">
+                <img src="img/s9-1.png" alt="" />
+              </div>
+              <p>В упаковке есть все необходимое для выращивания</p>
+            </div>
+            <div class="s9-item-list">
+              <div class="s9-img">
+                <img src="img/s9-2.png" alt="" />
+              </div>
+              <p>Экологически чистый гибрид, созданный без генной инженерии</p>
+            </div>
+            <div class="s9-item-list">
+              <div class="s9-img">
+                <img src="img/s9-3.png" alt="" />
+              </div>
+              <p>Фрукты вкуснее и полезнее, чем из магазина</p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s10">
+        <div class="container">
+          <h2>Мнение <span class="color-green">специалиста</span></h2>
+          <div class="s10-item">
+            <img class="s10-img" src="img/s10.jpg" alt="" />
+            <p>
+              Не устаю повторять своим пациентам, что залог здоровья - это
+              разнообразие рациона и качество продуктов, которые мы потребляем.
+              Натуральность магазинных продуктов, к сожалению, вызывает сомнения
+              - во-первых. Во-вторых, есть фрукты и овощи - хорошо, но множество
+              необходимых организму соединений в привычных нам видах попросту не
+              содержится. Фрукты из тропиков - хорошо, но везут их слишком
+              долго, что влечет за собой неоднократную обработку химикатами с
+              целью сохранить товарный вид. Фрукты Дивный сад решают две
+              проблемы сразу. Во-первых, это разнообразие рациона и доставка
+              нужных микроэлементов в организм прямо с куста. Во-вторых,
+              исследования показали, что химический состав этих фруктов на 100%
+              идентичен составу своих старших братьев из тропических регионов.
+              Поэтому, я крайне рекомендую употреблять эти фрукты всей семьей,
+              особенно детям, и особенно в зимний период.
+            </p>
+            <img class="s10-icon" src="img/icon-reviews.png" alt="" />
+            <img class="icon-signature" src="img/icon-signature.png" alt="" />
+            <div class="s10-prof">
+              <span> Савинов Григорий Константинович</span><br />
+              Терапевт общей практики, диетолог. <br />
+              Стаж работы - 12 лет
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s11">
+        <img src="img/s11.jpg" alt="" />
+        <h2>
+          Почему
+          <br />
+          расчетливые садоводы
+          <br />
+          <span class="color-green"> выбирают домашнее выращивание? </span>
+        </h2>
+
+        <div class="s11-item">
+          <div class="s11-item-list">
+            <div class="s11-img"><img src="img/s11-1.jpg" alt="" /></div>
+            <div class="s11-item-list-block">
+              <img src="img/icon-true.png" alt="" />
+              <p>
+                Настоящие тропики у Вас дома:
+                <br />
+                <span class="color-pink"
+                  >1 упаковка это мини-дерево 50 - 100 см</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="s11-item-list">
+            <div class="s11-item-list-block">
+              <img src="img/icon-true.png" alt="" />
+              <p>
+                Высокая урожайность При покупке набора из 8 деревьев:
+                <span class="color-pink">
+                  96 кг сладких сочных фруктов в год!</span
+                >
+              </p>
+            </div>
+            <div class="s11-img"><img src="img/s11-2.jpg" alt="" /></div>
+          </div>
+
+          <div class="s11-item-list">
+            <div class="s11-img"><img src="img/s11-3.jpg" alt="" /></div>
+            <div class="s11-item-list-block">
+              <div class="s11-item-list-block">
+                <img src="img/icon-true.png" alt="" />
+                <p>
+                  Возможность заниматься любимым делом
+                  <span class="color-pink"
+                    ><br />
+                    в холодное время года
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="s11-item-list">
+            <div class="s11-item-list-block">
+              <img src="img/icon-true.png" alt="" />
+              <p>
+                Польза от натуральных домашних фруктов <br /><span
+                  class="color-pink"
+                >
+                  признана учёными и врачами мира
+                </span>
+              </p>
+            </div>
+            <div class="s11-img"><img src="img/s11-4.jpg" alt="" /></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h2>
+          Отзывы <br />
+          <span class="color-pink">покупателей</span>
+        </h2>
+        <div class="container">
+          <div class="reviews__slider">
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s12-1.png" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Сергей</p>
+                    </div>
+                    <span> 38 лет, Казань</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Никогда бы не подумал, что дома можно выращивать что-то такое.
+                Осенью на дачу не поедешь, а руки по огороду чешутся. Увидел
+                рекламу в одноклассниках, дай думаю закажу, попробую. Так вот,
+                весна только приближается, а я уже урожай собрал. У меня дома
+                теперь целая тропическая плантация. Всем друзьям рассказываю -
+                не верят. А как попробуют, спрашивают где купить такие. Фрукты
+                то высший класс выросли. Спасибо вам!
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s12-2.png" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar-2.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>София К.</p>
+                    </div>
+                    <span> 35 лет, Тула</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                Выращиваю эти семена уже 2 года, как они только появились.
+                Результатом довольна, ни разу еще не было осечек. Всегда свежие
+                и сочные фрукты на столе. Пробовала высаживать на даче летом,
+                тоже взялось. Вот только сезон короткий. Я и вес сбросила,
+                потому что больше фруктов стала есть и меньше жирного. Все
+                семейство здоровое, розовощекое. Хлопот никаких. Иногда полил,
+                собрал урожай, сухие листья собрал, да и все. А самое главное,
+                какая экономия! Рекомендую.
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s12-3.png" alt="" />
+              <div class="name-block">
+                <div class="name-block-left">
+                  <div class="icon-avatar">
+                    <img src="img/icon-avatar-3.png" alt="" />
+                  </div>
+                  <div class="block-name">
+                    <div class="reviews-name-header">
+                      <p>Виктория Л.</p>
+                    </div>
+                    <span> 50 лет, Уфа</span>
+                  </div>
+                </div>
+                <div class="reviews-stars">
+                  <img src="img/icon-stars.png" alt="" />
+                </div>
+              </div>
+              <p class="reviews-text">
+                У меня много опыта с домашним выращиванием, например,
+                цитрусовых, типа лимона, мандарина. Но все это больше
+                декоративные растения. Урожай несущественный. Тут я заказала
+                семена, благо, они дешевые, и ожидала примерно такого-же. Но,
+                нет! Буквально через полтора месяца начали появляться маленькие
+                плоды, и их было настолько много, что я уже стала думать куда
+                это все девать. Короче, с первого урожая у меня вышло около 20
+                кг суммарно. Это очень много! Стала раздавать всем друзьям,
+                коллегам. Благо, фрукты хорошие, не стыдно. А то и продавать
+                можно! Спасибо.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s13">
+        <img src="img/s13.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Как сделать
+            <br />
+            <span class="color-green"> заказ?</span>
+          </h2>
+
+          <div class="s13-item">
+            <div class="s13-item-list">
+              <div class="s13-img"><img src="img/s13-1.png" alt="" /></div>
+
+              <p>
+                <span>Заявка</span><br />
+                Оставьте заявку на нашем сайте, заполнив форму заказа
+              </p>
+            </div>
+
+            <div class="s13-item-list">
+              <div class="s13-img"><img src="img/s13-2.png" alt="" /></div>
+              <p>
+                <span>Подтверждение</span><br />
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар по указанному адресу
+              </p>
+            </div>
+
+            <div class="s13-item-list">
+              <div class="s13-img"><img src="img/s13-3.png" alt="" /></div>
+              <p>
+                <span>Получение</span><br />
+                Оплатите вашу посылку при получении
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1 footer">
+     
+            <div class="s1-title">
+              <div class="s1-suptitle">Гибридные мини-деревья</div>
+              <h1>«Дивный Сад»</h1>
+            </div>
+    
+            <div class="s1-text-block">
+              <p>Экзотические фрукты у вас на подоконнике!</p>
+            </div>
+    
+          
+              <div class="s1-list">
+                <div class="s1-list-item">
+                  <img src="img/s1-list-1.png" alt="" />
+                  <p>Не требуют особого ухода</p>
+                </div>
+                <div class="s1-list-item">
+                  <img src="img/s1-list-2.png" alt="" />
+                  <p>Растут на балконе и подоконнике</p>
+                </div>
+                <div class="s1-list-item">
+                  <img src="img/s1-list-3.png" alt="" />
+                  <p>До 120 кг сочных фруктов в год!</p>
+                </div>
+              </div>
+            
+        
+          <div class="form-wrapper" id="form">
+            <h3>
+              Сделайте свой первый заказ <br />
+              <b>и получите 92% скидку</b>
+            </h3>
+            <div class="timer">
+              <div class="timer-title">До конца акции:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">ч</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">м</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">с</div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <!--Container-->
+
+              <form
+                method="post"
+                class=""
+                action="https://exotic-fruits-wonderful-garden-m-2.bestsales2020.ru/success/"
+              >
+                <div class="form-item">
+                  <div class="item-name">Выберите вашу страну</div>
+                  <select
+                    name="country"
+                    class="countryselect form-control location"
+                  >
+                    <option selected value="RU">Россия</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <div class="item-name">Введите ваше имя</div>
+                  <input
+                    type="text"
+                    name="name"
+                    class="field form-control userneme"
+                    placeholder=""
+                    required
+                    value=""
+                  />
+                </div>
+                <div class="form-item">
+                  <div class="item-name">Введите ваш телефон</div>
+                  <input
+                    type="text"
+                    name="phone"
+                    class="field form-control phone"
+                    placeholder=""
+                    required
+                    value=""
+                  />
+                </div>
+
+                <div class="price">
+                  <div class="price-old">
+                    <div>Цена со скидкой:</div>
+                  </div>
+                  <div class="price-new">
+                    <span class="price-new-val"
+                      ><span class="productsum"></span></span
+                    >
+                    <div>Cтандартная цена: <s class="oldproductsum"></s></div>
+                  </div>
+                </div>
+                <input
+                  type="hidden"
+                  name="productsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="delivery" value="0 руб." />
+                <input
+                  type="hidden"
+                  name="totalsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="user" value="1" />
+                <input
+                  type="hidden"
+                  name="address"
+                  value="Уточнить у покупателя"
+                />
+
+                <div class="reolader">
+                  <button
+                    type="submit"
+                    class="form-btn mm_button"
+                    onclick="checkFields(event, this);"
+                  >
+                    Заказать сейчас
+                  </button>
+                  <div class="ajax_loader_block">
+                    <img
+                      class="ajax_loader"
+                      src="img/ajax-loader.gif"
+                      alt="Идет отправка данных"
+                    />
+                    <br />
+                    <span class="ajax_loader">Идет отправка данных</span>
+                  </div>
+                </div>
+
+                <div class="form-count">
+                  *При покупке комплекта. Акция действует:
+                  <span class="date_1"></span> - <span class="date_2"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container"
+          style="text-align: center; margin-top: 30px; font-size: 14px"
+        >
+          <p>
+            ООО "Торг-Альянс" ИНН 7724602891 / ОГРН 1067761723534 г. Москва,
+            Ярославское шоссе, дом 44, офис 314
+          </p>
+          <br />
+          <a style="color: inherit" href="politika.html" target="_blank"
+            >Политика&nbsp;конфиденциальности</a
+          >
+          <br />
+          <a style="color: inherit" href="agreement.html" target="_blank"
+            >Пользовательское&nbsp;соглашение</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({
+            scrollTop: $(_href).offset().top + "px",
+          });
+
+          return false;
+        });
+
+        $(".s4-slide").slick({
+          dots: false,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="s4-slider-reviews_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="s4-slider-reviews_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".reviews__slider").slick({
+          dots: false,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="slider-reviews_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-reviews_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+   
+      });
+    </script>
+  </body>
+
+  
+</html>
