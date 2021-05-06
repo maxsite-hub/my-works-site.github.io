@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Crystalix</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 6640,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">Женские смарт-часы</div>
+          <h1>Beauty Style Watch</h1>
+        </div>
+
+        <div class="discount">-70%</div>
+        <div class="s1-top">
+          <div class="s1-icon-fon">
+            <img src="img/icon-trophy.png" alt="" />
+          </div>
+          <div class="s1-icon-text">Топ продаж 2021 года!</div>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-title">
+            <img src="img/s1-1.png" alt="" />
+          </div>
+          <div class="s1-list-block">
+            <div class="s1-list-item">
+              <p>Изысканный стиль</p>
+            </div>
+            <div class="s1-list-item">
+              <p>Японская точность</p>
+            </div>
+            <div class="s1-list-item">
+              <p>Множество функций</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <p class="form-wrapper-title">
+              Активирована скидка 70% по промокоду
+              <span class="color-purple">SALE21</span>
+            </p>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Стандартная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+
+                  <div class="price-new">
+                    <div>Цена со скидкой:</div>
+                    <span class="price-new-val productsum color-purple"></span>
+                  </div>
+                </div>
+
+                <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1 color-purple"></span>
+                  <span class="color-purple">-</span>
+                  <span class="date_2 color-purple"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <img class="gif" src="gif/1.gif" alt="" />
+        <div class="container">
+          <h2>Не просто <span class="color-purple">часы!</span></h2>
+          <div class="s3-item">
+            <div class="s3-item-list">
+              <div class="s3-img">
+                <img src="img/s3-1.png" alt="" />
+              </div>
+              <p>
+                Beauty Style Watch - это изысканные умные часы, разработанные
+                специально для женщин с учетом всех их потребностей.
+              </p>
+            </div>
+            <div class="s3-item-list">
+              <div class="s3-img">
+                <img src="img/s3-2.png" alt="" />
+              </div>
+              <p>
+                Созданные японским инженером-женщиной Сатоки Мирамото и
+                французскими дизайнерами сестрами Курвуазье, часы стали
+                воплощением женской красоты, элегантности и практичности.
+              </p>
+            </div>
+            <div class="s3-item-list">
+              <div class="video">
+                <div class="click-for-video">
+                  <h4>Смотрите видео!</h4>
+                  <img src="img/s3-3.png" alt="" />
+                </div>
+                <div class="youtube">
+                  <iframe class="youtube"></iframe>
+                </div>
+              </div>
+              <p>
+                Совмещая в себе функции smart-часов и <br />
+                фитнес-браслета, Beaty Style Watch станут Вам верным спутником и
+                помощником в любой ситуации, где бы Вы ни находились!
+              </p>
+            </div>
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          </div>
+        </div>
+        <img src="img/s3-bg.jpg" alt="" />
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>
+            <span class="color-purple">Beauty Style Watch</span> доступны в 4
+            цветах:
+          </h2>
+          <div class="header__slider">
+            <div class="header__slider_item">
+              <img src="img/s4-1.jpg" alt="" />
+            </div>
+            <div class="header__slider_item">
+              <img src="img/s4-2.jpg" alt="" />
+            </div>
+            <div class="header__slider_item">
+              <img src="img/s4-3.jpg" alt="" />
+            </div>
+            <div class="header__slider_item">
+              <img src="img/s4-4.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="slider-dots">
+            <div class="slider-dots__item" style="width: 70px">
+              <div class="dots-box">
+                <div class="dots-box__title gold">Золотой</div>
+              </div>
+            </div>
+            <div class="slider-dots__item" style="width: 70px">
+              <div class="dots-box">
+                <div class="dots-box__title silver">Серебристый</div>
+              </div>
+            </div>
+            <div class="slider-dots__item" style="width: 70px">
+              <div class="dots-box">
+                <div class="dots-box__title blue">Синий</div>
+              </div>
+            </div>
+            <div class="slider-dots__item" style="width: 70px">
+              <div class="dots-box">
+                <div class="dots-box__title purple">Фиолетовый</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        <img src="img/s4-bg.jpg" alt="" />
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>
+            <span class="color-purple">Особенности </span> <br />смарт-часов
+          </h2>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-1.png" alt="" />
+              </div>
+              <p>
+                <span>Отслеживание женских циклов</span>
+                Часы могут отслеживать периоды менструации, овуляции,
+                беременности, и отображать актуальную информацию на дисплее.
+              </p>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-2.png" alt="" />
+              </div>
+              <p>
+                <span>Оптические сенсоры</span>
+                Позволяют с максимальной точностью снимать всю биологическую
+                информацию.
+              </p>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-img">
+                <img src="img/s5-3.png" alt="" />
+              </div>
+              <p>
+                <span>Водонепроницаемость IP67</span>
+                Это значит, что вы спокойно можете мочить часы, мыть в них руки,
+                попадать под дождь, и с ними ничего не случится!
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="img/s5-bg.png" alt="" />
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2><span class="color-purple">20 </span>функций в 1!</h2>
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-1.png" alt="" />
+              </div>
+              <p>Шагомер</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-2.png" alt="" />
+              </div>
+              <p>Счетчик калорий</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-3.png" alt="" />
+              </div>
+              <p>Счетчик расстояния</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-4.png" alt="" />
+              </div>
+              <p>Режим для тренировок</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-5.png" alt="" />
+              </div>
+              <p>Мониторинг артериального давления</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-6.png" alt="" />
+              </div>
+              <p>Мониторинг сердечного ритма</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-7.png" alt="" />
+              </div>
+              <p>Мониторинг сна</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-8.png" alt="" />
+              </div>
+              <p>Дистанционное управление камерой</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-9.png" alt="" />
+              </div>
+              <p>Напоминание о сидячем положении</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-10.png" alt="" />
+              </div>
+              <p>Входящие звонки</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-11.png" alt="" />
+              </div>
+              <p>Уведомления из мессенджеров</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-12.png" alt="" />
+              </div>
+              <p>Умный секундомер</p>
+            </div>
+          </div>
+          <div class="s6-item-footer">
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-13.png" alt="" />
+              </div>
+              <p>Будильник</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-14.png" alt="" />
+              </div>
+              <p>Другие функции</p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+        <img src="img/s6-bg.jpg" alt="" />
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2><span class="color-purple">Изящество </span> в каждом изгибе</h2>
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-1.png" alt="" />
+              </div>
+              <p>
+                Тонкий ремешок из нержавеющей стали идеально подчеркнет Ваше
+                запястье
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-2.png" alt="" />
+              </div>
+              <p>
+                Сферическое закаленное стекло, совершенно прозрачное и гладкое
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-3.png" alt="" />
+              </div>
+              <p>
+                Камушки из горного хрусталя ослепительно дополняют композицию
+              </p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s8">
+        <div class="container">
+          <h2>
+            <span class="color-purple">Признание </span> <br />fashion-индустрии
+          </h2>
+          <div class="s8-item">
+            <div class="s8-item-list">
+              <div class="s8-img">
+                <img src="img/s8.png" alt="" />
+              </div>
+              <p>
+                Beaty Style Watch используются модельерами по всему миру для
+                создания эффектных образов.
+              </p>
+            </div>
+          </div>
+          <div class="s8-list">
+            <div class="s8-block">
+              <div class="s8-img">
+                <img src="img/s8-1.png" alt="" />
+              </div>
+              <div class="s8-title">Modefabriek 2020</div>
+              <div class="s8-text">Амстердам, Нидерланды</div>
+            </div>
+            <div class="s8-block">
+              <div class="s8-img">
+                <img src="img/s8-2.png" alt="" />
+              </div>
+              <div class="s8-title">Avantex Paris 2020</div>
+              <div class="s8-text">Париж, Франция</div>
+            </div>
+            <div class="s8-block">
+              <div class="s8-img">
+                <img src="img/s8-3.png" alt="" />
+              </div>
+              <div class="s8-title">SEEK 2020</div>
+              <div class="s8-text">Берлин, Германия</div>
+            </div>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>
+            <span class="color-purple">Характеристики </span><br />
+            смарт-часов
+          </h2>
+          <div class="s9-img">
+            <img src="img/s9-1.jpg" alt="" />
+            <img src="img/s9-2.jpg" alt="" />
+            <img src="img/s9-3.jpg" alt="" />
+            <img src="img/s9-4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="s9-list">
+          <table cellpadding="5">
+            <tr>
+              <td colspan="2"><b> Дисплей: </b> 1,08" цветной HD-ЖК-экран</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Разрешение: </b> 240*210px</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Процессор: </b> NRF52832</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b> Экран: </b>
+                <span> сенсорный </span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Стекло: </b> противоударное закаленное</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Емкость батареи: </b> 120 мАч</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Версия Bluetooth: </b> 4.0</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Уровень водонепроницаемости: </b> IP67</td>
+            </tr>
+          </table>
+          <div class="container">
+            <div class="s9-item">
+              <img src="img/s9-bg.png " alt="" />
+              <p class="s9-title">Комплектация:</p>
+              <ul class="list">
+                <li>Упаковка</li>
+                <li>Smart-часы Beauty Style Watch</li>
+                <li>Кабель для зарядки магнитного типа (USB)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s10">
+        <div class="container">
+          <h2><span class="color-purple"> Отзывы</span> наших покупателей</h2>
+
+          <div class="s10-slide">
+        
+            <div class="s10-block white-block">
+              <div class="s10-img-block">
+                <img class="s10-img" src="img/s10-2.png" alt="" />
+              </div>
+              <div class="block-name">
+                <p class="name">
+                  <b>Лежавина Светлана </b><br /><span> 30 лет</span>
+                </p>
+              </div>
+              <p class="s10-text">
+                Я ношу эти часы уже 3 месяца, и за это время у меня не появилось
+                ни одного замечания к ним. Все удобно, классно смотрится, очень
+                легко синхронизируется с телефоном. Женские показатели - я
+                сначала думала, маркетинговый ход, а нет, все точно считает.
+                Никогда не пропустишь свой день календаря. В остальном, они
+                просто очень красивые, подходят почти к любому образу. Благо, я
+                цвет взяла универсальный - серебристый. Покупала я в первую
+                очередь из-за внешнего вида, но набор функций не разачорвал.
+                Теперь даже не знаю, как жила без этого всего раньше)
+              </p>
+            </div>
+            <div class="s10-block white-block">
+              <div class="s10-img-block">
+                <img class="s10-img" src="img/s10-3.png" alt="" />
+              </div>
+              <div class="block-name">
+                <p class="name">
+                  <b>Ефремова Елена </b><br /><span> 35 лет</span>
+                </p>
+              </div>
+              <p class="s10-text">
+                У меня до этого был фитнес-браслет. Я веду активный образ жизни,
+                бегаю, хожу на фитнес, браслет очень помогал. И тут мне на день
+                рождения парень подарил эти часы. Я рассматривала это просто,
+                как красивую побрякушку (смотрятся они и правда отпад). Но
+                немного поковырявшись в настройках, я выяснила, что они могут
+                все то же самое, что и мой фитнес-браслет Xiaomi, и даже больше!
+                А некоторые показания даже точнее, по сравнению с медицинскими
+                приборами. Поэтому мой фитнес-браслет уже второй месяц пылится в
+                столе. Часы заменили его полностью.
+              </p>
+            </div>
+            <div class="s10-block white-block">
+              <div class="s10-img-block">
+                <img class="s10-img" src="img/s10-1.png" alt="" />
+              </div>
+              <div class="block-name">
+                <p class="name">
+                  <b>Петрова Марина </b><br /><span> 28 лет</span>
+                </p>
+              </div>
+              <p class="s10-text">
+                Часики просто шик! У меня было много умных часов, в том числе и
+                iWatch, я знаю, о чем говорю. За такие деньги такой набор
+                функций не найдешь больше нигде. Видно, потому что часы новые,
+                нет накрутки за бренд. И смотрятся просто шикос! Все прям
+                добротно сделано, на ощупь приятные. Короче, нет слов.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   
+
+      <section class="s11">
+        <h2>
+          Доставка и оплата
+        </h2>
+        <div class="container">
+          <div class="s11-list">
+            <div class="s11-list-item">
+              <img src="img/s11-1.png" alt="" />
+              
+              <p>Доставка почтой в течение 3-10 рабочих дней. Стоимость доставки товара от 350р.</p>
+            </div>
+            <div class="s11-list-item">
+              <img src="img/s11-2.png" alt="" />
+           
+              <p>Оплата заказов осуществляется по факту получения товара на почте или у курьера</p>
+            </div>
+            <div class="s11-list-item">
+              <img src="img/s11-3.png" alt="" />
+            
+              <p>Мы всегда проверяем товар перед отправкой и гарантируем 100% качество</p>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">Женские смарт-часы</div>
+          <h1>Beauty Style Watch</h1>
+        </div>
+
+        <div class="discount">-70%</div>
+        <div class="s1-top">
+          <div class="s1-icon-fon">
+            <img src="img/icon-trophy.png" alt="" />
+          </div>
+          <div class="s1-icon-text">Топ продаж 2021 года!</div>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-title">
+            <img src="img/s1-1.png" alt="" />
+          </div>
+          <div class="s1-list-block">
+            <div class="s1-list-item">
+              <p>Изысканный стиль</p>
+            </div>
+            <div class="s1-list-item">
+              <p>Японская точность</p>
+            </div>
+            <div class="s1-list-item">
+              <p>Множество функций</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <p class="form-wrapper-title">
+              Активирована скидка 70% по промокоду
+              <span class="color-purple">SALE21</span>
+            </p>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <form method="post">
+                <div class="price">
+                  <div class="price-old">
+                    <div>Обычная цена:</div>
+                    <span class="price-old-val oldproductsum"><s></s></span>
+                  </div>
+          
+                  <div class="price-line"></div>
+          
+                  <div class="price-new">
+                    <div>Цена по акции:</div>
+                    <span class="price-new-val productsum color-purple"></span>
+                  </div>
+                </div>
+                <div class="form-item" id="form">
+                  <select
+                    name="country"
+                    class="countryselect form-control location"
+                  >
+                    <option selected value="RU">Россия</option>
+                    <option selected value="RU">Выберите вашу страну</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="name"
+                    class="field form-control userneme"
+                    placeholder="Введите ваше имя"
+                    value=""
+                  />
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="phone"
+                    class="field form-control phone"
+                    placeholder="Введите ваш телефон"
+                    value=""
+                  />
+                </div>
+          
+                <input
+                  type="hidden"
+                  name="productsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="delivery" value="0 руб." />
+                <input
+                  type="hidden"
+                  name="totalsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="user" value="1" />
+                <input
+                  type="hidden"
+                  name="address"
+                  value="Уточнить у покупателя"
+                />
+          
+                <div class="reolader form-item">
+                  <button
+                    type="submit"
+                    class="form-btn mm_button"
+                    onclick="checkFields(event, this);"
+                  >
+                    Заказать сейчас
+                  </button>
+                  <div class="ajax_loader_block">
+                    <img
+                      class="ajax_loader"
+                      src="img/ajax-loader.gif"
+                      alt="Идет отправка данных"
+                    />
+                    <span class="ajax_loader">Идет отправка данных</span>
+                  </div>
+                </div>
+                <div class="form-count">
+                  *акция действует:
+                  <span class="date_1 color-purple"></span> <span class="color-purple">-</span>
+                  <span class="date_2 color-purple"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        now = new Date();
+        var perem = (24 - now.getHours()) * 3600;
+        $(".el-timer").attr("data-timer", perem);
+        $(".el-timer").TimeCircles({
+          animation: "smooth",
+          text_size: 0.0679,
+          bg_width: 0.902,
+          fg_width: 0.042,
+          use_background: true,
+          circle_bg_color: "#e5e5ef",
+          time: {
+            Days: {
+              text: "Days",
+              color: "#ffbe19",
+              show: false,
+            },
+            Hours: {
+              text: "часов",
+              color: "#ffbe19",
+              show: true,
+              circle_bg_color: "#000000",
+            },
+            Minutes: {
+              text: "минут",
+              color: "#ffbe19",
+              show: true,
+            },
+            Seconds: {
+              text: "секунд",
+              color: "#ffbe19",
+              show: true,
+            },
+          },
+        });
+
+        $(".header__slider").slick({
+          dots: false,
+          dotsClass: "slider_img-dots",
+
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: "linear",
+          asNavFor: ".slider-dots",
+          arrows: true,
+          prevArrow:
+            '<img class="s4-slider_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="s4-slider_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".slider-dots").slick({
+          infinite: false,
+          vertical: true,
+          focusOnSelect: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          asNavFor: ".header__slider",
+          responsive: [
+            {
+              breakpoint: 1000,
+              settings: {
+                vertical: false,
+              },
+            },
+          ],
+        });
+
+        $(".s8-list").slick({
+          dots: false,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="s8-slider_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="s8-slider_right" src="img/icon-arrow-right.png" alt="">',
+        });
+        $(".s9-img").slick({
+          dots: false,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="s9-slider_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="s9-slider_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".s10-slide").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          daptiveHeight: true,
+          prevArrow:
+            '<img class="s10-slider_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="s10-slider_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".click-for-video").click(function () {
+          this.style.display = "none";
+          $("div.youtube").css("display", "block");
+          $("iframe.youtube").prop("src", "video.mp4");
+        });
+      });
+    </script>
+  </body>
+</html>
