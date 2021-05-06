@@ -752,7 +752,7 @@
         $(".el-timer").attr("data-timer", perem);
         $(".el-timer").TimeCircles({
           animation: "smooth",
-          text_size: 0.0679,
+          text_size: 0.0769,
           bg_width: 0.902,
           fg_width: 0.042,
           use_background: true,
@@ -787,9 +787,7 @@
           dotsClass: "slider_img-dots",
 
           infinite: true,
-          speed: 500,
-          fade: true,
-          cssEase: "linear",
+        
           asNavFor: ".slider-dots",
           arrows: true,
           prevArrow:
@@ -800,19 +798,12 @@
 
         $(".slider-dots").slick({
           infinite: false,
-          vertical: true,
+          vertical: false,
           focusOnSelect: true,
           slidesToShow: 4,
           slidesToScroll: 4,
           asNavFor: ".header__slider",
-          responsive: [
-            {
-              breakpoint: 1000,
-              settings: {
-                vertical: false,
-              },
-            },
-          ],
+         
         });
 
         $(".s8-list").slick({
