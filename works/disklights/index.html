@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Фонари Disk Lights</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 6640,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+      .form-btn:hover {
+        animation: none;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <h1>
+            <span>Фонари</span><br />
+            Disk Lights
+          </h1>
+          <p class="s1-title-top">
+            <span>Эффектная</span> <br /><span>подсветка для дачи!</span>
+          </p>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Работают без проводов</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Крепятся к любой поверхности</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Заряжаются от солнца</p>
+          </div>
+        </div>
+
+        <div class="s1-gif">
+          <img class="gif" src="gif/1.gif" alt="" />
+        </div>
+
+        <div class="s1-block">Набор из 8-ми светодиодных фонарей</div>
+
+        <div class="discount">***Акция***</div>
+
+        <div class="form-wrapper">
+          <div class="timer">
+            <div class="timer-title">Предложение действует:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">секунд</div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <p class="price-title">
+              Активирована скидка 70%<br />
+              по промокоду <span class="color-orange">sale21</span>
+            </p>
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+            <div class="s1-img">
+              <img class="s1-img-price" src="img/s1-bg-2.png" alt="" />
+              <p class="timer-date color-orange">
+                <span>Акция! Только: </span>
+                <span class="date_1"></span>
+                <span>-</span>
+                <span class="date_2"></span>
+              </p>
+              <p class="timer-price">
+                Второй набор Disk Lights (8 шт.) в подарок!
+              </p>
+            </div>
+            <form action="#" method="post" class="orderformcdn">
+              <div class="reolader form-item">
+                <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img" src="img/s2-1.jpg" alt="" />
+        <h2>
+          Да будет
+          <span class="color-green">свет!</span>
+        </h2>
+
+        <div class="s2-item">
+          <img src="img/s2-2.jpg" alt="" />
+          <p>
+            Disk Lights - это мощные многофункциональные светодиодные фонари,
+            которые превратят ваш дачный участок в настоящее светопредставление!
+          </p>
+        </div>
+        <div class="s2-block">
+          <div class="s2-item-list">
+            <img src="img/s2-3.png" alt="" />
+            <p>
+              Благодаря беспроводному устройству и удобным креплениям Вы сможете
+              легко установить Disk Lights в любое место, которое нуждается в
+              освещении.
+            </p>
+          </div>
+          <div class="s2-item-list">
+            <img class="gif" src="gif/2.gif" alt="" />
+            <p>
+              Disk Lights - автономный источник света, поэтому вы можете
+              использовать их, даже если у вас не подведено электричество, или
+              его отключили.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>
+            Где чаще всего используется
+            <span class="color-green">Disk Lights?</span>
+          </h2>
+          <div class="s3-item">
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-1.png" alt="" />
+              <p>Дорожки</p>
+            </div>
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-2.png" alt="" />
+              <p>Ступеньки</p>
+            </div>
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-3.png" alt="" />
+              <p>Двери</p>
+            </div>
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-4.png" alt="" />
+              <p>Гараж</p>
+            </div>
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-5.png" alt="" />
+              <p>Уборная</p>
+            </div>
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-6.png" alt="" />
+              <p>Беседка</p>
+            </div>
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-7.png" alt="" />
+              <p>Веранда</p>
+            </div>
+            <div class="s3-item-list">
+              <img class="img" src="img/s3-8.png" alt="" />
+              <p>Калитка</p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s4">
+        <p class="s4-top">Автоматическая зарядка днём от солнца</p>
+        <p class="s4-bottom">Автоматическое включение ночью</p>
+        <img class="img" src="img/s4-bg.jpg" alt="" />
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>
+            Преимущества<br />
+            <span class="color-green"> Disk Lights</span>
+          </h2>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <img src="img/s5-1.jpg" alt="" />
+              <p class="s5-title">До 8 часов работы</p>
+              <p class="s5-text">
+                Фонари оснащены технологией преобразования света, которая
+                поглощает солнечную энергию в ячейки памяти, а затем преобразует
+                в электричество.
+              </p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-2.jpg" alt="" />
+              <p class="s5-title">Автоматическое отключение</p>
+              <p class="s5-text">
+                Disk Lights оснащены датчиками света, и автоматически
+                отключаются, если на улице светло, и включаются, если темно.
+              </p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-3.jpg" alt="" />
+              <p class="s5-title">Легкий монтаж</p>
+              <p class="s5-text">
+                В комплекте идут ножки для крепления в грунт и липучки для
+                крепления на вертикальные поверхности.
+              </p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-4.jpg" alt="" />
+              <p class="s5-title">Водонепроницаемость</p>
+              <p class="s5-text">
+                Disk Lights водонепроницаемы и устойчивы к температурному
+                воздействию, поэтому им не страшен ни дождь, ни вьюга.
+              </p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-5.jpg" alt="" />
+              <p class="s5-title">Эргономичный дизайн</p>
+              <p class="s5-text">
+                Светильники идеально гладкие и плоские, что позволяет Вам
+                использовать газонокосилку, не доставая Disk Lights из земли.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img class="img" src="img/s5-bg.jpg" alt="" />
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2><span class="color-green">Установка</span> светильников</h2>
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <img src="img/s6-2.png" alt="" />
+              <p class="s6-title">Для установки в грунт</p>
+              <p class="s6-text">
+                вам потребуется вставить пластиковую ножку (идет в комплекте) в
+                специальный паз на задней стороне светильника. После чего,
+                останется только вставить ножку в землю и наслаждаться
+                результатом!
+              </p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-3.png" alt="" />
+              <p class="s6-title">Для установки в грунт</p>
+              <p class="s6-text">
+                вам потребуется вставить пластиковую ножку (идет в комплекте) в
+                специальный паз на задней стороне светильника. После чего,
+                останется только вставить ножку в землю и наслаждаться
+                результатом!
+              </p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s7">
+        <h2>
+          Видео официального <span class="color-green">производителя</span>
+        </h2>
+        <div class="video">
+          <div class="click-for-video">
+            <h4>Смотрите видео!</h4>
+            <img src="img/s7.png" alt="" />
+          </div>
+          <div class="youtube">
+            <iframe class="youtube"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <h2>
+          Сделайте Ваш участок <span class="color-green">незабываемым!</span>
+        </h2>
+        <div class="s8-slider">
+          <img src="img/s8-1.jpg" alt="" />
+          <img src="img/s8-2.jpg" alt="" />
+          <img src="img/s8-3.jpg" alt="" />
+          <img src="img/s8-4.jpg" alt="" />
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>Технические <span class="color-green">характеристики</span></h2>
+          <img class="s9-img" src="img/s9-1.jpg" alt="" />
+        </div>
+
+        <div class="s9-list">
+          <table cellpadding="5">
+            <tr>
+              <td colspan="2"><b>Степень защиты: </b> IP44</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b> Выходная мощность в ваттах: </b> 4 x 200 МВт = 0,8 Вт
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><b> Световой поток в люменах: </b> 32 лм</td>
+            </tr>
+          </table>
+        </div>
+        <div class="s9-footer">
+          <h3>Комплектация</h3>
+          <div class="s9-footer-block">
+            <img class="s9-img-footer" src="img/s9-2.png" alt="" />
+          </div>
+          <ul class="list">
+            <li>Светодиодные фонари Disk Lights х8 (+8)</li>
+            <li>Ножки для крепления х8 (+8)</li>
+            <li>Липучки для крепления х8 (+8)</li>
+            <li>Инструкция пользователя х 1</li>
+            <li>Упаковка х1</li>
+            <li>Гарантийный талон х1</li>
+          </ul>
+        </div>
+        <img class="img" src="img/s9-3.jpg" alt="" />
+      </section>
+
+      <section class="s10">
+        <h2>Отзывы наших<br /><span class="color-green">покупателей</span></h2>
+
+        <div class="s10__slider">
+          <div class="s10-block white-block">
+            <img class="s10-img" src="img/s10-1.jpg" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p>
+                  <b>Петрова Динара </b><br /><span>44 года, Серпухов</span>
+                </p>
+              </div>
+              <img src="img/icon-stars.png" alt="" />
+            </div>
+            <p class="s10-text">
+              Мы изначально покупали эти светильники для декоративных целей, уж
+              очень они нам понравились. Но оказалось, что и в быту с ними
+              гораздо удобнее. Темными вечерами что-то делать на участке очень
+              удобно. Да и на посиделках с друзьями не приходится провод больше
+              из дома тянуть. А учитывая, что их 16 штук в комплекте, за такую
+              цену, мы все дорожки ими выложили, и еще осталось. Светят очень
+              ярко, всем рекомендую!
+            </p>
+          </div>
+          <div class="s10-block white-block">
+            <img class="s10-img" src="img/s10-2.jpg" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p><b>Карпов Виталий </b><br /><span> 50 лет, Орел</span></p>
+              </div>
+              <img src="img/icon-stars.png" alt="" />
+            </div>
+            <p class="s10-text">
+              Отличные светильники, сделаны добротно! Я давно задумывался об
+              акцентном освещении, и вот, наконец, купил. Не пожалел ни разу!
+              Светильники сделаны добротно, я сколько раз наступал, тачкой по
+              ним проезжал - ни царапины. Дождь тоже хорошо переносят. Горят,
+              как ни в чем ни бывало. И ночью больше нет нужды с фонарем в
+              туалет ходить, все видно, как днем. Хватает их на всю ночь, а
+              летом и подавно. Жена тоже довольна. Во все клумбы себе
+              понавтыкала. Спасибо вам!
+            </p>
+          </div>
+          <div class="s10-block white-block">
+            <img class="s10-img" src="img/s10-3.jpg" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p>
+                  <b>Веселов Григорий </b><br /><span> 39 лет, Москва</span>
+                </p>
+              </div>
+              <img src="img/icon-stars.png" alt="" />
+            </div>
+            <p class="s10-text">
+              Я купил себе домой, на участок 8 штук. А мне еще в придачу 8 дали,
+              пришлось на дачу везти. Ну, что могу сказать. За эти деньги света
+              лучше вы не найдете. Очень хорошие светильники, батареи достаточно
+              мощные, светят ярко и долго. Я поначалу довольно часто их воткнул,
+              а потом даже убрал несколько, потому что слепят ночью. Сделаны
+              тоже качественно. Все весенние дожди и снег пережили спокойно.
+              Очень много дизайнерских решений можно придумать с ними.
+              Подсветить дорожки, клумбы. А учитывая, что они без проводов и
+              работают от солнца, это вообще сказка. Никаких заморочек!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s11">
+        <div class="container">
+          <h2>Как сделать <span class="color-green">заказ?</span></h2>
+          <div class="s11-item">
+            <div class="s11-item-list">
+              <img src="img/s11-1.png" alt="" />
+              <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+            </div>
+            <div class="s11-item-list">
+              <img src="img/s11-2.png" alt="" />
+              <p>Наш менеджер перезвонит вам для уточнения деталей</p>
+            </div>
+            <div class="s11-item-list">
+              <img src="img/s11-3.png" alt="" />
+              <p>Мы отправим ваш товар почтой по указанному адресу</p>
+            </div>
+            <div class="s11-item-list">
+              <img src="img/s11-4.png" alt="" />
+              <p>Без предоплат! Оплата заказа только при получении</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="s1-title">
+          <h1>
+            <span>Фонари</span><br />
+            Disk Lights
+          </h1>
+          <p class="s1-title-top">
+            <span>Эффектная</span> <br /><span>подсветка для дачи!</span>
+          </p>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Работают без проводов</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Крепятся к любой поверхности</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Заряжаются от солнца</p>
+          </div>
+        </div>
+
+        <div class="s1-gif">
+          <img class="gif" src="gif/1.gif" alt="" />
+        </div>
+
+        <div class="s1-block">Набор из 8-ми светодиодных фонарей</div>
+
+        <div class="discount">***Акция***</div>
+
+        <div class="form-wrapper">
+          <div class="timer">
+            <div class="timer-title">Предложение действует:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">секунд</div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <p class="price-title">
+              Активирована скидка 70%<br />
+              по промокоду <span class="color-orange">sale21</span>
+            </p>
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selected value="RU">Выберите вашу страну</option>
+                 
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="s1-img">
+                <img class="s1-img-price" src="img/s1-bg-2.png" alt="" />
+                <p class="timer-date color-orange">
+                  <span>Акция! Только: </span>
+                  <span class="date_1"></span>
+                  <span>-</span>
+                  <span class="date_2"></span>
+                </p>
+                <p class="timer-price">
+                  Второй набор Disk Lights (8 шт.) в подарок!
+                </p>
+              </div>
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Сделать заказ
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s8-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="slider-icon_left-gray" src="img/BTN_arrow_back_gray.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right-gray" src="img/BTN_arrow_next_gray.png" alt="">',
+        });
+
+        $(".s10__slider").slick({
+          dots: false,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left"  src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right" src="img/BTN_arrow_next.png" alt="">',
+        });
+
+        $(".click-for-video").click(function () {
+          this.style.display = "none";
+          $("div.youtube").css("display", "block");
+          $("iframe.youtube").prop("src", "video.mp4");
+        });
+      });
+    </script>
+  </body>
+</html>
