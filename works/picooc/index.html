@@ -40,11 +40,44 @@
       };
     </script>
 
-    <style>
-      .ajax_loader {
-        display: none;
-      }
-    </style>
+<style>
+  .ajax_loader {
+    display: none;
+  }
+
+  .form-btn {
+    animation: pulse 1s infinite;
+  }
+  .form-btn:hover {
+    animation: none;
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 187, 0, 0.7);
+    }
+    70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 187, 0, 0.7);
+      box-shadow: 0 0 0 0 rgba(255, 187, 0, 0.7);
+    }
+    70% {
+      -moz-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+      box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+      box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+    }
+  }
+</style>
   </head>
 
   <body>
@@ -100,7 +133,7 @@
             </div>
           </div>
           <div class="date-title">
-            Акция действует до <span class="date_1"></span>
+            Акция действует с <span class="date_1"></span>
             <span>по</span>
             <span class="date_2"></span>
           </div>
@@ -158,7 +191,7 @@
                   class="form-btn mm_button btn-position"
                   onclick="checkFields(event, this);"
                 >
-                  Заказать сейчас
+                  Заказать по акции
                 </button>
                 <div class="ajax_loader_block">
                   <img
@@ -227,11 +260,11 @@
             На основании пола, возраста, роста и других показателей, Picooc
             формируют персональные рекомендации именно для Вашего организма.
           </p>
-          <img src="img/s2-2.jpg" alt="" />
+          <img class="gif" src="gif/1.gif" alt="" />
           <p class="s2-text-footer">
             «Picooc» - самый простой и удобный способ похудеть от 5 кг до 25 кг!
           </p>
-          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          <a href="#form" class="form-btn mm_button"> Заказать по акции </a>
         </div>
       </section>
 
@@ -363,7 +396,7 @@
             >
             которое вам нужно для быстрого и приятного похудения
           </p>
-          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          <a href="#form" class="form-btn mm_button"> Заказать по акции </a>
         </div>
       </section>
 
@@ -430,7 +463,7 @@
               если вы не похудеете, то мы вернем Вам деньги!
             </span>
           </p>
-          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          <a href="#form" class="form-btn mm_button"> Заказать по акции </a>
         </div>
       </section>
 
@@ -478,7 +511,7 @@
             <div class="s9-text-footer">
               Иными словами - ВСЁ, что Вы так любите!
             </div>
-            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+            <a href="#form" class="form-btn mm_button"> Заказать по акции </a>
           </div>
         </div>
       </section>
@@ -527,7 +560,7 @@
             Поэтому с «Picooc» любое похудение<br />
             <span class="color-blue">в 3 раза эффективнее!</span>
           </div>
-          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          <a href="#form" class="form-btn mm_button"> Заказать по акции </a>
           <div class="s10-footer">
             <div class="s10-img-footer">
               <img src="img/s10-2.png" alt="" />
@@ -564,7 +597,7 @@
           Эффективность «Picooc» оценили уже
           <span class="color-blue">83 793 женщины.</span> Попробуйте и Вы!
         </p>
-        <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        <a href="#form" class="form-btn mm_button"> Заказать по акции </a>
       </section>
 
       <section class="s12">
@@ -809,7 +842,7 @@
             </div>
           </div>
           <div class="date-title">
-            Акция действует до <span class="date_1"></span>
+            Акция действует с <span class="date_1"></span>
             <span>по</span>
             <span class="date_2"></span>
           </div>
@@ -867,7 +900,7 @@
                   class="form-btn mm_button btn-position"
                   onclick="checkFields(event, this);"
                 >
-                  Заказать сейчас
+                  Заказать по акции
                 </button>
                 <div class="ajax_loader_block">
                   <img
