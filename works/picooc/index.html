@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Умные весы «Picooc»</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+  
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-10);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM");
+        date_2 = date_2.toString("dd.MM");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440\u0443\u0431.",
+          productsum: 1990,
+          oldproductsum: 4975,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <h1 class="s1-title-top">Умные весы <span>«Picooc»</span></h1>
+          <div class="s1-title-bottom">Инновационные весы для похудения!</div>
+        </div>
+
+        <div class="s1-bg">
+          <div class="s1-present">
+            <div><img src="img/icon-present.png" alt="" /></div>
+            <div class="s1-present-text">
+              Фитнес- браслет
+              <div class="color-blue">в подарок!</div>
+            </div>
+          </div>
+          <img src="img/s1-bg.png" alt="" />
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <div class="s1-list-text">Помогают похудеть</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <div class="s1-list-text">Считают калории за Вас</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <div class="s1-list-text">Следят за питанием вместо Вас</div>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <p class="price-title">Скидка 60% по промокоду «LETO2021»</p>
+
+          <div class="price">
+            <div class="price-block">
+              <div class="price-old">
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+            </div>
+
+            <img src="img/icon-arrow.png" alt="" />
+
+            <div class="price-block">
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+          </div>
+          <div class="date-title">
+            Акция действует до <span class="date_1"></span>
+            <span>по</span>
+            <span class="date_2"></span>
+          </div>
+          <div class="container">
+            <form action="#" method="post" class="orderformcdn">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option value="RU" selected disabled>Страна</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Ваше имя..."
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Ваш телефон..."
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button btn-position"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">секунд</div>
+              </div>
+            </div>
+            <div class="timer-footer">
+              <u>Политика конфиденциальности</u>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <h2>Худейте легко!</h2>
+        <div class="container">
+          <img src="img/s2-1.jpg" alt="" />
+          <p class="s2-text">
+            «Piccoc» - это умные весы, которые рассчитывают нужное для похудения
+            количество калорий, и сообщают Вам, сколько вы уже съели, и сколько
+            осталось съесть.
+          </p>
+        </div>
+        <div class="s2-slider">
+          <img src="img/s2-list-1.png" alt="" />
+          <img src="img/s2-list-2.jpg" alt="" />
+          <img src="img/s2-list-3.jpg" alt="" />
+        </div>
+        <div class="container">
+          <p class="s2-text">
+            На основании пола, возраста, роста и других показателей, Picooc
+            формируют персональные рекомендации именно для Вашего организма.
+          </p>
+          <img src="img/s2-2.jpg" alt="" />
+          <p class="s2-text-footer">
+            «Picooc» - самый простой и удобный способ похудеть от 5 кг до 25 кг!
+          </p>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>Уже пробовали?</h2>
+          <div class="s3-item">
+            <div class="s3-item-list">
+              <img src="img/s3-1.png" alt="" />
+            </div>
+            <p>Физические упражнения – тяжело и не эффективно</p>
+          </div>
+          <div class="s3-item">
+            <div class="s3-item-list">
+              <img src="img/s3-2.png" alt="" />
+            </div>
+            <p>Диеты - голодно и безрезультатно</p>
+          </div>
+          <div class="s3-item">
+            <div class="s3-item-list">
+              <img src="img/s3-3.png" alt="" />
+            </div>
+            <p>Препараты для похудения – дорого и вредно</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>Почему вы не худеете?</h2>
+          <p class="s4-title">
+            Согласно последним исследованиям НИИ Питания РАМН, только 2 из 10
+            наблюдаемых женщин достигают поставленной цели.
+          </p>
+          <div class="s4-item">
+            <div class="s4-item-list">
+              <div class="s4-img">
+                <img src="img/s4-1.png" alt="" />
+              </div>
+              <p class="s4-percent">30%</p>
+              <p class="s4-text">
+                Переедают, потребляют больше калорий, чем им нужно
+              </p>
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-img">
+                <img src="img/s4-2.png" alt="" />
+              </div>
+              <p class="s4-percent">27%</p>
+              <p class="s4-text">
+                Малоподвижны, не успевают сжечь съеденные калории
+              </p>
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-img">
+                <img src="img/s4-3.png" alt="" />
+              </div>
+              <p class="s4-percent">23%</p>
+              <p class="s4-text">
+                Имеют проблемы со здоровьем или генетическую предрасположенность
+                к полноте
+              </p>
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-img">
+                <img src="img/s4-4.png" alt="" />
+              </div>
+              <p class="s4-percent">20%</p>
+              <p class="s4-text">
+                Успешно достигают поставленных целей самостоятельно
+              </p>
+            </div>
+          </div>
+          <div class="s4-text-footer">
+            Во всех случаях проблема одна - избыточные калории
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>Говорит специалист</h2>
+          <div class="s5-item">
+            <img class="s5-img" src="img/s5-1.png" alt="" />
+            <div class="s5-item-list">
+              <p class="s5-name">Перова Мария Валентиновна</p>
+              <p class="s5-prof">
+                Научный сотрудник НИИ Питания РАМН Стаж работы - 12 лет
+              </p>
+              <p class="s5-text">
+                На жалобы людей о том, что они не могут похудеть, я часто
+                отвечаю: "А если бы вы жили в концлагере, вы бы тоже страдали от
+                лишнего веса?" Мораль тут простая - если нет лишних калорий,
+                жиру откладываться просто не из чего. У каждого человека свой
+                ритм жизни, свой обмен веществ, свой расход калорий. Именно
+                поэтому такие популярные сейчас диеты так плохо работают. Не
+                бывает универсального решения для всех людей. Каждому человеку
+                нужно подобрать индивидуальную суточную норму калорий и её
+                придерживаться. Тогда все начнет получаться. Гарантирую!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s6">
+        <h2>Весы «Picooc» посчитают калории за Вас!</h2>
+        <div class="container">
+          <p class="s6-text">
+            Весы Picooc "сканируют" тело с помощью технологии биоимпенданса.
+            Слабый импульс тока проходит черезвсе тело и на основе сопротивления
+            определяется соотношение жира, мышц, костей, воды, белка и других
+            важных показателей.
+          </p>
+          <img src="img/s6-1.jpg" alt="" />
+        </div>
+
+        <div class="container">
+          <p class="s6-text">
+            Всего весы анализируют 12 биометрических параметров, после чего
+            данные отправляются в специальное приложение, благодаря встроенному
+            Wi-Fi модулю.
+          </p>
+          <img class="gif s6-gif" src="gif/2.gif" alt="" />
+          <p class="s6-text-footer">
+            На основе полученных данных,
+            <span class="color-blue"
+              >программа рассчитывает количество калорий,</span
+            >
+            которое вам нужно для быстрого и приятного похудения
+          </p>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>
+            Весы «Picooc» – <br />
+            это комфортное похудение!
+          </h2>
+
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-1.png" alt="" />
+              </div>
+              <p class="s7-text">Без голода</p>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-2.png" alt="" />
+              </div>
+              <p class="s7-text">Без ограничений в питании</p>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-3.png" alt="" />
+              </div>
+              <p class="s7-text">Без физических упражнений</p>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-img">
+                <img src="img/s7-4.png" alt="" />
+              </div>
+              <p class="s7-text">Без вреда для здоровья</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <div class="container">
+          <h2>Только представьте:</h2>
+          <div class="s8-item">
+            <div class="s8-item-list">
+              <img src="img/s8-1.png" alt="" />
+            </div>
+            <p>Вы едите то, что любите</p>
+          </div>
+          <div class="s8-item">
+            <div class="s8-item-list">
+              <img src="img/s8-2.png" alt="" />
+            </div>
+            <p>Живете полной жизнью</p>
+          </div>
+          <div class="s8-item">
+            <div class="s8-item-list">
+              <img src="img/s8-3.png" alt="" />
+            </div>
+            <p>И при этом худеете</p>
+          </div>
+          <p class="s8-text-footer">
+            Мы настолько уверены в эффективности весов, что даём гарантию:
+            <span class="color-blue">
+              если вы не похудеете, то мы вернем Вам деньги!
+            </span>
+          </p>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>Что можно есть?</h2>
+
+          <div class="s9-item">
+            <div class="s9-item-list">
+              <img src="img/s9-1.png" alt="" />
+              <p>Сладкое</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-2.png" alt="" />
+              <p>Мучное</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-3.png" alt="" />
+              <p>Мясо</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-4.png" alt="" />
+              <p>Рыба</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-5.png" alt="" />
+              <p>Молочное</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-6.png" alt="" />
+              <p>Фрукты</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-7.png" alt="" />
+              <p>Овощи</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-8.png" alt="" />
+              <p>Зерновые</p>
+            </div>
+            <div class="s9-item-list">
+              <img src="img/s9-9.png" alt="" />
+              <p>Бобовые</p>
+            </div>
+            <div class="s9-text-footer">
+              Иными словами - ВСЁ, что Вы так любите!
+            </div>
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s10">
+        <div class="container">
+          <h2>«Picooc» – ваш личный диетолог!</h2>
+
+          <p class="s10-text">
+            Приложение составляет персональные рекомендации, следит как идет
+            похудение и корректирует программу на ходу, оповещая вас о том, что
+            пора поесть или взвеситься
+          </p>
+          <img class="s10-img-top" src="img/s10-1.jpg" alt="" />
+
+          <p class="s10-text">
+            С помощью анализа прироста и убыли жира весы точно определяют,
+            соблюдаете вы норму или нет.
+          </p>
+          <h4>Приложение посчитает за вас</h4>
+          <div class="s10-item">
+            <div class="s10-item-list">
+              <div class="s10-img"><img src="img/s10-list-1.png" alt="" /></div>
+              <p>Суточную калорийность</p>
+            </div>
+            <div class="s10-item-list">
+              <div class="s10-img"><img src="img/s10-list-2.png" alt="" /></div>
+              <p>Белки, жиры и углеводы</p>
+            </div>
+            <div class="s10-item-list">
+              <div class="s10-img"><img src="img/s10-list-3.png" alt="" /></div>
+              <p>Витамины и полезные микроэл-ты</p>
+            </div>
+          </div>
+        </div>
+        <div class="s10-item-function">
+          <h4>Дополнительные функции</h4>
+          <ul class="list">
+            <li>Пищевой дневник, чтобы записывать то, что Вы едите</li>
+            <li>Журнал для отслеживания сжигаемых калорий</li>
+            <li>График веса для демонстрации Вашего прогресса</li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="s10-text-footer">
+            Поэтому с «Picooc» любое похудение<br />
+            <span class="color-blue">в 3 раза эффективнее!</span>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          <div class="s10-footer">
+            <div class="s10-img-footer">
+              <img src="img/s10-2.png" alt="" />
+            </div>
+            <p class="s10-footer-text">
+              Приложение можно скачать по QR-коду на задней стороне коробки
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s11">
+        <div class="container">
+          <h2>Финансовая выгода</h2>
+          <div class="s11-item">
+            <p class="s11-text">
+              Консультация диетолога стоит от 2000 рублей. Для хорошего
+              результата требуется хотя бы один прием в неделю, что в месяц
+              составляет 8000 рублей, а в год 100 000 рублей!
+            </p>
+            <img class="s11-img" src="img/s11-1.jpg" alt="" />
+          </div>
+          <div class="s11-item">
+            <p class="s11-title">Не переплачивайте!</p>
+            <p class="s11-text">
+              Весы «Picooc» стоят всего 1990 руб и работают для Вас 24/7! При
+              невысокой стоимости и доказанной эффективности, вложение окупается
+              всего за 1 неделю!
+            </p>
+          </div>
+        </div>
+        <img src="img/s11-2.jpg" alt="" />
+        <p class="s11-footer-text">
+          Эффективность «Picooc» оценили уже
+          <span class="color-blue">83 793 женщины.</span> Попробуйте и Вы!
+        </p>
+        <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+      </section>
+
+      <section class="s12">
+        <div class="container">
+          <h2>Мнение профессионала</h2>
+          <div class="s12-item">
+            <img class="s12-img" src="img/s12-1.png" alt="" />
+            <div class="s12-item-list">
+              <p class="s12-prof">
+                Джеки Келлер – диетолог Анджелины Джоли, Риз Уизерспун, Шарлиз
+                Терон и Пенелопы Круз
+              </p>
+              <p class="s12-text">
+                «Грустно это признавать, но с такими технологиями, как Picooc,
+                мы все скоро останемся без работы, а фитнес-залы без
+                клиентов...» (Cosmopolitan, 03/19)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="s12-inner">
+          <div class="container">
+            <div class="s12-inner-list">
+              <img src="img/s12-list-1.png" alt="" />
+              <p>
+                Победитель SN Pro 2020 Expo
+                <span>Москва, Россия</span>
+              </p>
+            </div>
+            <div class="s12-inner-list">
+              <img src="img/s12-list-2.png" alt="" />
+              <p>
+                Призер Aktiv & Fit 2020
+                <span>Германия, Ганновер</span>
+              </p>
+            </div>
+            <div class="s12-inner-list">
+              <img src="img/s12-list-3.png" alt="" />
+              <p>
+                Участник IWF Shanghai 2020
+                <span>Китай, Шанхай</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="container">
+            <img src="img/s12-2.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="s13">
+        <div class="container">
+          <h2>Характеристики</h2>
+          <ul class="list">
+            <li>Подключение Bluetooth: 4.0 и выше</li>
+
+            <li>
+              Совместимость с устройствами: Android 4.1 и выше, iOS 8.0 и выше
+            </li>
+            <li>
+              Определяемые биометрические показатели: вес тела, телесный жир,
+              мышцы, индекс внутреннего жира, скорость основного обмена веществ,
+              процент воды в организме, процент белка, костная масса, скелетные
+              мышцы, индекс массы тела, метаболический возраст, безжировая масса
+              тела, оценка тела, тип телосложения
+            </li>
+            <li>Индекс веса: цифровой</li>
+
+            <li>Диапазон взвешивания: 8-150 кг</li>
+
+            <li>Шкала деления: 100 г</li>
+
+            <li>Питание: батарейки типа AAA 1.5В х 3 шт. (идут в комплекте)</li>
+
+            <li>Количество пользователей: неограничено</li>
+
+            <li>Автораспознавание: есть</li>
+
+            <li>
+              Хранение и синхронизация данных: телефон и облачный сервис
+              производителя
+            </li>
+
+            <li>
+              Совместимые приложения: Health-системы от Apple, Google и т.д.
+            </li>
+
+            <li>Размеры: 260 х 260 х 20 мм</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="s14">
+        <h2>Отзывы покупателей</h2>
+
+        <div class="s14-slider">
+          <div class="s14-block white-block">
+            <img class="s14-img" src="img/s14-1.jpg" alt="" />
+
+            <span class="block-name"> <b>Марина, 58 лет, Москва</b></span>
+            <br />
+
+            <img class="s14-icon-img" src="img/icon-stars.png" alt="" />
+            <p>
+              Много лет мучилась лишним весом, столько всего перепробовала, не
+              перечесть. Диеты не давались, так как поесть я люблю, спорт - не
+              моё по здоровью. Уже было смирилась, но тут наткнулась на вашу
+              рекламу и заказала весы. Довольно быстро доставили, все аккуратно
+              запаковано, но главное не это. Когда я взглянула на свои пропорции
+              после взвешивания, я, конечно, ужаснулась. Но приложение все
+              посчитало и дало мне весьма щедящие рекомендации с любимой едой и
+              без каких-либо нагрузок. И, вы не поверите, через две недели вес
+              начал уходить! Стабилизировалось пищеварение, чувствую себя лучше.
+              По весам показатели приходят в норму. За месяц - 4 кг без
+              каких-либо усилий! Мечты сбываются! Всем рекомендую.
+            </p>
+          </div>
+          <div class="s14-block white-block">
+            <img class="s14-img" src="img/s14-2.jpg" alt="" />
+
+            <span class="block-name"> <b>Сергей, 31 год, Калуга</b></span>
+            <br />
+
+            <img class="s14-icon-img" src="img/icon-stars.png" alt="" />
+            <p>
+              Я всегда был худощавым, и мне это не нравилось. Пробовал и есть в
+              три горла, и в зал хожу, ничего не помогает. Товарищи быстро
+              набирают, я ни в какую. Врачи говорят обмен веществ такой. Тут я
+              увидел у знакомого в зале приложение ваше и поинтересовался, что к
+              чему. По приходу домой сразу нашел вас и заказал набор. Задал цель
+              в приложении, взвесился, оно мне все посчитало, я выбрал
+              предпочтения в еде и стал соблюдать. Через 2 недели +2 килограмма
+              качественной массы! Я в шоке! Наконец-то лед тронулся. И диета
+              довольно простая, вкусная, не сказал бы, что я сильно больше ем.
+              Видимо, набор продуктов просто подходящий. Я очень доволен! Там и
+              режим сушки есть, но это на будущее) Рекомендую!
+            </p>
+          </div>
+          <div class="s14-block white-block">
+            <img class="s14-img" src="img/s14-3.jpg" alt="" />
+
+            <span class="block-name"> <b>Валерия, 47 лет, Уфа</b></span>
+            <br />
+
+            <img class="s14-icon-img" src="img/icon-stars.png" alt="" />
+            <p>
+              После 40 лет начали приходить килограммы. Я очень слежу за собой,
+              хожу на фитнес, диеты постоянно новые ем, но килограммы не уходят.
+              Диетолог сказал: "Возраст, что тут поделать. Поддерживайте хотя бы
+              форму." Я совсем расстроилась, но не сдалась. На форуме наткнулась
+              на обсуждение этих весов, почитала и заказала. Все очень просто
+              оказалось. Приложение очень просто и понятное, хоть я с
+              технологиями и не очень, быстро разобралась. Предложило мне диету
+              и ежедневные прогулки, и все! Радует выбор предпочтений. Я люблю
+              кавказскую кухню, выбрала её. А надоест, буду есть азиатскую. В
+              общем, результат такой, что через полтора месяца минус 3
+              килограмма. Я уже и забыла как это, последние годы вес только
+              прибавлялся. Еще очень радуют напоминания, когда забыл поесть, или
+              недостаточно активности. Забыть ничего невозможно. Я очень рада,
+              могу смело рекомендовать! 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s15">
+        <h2>Как заказать товар?</h2>
+        <div class="s15-item">
+          <div class="s15-item-list">
+            <img src="img/s15-1.png" alt="" />
+            <div class="s15-text">
+              <span>Шаг 1</span><br />
+              Оставьте заявку на заказ через форму ниже
+            </div>
+          </div>
+          <div class="s15-item-list">
+            <div class="s15-text">
+              <span>Шаг 2</span><br />
+              Мы свяжемся с Вами для подтверждения заказа
+            </div>
+            <img src="img/s15-2.png" alt="" />
+          </div>
+          <div class="s15-item-list">
+            <img src="img/s15-3.png" alt="" />
+            <div class="s15-text">
+              <span>Шаг 3</span><br />
+              Через несколько дней наш курьер доставит Вам товар
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1 s1-footer">
+        <div class="s1-title">
+          <h1 class="s1-title-top">Умные весы <span>«Picooc»</span></h1>
+          <div class="s1-title-bottom">Инновационные весы для похудения!</div>
+        </div>
+
+        <div class="s1-bg">
+          <div class="s1-present">
+            <div><img src="img/icon-present.png" alt="" /></div>
+            <div class="s1-present-text">
+              Фитнес- браслет
+              <div class="color-blue">в подарок!</div>
+            </div>
+          </div>
+          <img src="img/s1-bg-2.png" alt="" />
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <div class="s1-list-text">Помогают похудеть</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <div class="s1-list-text">Считают калории за Вас</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <div class="s1-list-text">Следят за питанием вместо Вас</div>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <p class="price-title">Скидка 60% по промокоду «LETO2021»</p>
+
+          <div class="price">
+            <div class="price-block">
+              <div class="price-old">
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+            </div>
+
+            <img src="img/icon-arrow.png" alt="" />
+
+            <div class="price-block">
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+          </div>
+          <div class="date-title">
+            Акция действует до <span class="date_1"></span>
+            <span>по</span>
+            <span class="date_2"></span>
+          </div>
+          <div class="container">
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option value="RU" selected disabled>Страна</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Ваше имя..."
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Ваш телефон..."
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button btn-position"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">секунд</div>
+              </div>
+            </div>
+            <div class="timer-footer">
+              <u>Политика конфиденциальности</u>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s2-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="slider-icon_left-gray" src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right-gray" src="img/BTN_arrow_next.png" alt="">',
+        });
+
+        $(".s14-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left" src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right" src="img/BTN_arrow_next.png" alt="">',
+        });
+
+       
+      });
+    </script>
+  </body>
+</html>
