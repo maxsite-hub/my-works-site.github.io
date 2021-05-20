@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Pleasure Duo</title>
+    <link rel="stylesheet" href="css/slick.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: " \u0065\u0075\u0072\u006f",
+          productsum: 49,
+          oldproductsum: 98,
+          delivery: 0,
+          totalsum: "49",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+      .form-btn:hover {
+        animation: none;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(211, 38, 44, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(211, 38, 44, 0.7);
+          box-shadow: 0 0 0 0 rgba(211, 38, 44, 0.7);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 12px rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 12px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">Возбуждающий гель-лубрикант для секса</div>
+          <h1 class="color-yellow">Pleasure Duo</h1>
+          <div class="s1-subtitle">
+            <div class="s1-subtitle-left">Добавьте красок в вашу</div>
+            <div class="s1-subtitle-right">сексуальную жизнь</div>
+          </div>
+        </div>
+
+        <div class="s1-moment">
+          <div class="s1-moment-img">
+            <img src="img/icon-moment.png" alt="" />
+          </div>
+          <div class="s1-moment-text">
+            Моментальный<br />
+            эффект
+          </div>
+        </div>
+
+        <div class="s1-sale">Скидка 50%</div>
+
+        <div class="container">
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Возбуждает обоих партнеров</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Усиливает эрекцию</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>Увеличивает половой член</p>
+            </div>
+          </div>
+
+          <div class="form-wrapper">
+            <p class="promo">
+              <span class="color-yellow">50% СКИДКА</span> ПО ПРОМОКОДУ
+              <span class="color-red">SALE50</span>
+            </p>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="container">
+              <!--Container-->
+
+              <div class="price">
+                <div class="price-old">
+                  <div>Обычная цена:</div>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                </div>
+
+                <div class="price-line"></div>
+
+                <div class="price-new">
+                  <div>Цена по акции:</div>
+                  <span class="price-new-val productsum color-yellow"></span>
+                </div>
+              </div>
+
+              <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+
+              <p class="timer-date color-orange">
+                <span>*акция действует: </span>
+                <span class="date_1 color-green"></span>
+                <span class="color-green">-</span>
+                <span class="date_2 color-green"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="img/s1-footer.png" alt="" />
+      </section>
+
+      <section class="s2">
+        <h2>
+          Вам знакомы эти
+          <span class="color-red">проблемы во время секса?</span>
+        </h2>
+        <div class="container">
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <img src="img/s2-1.png" alt="" />
+              <p>Вялая эрекция</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-2.png" alt="" />
+              <p>Нет страсти и "огня"</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-3.png" alt="" />
+              <p>Девушка не возбуждена</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-4.png" alt="" />
+              <p>Ваша партнерша не кончает</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-5.png" alt="" />
+              <p>Хочется разнообразия в сексе</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-6.png" alt="" />
+              <p>Комплексы по поводу размера члена</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="s3-item">
+          <h2>Забудьте об этом!</h2>
+        </div>
+        <div class="container">
+          <p class="s3-text">
+            Уникальная смазка нового поколения
+            <span class="color-yellow">Pleasure Duo</span> подарит вам
+            незабываемые эмоции во время секса с любой девушкой!
+          </p>
+        </div>
+        <div class="s3-item-two">
+          <img src="img/s3-2.png" alt="" />
+          <div class="container">
+            <p class="s3-text">
+              Смазка <span class="color-yellow">Pleasure Duo</span> содержит
+              феромоны, благодаря которым ваша партнерша получит невероятное
+              возбуждение, а вы - долгую и твердую потенцию, чтобы удовлетворять
+              её до самого утра!
+            </p>
+          </div>
+        </div>
+        <img src="img/s3-3.png" alt="" />
+      </section>
+
+      <section class="s4">
+        <h2>
+          Особенности смазки
+          <span class="color-yellow">Pleasure Duo</span>
+        </h2>
+        <div class="container">
+          <div class="s4-item">
+            <div class="s4-item-list">
+              <div class="s4-img"><img src="img/s4-1.png" alt="" /></div>
+              <p>
+                <span class="color-yellow"> Содержит феромоны, </span>
+                <br />
+                повышающие сексуальное влечение
+              </p>
+            </div>
+
+            <div class="s4-item-list">
+              <p>
+                <span class="color-yellow"> Стимулирует потенцию </span>
+                <br />
+                для долгого секса всю ночь
+              </p>
+              <div class="s4-img"><img src="img/s4-2.png" alt="" /></div>
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-img"><img src="img/s4-3.png" alt="" /></div>
+              <p>
+                <span class="color-yellow"> Возвращает страсть </span>
+                <br />
+                в отношениях
+              </p>
+            </div>
+
+            <div class="s4-item-list">
+              <p>
+                <span class="color-yellow"> Способствует росту </span>
+                <br />
+                полового члена от 3 до 5 см
+              </p>
+              <div class="s4-img"><img src="img/s4-4.png" alt="" /></div>
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-img"><img src="img/s4-5.png" alt="" /></div>
+              <p>
+                <span class="color-yellow">Подходит </span>
+                <br />
+                как для вагинального, так и для анального секса
+              </p>
+            </div>
+            <div class="s4-item-list">
+              <p>
+                <span class="color-yellow"> Препятствует развитию </span>
+                <br />
+                импотенции
+              </p>
+              <div class="s4-img"><img src="img/s4-6.png" alt="" /></div>
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-img"><img src="img/s4-7.png" alt="" /></div>
+              <p>
+                <span class="color-yellow">Содержит только натуральные </span>
+                <br />
+                компоненты в составе
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="img/s4-bg.png" alt="" />
+      </section>
+
+      <div class="s5">
+        <div class="container">
+          <h2>
+            <span class="color-green">Уникальная формула</span><br />
+            7 мощных и натуральных компонентов!
+          </h2>
+          <div class="s5-slider">
+            <div class="s5-slider-item">
+              <img src="img/s5-1.png" alt="" />
+              <p class="s5-title color-red">Экстракт плодов гуараны</p>
+              <p class="s5-text">
+                Обладает согревающими и заряжающими энергией свойствами, может
+                стимулировать и укреплять кожу. Он положительно влияет на
+                кровоток, одновременно поддерживая расширение кровеносных
+                сосудов. Обладает не стимулирующими, антиоксидантными и
+                антибактериальными свойствами. Гуарана считается сильным
+                афродизиаком. Он может предотвратить отек и сжечь подкожный жир,
+                стимулируя липолиз.
+              </p>
+            </div>
+            <div class="s5-slider-item">
+              <img src="img/s5-2.png" alt="" />
+              <p class="s5-title color-red">
+                Экстракт сушеных плодов острого перца
+              </p>
+              <p class="s5-text">
+                Его активный ингредиент, капсаицин (ответственный за остроту
+                перца), обладает обезболивающими свойствами. Обладает
+                противовоспалительными и согревающими свойствами. Он
+                способствует укреплению стенок сосудов и улучшению
+                микроциркуляции. Используется в массажных лосьонах и мазях для
+                расслабления напряженных и перегруженных мышц.
+              </p>
+            </div>
+            <div class="s5-slider-item">
+              <img src="img/s5-3.png" alt="" />
+              <p class="s5-title color-red">Камфора</p>
+              <p class="s5-text">
+                Обладает антибактериальными, антисептическими, обезболивающими и
+                согревающими свойствами. Используется, например, в мазях и
+                согревающих кремах. препараты для похудения и антицеллюлитные.
+                Это влияет на улучшение кровообращения. Имеет приятную восковую
+                консистенцию.
+              </p>
+            </div>
+            <div class="s5-slider-item">
+              <img src="img/s5-4.png" alt="" />
+              <p class="s5-title color-red">Фитогликоген</p>
+              <p class="s5-text">
+                В результате его разложения высвобождаются молекулы глюкозы -
+                важного питательного вещества для среды женского влагалища. Он
+                является источником питательных веществ для молочнокислых
+                бактерий, поддерживает их рост и способствует восстановлению
+                естественной бактериальной флоры влагалища. Повышает влажность
+                интимных зон, что обеспечивает безболезненные и приятные половые
+                контакты.
+              </p>
+            </div>
+            <div class="s5-slider-item">
+              <img src="img/s5-5.png" alt="" />
+              <p class="s5-title color-red">Экстракт корня женьшеня</p>
+              <p class="s5-text">
+                Ответственен за мужскую эрекцию и выработку тестостерона
+              </p>
+            </div>
+            <div class="s5-slider-item">
+              <img src="img/s5-6.png" alt="" />
+              <p class="s5-title color-red">Экстракт корня маки</p>
+              <p class="s5-text">
+                Улучшает выработку спермы и увеличивает сексуальную активность.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="img/s5-bg.png" alt="" />
+      </div>
+
+      <section class="s6">
+        <div class="container">
+          <h2>
+            Кому необходима смазка
+            <span class="color-yellow">Pleasure Duo?</span>
+          </h2>
+        </div>
+        <div class="s6-item">
+          <div class="s6-item-list">
+            <div class="s6-img"><img src="img/s6-1.jpg" alt="" /></div>
+            <p>
+              <span class="color-red">Людям,</span> желающим добавить красок в
+              сексуальную жизнь
+            </p>
+          </div>
+
+          <div class="s6-item-list">
+            <p>
+              <span class="color-red">Любителям </span>новых ощущений и эмоций
+            </p>
+            <div class="s6-img"><img src="img/s6-2.jpg" alt="" /></div>
+          </div>
+
+          <div class="s6-item-list">
+            <div class="s6-img"><img src="img/s6-3.jpg" alt="" /></div>
+            <p>
+              <span class="color-red">Мужчинам,</span> испытывающим страх и
+              стеснение перед девушками
+            </p>
+          </div>
+
+          <div class="s6-item-list">
+            <p>
+              <span class="color-red">Мужчинам, </span> испытывающим проблемы с
+              эрекцией
+            </p>
+            <div class="s6-img"><img src="img/s6-4.jpg" alt="" /></div>
+          </div>
+          <div class="s6-item-list">
+            <div class="s6-img"><img src="img/s6-5.jpg" alt="" /></div>
+            <p>
+              <span class="color-red">Мужчинам, </span> желающим подарить
+              девушке новые ощущения
+            </p>
+          </div>
+
+          <div class="s6-item-list">
+            <p>
+              <span class="color-red">Девушкам, </span> которые хотят добавить
+              страсти в свои отношения и секс
+            </p>
+            <div class="s6-img"><img src="img/s6-6.jpg" alt="" /></div>
+          </div>
+        </div>
+        <img src="img/s6-bg.png" alt="" />
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>Мнение <span class="color-green">специалиста</span></h2>
+          <div class="s7-item">
+            <div class="s7-img">
+              <img src="img/s7-1.png" alt="" />
+              <img class="s7-signature" src="img/icon-signature.png" alt="">
+            </div>
+            <p class="s7-title color-yellow">Джеронимо Капуто</p>
+            <p class="s7-text">
+              Уролог, врач высшей категории, кандидат медицинских наук
+            </p>
+          </div>
+          <div class="s7-item-list">
+            <img src="img/s7-2.png" alt="" />
+            <p>
+              В рамках исследования было приглашено 850 добровольцев в возрасте
+              от 19 до 67 лет, которые использовали смазку Pleasure Duo во время
+              полового акта. 99,4% отозвались о данном лубриканте как о
+              совершенно новом уникальном продукте, который дарит незабываемые
+              эмоции во время секса. Также 98,9% отметили усиленную эрекцию даже
+              у людей, ранее страдающих импотенцией.
+            </p>
+            <img src="img/s7-3.jpg" alt="" />
+            <p>
+              Смазка
+              <span class="color-yellow">Pleasure Duo</span> зарекомендовала
+              себя как лучший натуральный лубрикант для секса на рынке, имеющий
+              уникальные свойства и раскрывающий половую близость с новых
+              сторон.
+            </p>
+          </div>
+        </div>
+        <img src="img/s7-bg.png" alt="" />
+      </section>
+
+      <section class="s8">
+        <div class="container">
+          <h2>
+            Реальные люди - <span class="color-green">реальные отзывы</span>
+          </h2>
+
+          <div class="s8__slider">
+            <div class="s8-block white-block">
+              <div class="block-name">
+                <img src="img/s8-1.png" alt="" />
+                <p class="name">Акилле, 39 лет</p>
+                <img src="img/icon-chat.png" alt="" />
+              </div>
+              <p class="s8-text">
+                У меня была проблема - за 13 лет совместной жизни со своей
+                женой, а потерял интерес к сексу с ней. Занимались им не чаще1-2
+                раз в месяц. Но после покупки смазки Pleasure Duo мы занимаемся
+                этим почти каждый день и как-будто между нами вспыхнула новая
+                искра! Спасибо что сохранили наш брак!
+              </p>
+            </div>
+            <div class="s8-block white-block">
+              <div class="block-name">
+                <img src="img/s8-2.png" alt="" />
+                <p class="name">Джино, 21 год</p>
+                <img src="img/icon-chat.png" alt="" />
+              </div>
+              <p class="s8-text">
+                Мне 21 год и я почти каждые выходные сплю с новой девушкой.
+                Заниматься обычным сексом мне стало скучно, поэтому я решил
+                попробовать смазку Pleasure Duo. И я с уверенностью могу сказать
+                - это лучшее, что я пробовал! Таких эмоций и ощущений от секса я
+                не получал уже давно! Очень круто!
+              </p>
+            </div>
+            <div class="s8-block white-block">
+              <div class="block-name">
+                <img src="img/s8-3.png" alt="" />
+                <p class="name">Valentina, 37 лет</p>
+                <img src="img/icon-chat.png" alt="" />
+              </div>
+              <p class="s8-text">
+                Я в браке почти 25 лет и за это время секс с моим мужем стал
+                скучен для меня: потерялся тот "огонь", похоть и возбуждение,
+                которые были раньше. В поисках решения этой проблемы я заказала
+                смазку Pleasure Duo, чтобы как-то разнообразить нашу сексуальную
+                жизнь. И с момента первого использования я поняла что это именно
+                то, что нужно! Мой муж был так возбужден, что довел меня до
+                оргазма целых 2 раза! Такого не было никогда в моей жизни! И я
+                сама была настолько возбуждена, что хотела заниматься сексом
+                часами! Девочки, всем советую смазку Pleasure Duo, кто хочет
+                добавить страсти в свою половую жизнь!
+              </p>
+            </div>
+            <div class="s8-block white-block">
+              <div class="block-name">
+                <img src="img/s8-4.png" alt="" />
+                <p class="name">Арнольдо, 48 лет</p>
+                <img src="img/icon-chat.png" alt="" />
+              </div>
+              <p class="s8-text">
+                Мне 48 и я боюсь в этом признаваться, но уже в этом возрасте у
+                меня была плохая эрекция. Почему была? Потому что после покупки
+                смазки Pleasure Duo, мой член работает как в 25 лет назад и мы с
+                моей женой занимаемся сексом почти каждый день! Очень хорошая
+                вещь, всем рекомендую!
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="img/s8-bg.png" alt="">
+      </section>
+
+  
+
+      <section class="s9">
+       
+        <div class="container">
+          <h2>
+            Доставка и
+            <span class="color-green"> оплата</span>
+          </h2>
+
+          <div class="s9-item">
+            <div class="s9-item-list">
+              <p>
+                <span class="color-yellow">Заявка</span>
+                <br />
+                Оставьте заявку на нашем сайте, заполнив форму заказа
+              </p>
+            </div>
+
+            <div class="s9-item-list">
+              <p>
+                <span class="color-yellow">Подтверждение</span> <br />
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим ваш товар
+              </p>
+            </div>
+
+            <div class="s9-item-list">
+              <p>
+                <span class="color-yellow">Получение</span> <br />
+                Оплатите вашу посылку при получении на почте или у курьера
+              </p>
+            </div>
+          </div>
+          <div class="s9-footer">
+            <img src="img/icon-anonim.png" alt="">
+            <p class="s9-footer-title color-yellow">Гарантия анонимности доставки</p>
+            <p class="s9-footer-text">Товар скрывается с помощью плотной упаковки, а его описание при отправлении не указывается</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-suptitle">Возбуждающий гель-лубрикант для секса</div>
+          <h1 class="color-yellow">Pleasure Duo</h1>
+          <div class="s1-subtitle">
+            <div class="s1-subtitle-left">Добавьте красок в вашу</div>
+            <div class="s1-subtitle-right">сексуальную жизнь</div>
+          </div>
+        </div>
+
+        <div class="s1-moment">
+          <div class="s1-moment-img">
+            <img src="img/icon-moment.png" alt="" />
+          </div>
+          <div class="s1-moment-text">
+            Моментальный<br />
+            эффект
+          </div>
+        </div>
+
+        <div class="s1-sale">Скидка 50%</div>
+
+     
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Возбуждает обоих партнеров</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Усиливает эрекцию</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>Увеличивает половой член</p>
+            </div>
+          </div>
+          <div class="container">
+          <div class="form-wrapper">
+            <div class="promo">
+              <p>
+                <span class="color-yellow">50% СКИДКА </span> ПО ПРОМОКОДУ
+                <span class="color-pink"> SALE50</span>
+              </p>
+            </div>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+    
+            <form method="post">
+              <div class="price">
+                <div class="price-old">
+                  <div>Обычная цена:</div>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                </div>
+    
+                <div class="price-line"></div>
+    
+                <div class="price-new">
+                  <div>Цена по акции:</div>
+                  <span class="price-new-val productsum color-yellow"></span>
+                </div>
+              </div>
+    
+            
+    
+              <div class="form-item" id="form">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selected value="RU">Россия</option>
+                  <option selected value="RU">Выберите вашу страну</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+    
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+    
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button last_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+              <p class="timer-date color-orange">
+                <span>*акция действует: </span>
+                <span class="date_1 color-green"></span>
+                <span class="color-green">-</span>
+                <span class="date_2 color-green"></span>
+              </p>
+            </form>
+          </div>
+        </div>
+      
+      </section>
+      
+     
+    </main>
+
+   
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        now = new Date();
+        var perem = (24 - now.getHours()) * 3600;
+        $(".el-timer").attr("data-timer", perem);
+        $(".el-timer").TimeCircles({
+          animation: "smooth",
+          bg_width: 1,
+          fg_width: 0.032,
+          use_background: 444452,
+          time: {
+            Days: {
+              text: "Days",
+              color: "#d3262c",
+              show: false,
+            },
+            Hours: {
+              text: "часов",
+              color: "#d3262c",
+              show: true,
+            },
+            Minutes: {
+              text: "минут",
+              color: "#d3262c",
+              show: true,
+            },
+            Seconds: {
+              text: "секунд",
+              color: "#d3262c",
+              show: true,
+            },
+          },
+        });
+
+        $(".s5-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left" src="img/icon-arrow-left-yellow.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right" src="img/icon-arrow-right-yellow.png" alt="">',
+        });
+
+        $(".s8__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left-reviews"  src="img/icon-arrow-left-yellow.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right-reviews" src="img/icon-arrow-right-yellow.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>
