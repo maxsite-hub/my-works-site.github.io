@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Аппарат «Алмаг+»</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+   
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-10);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM");
+        date_2 = date_2.toString("dd.MM");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440\u0443\u0431",
+          productsum: 1990,
+          oldproductsum: 39380,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <h1>
+            <span class="left">Аппарат</span>
+            <span class="right">«Алмаг+»</span>
+          </h1>
+          <div class="s1-title-bottom">Аппарат домашней магнитотерапии</div>
+        </div>
+
+        <div class="s1-block-img">
+          <img src="img/s1-bg.png" alt="" />
+          <p class="s1-block-text">Жизнь без боли возможна!</p>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <div class="s1-list-text">
+              Лечит опорно- двигательные заболевания
+            </div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <div class="s1-list-text">Снимает боль и воспаление</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <div class="s1-list-text">Улучшает усвоение лекарств</div>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Секунд</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">
+            <div class="price-block">
+              <div class="price-text">Обычная цена:</div>
+              <div class="price-old">
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+            </div>
+
+            <div class="price-discount">СКИДКА <span>50%</span></div>
+
+            <div class="price-block">
+              <div class="price-text">Новая цена:</div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+          </div>
+          <p class="date-title">
+            <span>Акция проходит: </span>
+            <span>с</span>
+            <span class="date_1"></span>
+            <span>по</span>
+            <span class="date_2"></span>
+          </p>
+
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s2">
+        <h2>Новое слово в медицине!</h2>
+        <p class="s2-title-top">
+          Согласно исследованиям Минздрава РФ, более 40% граждан страдают от
+          заболеваний опорно-двигательного аппарата.
+        </p>
+        <div class="s2-item-block">
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <img src="img/s2-1.png" alt="" />
+              <p>Сколиоз</p>
+            </div>
+
+            <div class="s2-item-list">
+              <img src="img/s2-3.png" alt="" />
+              <p>Артриты и артрозы</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-5.png" alt="" />
+              <p>Пяточная шпора</p>
+            </div>
+          </div>
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <img src="img/s2-human.png" alt="" />
+            </div>
+          </div>
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <img src="img/s2-2.png" alt="" />
+              <p>Остеопороз</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-4.png" alt="" />
+              <p>Остеохондроз позвоночника</p>
+            </div>
+
+            <div class="s2-item-list">
+              <img src="img/s2-6.png" alt="" />
+              <p>Скелетные травмы</p>
+            </div>
+          </div>
+        </div>
+        <div class="s2-footer">
+          <div class="container">
+            <img class="gif" src="gif/begushchee_magnitnoe_pole.gif" alt="" />
+            <div class="s2-footer-title">Бегущее магнитное поле</div>
+            <p class="s2-footer-text">
+              <span>И одним из самых эффективных направлений</span> в их лечении
+              в 2021 году стало лечение с помощью магнитных волн -
+              <span>магнитотерапия.</span> За счет изменения потенциала мембран
+              клеток и усиления активности антиоксидантов в крови,
+              <span
+                >магнитотерапия способствует восстановлению поврежденных
+                тканей,</span
+              >
+              а также купированию боли и полному снятию воспаления.
+            </p>
+            <img class="gif s2-gif" src="gif/1.gif" alt="" />
+            <p class="s2-footer-bottom">
+              Алмаг+ - это 100% клинически доказанный результат, который не
+              заставит себя ждать!
+            </p>
+          </div>
+        </div>
+        <img class="img" src="img/s2-bg.jpg" alt="" />
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>Действие Алмаг +</h2>
+          <div class="s3-top">
+            Прибор полностью заменяет больничные физиопроцедуры и решает
+            следующие проблемы
+          </div>
+          <div class="s3-item">
+            <div class="s3-item-list">
+              <img src="img/s3-1.png" alt="" />
+              <p>Снимает обострения</p>
+            </div>
+            <div class="s3-item-list">
+              <img src="img/s3-2.png" alt="" />
+              <p>Убирает скованность</p>
+            </div>
+            <div class="s3-item-list">
+              <img src="img/s3-3.png" alt="" />
+              <p>Устраняет болевой синдром</p>
+            </div>
+            <div class="s3-item-list">
+              <img src="img/s3-4.png" alt="" />
+              <p>Улучшает подвижность</p>
+            </div>
+            <div class="s3-item-list">
+              <img src="img/s3-5.png" alt="" />
+              <p>Способствует восстановлению тканей</p>
+            </div>
+            <img class="s3-list-img" src="img/s3-6.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>3 режима для любой ситуации</h2>
+          <div class="s4-item">
+            <div class="s4-item-img">
+              <img src="img/s4-1.png" alt="" />
+            </div>
+            <p class="s4-item-text">
+              Специальный<span> режим для периода обострений </span>- эффективно
+              снимает воспаление и боль
+            </p>
+          </div>
+          <div class="s4-item">
+            <div class="s4-item-img">
+              <img src="img/s4-2.png" alt="" />
+            </div>
+            <p class="s4-item-text">
+              Основной режим <span>для основательного лечения</span> болезни
+            </p>
+          </div>
+          <div class="s4-item">
+            <div class="s4-item-img">
+              <img src="img/s4-1.png" alt="" />
+            </div>
+            <p class="s4-item-text">
+              <span>Уникальный детский режим </span>разработан специально для
+              малышей от 1 месяца жизни
+            </p>
+          </div>
+        </div>
+        <div class="s4-footer">
+          <div class="container">
+            <h3>Алмаг+ решит Ваши проблемы навсегда!</h3>
+            <img class="img" src="img/s4-footer.png" alt="" />
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <div class="s5">
+        <div class="container">
+          <h2>Просто использовать!</h2>
+          <p class="s5-title">
+            Алмаг + - это современный аппарат магнитотерапии, разработанный
+            компанией Еламед специально для домашнего использования.
+          </p>
+          <img src="img/s5-top.jpg" alt="" />
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <div class="s5-num">1</div>
+              С помощью удобного пульта вы сможете переключать режимы одним
+              нажатием кнопки.
+            </div>
+          </div>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <div class="s5-num">3</div>
+              Аппаратом можно лечить сразу два сустава, располагая по паре
+              индукторов на каждом.
+            </div>
+          </div>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <div class="s5-num">2</div>
+              Индукторы-катушки можно трансформировать и накладывать цепочкой,
+              спиралью, ковриком 2х2, чтобы воздействовать целенаправленно на
+              нужную зону, а значит, максимально результативно.
+            </div>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+        <img class="img s5-middle" src="img/s5.jpg" alt="" />
+        <div class="s5-footer">
+          <div class="s5-footer-text">
+            Помимо эффективного лечения заболеваний опорно-двигательного
+            аппарата, Алмаг + также хорошо себя показал в лечении следующих
+            недугов:
+          </div>
+          <div class="s5-inner">
+            <div class="s5-inner-list">
+              <img src="img/s5-1.png" alt="" />
+              <p>Хронический бронхит</p>
+            </div>
+            <div class="s5-inner-list">
+              <img src="img/s5-2.png" alt="" />
+              <p>Бронхиальная астма</p>
+            </div>
+            <div class="s5-inner-list">
+              <img src="img/s5-3.png" alt="" />
+              <p>Осложнения сахарного диабета</p>
+            </div>
+            <div class="s5-inner-list">
+              <img src="img/s5-4.png" alt="" />
+              <p>Атеросклероз сосудов конечностей</p>
+            </div>
+            <div class="s5-inner-list">
+              <img src="img/s5-5.png" alt="" />
+              <p>Гипертоническая болезнь</p>
+            </div>
+            <div class="s5-inner-list">
+              <img src="img/s5-6.png" alt="" />
+              <p>Поражения отдельных нервов</p>
+            </div>
+            <div class="s5-inner-img">
+              <img src="img/s5-7.png" alt="" />
+            </div>
+            <div class="s5-inner-list">
+              <img src="img/s5-8.png" alt="" />
+              <p>Вегето-сосудистая дистония</p>
+            </div>
+          </div>
+          <div class="container">
+            <p class="s5-footer-text-bottom">
+              Закажите Алмаг+ сейчас и наслаждайтесь жизнью без боли!
+            </p>
+            <img class="s5-footer-img" src="img/s5-bg-2.png" alt="" />
+            <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+          </div>
+        </div>
+      </div>
+
+      <section class="s6">
+        <div class="container">
+          <h2>Алмаг+ широко известен в странах Европы!</h2>
+          <div class="s6-text-top">
+            И заслужил положительные отзывы всего медицинского сообщества
+          </div>
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <p>Medtec Live Medtech Summit 2020 Нюрнберг, Германия</p>
+          </div>
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <img src="img/s6-2.png" alt="" />
+            </div>
+            <p>Quality & Safety in Healthcare 2020 London Лондон, Англия</p>
+          </div>
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <img src="img/s6-3.png" alt="" />
+            </div>
+            <p>CareExpo 2021 Катовице, Польша</p>
+          </div>
+          <img src="img/s6-bg.png" alt="" />
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>Мнение специалиста</h2>
+          <div class="s7-item">
+            <img src="img/s7-1.png" alt="" />
+            <div class="s7-name">Борисов Сергей Викторович</div>
+            <div class="s7-prof">
+              Практикующий невролог, профессор Стаж - 20 лет
+            </div>
+            <p class="s7-item-list">
+              Думаю, магнитотерапия - это будущее хирургии и неврологии. Уже
+              сейчас мы имеем <span>потрясающие результаты</span> и активно
+              внедряем её использование во все возможные отрасли медицины.
+              Например, Алмаг + может использоваться,
+              <span>как самостоятельное средство лечения</span> различных
+              тяжелых заболеваний, так и
+              <span>в качестве поддерживающей терапии.</span> Благодаря тому,
+              что он улучшает кровоток
+              <span>в проблемных областях,</span> принимаемые лекарства
+              действуют значительно лучше. В отдельных случаях приходится даже
+              снижать дозировку.
+              <span
+                >Алмаг+ прошел все клинические испытания и подтвердил свою
+                эффективность.</span
+              >
+            </p>
+          </div>
+        </div>
+        <img class="shtamp" src="img/s7-shtamp.png" alt="" />
+      </section>
+
+      <section class="s8">
+        <h2>Отзывы тех, кому уже помог Алмаг+</h2>
+
+        <div class="s8-slider">
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-1.jpg" alt="" />
+            <div class="s8-block-name">
+              <p class="name">Гущина Елена</p>
+              <p class="prof">48 лет, Нижний Новгород</p>
+            </div>
+
+            <img class="s8-icon-img" src="img/icon-stars.png" alt="" />
+            <p class="text">
+              Меня работа обязывает ходить на каблуках, вот и к 45 годам
+              заработала себе шпору. Лечила 2 года с переменным успехом. То есть
+              улучшения, то нет. У меня график работы сумасшедший.
+              Физиопроцедуры регулярно посещать не могу, доктора тоже. На
+              очередной встрече, мой доктор посоветовал использовать Алмаг +.
+              Говорит, что это полноценная замена физиопроцедурам в больнице,
+              только когда хочешь, и где хочешь. Я стала применять, и, правда!
+              Эффект не заставил себя ждать. Боли можно убрать за считанные
+              минут с помощью специального режима, а долгосрочные изменения
+              наступают дольше. Где-то спустя неделю, пятка перестала беспокоить
+              меня почти совсем. А сейчас спустя полгода я абсолютна здорова!
+              Доктор сказал, что можно больше не приходить.
+            </p>
+          </div>
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-2.jpg" alt="" />
+            <div class="s8-block-name">
+              <p class="name">Светлаков Максим</p>
+              <p class="prof">59 лет, Курган</p>
+            </div>
+
+            <img class="s8-icon-img" src="img/icon-stars.png" alt="" />
+            <p class="text">
+              Я 30 лет за баранкой, спина ноет ужасно. Ходил по врачам, говорят
+              протрузии. На физиопроцедуры ходил. Эффект есть, но недолгий. Как
+              физиопроцедуры заканчиваются, боли возвращаются. Ну а коли я
+              профессию менять не планирую, улучшений никаких нет. Ну и тут по
+              телевизору я увидел выпуск про Алмаг+. Поинтересовался, быстро
+              нашел, где купить и стал пользоваться. И, вы знаете, я себя так
+              хорошо даже в 20 лет не чувствовал! Боли прошли на второй день.
+              Через месяц я пришел к врачу на прием, говорит улучшения на глаза!
+              И работа теперь опять в радость. Хоть еще 30 лет откатаю. Всем
+              советую, аппарат работает!
+            </p>
+          </div>
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-3.jpg" alt="" />
+            <div class="s8-block-name">
+              <p class="name">Северов Вадим</p>
+              <p class="prof">35 лет, Уфа</p>
+            </div>
+
+            <img class="s8-icon-img" src="img/icon-stars.png" alt="" />
+            <p class="text">
+              По молодости увлекался футболом. Был разрыв мениска на обоих
+              коленях. Ну был и был. Играть я давно перестал. Но вот недавно
+              меня снова начали мучать колени. Я мази разные пробовал, массаж, к
+              врачу ходил. Все бестолку. До тех пор, пока не нашел Алмаг +. То
+              есть моя жена нашла. Лучше любых обезболивающих, а главное -
+              дешевле! Чуть заболело, включил прибор, 5 минут и хоть снова на
+              поле выходи. Ну и в целом, накопительный эффект тоже есть. Спустя
+              месяц использования болеть стало гораздо меньше. Могу смело
+              рекомендовать, не развод!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2>Как заказать товар?</h2>
+        <div class="s9-item">
+          <div class="s9-item-list">
+            <img src="img/s9-1.png" alt="" />
+            <div class="s9-text">Оставьте заявку на заказ через форму ниже</div>
+          </div>
+          <div class="s9-item-list">
+            <div class="s9-text">
+              Мы свяжемся с вами для подтверждения заказа
+            </div>
+            <img src="img/s9-2.png" alt="" />
+          </div>
+          <div class="s9-item-list">
+            <img src="img/s9-3.png" alt="" />
+            <div class="s9-text">
+              Через несколько дней мы доставим вам товар
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="s1-title">
+          <h1>
+            <span class="left">Аппарат</span>
+            <span class="right">«Алмаг+»</span>
+          </h1>
+          <div class="s1-title-bottom">Аппарат домашней магнитотерапии</div>
+        </div>
+
+        <div class="s1-block-img">
+          <img src="img/s1-bg.png" alt="" />
+          <p class="s1-block-text">Жизнь без боли возможна!</p>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <div class="s1-list-text">
+              Лечит опорно- двигательные заболевания
+            </div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <div class="s1-list-text">Снимает боль и воспаление</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <div class="s1-list-text">Улучшает усвоение лекарств</div>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Секунд</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">
+            <div class="price-block">
+              <div class="price-text">Обычная цена:</div>
+              <div class="price-old">
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+            </div>
+
+            <div class="price-discount">СКИДКА <span>50%</span></div>
+
+            <div class="price-block">
+              <div class="price-text">Новая цена:</div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+          </div>
+          <p class="date-title">
+            <span>Акция проходит: </span>
+            <span>с</span>
+            <span class="date_1"></span>
+            <span>по</span>
+            <span class="date_2"></span>
+          </p>
+
+          <form action="#" method="post" class="orderformcdn" id="form">
+            <div class="form-item">
+              <select
+                name="country"
+                class="countryselect form-control location"
+              >
+                <option value="RU" selected disabled>Россия</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                name="name"
+                class="field form-control userneme"
+                placeholder="Ваше имя..."
+                value=""
+              />
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                name="phone"
+                class="field form-control phone"
+                placeholder="Ваш телефон..."
+                value=""
+              />
+            </div>
+            <input
+              type="hidden"
+              name="productsum"
+              class="productsum"
+              value="1 руб."
+            />
+            <input type="hidden" name="delivery" value="0 руб." />
+            <input
+              type="hidden"
+              name="totalsum"
+              class="productsum"
+              value="1 руб."
+            />
+            <input type="hidden" name="user" value="1" />
+            <input
+              type="hidden"
+              name="address"
+              value="Уточнить у покупателя"
+            />
+      
+            <div class="reolader form-item">
+              <button
+                type="submit"
+                class="form-btn mm_button"
+                onclick="checkFields(event, this);"
+              >
+                Заказать сейчас
+              </button>
+              <div class="ajax_loader_block">
+                <img
+                  class="ajax_loader"
+                  src="img/ajax-loader.gif"
+                  alt="Идет отправка данных"
+                />
+                <span class="ajax_loader">Идет отправка данных</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s8-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left-2" src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right-2" src="img/BTN_arrow_next.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>
