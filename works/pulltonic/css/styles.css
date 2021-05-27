@@ -922,11 +922,13 @@ h2 {
    
  }
 .rev-block-v3 .slick-prev{
+    cursor: pointer;
   position: absolute;
     left: -16px;
     z-index: 100;
 }
 .rev-block-v3 .slick-next{
+    cursor: pointer;
   position: absolute;
     right: -16px;
     top: 50%;
@@ -1161,19 +1163,7 @@ h2 {
         max-width: 440px;
         margin: 0 auto;
     }
-    /* reviews */
-    .reviews_section h2 {
-        font-size: 26px;
-        line-height: 1.4em;
-        margin-bottom: 20px;
-    }
-    .reviews_section h2:before,
-    .reviews_section h2:after {
-        display: none;
-    }
-    .reviews_section .review_item {
-        width: 280px;
-    }
+   
     /* order */
     .order_section .title_block h1 {
         font-size: 25px;
