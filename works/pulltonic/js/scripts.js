@@ -91,36 +91,3 @@ $(document).ready(function() {
 });
 
 
-$(window).on("load", function() {
-
-    /* sliders */
-    $(".reviews_list").owlCarousel({
-        smartSpeed: 300,
-        mouseDrag: false,
-        pullDrag: false,
-        dots: false,
-        autoHeight: true,
-        navText: "",
-        responsive: {
-            0: {
-                items: 1,
-                margin: 0,
-                nav: true,
-                loop: true
-            },
-            660: {
-                items: 2,
-                margin: 20,
-                nav: true,
-                loop: true
-            },
-            1170: {
-                items: 4,
-                margin: 20,
-                nav: true,
-                loop: true
-            }
-        }
-    });
-
-});
