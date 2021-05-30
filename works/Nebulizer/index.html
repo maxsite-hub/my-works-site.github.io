@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>RinoMed</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 4450,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+      .form-btn:hover {
+        animation: none;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+          box-shadow: 0 0 0 10px rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <h1>RinoMed</h1>
+          <p class="s1-title-top">
+            Портативный <br />
+            небулайзер
+          </p>
+          <p class="s1-title-right">
+            Дышите
+            <br />
+            свободно!
+          </p>
+        </div>
+        <div class="s1-block">3 режима работы</div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Легкий и портативный</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Бесшумная работа</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Процедура 6-10 мин</p>
+          </div>
+        </div>
+
+        <div class="discount">-60%</div>
+
+        <div class="form-wrapper">
+          <div class="container">
+            <p class="price-title">
+              Активирована скидка 60% <br />
+              по промокоду <span class="color-red">MED21</span>
+            </p>
+          </div>
+          <div class="timer-cont">
+            <h3>Акция закончится через:</h3>
+            <div class="el-timer"></div>
+          </div>
+          <div class="container">
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selected value="RU">Выберите вашу страну</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Сделать заказ
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form-count">
+            *акция действует:
+            <span class="date_1 color-purple"></span>
+            <span class="color-purple">-</span>
+            <span class="date_2 color-purple"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <div class="container">
+          <h2>
+            Сталкивались ли вы с такими
+            <span class="color-orange">проблемами</span> при лечении органов
+            дыхания?
+          </h2>
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <img src="img/s2-1.png" alt="" />
+              <p>Неудобство использования ингаляторов</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-2.png" alt="" />
+              <p>Низкая эффективность препаратов</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-3.png" alt="" />
+              <p>Необходимость присутствия врача</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-4.png" alt="" />
+              <p>Сложность расчета дозы</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-5.png" alt="" />
+              <p>Обязательное прохождение физиотерапии</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-6.png" alt="" />
+              <p>Недоступность рецептурных препаратов</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="s3-item">
+          <h2>Забудьте об этом!</h2>
+        </div>
+        <img src="img/s3.png" alt="" />
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>
+            <span class="color-purple">Профессиональный</span><br />небулайзер
+          </h2>
+        </div>
+        <img src="img/s4-1.jpg" alt="" />
+        <div class="container">
+          <p>
+            <span>Небулайзер RinoMed -</span> это профессиональный аппарат,
+            разработанный специально для домашнего использования.
+          </p>
+          <img class="gif" src="gif/1.gif" alt="" />
+          <p>
+            Небулайзер предназначен для ингаляции лекарственного средства при
+            различных респираторных заболеваниях, профилактики простуд и ОРВИ, а
+            также помогает бросить курить.
+          </p>
+        </div>
+        <img src="img/s4-2.jpg" alt="" />
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>
+            Кому необходим
+            <span class="color-purple">небулайзер RinoMed?</span>
+          </h2>
+          <div class="s5-item">
+            <div class="s5-list">
+              <img src="img/s5-1.png" alt="" />
+              <p>Астматикам</p>
+            </div>
+            <div class="s5-list">
+              <img src="img/s5-2.png" alt="" />
+              <p>Переболевшим коронавирусом</p>
+            </div>
+            <div class="s5-list">
+              <img src="img/s5-3.png" alt="" />
+              <p>Аллергикам</p>
+            </div>
+          </div>
+          <img class="s5-img" src="img/s5-4.png" alt="" />
+          <div class="s5-item">
+            <div class="s5-list">
+              <img src="img/s5-5.png" alt="" />
+              <p>Пенсионерам</p>
+            </div>
+            <div class="s5-list">
+              <img src="img/s5-6.png" alt="" />
+              <p>Детям</p>
+            </div>
+            <div class="s5-list">
+              <img src="img/s5-7.png" alt="" />
+              <p>Курильщикам</p>
+            </div>
+          </div>
+        </div>
+        <img src="img/s5-8.jpg" alt="" />
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2>
+            <span class="color-purple">Преимущества</span> небулайзера RinoMed
+          </h2>
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <img src="img/s6-1.png" alt="" />
+              <p>Простота использования</p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-2.png" alt="" />
+              <p>Не требует присутствия специалиста</p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-3.png" alt="" />
+              <p>Воздействует на все отделы дыхательных путей</p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-4.png" alt="" />
+              <p>Возможность использовать в любом месте</p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-5.png" alt="" />
+              <p>Подходит как взрослым, так и детям</p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-6.png" alt="" />
+              <p>Профилактика ОРВИ, простуд и коронавируса</p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-7.png" alt="" />
+              <p>Возможность использовать с любым раствором</p>
+            </div>
+            <div class="s6-item-list">
+              <img src="img/s6-8.png" alt="" />
+              <p>Полная альтернатива физиотерапии</p>
+            </div>
+          </div>
+        </div>
+        <img src="img/s6-9.jpg" alt="" />
+        <a href="#form" class="form-btn">Сделать заказ</a>
+        <img class="img" src="img/s6-10.jpg" alt="" />
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>
+            В каких случаях используют
+            <span class="color-purple"> небулайзер RinoMed? </span>
+          </h2>
+          <div class="s7-item">
+            <img src="img/s7-1.png" alt="" />
+            <p>Для лечения любых заболеваний органов дыханий</p>
+          </div>
+          <div class="s7-item">
+            <img src="img/s7-2.png" alt="" />
+            <p>
+              Для профилактики ринита, туберкулеза, хронического кашля и т.д.
+            </p>
+          </div>
+          <div class="s7-item">
+            <img src="img/s7-3.png" alt="" />
+            <p>В сезон повышенной активности вирусов и простуд</p>
+          </div>
+          <div class="s7-item">
+            <img src="img/s7-4.png" alt="" />
+            <p>Для быстрейшего восстановления иммунитета после болезни</p>
+          </div>
+          <div class="s7-item">
+            <img src="img/s7-5.png" alt="" />
+            <p>Для формирования крепкого иммунитета у детей</p>
+          </div>
+          <div class="s7-item">
+            <img src="img/s7-6.png" alt="" />
+            <p>Для укрепления здоровья у пожилых людей</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <h2>Посмотрите видео!</h2>
+        <div class="video">
+          <div class="click-for-video">
+            <img src="img/s8.png" alt="" />
+          </div>
+          <div class="youtube">
+            <iframe class="youtube"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>
+            Небулайзер <span class="color-purple">RinoMed</span> уже
+            зарекомендовал себя <span class="color-purple">в 17 странах!</span>
+          </h2>
+        </div>
+        <div class="s9-block-top">Теперь он доступен и в России!</div>
+        <img src="img/s9-1.jpg" alt="" />
+        <div class="container">
+          <ul class="list">
+            <li>Лидер продаж в США и Европе</li>
+            <li>Рекомендован лучшими врачами со всего мира</li>
+            <li>Победитель 8 международных конкурсов и выставок</li>
+          </ul>
+          <div class="s9-item">
+            <img src="img/s9-2.png" alt="" />
+            <p>Победитель медицинской выставки МедФарм 2021 в Москве</p>
+          </div>
+          <div class="s9-item">
+            <img src="img/s9-3.png" alt="" />
+            <p>
+              Победитель категории "Инновация года" на форуме CMEF21 (China
+              International Medical Equipment Fair 2021) в Шанхае
+            </p>
+          </div>
+          <div class="s9-item">
+            <img src="img/s9-4.png" alt="" />
+            <p>
+              Номинант на премию "Товар года" на мероприятии-семинаре
+              EuroMedEmirates 2021 в Дубае
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s10">
+        <div class="container">
+          <h2>Мнение специалиста</h2>
+          <img src="img/s10-1.png" alt="" />
+          <p class="name">Геннадий Смотрин</p>
+          <p class="prof">Лор высшей категории, кандидат медицинских наук</p>
+        </div>
+        <div class="s10-item">
+          <p>
+            В моей практике, я часто встречал пациентов, которые принимали
+            различные препараты для лечения респираторных заболеваний и
+            восстановления после них. К сожалению, многие из таких препаратов не
+            работали, т.к. сложность переносимых заболеваний зачастую выше
+            нейтралитической способности этих препаратов.
+          </p>
+          <p>
+            К счастью для моих пациентов, на рынке появился небулайзер RinoMed
+            способный в домашних условиях полностью заменить необходимые
+            физиотерапевтические процедуры. Небулайзер RinoMed работает по
+            принципу "рассеивания" частиц залитого в него лекарства, благодаря
+            чему он эффективно борется с заболеванием, проникая в самые
+            труднодоступные места легких человека или слизистой носоглотки.
+          </p>
+          <p class="s10-item-footer">
+            Однозначно, я рекомендую небулайзер RinoMed всем, кто следит за
+            своим здоровьем.
+          </p>
+          <img class="signature" src="img/icon-signature.png" alt="" />
+        </div>
+      </section>
+
+      <section class="s11">
+        <h2>
+          Реальные люди - <span class="color-purple">реальные отзывы</span>
+        </h2>
+
+        <div class="s11__slider">
+          <div class="s11-block white-block">
+            <img class="s11-img" src="img/s11-1.png" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p><b>Андрей </b><br /><span> г. Москва</span></p>
+              </div>
+            </div>
+            <div class="s11-text">
+              <p>
+                Я страдал ринитом на протяжении двух лет. Ни один из
+                испробованных мною препаратов ну помогал мне полностью
+                излечиться от него, давая лишь временных эффект.
+              </p>
+              <p>
+                Заказав небулайзер RinoMed, я в течении 2х недель его
+                использования забыл про заложенность носа и насморк, отказавшись
+                от всех сосудосуживающих капель. Теперь я дышу в полный нос.
+                Спасибо огромное!
+              </p>
+            </div>
+          </div>
+          <div class="s11-block white-block">
+            <img class="s11-img" src="img/s11-2.png" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p><b>Михаил </b><br /><span> г. Омск</span></p>
+              </div>
+            </div>
+            <div class="s11-text">
+              <p>
+                Пытался бросить курить на протяжении 3х лет. Принимал различные
+                таблетки, пластыри, заменители сигарет, аэрозоли и тд - ничего
+                не помогало. Коллега на работе посоветовал небулайзер RinoMed,
+                сказав что это самое эффективное средство в борьбе с курением.
+                Как-то оно там действует на бронхи, очищая их....я уж не помню.
+                Самое главное, что после 3х недель использования, у меня
+                прекратился так называемый "кашель курильщика" по утрам, а еще
+                через 1,5 недели я полностью потерял тягу к сигаретам. Не курю
+                уже 4 месяца и совсем не тянет.
+              </p>
+              <p>Спасибо, это действительно работает!</p>
+            </div>
+          </div>
+          <div class="s11-block white-block">
+            <img class="s11-img" src="img/s11-3.png" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p><b>Ольга </b><br /><span> г. Хабаровск</span></p>
+              </div>
+            </div>
+            <div class="s11-text">
+              <p>
+                Мой ребенок заболел ангиной. Страшное заболевание, тем более у
+                детей. Сын кашлял целыми днями, а врачи ничего не могли сделать,
+                выписывая лишь слабодействующие препараты. Слава Богу, я
+                решилась на покупку небулайзера RinoMed. В течение 1 недели у
+                ребенка полностью прошел кашель и температура, не знаю, что бы
+                было с моим сыном, если бы не этот аппарат!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s12">
+        <h2>Комплект небулайзера <span class="color-purple">RinoMed</span></h2>
+        <img src="img/s12-1.jpg" alt="" />
+        <div class="container">
+          <ul class="list">
+            <li>Основной блок</li>
+            <li>Чаша для лекарственного препарата</li>
+            <li>Инструкция по эксплуатации и гарантийный талон</li>
+            <li>Маска</li>
+            <li>Мундштук</li>
+            <li>USB кабель</li>
+            <li>Сумка для хранения</li>
+          </ul>
+        </div>
+        <img src="img/s12-2.jpg" alt="" />
+      </section>
+
+      <section class="s13">
+        <div class="container">
+          <h2>Доставка и <span class="color-purple">оплата</span></h2>
+          <div class="s13-item">
+            <img src="img/s13-1.png" alt="" />
+            <p>
+              Доставка почтой в течение 3-10 рабочих дней. Стоимость доставки
+              товара от 350р.
+            </p>
+          </div>
+          <div class="s13-item">
+            <img src="img/s13-2.png" alt="" />
+            <p>Оплата заказов осуществляется по факту получения товара</p>
+          </div>
+          <div class="s13-item">
+            <img src="img/s13-3.png" alt="" />
+            <p>
+              Мы всегда проверяем товар перед отправкой и гарантируем 100%
+              качество
+            </p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="s1">
+        <div class="s1-title">
+          <h1>RinoMed</h1>
+          <p class="s1-title-top">
+            Портативный <br />
+            небулайзер
+          </p>
+          <p class="s1-title-right">
+            Дышите
+            <br />
+            свободно!
+          </p>
+        </div>
+        <div class="s1-block">3 режима работы</div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Легкий и портативный</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Бесшумная работа</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Процедура 6-10 мин</p>
+          </div>
+        </div>
+
+        <div class="discount">-60%</div>
+
+        <div class="form-wrapper">
+          <div class="container">
+            <p class="price-title">
+              Активирована скидка 60% <br />
+              по промокоду <span class="color-red">MED21</span>
+            </p>
+          </div>
+          <div class="timer-cont">
+            <h3>Акция закончится через:</h3>
+            <div class="el-timer"></div>
+          </div>
+          <div class="container">
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selected value="RU">Выберите вашу страну</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Сделать заказ
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form-count">
+            *акция действует:
+            <span class="date_1 color-purple"></span>
+            <span class="color-purple">-</span>
+            <span class="date_2 color-purple"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s11__slider").slick({
+          dots: false,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left"  src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right" src="img/BTN_arrow_next.png" alt="">',
+        });
+
+        $(".click-for-video").click(function () {
+          this.style.display = "none";
+          $("div.youtube").css("display", "block");
+          $("iframe.youtube").prop("src", "video.mp4");
+        });
+        now = new Date();
+        var perem = (24 - now.getHours()) * 3600;
+        $(".el-timer").attr("data-timer", perem);
+        $(".el-timer").TimeCircles({
+          animation: "smooth",
+          bg_width: 1,
+          fg_width: 0.032,
+          circle_bg_color: "#ebf0f7",
+          time: {
+            Days: {
+              text: "Days",
+              color: "#ffb700",
+              show: false,
+            },
+            Hours: {
+              text: "часов",
+              color: "#ffb700",
+              show: true,
+            },
+            Minutes: {
+              text: "минут",
+              color: "#ffb700",
+              show: true,
+            },
+            Seconds: {
+              text: "секунд",
+              color: "#ffb700",
+              show: true,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
