@@ -133,11 +133,15 @@ button {
   outline: none;
 }
 
+
 a {
+  cursor: pointer;
   background-color: transparent;
   text-decoration: underline;
   -webkit-text-decoration-skip: objects;
 }
+
+
 
 select,
 input,
@@ -527,6 +531,7 @@ h2 {
   color: #a8a9aa;
   font-size: 18px;
   line-height: 1.1em;
+  margin-top: 10px;
   margin-bottom: 18px;
 }
 
