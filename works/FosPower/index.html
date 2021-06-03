@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>FosPower 4в1</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 2490,
+          oldproductsum: 5533,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(232, 28, 46, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0.7);
+          box-shadow: 0 0 0 0 rgba(232, 28, 46, 0.7);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 12px rgba(232, 28, 46, 0);
+          box-shadow: 0 0 0 12px rgba(232, 28, 46, 0);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+          box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="container">
+          <div class="s1-title">
+            <div class="s1-suptitle">Настоящий мужской гаджет</div>
+            <h1>FosPower 4в1</h1>
+            <div class="s1-subtitle">
+              Фонарь • FM-Радио • Повербанк • Сигнал SOS
+            </div>
+          </div>
+
+          <div class="s1-block">
+            <span class="color-red">Незаменимый</span>
+            помощник на отдыхе
+          </div>
+
+          <div class="discount">
+            <p class="discount-text">
+              <span class="num">65%</span>
+              <span class="name">скидка</span>
+            </p>
+          </div>
+        </div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list.jpg" alt="" />
+            <p><span>Солнечная</span> батарея</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.jpg" alt="" />
+            <p><span>Защита</span> от воды и пыли</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.jpg" alt="" />
+            <p><span>Гарантия</span> 10 лет!</p>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="timer-cont">
+            <h3>Акция закончится через:</h3>
+            <div class="el-timer"></div>
+          </div>
+          <div class="container-form">
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-red"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод <span class="color-red">CAMP</span> на
+                  <span class="color-red">скидку 65%</span>
+                </p>
+              </div>
+            </div>
+
+            <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+            <div class="form-count">
+              *акция действует:
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <h2>
+          Знакомы ли вам <span class="color-yellow">эти проблемы</span> на
+          отдыхе?
+        </h2>
+
+        <div class="s2-item">
+          <div class="s2-item-list">
+            <img src="img/s2-1.jpg" alt="" />
+            <p class="s2-text">
+              Вы собрались с друзьями, но не можете включить музыку
+            </p>
+          </div>
+          <div class="s2-item-list">
+            <img src="img/s2-2.jpg" alt="" />
+            <p class="s2-text">
+              Гаджеты разрядились в самый неподходящий момент
+            </p>
+          </div>
+          <div class="s2-item-list">
+            <img src="img/s2-3.jpg" alt="" />
+            <p class="s2-text">Отсутствие рядом электросети или повербанка</p>
+          </div>
+          <div class="s2-item-list">
+            <img src="img/s2-4.jpg" alt="" />
+            <p class="s2-text">Недостаточно освещения вечером или ночью</p>
+          </div>
+          <div class="s2-item-list">
+            <img src="img/s2-5.jpg" alt="" />
+            <p class="s2-text">Ваш плеер или FM-радио не работают</p>
+          </div>
+          <div class="s2-item-list">
+            <img src="img/s2-6.jpg" alt="" />
+            <p class="s2-text">Вам необходимо позвать на помощь</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>
+            <span class="color-red">Забудьте!</span><br />
+            Теперь есть решение!
+          </h2>
+        </div>
+        <div class="s3-item">
+          <div class="s3-item-list">
+            Представляем вам уникальный гаджет нового поколения
+            <span class="color-red">FosPower 4в1!</span>
+          </div>
+          <img class="img" src="img/s3-1.jpg" alt="" />
+          <img class="img" src="img/s3-2.jpg" alt="" />
+        </div>
+        <div class="s3-text">
+          <p>
+            <span>FosPower</span> – революционный девайс как для простого отдыха
+            за городом или в гараже, так и для настоящего похода и кемпинга,
+            сочетающий в себе 4 устройства: фонарь, FM-радио, повербанк и маяк
+            для отправки сигнала SOS
+          </p>
+        </div>
+        <img class="gif" src="gif/1.gif" alt="" />
+        <div class="s3-text">
+          <p>
+            <span>FosPower</span> станет вашим незаменимым помощником во время
+            отдыха или кемпингов любой длительности, а при определенных
+            ситуациях поможет позвать на помощь, отправив сигнал SOS.
+          </p>
+        </div>
+        <img src="img/s3-3.jpg" alt="" />
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>Когда и где пригодится FosPower?</h2>
+        </div>
+
+        <div class="s4-item">
+          <div class="s4-item-list">
+            <img src="img/s4-1.jpg" alt="" />
+            <p class="s4-text">Поездка на дачу</p>
+          </div>
+          <div class="s4-item-list">
+            <img src="img/s4-2.jpg" alt="" />
+            <p class="s4-text">В машине</p>
+          </div>
+          <div class="s4-item-list">
+            <img src="img/s4-3.jpg" alt="" />
+            <p class="s4-text">Рыбалка или охота</p>
+          </div>
+          <div class="s4-item-list">
+            <img src="img/s4-4.jpg" alt="" />
+            <p class="s4-text">В походе и кемпинге</p>
+          </div>
+          <div class="s4-item-list">
+            <img src="img/s4-5.jpg" alt="" />
+            <p class="s4-text">Встреча с друзьями</p>
+          </div>
+          <div class="s4-item-list">
+            <img src="img/s4-6.jpg" alt="" />
+            <p class="s4-text">Посиделки в гараже</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <div class="video">
+          <div class="click-for-video">
+            <h2>Смотрите видео!</h2>
+            <img src="img/s5.png" alt="" />
+          </div>
+          <div class="youtube">
+            <iframe class="youtube"></iframe>
+          </div>
+        </div>
+        <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+       
+      </section>
+
+      <section class="s6">
+        <img class="img" src="img/s6-top.jpg" alt="" />
+        <div class="container">
+          <h2>Преимущества FosPower:</h2>
+          <div class="s6-item">
+            <img src="img/s6-1.jpg" alt="" />
+            <p class="s6-title">Громкий динамик</p>
+            <p class="s6-text">
+              Динамик FosPower разработан так, чтобы звучать одинаково
+              качественно и громко как в помещении, так и на улице.
+            </p>
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-2.jpg" alt="" />
+            <p class="s6-title">Мощный аккумулятор</p>
+            <p class="s6-text">
+              20000 мАч обеспечат автономную работу устройства до 7 дней.
+            </p>
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-3.jpg" alt="" />
+            <p class="s6-title">Сверхъяркий фонарь</p>
+            <p class="s6-text">
+              3 режима работы: ближний свет, дальний свет и ночник. Наибольшая
+              дальность освещения превышает 30 метров.
+            </p>
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-4.jpg" alt="" />
+            <p class="s6-title">Внешний аккумулятор для других устройств</p>
+            <p class="s6-text">
+              С помощью FosPower вы сможете зарядить любое устройство, если под
+              рукой нет обычной зарядки.
+            </p>
+          </div>
+        </div>
+        <img class="img" src="img/s6-5.jpg" alt="" />
+        <div class="container">
+          <div class="s6-item">
+            <img src="img/s6-6.jpg" alt="" />
+            <p class="s6-title">Солнечная батарея</p>
+            <p class="s6-text">
+              Рядом нет розетки? Не проблема - FosPower легко зарядить, направив
+              его к источнику света.
+            </p>
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-7.jpg" alt="" />
+            <p class="s6-title">Динамомашина</p>
+            <p class="s6-text">
+              В ситуациях, где нет ни света, ни электричества, вы можете
+              зарядить FosPower просто покрутив специальный рычаг в течение 1-2
+              минут.
+            </p>
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-8.jpg" alt="" />
+            <p class="s6-title">Сигнал SOS</p>
+            <p class="s6-text">
+              Если вы попали в чрезвычайную ситуацию, с помощью FosPower
+              отправьте сигнал SOS и ближайшая служба спасения сразу же его
+              примет.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="s7-item">
+          <div class="s7-item-list">
+            <p><span>Внимание!</span> Остерегайтесь подделок!</p>
+          </div>
+          <div class="s7-item-list-2">
+            <p>
+              Обратите внимание, что
+              <span class="color-red"
+                >подделки зачастую не имеют такого обширного функционала,</span
+              >
+              как у оригинала, а также быстро ломаются или работают
+              некачественно!
+            </p>
+          </div>
+          <img src="img/s7-bg.jpg" alt="" />
+        </div>
+        <div class="s7-item-middle">
+          <img class="s7-img" src="img/s7.png" alt="" />
+          <p>
+            Оригинальное устройство FosPower можно приобрести
+            <span class="color-red">только здесь</span> на официальном сайте
+          </p>
+        </div>
+      </section>
+
+      <section class="s8">
+        <div class="form-wrapper">
+          <div class="timer-cont">
+            <h3>Акция закончится через:</h3>
+            <div class="el-timer"></div>
+          </div>
+          <div class="container-form">
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-red"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод <span class="color-red">CAMP</span> на
+                  <span class="color-red">скидку 65%</span>
+                </p>
+              </div>
+            </div>
+
+            <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+            <div class="form-count">
+              *акция действует:
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>Мнение эксперта</h2>
+        </div>
+        <div class="s9-item">
+          <div class="s9-item-list">
+            <p class="s9-name">Алексей Морозов</p>
+            <p>
+              Специалист по выживанию, ведущий тематического телешоу, инструктор
+            </p>
+          </div>
+          <img src="img/s9-1.jpg" alt="" />
+        </div>
+        <div class="s9-text">
+          <p>
+            "Более 20 лет я занимаюсь эстремальными походами и вылазками в
+            места, где часто даже не ступала нога человека. В таких вещах очень
+            важен инвентарь, который ты берешь с собой.
+          </p>
+          <p>
+            Ни один мой поход не обходится без <span>FosPower.</span> От него я
+            заряжаю другие гаджеты благодаря солнечной батарее, слушаю свою
+            музыку и FM-радио. С ним я всегда могу разбить лагерь в темное время
+            суток и уверен, что если не дай Бог что-то случится - я всегда смогу
+            подать сигнал SOS.
+          </p>
+          <p>
+            В то время, когда я не хожу в походы, <span>FosPower</span> просто
+            лежит у меня в машине. Через него я слушаю радио или включаю плеер.
+          </p>
+          <p>
+            Рекомендую <span>FosPower</span> не только тем, кто увлекается
+            походами, но и простым людям, любящим выехать куда-нибудь на отдых!"
+          </p>
+        </div>
+        <img class="img" src="img/s9-2.jpg" alt="" />
+      </section>
+
+      <section class="s10">
+        <h2>Отзывы наших покупателей</h2>
+        <div class="container">
+          <div class="s10__slider">
+            <div class="s10-block white-block">
+              <img class="s10-img" src="img/s10-1.jpg" alt="" />
+              <div class="block-name">
+                <img src="img/icon-avatar.png" alt="" />
+                <div class="name">
+                  <p><b>Иван</b> <br />г. Анапа</p>
+                </div>
+              </div>
+              <p class="s10-text">
+                Часто собираемся в гараже с мужиками и всегда берем с собой
+                FosPower. Это классная колонка, которая громко, качественно и
+                долго играет, благодаря чему наши встречи проходят еще более
+                душевно и весело. Всем любителям отдыхать рекомендую!)
+              </p>
+            </div>
+            <div class="s10-block white-block">
+              <img class="s10-img" src="img/s10-2.jpg" alt="" />
+              <div class="block-name">
+                <img src="img/icon-avatar-2.png" alt="" />
+                <div class="name">
+                  <p><b>Сергей </b> <br />г. Москва</p>
+                </div>
+              </div>
+              <p class="s10-text">
+                Почти каждые выходные выбираемся с семьей на природу или на
+                дачу, обязательно взяв с собой FosPower. Встроенный
+                радиоприемник позволяет слушать музыку где бы мы ни находились,
+                а встроенный фонарь нередко выручал в ночи или на трассе, тк
+                светит он очень ярко! Огромный плюс, что есть возможность
+                заряжать другие устройства, подключив их по USB к радио. Куплю
+                еще один своим пожилым родителям. Классная вещь!
+              </p>
+            </div>
+
+            <div class="s10-block white-block">
+              <img class="s10-img" src="img/s10-3.jpg" alt="" />
+              <div class="block-name">
+                <img src="img/icon-avatar-3.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Михаил </b> <br />
+                    г. Геленджик
+                  </p>
+                </div>
+              </div>
+              <p class="s10-text">
+                Часто хожу в походы на несколько дней и FosPower меня выручает
+                уже очень давно. Он всегда расскажет актуальные новости и
+                прогноз на завтра, если в лесу или в горах у обычных устройств
+                нет сети. Заказал еще один для друга, который в следующем сезоне
+                собирается покорить Эверест. Однозначно рекомендую!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s11">
+        <h2>
+          Как сделать заказ?
+        </h2>
+        <div class="container">
+          <div class="s11-list">
+            <div class="s11-list-item">
+              <img src="img/s11-1.jpg" alt="" />
+              <span class="s11-text">Заявка</span>
+              <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+            </div>
+            <div class="s11-list-item">
+              <img src="img/s11-2.jpg" alt="" />
+              <span class="s11-text">Подтверждение</span>
+              <p>
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим ваш товар
+              </p>
+            </div>
+            <div class="s11-list-item">
+              <img src="img/s11-3.jpg" alt="" />
+              <span class="s11-text">Получение</span>
+              <p>Оплатите вашу посылку при получении на почте или у курьера
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s1">
+        <div class="container">
+          <div class="s1-title">
+            <div class="s1-suptitle">Настоящий мужской гаджет</div>
+            <h1>FosPower 4в1</h1>
+            <div class="s1-subtitle">
+              Фонарь • FM-Радио • Повербанк • Сигнал SOS
+            </div>
+          </div>
+
+          <div class="s1-block">
+            <span class="color-red">Незаменимый</span>
+            помощник на отдыхе
+          </div>
+
+          <div class="discount">
+            <p class="discount-text">
+              <span class="num">65%</span>
+              <span class="name">скидка</span>
+            </p>
+          </div>
+        </div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list.jpg" alt="" />
+            <p><span>Солнечная</span> батарея</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.jpg" alt="" />
+            <p><span>Защита</span> от воды и пыли</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.jpg" alt="" />
+            <p><span>Гарантия</span> 10 лет!</p>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="timer-cont">
+            <h3>Акция закончится через:</h3>
+            <div class="el-timer"></div>
+          </div>
+          <div class="container-form">
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-red"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод <span class="color-red">CAMP</span> на
+                  <span class="color-red">скидку 65%</span>
+                </p>
+              </div>
+            </div>
+
+        
+          </div>
+          <div class="container">
+            <form id="form">
+              <div class="form-item" >
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selecte value="RU">Выберите вашу страну</option>
+                  <option selecte value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+      
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+      
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Сделать заказ
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+            <div class="form-count">
+              *акция действует:
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
