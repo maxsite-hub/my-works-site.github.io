@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>MI5 ProSlim</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 4975,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn,
+      .content_toggle {
+        animation: pulse 1s infinite;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(232, 28, 46, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0.7);
+          box-shadow: 0 0 0 0 rgba(232, 28, 46, 0.7);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 12px rgba(232, 28, 46, 0);
+          box-shadow: 0 0 0 12px rgba(232, 28, 46, 0);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+          box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-block-top">
+          <div class="s1-block-top-text">
+            <div><img src="img/icon-top-1.png" /></div>
+            <p>Без усилий</p>
+          </div>
+          <div class="s1-block-top-text">
+            <div><img src="img/icon-top-2.png" /></div>
+            <p>Результат за 7 дней!</p>
+          </div>
+        </div>
+        <div class="s1-title">
+          <h1>MI5 ProSlim</h1>
+          <div class="s1-suptitle">
+            <p><span>Умные часы</span> для похудения!</p>
+          </div>
+        </div>
+
+        <div class="s1-block-band">
+          <div class="s1-band">
+            <p class="s1-band-title">Потребили:</p>
+            <div><img src="img/icon-healthy.png" alt="" /></div>
+            <p>
+              <span class="num">1242</span>
+
+              <span class="kcal">ккал</span>
+            </p>
+          </div>
+          <div class="s1-band-2">
+            <p class="s1-band-title">Осталось потребить:</p>
+            <div><img src="img/icon-healthy-2.png" alt="" /></div>
+            <p>
+              <span class="num">680</span>
+
+              <span class="kcal">ккал</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="discount">Скидка 60%</div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list.png" alt="" />
+            <p><span>Считают </span> калории</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p><span>Контролируют</span> питание</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p><span>Помогают </span> похудеть</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-purple"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод
+                  <span class="color-purple">LETO2021</span>
+                  <span class="color-purple">на скидку 60%</span>
+                </p>
+              </div>
+            </div>
+
+            <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+            <div class="form-count">
+              *акция проходит: c
+              <span class="date_1 color-yellow"></span>
+              <span class="color-yellow">по</span>
+              <span class="date_2 color-yellow"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img-top" src="img/s2-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Похудение еще никогда не было
+            <span class="color-purple">таким простым!</span>
+          </h2>
+        </div>
+        <img src="img/s2-1.jpg" alt="" />
+        <div class="container">
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <p class="s2-text">
+                MI5 Pro Slim – это Smart-часы, созданные по многочисленным
+                просьбам женщин, которые хотят похудеть.
+              </p>
+            </div>
+            <div class="s2-block">
+              <img src="img/s2-1.png" alt="" />
+              <p class="s2-text">
+                На основании пола, возраста, роста и биометрических данных, часы
+                формируют персональные рекомендации по питанию специально для
+                Вас.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="s2-footer">
+          <div class="s1-block-band">
+            <div class="s1-band">
+              <p class="s1-band-title">Потребили:</p>
+              <div><img src="img/icon-healthy.png" alt="" /></div>
+              <p>
+                <span class="num">1242</span>
+
+                <span class="kcal">ккал</span>
+              </p>
+            </div>
+            <div class="s1-band-2">
+              <p class="s1-band-title">Осталось потребить:</p>
+              <div><img src="img/icon-healthy-2.png" alt="" /></div>
+              <p>
+                <span class="num">680</span>
+
+                <span class="kcal">ккал</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class="s2-text">
+            А затем считают и сообщают Вам, сколько калорий Вы уже съели, и
+            сколько осталось съесть, напоминая о каждом приеме пищи.
+          </p>
+          <div class="s2-footer-text">
+            MI5 ProSlim – самый эффективный способ похудения в 2021 году!
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <img class="img-top" src="img/s3-top.jpg" alt="" />
+        <div class="container">
+          <h2>Наслаждайтесь <span class="color-purple">похудением!</span></h2>
+          <div class="s3-item">
+            <img src="img/s3-1.png" alt="" />
+            <p class="s3-title">Без голода</p>
+            <p>
+              Вам не придется терпеть чувство голода и судорожно ждать следующий
+              прием пищи.
+            </p>
+          </div>
+          <div class="s3-item">
+            <img src="img/s3-2.png" alt="" />
+            <p class="s3-title">Без физических упражнений</p>
+            <p>
+              Для эффективного похудения это вовсе не обязательно, ведь часы
+              считают норму калорий исходя из вашей текущей активности.
+            </p>
+          </div>
+          <div class="s3-item">
+            <img src="img/s3-3.png" alt="" />
+            <p class="s3-title">Без ограничений в питании</p>
+            <p>
+              Ни в чем себе не отказывайте и кушайте только то, что Вы любите!
+            </p>
+          </div>
+          <div class="s3-item">
+            <img src="img/s3-4.png" alt="" />
+            <p class="s3-title">Без вреда для здоровья</p>
+            <p>
+              Похудение с MI5 ProSlim абсолютно безвредно, что подтверждено
+              клиническими исследованиями.
+            </p>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <div class="s4-item">
+            <h2>Мнение <span class="color-purple">эксперта</span></h2>
+            <img src="img/s4.png" alt="" />
+            <p class="name">Свиридова Марина Геннадьевна</p>
+            <p class="prof">Врач-диетолог, стаж работы 19 лет</p>
+            <img src="img/icon-dots.png" alt="" />
+            <p class="text">
+              Эффективность любой диеты - это держать минус по калориям. Если вы
+              потребляете калорий больше, чем сжигаете, вы поправляетесь. Если
+              меньше - худеете. Никаких секретов и исключений тут нет. MI5
+              ProSlim с помощью оптических сенсоров очень хорошо снимают норму
+              калорий и дают рекомендации сравнимые с профессиональным
+              диетологом. Мы проводили исследование и расхождение в редких
+              случаях составляло 3%. С этими часами люди худеют - это факт.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <img class="img-top" src="img/s5-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            MI5 ProSlim <span class="color-purple">посчитают всё за Вас!</span>
+          </h2>
+        </div>
+        <img src="img/s5-1.jpg" alt="" />
+
+        <p class="s5-text">
+          Часы "сканируют" тело с помощью инновационных оптических сенсоров с
+          технологией биоимпенданса.
+        </p>
+        <img src="gif/2.gif" alt="" />
+        <p class="s5-text">
+          Слабый импульс тока проходит через Вашу руку, и на основе
+          сопротивления определяется соотношение жира, мышц, костей, воды, белка
+          и других биологических показателей.
+        </p>
+        <img src="img/s5-2.jpg" alt="" />
+        <p class="s5-text middle-text">
+          После чего данные отправляются в специальное приложение по Bluetooth.
+          На основе полученных данных, программа рассчитывает количество
+          калорий, которое вам нужно для быстрого и приятного похудения, а также
+          понимает, придерживаетесь ли Вы рекомендаций.
+        </p>
+        <div class="container">
+          <div class="s5-footer">
+            <p>
+              Эффективность MI5 ProSlim оценили уже 48324 женщины.<br /><span
+                >Ваша очередь!</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s6">
+        <img class="img-top" src="img/s6-top.jpg" alt="" />
+        <div class="container">
+          <h2><span class="color-purple">Множество </span>функций</h2>
+          <div class="s6-item-top">
+            Режим похудения MI5 ProSlim - полноценный, и не требует каких-либо
+            дополнительных действий. Но, если вы любите фитнес и следите за
+            своим здоровьем, часы порадуют Вас всеми необходимыми функциями
+            полноценного smart-браслета.
+          </div>
+          <div class="s6-item">
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-1.png" alt="" />
+              </div>
+              <p>Шагомер</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-2.png" alt="" />
+              </div>
+              <p>Счетчик калорий</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-3.png" alt="" />
+              </div>
+              <p>Счетчик расстояния</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-4.png" alt="" />
+              </div>
+              <p>Режим для тренировок</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-5.png" alt="" />
+              </div>
+              <p>Мониторинг артериального давления</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-6.png" alt="" />
+              </div>
+              <p>Мониторинг сердечного ритма</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-7.png" alt="" />
+              </div>
+              <p>Мониторинг сна</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-8.png" alt="" />
+              </div>
+              <p>Дистанционное управление камерой</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-9.png" alt="" />
+              </div>
+              <p>Напоминание о сидячем положении</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-10.png" alt="" />
+              </div>
+              <p>Входящие звонки</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-11.png" alt="" />
+              </div>
+              <p>Уведомления из мессенджеров</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-12.png" alt="" />
+              </div>
+              <p>Поиск телефона</p>
+            </div>
+          </div>
+          <div class="s6-item-footer">
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-13.png" alt="" />
+              </div>
+              <p>Будильник</p>
+            </div>
+            <div class="s6-item-list">
+              <div class="s6-img">
+                <img src="img/s6-14.png" alt="" />
+              </div>
+              <p>Другие функции</p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+        </div>
+        
+      </section>
+
+      <section class="s7">
+        <img class="img-top" src="img/s7-top.jpg" alt="" />
+        <div class="container">
+          <div class="s7-item">
+            <h2>
+              Мнение профессионального
+              <span class="color-purple">диетолога</span>
+            </h2>
+            <img src="img/s7.png" alt="" />
+
+            <p class="text">
+              „Отличное подспорье для диетолога. У звезд часто сумасшедший
+              график, и следить за питанием самостоятельно для них бывает
+              тяжело, а постоянное моё присутствие не всегда возможно. Когда мы
+              ввели эти часы в работу, эффективность похудения выросла в среднем
+              на 30%, что не может не радовать. (Vogue, 11/20)“
+            </p>
+            <img src="img/icon-dots.png" alt="" />
+            <p class="name">
+              <span>Оз Гарсия</span> – личный диетолог Мадонны,
+            </p>
+            <p class="prof">Роберта Де Ниро, Ричарда Гира, Вайноны Райдер.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <img class="img-top" src="img/s8-top.jpg" alt="" />
+        <h2>
+          Характеристики <br />
+          <span class="color-purple">умных часов</span>
+        </h2>
+        <img src="img/s8-1.jpg" alt="" />
+        <ul>
+          <li>
+            <p class="s8-top">Гарантия:</p>
+            <p class="s8-bottom">12 мес.</p>
+          </li>
+          <li>
+            <p class="s8-top">Цвет корпуса:</p>
+            <p class="s8-bottom">черный</p>
+          </li>
+          <li>
+            <p class="s8-top">Цвет ремешка:</p>
+            <p class="s8-bottom">черный</p>
+          </li>
+          <li>
+            <p class="s8-top">Совместимость с устройствами:</p>
+            <p class="s8-bottom">Android устройства, iOS устройства</p>
+          </li>
+        </ul>
+        <ul class="content_block" style="display: none">
+          <li>
+            <p class="s8-top">Совместимость с операционными системами:</p>
+            <p class="s8-bottom">iOS 10 и выше, Android 5.0 и выше</p>
+          </li>
+          <li>
+            <p class="s8-top">Тип управления:</p>
+            <p class="s8-bottom">сенсорное</p>
+          </li>
+          <li>
+            <p class="s8-top">Тип циферблата:</p>
+            <p class="s8-bottom">ЖК-дисплей</p>
+          </li>
+          <li>
+            <p class="s8-top">Технология изготовления ЖК-экрана:</p>
+            <p class="s8-bottom">AMOLED</p>
+          </li>
+          <li>
+            <p class="s8-top">Диагональ в дюймах:</p>
+            <p class="s8-bottom">1.1"</p>
+          </li>
+          <li>
+            <p class="s8-top">Разрешение:</p>
+            <p class="s8-bottom">126х294</p>
+          </li>
+          <li>
+            <p class="s8-top">Материал корпуса:</p>
+            <p class="s8-bottom">алюминий, пластик</p>
+          </li>
+          <li>
+            <p class="s8-top">Совместимые приложения:</p>
+            <p class="s8-bottom">Health-системы от Apple, Google и т.д.</p>
+          </li>
+          <li>
+            <p class="s8-top">Водонепроницаемость:</p>
+            <p class="s8-bottom">5 Бар</p>
+          </li>
+          <li>
+            <p class="s8-top">Водонепроницаемость:</p>
+            <p class="s8-bottom">5 Бар</p>
+          </li>
+          <li>
+            <p class="s8-top">Степень защиты:</p>
+            <p class="s8-bottom">IP68</p>
+          </li>
+          <li>
+            <p class="s8-top">Материал ремешка:</p>
+            <p class="s8-bottom">силикон</p>
+          </li>
+          <li>
+            <p class="s8-top">Размер ремешка:</p>
+            <p class="s8-bottom">регулируемый</p>
+          </li>
+          <li>
+            <p class="s8-top">Версия Bluetooth:</p>
+            <p class="s8-bottom">5.0</p>
+          </li>
+          <li>
+            <p class="s8-top">Емкость аккумулятора:</p>
+            <p class="s8-bottom">125 мА*ч</p>
+          </li>
+          <li>
+            <p class="s8-top">Продолжительность работы:</p>
+            <p class="s8-bottom">336 часов</p>
+          </li>
+          <li>
+            <p class="s8-top">Время зарядки:</p>
+            <p class="s8-bottom">2 часа</p>
+          </li>
+          <li>
+            <p class="s8-top">Комплектация:</p>
+            <p class="s8-bottom">
+              документация, кабель для зарядки, умные часы
+            </p>
+          </li>
+        </ul>
+        <a class="content_toggle">Показать все</a>
+      </section>
+
+      <section class="s9">
+        <img class="img-top" src="img/s9-top.jpg" alt="" />
+        <h2>Отзывы покупателей</h2>
+        <div class="container">
+          <div class="s9__slider">
+            <div class="s9-block white-block">
+              <img class="s9-img" src="img/s9-1.jpg" alt="" />
+              <div class="block-name">
+                <img src="img/s9-1.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Светлана </b> <br />
+                    46 лет, Москва
+                  </p>
+                </div>
+              </div>
+              <p class="s9-text">
+                У меня очень плотный график, следить за питанием совсем не
+                успеваю. То поесть забуду, то наоборот переедаю. Иногда весь
+                день перекусами перебиваюсь, а вечером дома, так сказать
+                компенсирую. Раньше как-то обходилось, но с возрастом килограммы
+                начали приходить. Ходила к диетологам, пробовала разные диеты,
+                на фитнес ходила, напоминания на телефоне ставила - все
+                безрезультатно. Последний диетолог, к которой я попала
+                посоветовала мне эти часы. Говорит, люди начинают худеть даже
+                самые безнадежные. Я решила попробовать, и это оказалось
+                правдой. Вопросы питания вообще можно выбросить из головы.
+                Просто ориентируешься на часы и все. При этом, не ощущается
+                чувства голода совсем, получается совсем небольшой минус по
+                калориям, но ощутимый. За 2 месяца минус 5 кг. Я очень довольна
+                покупкой!
+              </p>
+            </div>
+            <div class="s9-block white-block">
+              <img class="s9-img" src="img/s9-2.jpg" alt="" />
+              <div class="block-name">
+                <img src="img/s9-2.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Галина </b> <br />
+                    55 лет, Волгоград
+                  </p>
+                </div>
+              </div>
+              <p class="s9-text">
+                Я мучилсь диетами уже лет 10, никак не получается похудеть.
+                Результат вроде есть, но как диета прекращается, килограммы
+                возвращаются. Недавно у меня дочь очень хорошо похудела.
+                Килограмм на 15. Я поинтересовалась, как у неё так получается,
+                она мне рассказала про часы. Я заказала себе тоже. Поначалу
+                думала не разберусь, у меня не очень с технологиями, но
+                оказалось все очень просто. Часы напоминают когда и сколько
+                нужно поесть, следят за соблюдением нормы, отслеживают
+                результаты и корректируют программу. Считай свой диетолог на
+                руке. Прошло полтора месяца - минус 4 кг. И это без каких либо
+                усилий и страданий, как на обычной диете. Буду продолжать. Всем
+                советую!
+              </p>
+            </div>
+
+            <div class="s9-block white-block">
+              <img class="s9-img" src="img/s9-3.jpg" alt="" />
+              <div class="block-name">
+                <img src="img/s9-3.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Мария </b> <br />
+                    37 лет, Санкт-Петербург
+                  </p>
+                </div>
+              </div>
+              <p class="s9-text">
+                Очень эффективная программа! Я у своего диетолга в последний раз
+                была месяца 2 назад. Все часы делают. И какая экономия! Я слежу
+                за своим здоровьем, хожу на фитнес, но диеты до этого доверяла
+                только диетологам. А теперь получаю все то же самое, но
+                самостоятельно. Плюс к тому, браслет имеет все обычные функции:
+                пульс, мониторинг сна, сердечный ритм, и прочие, и очень
+                пригождается на тренировках. Так что, могу смело рекомендовать
+                всем, кто занимается собой, или хочет похудеть без лишних денег
+                и нервов.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s10">
+        <img class="img-top" src="img/s10-top.jpg" alt="">
+        <div class="container">
+          <h2>Как сделать<br>
+            <span class="color-purple">заказ?</span></h2>
+            <div class="s10-item">
+              <div class="s10-item-list">
+                <img src="img/s10-1.png" alt="">
+                <p class="s10-title">Заявка</p>
+                <p class="s10-text">Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+              </div>
+              <div class="s10-item-list">
+                <img src="img/s10-2.png" alt="">
+                <p class="s10-title">Подтверждение</p>
+                <p class="s10-text">Наш менеджер перезвонит вам для уточнения деталей и мы отправим ваш товар</p>
+              </div>
+              <div class="s10-item-list">
+                <img src="img/s10-3.png" alt="">
+                <p class="s10-title">Получение</p>
+                <p class="s10-text">Оплатите вашу посылку при получении на почте или у курьера
+                </p>
+              </div>
+            </div>
+        </div>
+      </section>
+     
+      <section class="s1">
+        <div class="s1-block-top">
+          <div class="s1-block-top-text">
+            <div><img src="img/icon-top-1.png" /></div>
+            <p>Без усилий</p>
+          </div>
+          <div class="s1-block-top-text">
+            <div><img src="img/icon-top-2.png" /></div>
+            <p>Результат за 7 дней!</p>
+          </div>
+        </div>
+        <div class="s1-title">
+          <h1>MI5 ProSlim</h1>
+          <div class="s1-suptitle">
+            <p><span>Умные часы</span> для похудения!</p>
+          </div>
+        </div>
+
+        <div class="s1-block-band">
+          <div class="s1-band">
+            <p class="s1-band-title">Потребили:</p>
+            <div><img src="img/icon-healthy.png" alt="" /></div>
+            <p>
+              <span class="num">1242</span>
+
+              <span class="kcal">ккал</span>
+            </p>
+          </div>
+          <div class="s1-band-2">
+            <p class="s1-band-title">Осталось потребить:</p>
+            <div><img src="img/icon-healthy-2.png" alt="" /></div>
+            <p>
+              <span class="num">680</span>
+
+              <span class="kcal">ккал</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="discount">Скидка 60%</div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list.png" alt="" />
+            <p><span>Считают </span> калории</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p><span>Контролируют</span> питание</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p><span>Помогают </span> похудеть</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-purple"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод
+                  <span class="color-purple">LETO2021</span>
+                  <span class="color-purple">на скидку 60%</span>
+                </p>
+              </div>
+            </div>
+
+            <form>
+              <div class="form-item" id="form">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selecte value="RU">Выберите вашу страну</option>
+                  <option selecte value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+        
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+        
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Сделать заказ
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+            <div class="form-count">
+              *акция проходит: c
+              <span class="date_1 color-yellow"></span>
+              <span class="color-yellow">по</span>
+              <span class="date_2 color-yellow"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(".content_toggle").click(function () {
+        $(".content_block").slideToggle(300);
+        $(".content_toggle").slideToggle(300);
+
+        return false;
+      });
+    </script>
+  </body>
+</html>
