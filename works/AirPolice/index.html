@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Air Police</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 4975,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+      .form-btn:hover {
+        animation: none;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+          box-shadow: 0 0 0 10px rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0),
+            0px 13px 24px 0 rgba(255, 109, 18, 0.35);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-block-top">
+          <div class="s1-block-top-left">2в1</div>
+
+          <p>Очиститель + кондиционер!</p>
+          <div>
+            <img src="img/s1-top.png" alt="" />
+          </div>
+        </div>
+        <div class="s1-main">
+          <div class="s1-title">
+            <p class="s1-title-top">Портативный кондиционер</p>
+            <br />
+            <h1>Air Police</h1>
+          </div>
+          <div class="s1-block">
+            Охладит и очистит воздух за считанные минуты!
+          </div>
+
+          <div class="discount">-60%</div>
+
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Работает от обычной розетки</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Маленький, но очень мощный!</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>
+                Бесшумная<br />
+                работа
+              </p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-4.png" alt="" />
+              <p>Минимум электроэнергии</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <img class="gif" src="gif/1.gif" alt="" />
+          </div>
+
+          <div class="form-wrapper">
+            <div class="container">
+              <p class="price-title">
+                Активирована скидка 60% <br />
+                по промокоду <span class="color-orange">AIR21</span>
+              </p>
+            </div>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+            <div class="container">
+              <div class="price">
+                <div class="price-old">
+                  <div>Обычная цена:</div>
+                  <div class="price-old-val oldproductsum"></div>
+                </div>
+                <div class="price-new">
+                  <span class="price-new-val productsum"></span>
+                </div>
+              </div>
+
+              <a href="#form" class="form-btn">Сделать заказ</a>
+            </div>
+            <div class="form-count">
+              *акция проходит: с
+              <span class="date_1"></span>
+              по
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img-top" src="img/s2-top.jpg" alt="" />
+        <div class="container">
+          <h2>Настоящее <span class="color-blue">спасение</span> летом!</h2>
+          <div class="s2-block-top">
+            <p>
+              <span>Вы больше не будете изнывать от жары, </span>сидя в офисе
+              или занимаясь домашними делами.
+            </p>
+          </div>
+          <div class="s2-block-middle">
+            <img src="img/s2-1.png" alt="" />
+            <img src="img/s2-2.png" alt="" />
+          </div>
+          <div class="s2-block-footer">
+            Кондиционер Air Police спасет Вас, где бы Вы ни находились!
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <img src="img/s3-top.jpg" alt="" />
+        <p class="s3-text">
+          Благодаря новаторской ионной технологии с высокопроводящим цеолитным
+          фильтром с двуокисью титана и активированным углем,
+          <span>Air Police эффективно очищает и охлаждает воздух,</span>
+          несмотря на свои скромные размеры.
+        </p>
+        <img src="img/s3.png" alt="" />
+        <p class="s3-text">
+          А бесшумная работа и компактный эргономичный дизайн позволяют
+          <span>использовать Air Police буквально где угодно!</span>
+        </p>
+        <div class="s3-item">
+          <div class="s3-item-list">
+            <img src="img/s3-1.png" alt="" />
+            <p>В детской</p>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-2.png" alt="" />
+            <p>На работе</p>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-3.png" alt="" />
+            <p>В гараже</p>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-4.png" alt="" />
+            <p>В гостиной</p>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-9.png" alt="" />
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-5.png" alt="" />
+            <p>На кухне</p>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-6.png" alt="" />
+            <p>В ванной</p>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-7.png" alt="" />
+            <p>В спальне</p>
+          </div>
+          <div class="s3-item-list">
+            <img src="img/s3-8.png" alt="" />
+            <p>На даче</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="s3-footer">
+            <img src="img/s3-footer.png" alt="" />
+            <p>Наслаждайтесь летом вместе с кондиционером Air Police!</p>
+          </div>
+          <a href="#form" class="form-btn">Сделать заказ</a>
+        </div>
+      </section>
+
+      <section class="s4">
+        <img class="img-top" src="img/s4-top.jpg" alt="" />
+        <div class="container">
+          <h2>Вздохните <span class="color-blue">свободно! </span></h2>
+          <img class="img" src="img/s4.png" alt="" />
+
+          <p class="s4-text">
+            <span>Вы думаете, что у вас дома чистый воздух?</span> Но это
+            заблуждение! Воздух может быть загрязнен микроскопическими
+            частицами, которые неуловимы для человеческого глаза, но очень
+            ощутимы для здоровья и иммунитета.
+          </p>
+        </div>
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <img class="gif" src="gif/2.gif" alt="" />
+          <p class="s5-text">
+            Благодаря системе ионной фильтрации, Air Police эффективно очищает
+            воздух от таких раздражителей, как:
+          </p>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <img src="img/s5-1.png" alt="" />
+              <p>Дым</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-2.png" alt="" />
+              <p>Аллергены</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-3.png" alt="" />
+              <p>Пыльца</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-4.png" alt="" />
+              <p>Мелкая пыль</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-5.png" alt="" />
+              <p>Неприятные запахи</p>
+            </div>
+          </div>
+          <div class="s5-item-footer">
+            Дышите чистым и свежим горным воздухом, где бы Вы ни находились!
+          </div>
+          <a href="#form" class="form-btn">Сделать заказ</a>
+        </div>
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2>Особенности <span class="color-blue">Air Police</span></h2>
+          <img class="img" src="img/s6-1.png" />
+          <div class="s6-top">
+            <p class="s6-title-top">Готов к использованию</p>
+            <p>
+              Просто включите в розетку и наслаждайтесь прохладой и чистым
+              воздухом
+            </p>
+          </div>
+        </div>
+        <div class="s6-item">
+          <div class="s6-item-list">
+            <img src="img/s6-2.png" alt="" />
+            <p class="s6-title">Легко моется</p>
+            <p class="s6-text">
+              Цеолитный фильтр Air Police легко моется и рассчитан на
+              многоразовое применение в течение 15 лет.
+            </p>
+          </div>
+          <div class="s6-item-list">
+            <img src="img/s6-3.png" alt="" />
+            <p class="s6-title">Освещает помещение</p>
+            <p class="s6-text">
+              AirPolice оснащен ночником с функцией автоматического отключения,
+              что станет идеальным вариантом для детской комнаты.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <a href="#form" class="form-btn">Сделать заказ</a>
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="s7-block">
+          <img class="img-top" src="img/s7-top.jpg" alt="" />
+          <div class="container">
+            <h2>Доказанная <span class="color-blue">эффективность</span></h2>
+            <img src="img/s7-1.png" alt="" />
+            <p class="s7-text">
+              Несмотря на свой компактный размер, AirPolice работает "за троих"
+              и
+              <span>невероятно быстро охлаждает воздух в помещении.</span>
+            </p>
+            <div class="s7-block-text">
+              Тесты проводились для стандартной гостиной, метражом 18 кв.м.
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <img src="img/s7-2.png" alt="" />
+            </div>
+            <div class="s7-item-list">
+              <p>
+                Изначальный замер температуры показал 32 градуса по цельсию,
+                после чего мы включили Air Police.
+              </p>
+              <p>
+                Через 5 минут мы повторили замер и термометры показали понижение
+                на 2 градуса.
+              </p>
+              <p>
+                Через 10 минут с начала эксперимента температура упала уже на
+                6°C
+              </p>
+              <p>
+                И через 15 минут температура достигла 21°C - ощущения комфортной
+                прохлады, и мы решили закончить эксперимент.
+              </p>
+            </div>
+          </div>
+          <div class="s7-footer">
+            Результатом эксперимента стало понижение температуры в комнате на
+            11°C за 15 минут, что сравнимо с работой большого кондиционера.
+          </div>
+          <a href="#form" class="form-btn">Сделать заказ</a>
+        </div>
+      </section>
+
+      <section class="s8">
+        <img class="img-top" src="img/s8-top.jpg" alt="" />
+        <h2>Отзывы <span class="color-blue">покупателей</span></h2>
+
+        <div class="s8__slider">
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-1.png" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p><b>Перов Дмитрий </b><br /><span> г. Калуга</span></p>
+              </div>
+            </div>
+            <div class="s8-text">
+              <p>
+                Самое мое удачное приобретение прошлого лета это этот
+                кондиционер. Он реально спасает в жаркие дни. Я работаю дома,
+                еще и курю. Свежего воздуха прям не хватает. Я давно думал
+                поставить себе обычный кондер, но теперь не думаю. Этот
+                маленький закрывает все мои потребности. Дома стало гораздо
+                комфортнее находиться. И потребляет он какие-то смешные ватты,
+                по сравнению с большим, так что это еще и очень выгодно. Смело
+                рекомендую всем!
+              </p>
+            </div>
+          </div>
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-2.png" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p><b>Чепикова Елена </b><br /><span> г. Челябинск</span></p>
+              </div>
+            </div>
+            <div class="s8-text">
+              <p>
+                У нас заводы, город промышленный, воздух сами знаете какой. У
+                меня двое детей маленьких, оба аллергики - в меня. Я уж с ними
+                намучилась по врачам, таблетки вечно дорогие. Тут у нас педиатр
+                сменилась, молоденькая и посоветовала мне этот Air Police.
+                Говорит, в промышленных городах - просто необходимость. Я сразу
+                заказала и на разу не пожалела. Дети стали болеть гораздо реже,
+                сопли не текут, я и сама себя чувствую лучше. Заказала себе
+                второй. У детей в комнате один, второй у меня будет. И на работу
+                можно брать, он легко помещается в сумочке. В общем, земляки,
+                всем вам советую, я не знаю, как без него жила раньше! Спасибо!
+              </p>
+            </div>
+          </div>
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-3.png" alt="" />
+
+            <div class="block-name">
+              <div class="name">
+                <p><b>Кашин Владислав </b><br /><span> г. Воронеж</span></p>
+              </div>
+            </div>
+            <div class="s8-text">
+              <p>
+                У нас небольшая столярная мастерская с ребятами. Бывает в теплые
+                дни по три пота сходит. Да и дышим бог знает чем, то стружкой,
+                то лаком. Давно хотел поставить кондиционер, но все арендодателя
+                никак не выловлю, да и накладно это, если честно. Наткнулся в
+                интернете на Air Police и решил попробовать, деньги то смешные.
+                И, вы знаете, он справился! У нас помещение небольшое, 30м2
+                всего, но кондиционер работает исправно. Теперь всегда прохладно
+                и дышать хоть теперь можно после лакокрасочных работ. Большое
+                спасибо, я не ожидал!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>Доставка и <span class="color-blue">оплата</span></h2>
+          <div class="s9-item">
+            <img src="img/s9-1.png" alt="" />
+            <p class="title">Заявка</p>
+            <p>
+              Оставьте заявку на нашем сайте, заполнив форму заказа
+            </p>
+          </div>
+          <div class="s9-item">
+            <img src="img/s9-2.png" alt="" />
+            <p class="title">Подтверждение</p>
+            <p>Наш менеджер перезвонит вам для уточнения деталей и мы отправим ваш товар</p>
+          </div>
+          <div class="s9-item">
+            <img src="img/s9-3.png" alt="" />
+            <p class="title">Получение</p>
+            <p>
+              Оплатите вашу посылку при получении на почте или у курьера
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+       
+        <div class="s1-main">
+          <div class="s1-title">
+            <p class="s1-title-top">Портативный кондиционер</p>
+            <br />
+            <h1>Air Police</h1>
+          </div>
+          <div class="s1-block">
+            Охладит и очистит воздух за считанные минуты!
+          </div>
+
+          <div class="discount">-60%</div>
+
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Работает от обычной розетки</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Маленький, но очень мощный!</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>
+                Бесшумная<br />
+                работа
+              </p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-4.png" alt="" />
+              <p>Минимум электроэнергии</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <img class="gif" src="gif/1.gif" alt="" />
+          </div>
+
+          <div class="form-wrapper">
+            <div class="container">
+              <p class="price-title">
+                Активирована скидка 60% <br />
+                по промокоду <span class="color-orange">AIR21</span>
+              </p>
+            </div>
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+            <div class="container">
+              <div class="price">
+                <div class="price-old">
+                  <div>Обычная цена:</div>
+                  <div class="price-old-val oldproductsum"></div>
+                </div>
+                <div class="price-new">
+                  <span class="price-new-val productsum"></span>
+                </div>
+              </div>
+
+              <form action="#" method="post" class="orderformcdn" id="form">
+                <div class="form-item">
+                  <select
+                    name="country"
+                    class="countryselect form-control location"
+                  >
+                    <option selected value="RU">Выберите вашу страну</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="name"
+                    class="field form-control userneme"
+                    placeholder="Введите ваше имя"
+                    value=""
+                  />
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="phone"
+                    class="field form-control phone"
+                    placeholder="Введите ваш телефон"
+                    value=""
+                  />
+                </div>
+                <input
+                  type="hidden"
+                  name="productsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="delivery" value="0 руб." />
+                <input
+                  type="hidden"
+                  name="totalsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="user" value="1" />
+                <input
+                  type="hidden"
+                  name="address"
+                  value="Уточнить у покупателя"
+                />
+
+                <div class="reolader form-item">
+                  <button
+                    type="submit"
+                    class="form-btn mm_button"
+                    onclick="checkFields(event, this);"
+                  >
+                    Сделать заказ
+                  </button>
+                  <div class="ajax_loader_block">
+                    <img
+                      class="ajax_loader"
+                      src="img/ajax-loader.gif"
+                      alt="Идет отправка данных"
+                    />
+                    <span class="ajax_loader">Идет отправка данных</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="form-count">
+              *акция проходит: с
+              <span class="date_1"></span>
+              по
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s8__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left"  src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right" src="img/BTN_arrow_next.png" alt="">',
+        });
+
+      
+        now = new Date();
+        var perem = (24 - now.getHours()) * 3600;
+        $(".el-timer").attr("data-timer", perem);
+        $(".el-timer").TimeCircles({
+          animation: "smooth",
+          bg_width: 1,
+          fg_width: 0.042,
+          circle_bg_color: "#ebf0f7",
+          time: {
+            Days: {
+              text: "Days",
+              color: "#ff8c2f",
+              show: false,
+            },
+            Hours: {
+              text: "часов",
+              color: "#ff8c2f",
+              show: true,
+            },
+            Minutes: {
+              text: "минут",
+              color: "#ff8c2f",
+              show: true,
+            },
+            Seconds: {
+              text: "секунд",
+              color: "#ff8c2f",
+              show: true,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
