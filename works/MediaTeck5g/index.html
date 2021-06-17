@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>MediaTeck 5G</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-10);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM");
+        date_2 = date_2.toString("dd.MM");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1890,
+          oldproductsum: 6300,
+          delivery: 0,
+          totalsum: "1890",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <h1>MediaTeck 5G</h1>
+          <br />
+          <p class="s1-suptitle">
+            Мощный планшет поколения <span class="color-yellow">5g</span>
+          </p>
+        </div>
+
+        <img class="icon-top" src="img/s1-icon-top.png" alt="" />
+        <div class="container-img">
+          <img class="img-1" src="img/s1-icon.png" alt="" />
+          <div class="s1-block-1">
+            <p>Чехол- клавиатура в подарок!</p>
+            <img src="img/icon-present.png" alt="" />
+          </div>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Быстрый 5G интернет</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>8-ми ядерный процессор</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Целых 128 гб памяти</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <h3>
+              Активирована <span class="color-orange"> скидка 70% </span><br /> по
+              промокоду <span class="color-green"> 5G21 </span>
+            </h3>
+            <div class="timer">
+              <div class="timer-title">До конца акции:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">ч</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">м</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">с</div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <!--Container-->
+
+              <div class="price">
+                <div class="price-old">
+                  <div>Обычная цена:</div>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="price-new">
+                  <div>Цена по акции:</div>
+                  <span class="price-new-val productsum color-orange"></span>
+                </div>
+              </div>
+
+              <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+            </div>
+
+            <p class="timer-date">
+              <span>Акция действует</span>
+              <span>с</span>
+              <span class="date_1"></span>
+              <span>по</span>
+              <span class="date_2"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img-top" src="img/s2-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Вам знакомы эти <span class="color-orange">проблемы</span> при
+            работе с обычными планшетами?
+          </h2>
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <img src="img/s2-1.jpg" alt="" />
+              <p>Батарея быстро садится</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-2.jpg" alt="" />
+              <p>Слабая производительность</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-3.jpg" alt="" />
+              <p>"Тупой" сенсор</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-4.jpg" alt="" />
+              <p>Сильно нагреваются</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-5.jpg" alt="" />
+              <p>Тусклый и "мыльный" дисплей</p>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-6.jpg" alt="" />
+              <p>Медленный интернет</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <img class="img-top" src="img/s3-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            <span class="color-orange"> Забудьте! </span>
+            <br />
+            Теперь это в прошлом!
+          </h2>
+        </div>
+        <div class="s3-slider">
+          <img src="img/s3-1.jpg" alt="" />
+          <img src="img/s3-2.jpg" alt="" />
+          <img src="img/s3-3.jpg" alt="" />
+        </div>
+        <div class="container">
+          <p class="s3-text">
+            <span>MediaTeck 5G</span> – это мощный планшет нового 5G поколения,
+            который изменит ваше привычное представление о скорости интернета и
+            работе на планшете!
+          </p>
+          <img class="s3-gif" src="gif/1.gif" alt="" />
+          <p class="s3-text">
+            Благодаря 5G технологии, теперь вы сможете скачивать файлы и фильмы
+            из интернета на скорости до <spam>25 Гб в секунду!</spam>
+          </p>
+          <img class="s3-gif" src="gif/2.gif" alt="" />
+          <p class="s3-text">
+            А мощная начинка в виде
+            <span>6 гб оперативной памяти и 8-ми ядерного процессора</span>
+            позволит запускать самые тяжёлые программы и игры без единого
+            торможения и лага.
+          </p>
+        </div>
+      </section>
+
+      <section class="s4">
+        <h2>Смотрите видео!</h2>
+        <div class="video">
+          <div class="click-for-video">
+            <img src="img/s4.jpg" alt="" />
+          </div>
+          <div class="youtube">
+            <iframe class="youtube"></iframe>
+          </div>
+        </div>
+        <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>
+            Преимущества <span class="color-orange">MediaTeck 5G</span> перед
+            другими планшетами:
+          </h2>
+        </div>
+        <div class="s5-item">
+          <div class="s5-item-list">
+            <img src="img/s5-1.jpg" alt="" />
+            <div class="s5-item-block">
+              <div class="s5-item-title">Интернет 5G</div>
+              <div class="s5-item-text">
+                Скорость загрузки до 25гб/сек молниеносно загружает страницы и
+                скачивает фильмы весом в 15 гб всего за 4 секунды!
+              </div>
+            </div>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-2.jpg" alt="" />
+            <div class="s5-item-block">
+              <div class="s5-item-title">Мощный аккумулятор</div>
+              <div class="s5-item-text">
+                Аккумулятор ёмкостью в 8000 мАч позволяет работать на планшете
+                до 12 часов без перерыва.
+              </div>
+            </div>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-3.jpg" alt="" />
+            <div class="s5-item-block">
+              <div class="s5-item-title">Высокая производительность</div>
+              <div class="s5-item-text">
+                Встроенный процессор обгоняет в производительности многие
+                современные ноутбуки. Ему по силам и профессиональные задачи, и
+                продвинутые игры.
+              </div>
+            </div>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-4.jpg" alt="" />
+            <div class="s5-item-block">
+              <div class="s5-item-title">"Сочный" экран</div>
+              <div class="s5-item-text">
+                Планшет MediaTeck 5G максимально точно и ярко передает цвета с
+                экрана. Изображение на планшете выглядит невероятно четко!
+              </div>
+            </div>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-5.jpg" alt="" />
+            <div class="s5-item-block">
+              <div class="s5-item-title">Камера высокого разрешения</div>
+              <div class="s5-item-text">
+                Съемка в 4К, широкоугольный формат и 12мп - все это позволяет
+                планшету MediaTeck 5G делать снимки, практически не отличающиеся
+                от профессионального фотоаппарата.
+              </div>
+            </div>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-6.jpg" alt="" />
+            <div class="s5-item-block">
+              <div class="s5-item-title">Компактные размеры</div>
+              <div class="s5-item-text">
+                Планшет MediaTeck 5G имеет идеальные пропорции как для
+                комфортной работы, так и для удобства переноски.
+              </div>
+            </div>
+          </div>
+          <div class="s5-item-list">
+            <img src="img/s5-7.jpg" alt="" />
+            <div class="s5-item-block">
+              <div class="s5-item-title">Аксессуары в комплекте</div>
+              <div class="s5-item-text">
+                Вместе с планшетом MediaTeck 5G, вы получаете целый набор
+                аксессуаров, необходимых для комфортной работы: от переходника
+                под Flash-карту до чехла со встроенной клавиатурой.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s6">
+        <img class="img-top" src="img/s6-top.jpg" alt="" />
+        <div class="container">
+          <h2>Выберите <span class="color-orange">свой цвет!</span></h2>
+          <p class="s6-top">
+            Уникальные цветовые оттенки
+            <span>подчеркнут ваш стиль и индивидуальность!</span>
+          </p>
+          <p class="s6-title">Какой выберете вы?</p>
+        </div>
+        <div class="s6-slider">
+          <div class="s6-slide">
+            <img src="img/s6-1.jpg" alt="" />
+            <p>Океанский голубой</p>
+          </div>
+          <div class="s6-slide">
+            <img src="img/s6-2.jpg" alt="" />
+            <p>Закаленное серебро</p>
+          </div>
+          <div class="s6-slide">
+            <img src="img/s6-3.jpg" alt="" />
+            <p>Черный космос</p>
+          </div>
+          <div class="s6-slide">
+            <img src="img/s6-4.jpg" alt="" />
+            <p>Шампань</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <img class="img-top" src="img/s7-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Кому необходим планшет
+            <span class="color-orange"> MediaTeck 5G? </span>
+          </h2>
+        </div>
+        <div class="s7-item">
+          <div class="s7-item-list">
+            <img src="img/s7-1.png" alt="" />
+            <p>Офисным работникам</p>
+          </div>
+          <div class="s7-item-list">
+            <img src="img/s7-2.png" alt="" />
+            <p>Графическим дизайнерам</p>
+          </div>
+          <div class="s7-item-list">
+            <img src="img/s7-3.png" alt="" />
+            <p>Простым пользователям</p>
+          </div>
+          <div class="s7-item-list">
+            <img src="img/s7-4.png" alt="" />
+            <p>Архитекторам</p>
+          </div>
+          <div class="s7-item-list">
+            <img src="img/s7-5.png" alt="" />
+            <p>Видеомонтажерам</p>
+          </div>
+          <div class="s7-item-list">
+            <img src="img/s7-6.png" alt="" />
+            <p>Геймерам</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <div class="container">
+          <h2>
+            Планшет <span class="color-orange">Mediateck 5G</span> уже
+            зарекомендовал себя в 18 странах мира!
+          </h2>
+        </div>
+        <div class="s8-top">
+          <div class="s8-top-block">
+            <p>
+              Теперь он доступен<br />
+              <span>и в России!</span>
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <img src="img/s8.png" alt="" />
+        </div>
+        <div class="s8-list">
+          <div class="s8-list-item">
+            <img src="img/s8-list-1.png" alt="" />
+            <p>Победитель 23 международных конкурсов и выставок</p>
+          </div>
+          <div class="s8-list-item">
+            <img src="img/s8-list-2.png" alt="" />
+            <p>Рекомендован техноблогерами на YouTube</p>
+          </div>
+          <div class="s8-list-item">
+            <img src="img/s8-list-3.png" alt="" />
+            <p>Лидер продаж в США и Европе</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="s8-inner-list">
+            <div class="s8-inner-img"><img src="img/s8-1.png" alt="" /></div>
+            <p>Победитель техновыставки Techno-Frontier 2021 в Японии</p>
+          </div>
+          <div class="s8-inner-list">
+            <div class="s8-inner-img"><img src="img/s8-2.png" alt="" /></div>
+            <p>
+              Номинант на премию "Товар года" на выставке гаджетов IFA Berlin
+              2021 (Берлин, Германия)
+            </p>
+          </div>
+          <div class="s8-inner-list">
+            <div class="s8-inner-img"><img src="img/s8-3.png" alt="" /></div>
+            <p>
+              Рекомендации такими техноблогерами как <br />Wylsacom, IT-Pedia и
+              др.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>
+            <span class="color-orange">Внимание!</span>
+            <br />
+            Остерегайтесь подделок!
+          </h2>
+          <p class="s9-top">
+            Обратите внимание, что
+            <span
+              >подделки зачастую выполнены из некачественных материалов</span
+            >
+            и их использование может быть опасно!
+          </p>
+        </div>
+        <img src="img/s9-1.jpg" alt="" />
+        <div class="s9-img-block">
+          <img src="img/s9-2.jpg" alt="" />
+          <div class="s9-block">
+            <div class="s9-block-text">Осторожно! Подделки!</div>
+            <img src="img/s9-3.jpg" alt="" />
+          </div>
+        </div>
+        <p class="s9-footer">
+          <span class="color-orange"> Оригинальный планшет MediaTeck 5G </span>
+          <br />
+          можно приобрести только здесь на официальном сайте
+        </p>
+        <img src="img/s9-4.jpg" alt="" />
+
+        <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+      </section>
+
+      <section class="s10">
+        <div class="container">
+          <h2>
+            Отзывы наших
+            <span class="color-orange"> покупателей </span>
+          </h2>
+
+          <div class="s10__slider">
+            <div class="s10-block white-block">
+              <img src="img/s10-1.jpg" alt="" />
+              <div class="block-name">
+                <p class="name"><b>Владимир </b><br /><span>г. Москва</span></p>
+                <img src="img/icon-chat.png" alt="" />
+              </div>
+
+              <p class="s10-text">
+                Очень крутой планшет! В который раз убеждаюсь, что переплачивать
+                за какой-то известный бренд - пустая трата денег! Планшет
+                <span> MediaTeck 5G</span> тянет все игры и программы, которыми
+                я пользуюсь. Но больше всего меня поразил интернет 5G - я еще
+                никогда не загружал сайты и не скачивал фильмы так быстро! Чтобы
+                вы понимали, я скачал целый сезон любимого сериала в 13 серий
+                всего за 40 секунд! Это просто невероятно! Спасибо, теперь буду
+                рекомендовать всем своим друзьям планшет
+                <span>MediaTeck 5G!</span>
+              </p>
+            </div>
+
+            <div class="s10-block white-block">
+              <img src="img/s10-2.jpg" alt="" />
+              <div class="block-name">
+                <p class="name">
+                  <b>Семён </b><br /><span> г. Красноярск</span>
+                </p>
+                <img src="img/icon-chat.png" alt="" />
+              </div>
+
+              <p class="s10-text">
+                Я профессионально занимаюсь дизайном интерьеров и видеомонтажем,
+                в следствии чего мне нужен очень производительный планшет с
+                мощным железом. Я выбрал MediaTeck 5G, потому что он
+                удовлетворяет всем моим запросам и тянет даже самые тяжёлые
+                программы. Данный планшет ничем не уступает продуктам известных
+                марок ценником в 80 тысяч. Всем рекомендую!
+              </p>
+            </div>
+
+            <div class="s10-block white-block">
+              <img src="img/s10-3.jpg" alt="" />
+              <div class="block-name">
+                <p class="name"><b>Михаил </b><br /><span> г. Ростов</span></p>
+                <img src="img/icon-chat.png" alt="" />
+              </div>
+
+              <p class="s10-text">
+                Часто беру планшет с собой в поездку и даже в тех местах, где ни
+                один другой гаджет ни ловит сеть, планшет MediaTeck 5G без
+                проблем загружает любые сайты и видео с ютуба. Я думаю, что это
+                благодаря новейшей технологии 5G. Все работает дейтсвительно
+                очень быстро! Ну и стоит отметить очень высокую
+                производительность планшета - любые программы и игры летают на
+                УРА! Спасибо производителю за такой продукт. Я думаю что скоро
+                все больше людей начнет понимать, что переплачивать за известные
+                бренды - это глупо, когда есть такие планшеты с
+                производительностью даже выше топовых известных ноутбуков.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s11">
+        <h2>Характеристики</h2>
+        <div class="s11-slider">
+          <img class="s11-img" src="img/s11-1.jpg" alt="" />
+          <img class="s11-img" src="img/s11-2.jpg" alt="" />
+          <img class="s11-img" src="img/s11-3.jpg" alt="" />
+          <img class="s11-img" src="img/s11-4.jpg" alt="" />
+        </div>
+
+        <table cellpadding="5">
+          <tr>
+            <td colspan="2"><b>Операционная система: </b> Android 11</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Встроенная память: </b> 128 гб</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Оперативная память: </b> 6 гб</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <b> Количество ядер: </b>
+              <span
+                >плечи, шея, спина, поясница, <br />
+                8
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <b> Камеры: </b>основная 12 мп, фронтальная 7 мп
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>Время работы: </b> до 12 часов</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Аккумулятор: </b> 8000 мАч</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Размеры: </b>247.6x178.5x5.9 мм</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Вес: </b> 471 г</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Устойчивое к царапинам стекло: </b>да</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Водозащита: </b>да</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Wi-Fi: </b>да</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Bluetooth: </b>да</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b> Возможность вызова на телефон: </b>да</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="s12">
+        <img class="img-top" src="img/s12-top.jpg" alt="">
+        <div class="container">
+          <h2>
+            Как сделать
+            <span class="color-orange">заказ?</span>
+          </h2>
+
+          <div class="s12-item">
+            <div class="s12-item-list">
+              <img class="s12-img" src="img/s12-1.jpg" alt="" />
+
+              <p>
+                <span>Заявка</span><br />
+
+                Оставьте заявку на нашем сайте, заполнив форму заказа
+              </p>
+            </div>
+
+            <div class="s12-item-list">
+              <img class="s12-img" src="img/s12-2.jpg" alt="" />
+              <p>
+                <span>Подтверждение</span><br />
+
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар
+              </p>
+            </div>
+
+            <div class="s12-item-list">
+              <img class="s12-img" src="img/s12-3.jpg" alt="" />
+              <p>
+                <span>Получение</span><br />
+
+                Оплатите вашу посылку при получении на почте или у курьера
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1 footer">
+        <div class="s1-title">
+          <h1>MediaTeck 5G</h1>
+          <br />
+          <p class="s1-suptitle">
+            Мощный планшет поколения <span class="color-yellow">5g</span>
+          </p>
+        </div>
+
+        <img class="icon-top" src="img/s1-icon-top.png" alt="" />
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1-footer.png" alt="" />
+            <p>5G интернет</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2-footer.png" alt="" />
+            <p>8 ядер</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3-footer.png" alt="" />
+            <p>Память 128 гб</p>
+          </div>
+        </div>
+        <div class="container-img">
+          <img class="img-1" src="img/s1-icon.png" alt="" />
+          <div class="s1-block-1">
+            <p>Чехол- клавиатура в подарок!</p>
+            <img src="img/icon-present.png" alt="" />
+          </div>
+        </div>
+
+      
+
+        <div class="container">
+      
+            <div class="form-wrapper">
+              <h3>
+                Активирована <span class="color-orange"> скидка 70% </span><br /> по
+                промокоду <span class="color-green"> 5G21 </span>
+              </h3>
+            <div class="timer">
+              <div class="timer-title">До конца акции:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">ч</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">м</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">с</div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <!--Container-->
+              <div class="price">
+                <div class="price-old">
+                  <div>Cтандартная цена:</div>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                </div>
+  
+                <div class="line"></div>
+
+                <div class="price-new">
+                  <div>Цена со скидкой:</div>
+                  <span class="price-new-val productsum color-orange"></span>
+                </div>
+              </div>
+              <form method="post" id="form">
+                <div class="form-item">
+                  <select
+                    name="country"
+                    class="countryselect form-control location"
+                  >
+                    <option selected value="RU">Россия</option>
+                    <option selected value="RU">Выберите вашу страну</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="name"
+                    class="field form-control userneme"
+                    placeholder="Введите ваше имя"
+                    value=""
+                  />
+                </div>
+                <div class="form-item">
+                  <input
+                    type="text"
+                    name="phone"
+                    class="field form-control phone"
+                    placeholder="Введите ваш телефон"
+                    value=""
+                  />
+                </div>
+    
+              
+                <input
+                  type="hidden"
+                  name="productsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="delivery" value="0 руб." />
+                <input
+                  type="hidden"
+                  name="totalsum"
+                  class="productsum"
+                  value="1 руб."
+                />
+                <input type="hidden" name="user" value="1" />
+                <input
+                  type="hidden"
+                  name="address"
+                  value="Уточнить у покупателя"
+                />
+    
+                <div class="reolader form-item">
+                  <button
+                    type="submit"
+                    class="form-btn mm_button"
+                    onclick="checkFields(event, this);"
+                  >
+                  Сделать заказ
+                  </button>
+                  <div class="ajax_loader_block">
+                    <img
+                      class="ajax_loader"
+                      src="img/ajax-loader.gif"
+                      alt="Идет отправка данных"
+                    />
+                    <span class="ajax_loader">Идет отправка данных</span>
+                  </div>
+                </div>
+                <p class="timer-date">
+                  <span>Акция действует</span>
+                  <span>с</span>
+                  <span class="date_1"></span>
+                  <span>по</span>
+                  <span class="date_2"></span>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s3-slider").slick({
+          dots: false,
+
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="slider-s3_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-s3_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".s6-slider").slick({
+          dots: true,
+          dotsClass: "title-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="slider-s6_left" <img src="img/icon-arrow-green-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-s6_right" src="img/icon-arrow-green-right.png" alt="">',
+        });
+
+        $(".s10__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+
+          prevArrow:
+            '<img class="slider-s10_left" <img src="img/s10-icon-arrow-green-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-s10_right" src="img/s10-icon-arrow-green-right.png" alt="">',
+        });
+
+        $(".s11-slider").slick({
+          dots: false,
+
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          prevArrow:
+            '<img class="slider-s11_left" <img src="img/icon-arrow-left.png" alt="">',
+          nextArrow:
+            '<img class="slider-s11_right" src="img/icon-arrow-right.png" alt="">',
+        });
+
+        $(".click-for-video").click(function () {
+          this.style.display = "none";
+          $("div.youtube").css("display", "block");
+          $("iframe.youtube").prop("src", "video.mp4");
+        });
+      });
+    </script>
+  </body>
+</html>
