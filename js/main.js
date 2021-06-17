@@ -64,7 +64,7 @@ $(function(){
 });
 
 $(window).on('load', function () {
-    $('.preloader').delay(2000).fadeOut('slow');
+    $('.preloader').delay(200).fadeOut('slow');
   
     setTimeout(function(){
       $('body').removeClass('no-scroll');
