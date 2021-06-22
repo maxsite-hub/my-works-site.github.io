@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>UltraSonic</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(163, 134, 229, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(232, 28, 46, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(163, 134, 229, 0.7),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+          box-shadow: 0 0 0 0 rgba(163, 134, 229, 0.7),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 12px rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+          box-shadow: 0 0 0 12px rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+          box-shadow: 0 0 0 0 rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+        }
+      }
+      .s4-btn-active {
+        animation: s4-pulse 1s infinite;
+      }
+
+      @-webkit-keyframes s4-pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 210, 37, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(232, 28, 46, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+        }
+      }
+      @keyframes s4-pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 210, 37, 0.7),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+          box-shadow: 0 0 0 0 rgba(255, 210, 37, 0.7),
+            0px 13px 18px 0 rgba(205, 157, 242, 0.3);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 12px rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 210, 37, 0.3);
+          box-shadow: 0 0 0 12px rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 210, 37, 0.3);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 210, 37, 0.3);
+          box-shadow: 0 0 0 0 rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 210, 37, 0.3);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="container">
+          <div class="s1-title">
+            <div class="s1-suptitle">Портативная стиральная машинка</div>
+            <h1>UltraSonic</h1>
+            <div class="s1-subtitle">Чистота • Свежесть • Экономия</div>
+          </div>
+
+          <div class="s1-block">
+            <img class="gif" src="gif/1.gif" alt="" />
+          </div>
+
+          <div class="discount">
+            <p class="discount-text">
+              <span class="num">55%</span>
+              <span class="name">скидка</span>
+            </p>
+          </div>
+
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Удаляет пятна всех видов</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Подходит для стирки любых вещей</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>Помещается на ладони</p>
+            </div>
+          </div>
+
+          <img class="gif" src="gif/2.gif" alt="" />
+        </div>
+        <div class="form-wrapper">
+          <div class="container">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-blue"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод
+                  <span class="color-purple">ULTRA21</span> на
+                  <span class="color-blue">скидку 55%</span>
+                </p>
+              </div>
+            </div>
+
+            <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+            <div class="form-count">
+              *акция действует:
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img-top" src="img/s2-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Новое слово<br />
+            <span class="color-purple">в стирке белья!</span>
+          </h2>
+          <div class="s2-item">
+            <img class="gif" src="gif/3.gif" alt="" />
+            <p class="s2-text">
+              UltraSonic - это инновационная компактная стиральная машина,
+              которая эффективно отстирывает загрязнения с помощью
+              ультразвуковых волн и мощной турбины, обеспечивающей циркуляцию
+              воды.
+            </p>
+          </div>
+          <div class="s2-item">
+            <img class="gif" src="gif/4.gif" alt="" />
+            <p class="s2-text">
+              Она станет отличным дополнением к стационарной стиральной машине,
+              а также прекрасно послужит в поездках или на даче, ведь для её
+              использования нужна только ёмкость с водой и USB-порт (или
+              розетка).
+            </p>
+          </div>
+        </div>
+        <div class="s2-item-block">
+          <img src="img/s2-1.png" alt="" />
+
+          <div class="s2-text-block">
+            <p>
+              <span class="color-blue"
+                >С UltraSonic Вы забудете о ручной стирке</span
+              >
+              и сможете быстро и качественно постирать вещи, где бы Вы ни
+              находились!
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <img class="s2-img" src="img/s2-2.png" alt="" />
+          <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+        </div>
+      </section>
+
+      <section class="s3">
+        <h2>
+          Почему UltraSonic<br />
+          <span class="color-purple">так эффективна?</span>
+        </h2>
+        <div class="container">
+          <div class="s3-item">
+            <div class="s3-item-list">
+              <div class="s3-img"><img src="img/s3-1.png" alt="" /></div>
+              <p>
+                Пьезокерамический излучатель провоцирует ультразвуковые
+                колебания, которые нарушают сцепление загрязненных частиц с
+                тканью и способствуют их удалению.
+              </p>
+            </div>
+
+            <div class="s3-item-list">
+              <p>
+                А мощная турбина создает необходимое движение воды, чтобы
+                улучшить протекающую способность ультразвуковых волн и усилить
+                их воздействие на загрязнения.
+              </p>
+              <div class="s3-img"><img src="img/s3-2.png" alt="" /></div>
+            </div>
+            <div class="s3-item-list">
+              <div class="s3-img"><img src="img/s3-3.png" alt="" /></div>
+              <p>
+                Совокупность ультразвука и механического воздействия в разы
+                повышает эффективность моющих средств, обеспечивая их
+                максимально глубокое проникновение в структуру ткани, что и дает
+                такой хороший результат!
+              </p>
+            </div>
+          </div>
+          <div class="s3-block">
+            <p>
+              Уже <span>44812</span> довольных клиентов выбрали UltraSoniс!<br />
+              <span class="color-blue"> Попробуйте и Вы!</span>
+            </p>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+        </div>
+      </section>
+
+      <section class="s4">
+        <img class="img-top" src="img/s4-top.jpg" alt="" />
+        <div class="container">
+          <h2>Преимущества <span class="color-purple">UltraSonic</span></h2>
+        </div>
+        <div class="s4-item">
+          <div class="s4-item-list two">
+            <div class="s4-btn open-modal s4-btn-active" data-modal="#modal1">
+              ✚
+            </div>
+            <div class="s4-text">Бесшумность</div>
+          </div>
+          <div class="s4-item-list two">
+            <div class="s4-btn open-modal s4-btn-active" data-modal="#modal2">
+              ✚
+            </div>
+            <div class="s4-text">Мобильность</div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-btn open-modal s4-btn-active" data-modal="#modal3">
+              ✚
+            </div>
+            <div class="s4-text">Универсальность</div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-btn open-modal s4-btn-active" data-modal="#modal4">
+              ✚
+            </div>
+            <div class="s4-text">Экономия</div>
+          </div>
+
+          <div class="modal open" id="modal1">
+            <div class="content">
+              <p>
+                UltraSonic работает абсолютно бесшумно, не раздражает слух и
+                сохраняет комфортную обстановку в доме даже ночью.
+              </p>
+              <div class="btn close-modal" data-modal="#modal1">✖</div>
+            </div>
+          </div>
+          <div class="modal" id="modal2">
+            <div class="content">
+              <p>
+                UltraSonic всего 9 сантиметров в диаметре и 4 см в высоту, а
+                весит всего 225 грамм, что позволяет легко брать её с собой в
+                поездки, а также экономить место в квартире.
+              </p>
+              <div class="btn close-modal" data-modal="#modal2">✖</div>
+            </div>
+          </div>
+          <div class="modal" id="modal3">
+            <div class="content">
+              <p>
+                UltraSonic подходит для стирки абсолютно любых вещей, любого
+                размера и количества, и будет одинаково эффективна, как в целой
+                ванне воды, так и в небольшом тазике.
+              </p>
+              <div class="btn close-modal" data-modal="#modal3">✖</div>
+            </div>
+          </div>
+          <div class="modal" id="modal4">
+            <div class="content">
+              <p>
+                Низкое энергопотребление - 6Вт и фиксированный объем воды в
+                ёмкости существенно сократят Ваши расходы на оплату коммунальных
+                услуг, по сравнению с обычной стиральной машиной.
+              </p>
+              <div class="btn close-modal" data-modal="#modal4">✖</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+        </div>
+        <img src="img/s4-footer.jpg" alt="" />
+      </section>
+
+      <section class="s5">
+        <h2>
+          Как пользоваться
+          <br />
+          <span class="color-purple"> UltraSonic?</span>
+        </h2>
+        <div class="container">
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <div class="s5-text-block">
+                <p class="s5-title">Шаг 1</p>
+                <p class="s5-text">
+                  Подготовьте емкость с водой и закрепите стиральную машинку на
+                  дно или стенку с помощью специальных присосок.
+                </p>
+              </div>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-text-block">
+                <p class="s5-title">Шаг 2</p>
+                <p class="s5-text">
+                  Положите грязное белье в воду, добавьте моющее средство,
+                  подключите UltraSonic к сети и запускайте стирку!
+                </p>
+              </div>
+            </div>
+            <div class="s5-item-list">
+              <div class="s5-text-block">
+                <p class="s5-title">Шаг 3</p>
+                <p class="s5-text">
+                  По завершении стирки выключите устройство из розетки и
+                  наслаждайтесь результатом!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="s5-footer">
+            <div class="s5-block">
+              <p>
+                UltraSonic оснащена
+                <span class="color-blue">
+                  таймером автоматического отключения
+                </span>
+                после завершения стирки.
+              </p>
+              <p class="footer">
+                Это позволит Вам спокойно запустить её и уйти по своим делам.
+              </p>
+            </div>
+          </div>
+          <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+        </div>
+      </section>
+
+      <section class="s6">
+        <img class="img-top" src="img/s6-top.jpg" alt="" />
+        <div class="container">
+          <h2>Характеристики</h2>
+        </div>
+        <div class="s6-img">
+          <img src="img/s6.jpg" alt="" />
+        </div>
+        <div class="container">
+          <div class="s6-item">
+            <ul class="list">
+              <li>
+                <p class="title">Цвет:</p>
+                <p class="text">белый</p>
+              </li>
+              <li>
+                <p class="title">Основной материал:</p>
+                <p class="text">АБС-пластик</p>
+              </li>
+              <li>
+                <p class="title">Источник питания:</p>
+                <p class="text">USB</p>
+              </li>
+              <li>
+                <p class="title">Входное напряжение:</p>
+                <p class="text">DC5V</p>
+              </li>
+              <li>
+                <p class="title">Выходное напряжение:</p>
+                <p class="text">DC10V</p>
+              </li>
+            </ul>
+            <ul class="list">
+              <li>
+                <p class="title">Скорость вращения:</p>
+                <p class="text">200 об/мин</p>
+              </li>
+              <li>
+                <p class="title">Выходная мощность:</p>
+                <p class="text">6 Вт</p>
+              </li>
+              <li>
+                <p class="title">Размер товара:</p>
+                <p class="text">90*90*40 мм</p>
+              </li>
+              <li>
+                <p class="title">Вес изделия:</p>
+                <p class="text">225 г</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <h2>Отзывы наших <span class="color-purple">покупателей</span></h2>
+
+        <div class="s7__slider">
+          <div class="s7-block white-block">
+            <img class="s7-img" src="img/s7-1.png" alt="" />
+            <div class="block-name">
+              <img src="img/icon-avatar.png" alt="" />
+              <div class="name">
+                <p><b>Сарычев Сергей </b> <br />г. Анапа</p>
+              </div>
+            </div>
+            <p class="s7-text">
+              Приобретал, как подспорье в поездках. Я очень часто езжу по
+              командировкам, и в гостиницах руками стирать замучился. А за
+              прачечную платить из-за двух пар носков тоже не хочется.
+              UltraSonic справляется на ура. Я просто набираю в раковину воды,
+              наливаю жидкого мыла, кладу вещи, запускаю и отдыхаю. А результат
+              не хуже, чем в обычной стиральной машинке. И рубашки
+              отстирываются, и пятна любые. А весит всего 200 грамм, в чемодане
+              вообще не ощущается. Смело могу рекомендовать всем
+              путешественникам!
+            </p>
+          </div>
+          <div class="s7-block white-block">
+            <img class="s7-img" src="img/s7-2.png" alt="" />
+            <div class="block-name">
+              <img src="img/icon-avatar-2.png" alt="" />
+              <div class="name">
+                <p>
+                  <b>Миляева Елена </b> <br />
+                  г. Норильск
+                </p>
+              </div>
+            </div>
+            <p class="s7-text">
+              У меня муж и трое детей маленьких. Со стиркой я конечно
+              замучилась. Несмотря на то, что у меня машинка на 5 литров,
+              работает она почти без перерыва, а белье еще и остается.
+              UltraSonic стала мне отличной помощницей. Её можно запускать
+              параллельно с обычной, электричества она почти не ест. Я обычно
+              крупные вещи стираю в обычной, а всякие носки, колготки стирает
+              UltraSonic в тазике. Можно спокойно оставлять на ночь, благо она
+              не шумит и не пищит, и автоматически отключается. Я очень
+              довольна, спасибо мужу за такой подарок!
+            </p>
+          </div>
+
+          <div class="s7-block white-block">
+            <img class="s7-img" src="img/s7-3.png" alt="" />
+            <div class="block-name">
+              <img src="img/icon-avatar-3.png" alt="" />
+              <div class="name">
+                <p>
+                  <b>Елизарова Татьяна </b> <br />
+                  г. Казань
+                </p>
+              </div>
+            </div>
+            <p class="s7-text">
+              Я квартиру снимаю, своей стиральной машины тут нет. А покупать я
+              не решаюсь, потому что нет своей жилплощади, мало ли что.
+              UltraSonic стала для меня замечательным открытием. Поначалу я
+              стирала только по мелочи, белье всякое, а крупные вещи стирала у
+              родителей. Но потом прочитала, что эта машинка прекрасно
+              отстирывает и большие вещи. Так к тому же и безопасно, ничего не
+              линяет, не выцветает и не портится. И это оказалось действительно
+              так! Теперь я почти всю стирку закрываю дома. В химчистку ношу
+              только пальто и куртки. Вот так! А большая стиральная машина
+              оказывается и не нужна вовсе)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s8">
+        <h2>Как сделать заказ?</h2>
+        <div class="container">
+          <div class="s8-list">
+            <div class="s8-list-item">
+              <img src="img/s8-1.png" alt="" />
+              <span class="s8-text">Заявка</span>
+              <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+            </div>
+            <div class="s8-list-item">
+              <img src="img/s8-2.png" alt="" />
+              <span class="s8-text">Подтверждение</span>
+              <p>
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар
+              </p>
+            </div>
+            <div class="s8-list-item">
+              <img src="img/s8-3.png" alt="" />
+              <span class="s8-text">Получение</span>
+              <p>Оплатите вашу посылку при получении на почте или у курьера</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="container">
+          <div class="s1-title">
+            <div class="s1-suptitle">Портативная стиральная машинка</div>
+            <h1>UltraSonic</h1>
+            <div class="s1-subtitle">Чистота • Свежесть • Экономия</div>
+          </div>
+
+          <div class="s1-block">
+            <img class="gif" src="gif/1.gif" alt="" />
+          </div>
+
+          <div class="discount">
+            <p class="discount-text">
+              <span class="num">55%</span>
+              <span class="name">скидка</span>
+            </p>
+          </div>
+
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Удаляет пятна всех видов</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Подходит для стирки любых вещей</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>Помещается на ладони</p>
+            </div>
+          </div>
+
+          <img class="gif" src="gif/2.gif" alt="" />
+        </div>
+        <div class="form-wrapper">
+          <div class="container">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-blue"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод
+                  <span class="color-purple">ULTRA21</span> на
+                  <span class="color-blue">скидку 55%</span>
+                </p>
+              </div>
+            </div>
+
+            <form id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selecte value="RU">Выберите вашу страну</option>
+                  <option selecte value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Сделать заказ
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+
+            <div class="form-count">
+              *акция действует:
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
