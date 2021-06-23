@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Mattress Pro<sup>™</sup></title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/TimeCircles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 210, 37, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(232, 28, 46, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 210, 37, 0.7),
+            0px 13px 18px 0 rgba(255, 141, 32, 0.3);
+          box-shadow: 0 0 0 0 rgba(255, 210, 37, 0.7),
+            0px 13px 18px 0 rgba(255, 141, 32, 0.3);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 12px rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 141, 32, 0.3);
+          box-shadow: 0 0 0 12px rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 141, 32, 0.3);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 141, 32, 0.3);
+          box-shadow: 0 0 0 0 rgba(232, 28, 46, 0),
+            0px 13px 18px 0 rgba(255, 141, 32, 0.3);
+        }
+      }
+    
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="s1">
+        <div class="container">
+          <div class="s1-title">
+            <div class="s1-suptitle">
+              <div class="s1-suptitle-text">
+                Походный матрас
+              </div>
+              <div class="s1-suptitle-block">
+
+              </div>
+            </div>
+            <h1>Mattress Pro™</h1>
+            <div class="s1-subtitle">
+              <div class="s1-subtitle-block">
+                
+              </div>
+              <div class="s1-subtitle-text">
+                Настоящий отдых на природе
+              </div>
+              
+            </div>
+          </div>
+
+         
+
+          <div class="discount-num">
+           -50%
+          </div>
+          <div class="discount-text">
+            sale!
+          </div>
+
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Невероятно прочный</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Компактный и лёгкий</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>Максимальный комфорт</p>
+            </div>
+          </div>
+
+      
+        </div>
+        <div class="form-wrapper">
+          <div class="container">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-green"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод
+                  <span class="color-orange">PRO21</span> на
+                  <span class="color-green">скидку 55%</span>
+                </p>
+              </div>
+            </div>
+
+            <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+            <div class="form-count">
+              *акция действует:
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img-top" src="img/s2-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Настоящая инновация 
+            <span class="color-green">в сфере туризма!</span>
+          </h2>
+          <div class="s2-item">
+            <img class="gif" src="gif/1.gif" alt="" />
+            <p class="s2-text">
+              Встречайте сверхлегкий самонадувающийся коврик со встроенной подушкой для полноценного  и комфортного отдыха в любой ситуации!
+            </p>
+          </div>
+          <div class="s2-item">
+            <img  src="img/s2-1.png" alt="" />
+            <p class="s2-text">
+              Когда вы находитесь на природе, очень важен качественный восстановительный отдых!
+            </p>
+          </div>
+          <div class="s2-item">
+            <img  src="img/s2-2.png" alt="" />
+            <p class="s2-text">
+              Теперь вы можете выспаться, как младенец, где бы вы ни находились с помощью походного коврика Mattress Pro ™, толщиной всего 6 см!
+            </p>
+          </div>
+     
+         
+          <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>Почему уже 40 000 человек выбрали 
+            <span class="color-green">Mattress Pro™?</span></h2>
+            <div class="s3-item">
+              <img src="img/s3-1.png" alt="">
+              <p class="s3-title">Чрезвычайно прочный</p>
+              <p class="s3-text">Mattress Pro изготовлен из специального двуслойного нейлона повышенной прочности</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-2.png" alt="">
+              <p class="s3-title">Ультралегкий</p>
+              <p class="s3-text">Mattress Pro весит всего 500 грамм, как обычная пенка</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-3.png" alt="">
+              <p class="s3-title">Суперкомпактный</p>
+              <p class="s3-text">Такой же маленький, как 0,5 бутылка воды. В 10 раз меньше туристического коврика!</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-4.png" alt="">
+              <p class="s3-title">Очень удобный</p>
+              <p class="s3-text">Благодаря 144 изолированным гибким воздушным ячейкам, соответствующим форме вашего тела, Вы будете сладко спать, где бы вы ни находились.</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-5.png" alt="">
+              <p class="s3-title">Защищает от холода</p>
+              <p class="s3-text">Эргономичная многослойная система внутри коврика препятствует уходу тепла из вашего тела в землю, и наоборот.</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-6.png" alt="">
+              <p class="s3-title">Встроенная подушка</p>
+              <p class="s3-text">Подушка в изголовье Mattress Pro обеспечивает необходимую поддержку для головы и шеи и способствует комфортному сну.</p>
+            </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <img class="img-top" src="img/s4-top.jpg" alt="">
+        <h2>
+          Особенности
+         <br />
+          <span class="color-green"> Mattress Pro™</span>
+        </h2>
+        <div class="container">
+          <div class="s4-item">
+            <div class="s4-item-list">
+              <div class="s4-img"><img src="img/s4-1.png" alt="" /></div>
+             
+              <p><br />
+                <span>
+                  Водонепроницаемый
+                </span>
+                Mattress Pro можно использовать как плавательный надувной матрас
+              </p>
+            </div>
+
+            <div class="s4-item-list">
+              <p><br />
+                <span>
+                  Самонадувающийся
+                </span>
+                Благодаря 2 специальным клапанам и встроенному мини-насосу, коврик сам надувается и сдувается, в зависимости от того, какой клапан открыт.
+              </p>
+              <div class="s4-img"><img src="img/s4-2.png" alt="" /></div>
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-img"><img src="img/s4-3.png" alt="" /></div>
+              <p>
+                <span>Универсальный</span>
+                <br />
+                Можно использовать в походах, на водоемах и даже дома для приема гостей, или как полноценное спальное место!
+              </p>
+            </div>
+          </div>
+          <div class="s4-block">
+            <div class="container">
+              <img src="img/s4-4.png" alt="">
+              <p>
+                Планируете выезд на природу или ждете гостей, а спальных мест не хватает? <span class="color-orange">Mattress Pro спасет Вас в любой ситуации!</span>
+              </p>
+            </div>
+          </div>
+          <div class="s4-footer">
+            <img class="img" src="img/s4-5.png" alt="">
+            <div class="s4-footer-block">
+             
+              <p><span>Мы абсолютно уверены в качестве нашего продукта</span> и заинтересованы в его улучшении. Если Mattress Pro по какой-либо причине Вам не подойдет, мы вернем Вам деньги в 100% размере в течение 30 дней с момента покупки.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+
+     
+
+    
+
+      <section class="s5">
+        <img class="img-top" src="img/s5-top.jpg" alt="">
+        <h2>Отзывы наших <span class="color-green">покупателей</span></h2>
+
+        <div class="s5__slider">
+          <div class="s5-block white-block">
+            <img class="s5-img" src="img/s5-1.png" alt="" />
+            <div class="block-name">
+             
+              <div class="name">
+                <p><b>Сарычев Сергей </b> <br />г. Анапа</p>
+              </div>
+            </div>
+            <p class="s5-text">
+              Люблю рыбалку, летом почти каждые выходные с мужиками выбираемся с ночевкой. Вопрос ночлега стоит уже очень давно. В машине спать неудобно, тело затекает. Последние годы спал в спальнике, но все равно неудобно, жестко. И тут я нашел вас. Почитал, решил заказать, и не ошибся! Теперь на природе спать даже удобнее, чем дома. Я думал, что эти пупырышки будут мешать, буду скатываться с матраса, но наоборот. Спать очень удобно, массажный эффект чувствуется! Всем рекомендую!
+            </p>
+          </div>
+          <div class="s5-block white-block">
+            <img class="s5-img" src="img/s5-2.png" alt="" />
+            <div class="block-name">
+           
+              <div class="name">
+                <p>
+                  <b>Миляева Елена </b> <br />
+                  г. Норильск
+                </p>
+              </div>
+            </div>
+            <p class="s5-text">
+              У меня муж и трое детей маленьких. Со стиркой я конечно
+              замучилась. Несмотря на то, что у меня машинка на 5 литров,
+              работает она почти без перерыва, а белье еще и остается.
+              Mattress Pro™ стала мне отличной помощницей. Её можно запускать
+              параллельно с обычной, электричества она почти не ест. Я обычно
+              крупные вещи стираю в обычной, а всякие носки, колготки стирает
+              Mattress Pro™ в тазике. Можно спокойно оставлять на ночь, благо она
+              не шумит и не пищит, и автоматически отключается. Я очень
+              довольна, спасибо мужу за такой подарок!
+            </p>
+          </div>
+
+          <div class="s5-block white-block">
+            <img class="s5-img" src="img/s5-3.png" alt="" />
+            <div class="block-name">
+             
+              <div class="name">
+                <p>
+                  <b>Елизарова Татьяна </b> <br />
+                  г. Казань
+                </p>
+              </div>
+            </div>
+            <p class="s5-text">
+              Я квартиру снимаю, своей стиральной машины тут нет. А покупать я
+              не решаюсь, потому что нет своей жилплощади, мало ли что.
+              Mattress Pro™ стала для меня замечательным открытием. Поначалу я
+              стирала только по мелочи, белье всякое, а крупные вещи стирала у
+              родителей. Но потом прочитала, что эта машинка прекрасно
+              отстирывает и большие вещи. Так к тому же и безопасно, ничего не
+              линяет, не выцветает и не портится. И это оказалось действительно
+              так! Теперь я почти всю стирку закрываю дома. В химчистку ношу
+              только пальто и куртки. Вот так! А большая стиральная машина
+              оказывается и не нужна вовсе)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s6">
+        <h2>Как сделать <br/><span class="color-green">заказ?</span> </h2>
+        <div class="container">
+          <div class="s6-list">
+            <div class="s6-list-item">
+              <img src="img/s6-1.png" alt="" />
+              <span class="s6-text">Заявка</span>
+              <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+            </div>
+            <div class="s6-list-item">
+              <img src="img/s6-2.png" alt="" />
+              <span class="s6-text">Подтверждение</span>
+              <p>
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар
+              </p>
+            </div>
+            <div class="s6-list-item">
+              <img src="img/s6-3.png" alt="" />
+              <span class="s6-text">Получение</span>
+              <p>Оплатите вашу посылку при получении на почте или у курьера</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1 footer">
+        <div class="container">
+          <div class="s1-title">
+            <div class="s1-suptitle">
+              <div class="s1-suptitle-text">
+                Походный матрас
+              </div>
+              <div class="s1-suptitle-block">
+
+              </div>
+            </div>
+            <h1>Mattress Pro™</h1>
+            <div class="s1-subtitle">
+              <div class="s1-subtitle-block">
+                
+              </div>
+              <div class="s1-subtitle-text">
+                Настоящий отдых на природе
+              </div>
+              
+            </div>
+          </div>
+
+         
+
+          <div class="discount-num">
+           -50%
+          </div>
+          <div class="discount-text">
+            sale!
+          </div>
+
+          <div class="s1-list">
+            <div class="s1-list-item">
+              <img src="img/s1-list-1.png" alt="" />
+              <p>Невероятно прочный</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-2.png" alt="" />
+              <p>Компактный и лёгкий</p>
+            </div>
+            <div class="s1-list-item">
+              <img src="img/s1-list-3.png" alt="" />
+              <p>Максимальный комфорт</p>
+            </div>
+          </div>
+
+      
+        </div>
+        <div class="form-wrapper">
+          <div class="container">
+            <div class="timer-cont">
+              <h3>Акция закончится через:</h3>
+              <div class="el-timer"></div>
+            </div>
+
+            <div class="form-wrapper-block">
+              <div class="price">
+                <p class="price-block">
+                  <span class="price-title">Супер цена! </span>
+                  <span class="price-old-val oldproductsum"><s></s></span>
+                  <span class="price-new-val productsum color-green"></span>
+                </p>
+                <p class="promo">
+                  Активирован промокод
+                  <span class="color-orange">PRO21</span> на
+                  <span class="color-green">скидку 55%</span>
+                </p>
+              </div>
+            </div>
+
+            <form id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selecte value="RU">Выберите вашу страну</option>
+                  <option selecte value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+        
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+        
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Сделать заказ
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+            <div class="form-count">
+              *акция действует:
+              <span class="date_1"></span>
+              <span>-</span>
+              <span class="date_2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
