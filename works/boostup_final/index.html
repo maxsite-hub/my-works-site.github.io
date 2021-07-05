@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Встречайте BoostUp!</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-10);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM");
+        date_2 = date_2.toString("dd.MM");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440\u0443\u0431",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <h1>Встречайте BoostUp!</h1>
+          <div class="s1-title-bottom">
+            Высокотехнологичная присадка для моторного масла
+          </div>
+        </div>
+
+        <div class="s1-block-img">
+          <div class="s1-block-text-top">Только сейчас</div>
+          <div class="s1-block-text-bottom">скидка 50%</div>
+        </div>
+
+        <div class="s1-block-bottom">
+          <img src="img/icon-medal.png" alt="" />
+          <p>
+            <span class="s1-block-top-text">Присадка №1 </span><br />
+            <span class="s1-block-bottom-text">по версии «За Рулем» 2020 </span>
+          </p>
+        </div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <div class="s1-list-text">Увеличивает мощность двигателя</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <div class="s1-list-text">Сокращает расход топлива</div>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <div class="s1-list-text">Препятствует износу и коррозии</div>
+          </div>
+        </div>
+        <img class="gif" src="gif/1.gif" alt="" />
+        <div class="form-wrapper">
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">Секунд</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">
+            <div class="price-block">
+              <div class="price-text">Обычная цена:</div>
+              <div class="price-old">
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+            </div>
+
+            <div class="price-discount">скидка <span>50%</span></div>
+
+            <div class="price-block">
+              <div class="price-text">Новая цена:</div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+          </div>
+          <p class="date-title">
+            <span>Акция проходит: </span>
+            <span>с</span>
+            <span class="date_1"></span>
+            <span>по</span>
+            <span class="date_2"></span>
+          </p>
+
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img src="img/s2.png" alt="" />
+        <div class="s2-item">
+          <p class="title">Джереми Кларксон</p>
+          <p class="subtitle">
+            Автомобильный журналист, экс- ведущий программы TopGear
+          </p>
+          <div class="s2-item-text">
+            BoostUp - это высокотехнологичная масляная добавка, предназначенная
+            для уменьшения трения механических деталей, оптимизации перфорации
+            двигателя и поддержании его работоспособности в течение времени.
+            Обеспечивает высокую производительность с низким расходом масла и
+            топлива.
+          </div>
+          <div class="s2-item-footer-block">
+            <p>AutoCar, interview 2019</p>
+            <img src="img/icon-signatur.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>Небывалая экономия!</h2>
+          <p class="s4-text-top">
+            BoostUp заметно улучшает общую производительность системы впрыска
+            топлива и работы цилиндров, помогая сократить кол-во топлива:
+          </p>
+          <div class="s4-top">
+            <div class="s4-top-block">
+              <img src="img/s4-1.png" alt="" />
+              <p>Обычная присадка</p>
+            </div>
+            <div class="s4-top-block">
+              <img src="img/s4-2.png" alt="" />
+              <p>BOOSTUP</p>
+            </div>
+          </div>
+          <div class="s4-red-block">
+            <p class="s4-text">За счет более эффективной работы поршня,</p>
+            <div class="s4-red-block-item">
+              <div><img src="img/icon-medal-white.png" alt="" /></div>
+              <p>экономия топлива достигает 10-12%!</p>
+            </div>
+          </div>
+          <div class="s4-item">
+            <div class="s4-item-list">
+              <div class="s4-item-img">
+                <img src="img/s4-3.png" alt="" />
+              </div>
+              Благодаря специальным аддитивным компонентам, BoostUp cнижает
+              выгорание масла в двигателе на 90%, а также предотвращает его
+              вспенивание.
+            </div>
+            <div class="s4-item-list">
+              <div class="s4-item-img">
+                <img src="img/s4-4.png" alt="" />
+              </div>
+              <p>С BoostUp Вы будете менять масло в 1,5 раза реже!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>Первозданная мощь!</h2>
+          <div class="s5-text">
+            Boostup восстанавливает изношенные места внутри двигателя, царапины,
+            заполняя их содержащимися в нем частицами лития, цинка и аллюминия,
+            размером в микрон.
+          </div>
+          <img class="gif" src="gif/2.gif" alt="" />
+          <div class="s5-text">
+            Повышая низкие значения сжатия цилиндров, он восстанавливает
+            утраченную мощность автомобиля. С помощью Boostup наблюдается
+            увеличение тяги и повышенная производительность двигателя.
+          </div>
+          <div class="s5-title">Степень сжатия, lbf/in2</div>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <img src="img/s5-1.jpg" alt="" />
+              <p>До</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-2.jpg" alt="" />
+              <p>После</p>
+            </div>
+          </div>
+        </div>
+        <div class="s5-footer">
+          <p>
+            BoostUp обеспечивает увеличение мощности двигателя до 15%, особенно
+            на старых автомобилях!
+          </p>
+          <a class="form-btn mm_button" href="#form">Повысить мощность</a>
+        </div>
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2>Забота о Вашем автомобиле!</h2>
+          <div class="s6-red">
+            BoostUp омолаживает ваш автомобиль, обновляя двигатель до 95% от его
+            первозданного состояния без снятия единого болта!
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-1.png" alt="" />
+            <img src="img/s6-2.png" alt="" />
+          </div>
+          <p>
+            BoostUp образует специальную защитную плёнку, которая предотвращает
+            старение двигателя, сокращает износ, защищает от коррозии, спасает
+            от перегрева и продлевает срок службы!
+          </p>
+          <img class="gif" src="gif/3.gif" alt="" />
+          <p class="text-footer">Очищающий и защитный эффект гарантирован!</p>
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>Всего 3 шага до Boost!</h2>
+          <div class="s7-item">
+            <div class="s7-item-list">
+              <div class="s7-item-img">
+                <img src="img/s7-1.png" alt="" />
+                <div class="s7-red">
+                  <div>Шаг 1</div>
+                </div>
+              </div>
+              <p>
+                Запустите двигатель вашего автомобиля и прогрейте в течение
+                10-15 минут, чтобы температура масла составляла 70-80*
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-item-img">
+                <img src="img/s7-2.png" alt="" />
+                <div class="s7-red">
+                  <div>Шаг 2</div>
+                </div>
+              </div>
+              <p>
+                Запустите двигатель вашего автомобиля и прогрейте в течение
+                10-15 минут, чтобы температура масла составляла 70-80*
+              </p>
+            </div>
+            <div class="s7-item-list">
+              <div class="s7-item-img">
+                <img src="img/s7-3.png" alt="" />
+                <div class="s7-red">
+                  <div>Шаг 3</div>
+                </div>
+              </div>
+              <p>
+                Запустите двигатель вашего автомобиля и прогрейте в течение
+                10-15 минут, чтобы температура масла составляла 70-80*
+              </p>
+            </div>
+          </div>
+          <a class="form-btn mm_button" href="#form">Заказать по акции</a>
+        </div>
+      </section>
+
+      <section class="s8">
+        <img class="s8-top" src="img/s8-top.png" alt="" />
+        <p class="s8-top-text">
+          Используйте BoostUp при 2-х последующих заменах масла, чтобы получить
+          наилучший результат!
+        </p>
+        <div class="s8-container">
+          <div class="container">
+            <h2>
+              Почему еще 2 112 380 автолюбителей по всему миру выбирают BoostUp?
+            </h2>
+            <div class="s8-item">
+              <div class="s8-item-list">
+                <div class="s8-item-img">
+                  <img src="img/s8-1.png" alt="" />
+                </div>
+                <div class="title">Снижение шума двигателя</div>
+                <div class="text">
+                  Зазоры в подшипниках создают призвук в работе двигателя.
+                  Boostup заполняет эти промежутки, ощутимо уменьшая громкость
+                  работы.
+                </div>
+              </div>
+              <div class="s8-item-list">
+                <div class="s8-item-img">
+                  <img src="img/s8-1.png" alt="" />
+                </div>
+                <div class="title">Уменьшение количества вредных выбросов</div>
+                <div class="text">
+                  BoostUp существенно уменьшает количество дыма и сажи,
+                  вырабатываемых Вашим автомобилем. Выброс CO2 в атмосферу
+                  сокращается на 17%!
+                </div>
+              </div>
+              <div class="s8-item-list">
+                <div class="s8-item-img">
+                  <img src="img/s8-1.png" alt="" />
+                </div>
+                <div class="title">Универсальность</div>
+                <div class="text">
+                  BoostUp специально разрабатывался, учитывая особенности работы
+                  как бензиновых, так и дизельных 4-х тактных двигателей,
+                  поэтому он может быть использован
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2>Отзывы покупателей</h2>
+
+        <div class="s9-slider">
+ 
+          <div class="s9-block white-block">
+            <img class="s9-img" src="img/s9-1.png" alt="" />
+            <div class="s9-block-name">
+              <p class="name">Старовойтов Даниил, Reno Logan</p>
+           
+            </div>
+
+            <img class="s9-icon-img" src="img/icon-stars.png" alt="" />
+            <p class="text">
+              Отличное дополнение к набору автолюбителя. Я машину покупал не новую. После того, какначал использовать BoostUp, двигатель сталработать тише, плавнее. До этого каждые 3 месяца в сервис возил. Сейчас уже 8 месяцев - ни одной поломки. Расход действительно сократился, экономия выходит где-то 3000 в месяц, что довольно неплохо, учитывая стоимость самой присадки. Короче, всем смелорекомендую, лишним точно не будет! 
+            </p>
+          </div>
+          <div class="s9-block white-block">
+            <img class="s9-img" src="img/s9-2.png" alt="" />
+            <div class="s9-block-name">
+              <p class="name">Кретов Руслан, Lada Priora</p>
+            
+            </div>
+
+            <img class="s9-icon-img" src="img/icon-stars.png" alt="" />
+            <p class="text">
+              Я как машину купил новую в 2020, сразу стал
+BoostUp использовать, потому что на своей
+старой машине убедился, что вещь просто 
+незаменимая. Говорят, что Лада - помойка, всё время ломается, а у меня за 1,5 года ни одного автосервиса еще. Господа, вы просто не умеете как следует за ней ухаживать. Ездить одно удовольствие, ход мягкий, топлива жрет мало, еще меньше, чем заявлено в заводской спецификации. Уверен, не каждая иномарка таким может похвастаться. Всем автолюбителям BoostUp советую!
+            </p>
+          </div>
+          <div class="s9-block white-block">
+            <img class="s9-img" src="img/s9-3.png" alt="" />
+            <div class="s9-block-name">
+              <p class="name">Светлов Степан, сотрудник автосервиса</p>
+            
+            </div>
+
+            <img class="s9-icon-img" src="img/icon-stars.png" alt="" />
+            <p class="text">
+              Ко мне девчонки часто заезжают масло поменять, свечи, короче по мелочи. Я после того, как открыл для себя BoostUp, решил добавлять понемногу, посмотреть что будет. Благо, на работе он по опту дешевый. И что вы думаете, теперь вся эта толпа каждый месяц ко мне ездит масло менять, да и по ремонту клиентская база выросла. Говорят,
+машина так хорошо едет, что у вас за масло? 
+А я и не знаю что ответить. В общем, вот так)
+            </p>
+          </div>
+
+        </div>
+      </section> 
+
+    <section class="s10">
+      <div class="container">
+        <h2>Как заказать товар?</h2>
+        <div class="s10-item">
+          <div class="s10-item-list">
+            <div class="s10-item-img">
+              <img src="img/s10-1.png" alt="" />
+              <div class="s10-red">
+                <div>Шаг 1</div>
+              </div>
+            </div>
+            <p>
+              Оставьте заявку на заказ 
+              через форму ниже
+            </p>
+          </div>
+          <div class="s10-item-list">
+            <div class="s10-item-img">
+              <img src="img/s10-2.png" alt="" />
+              <div class="s10-red">
+                <div>Шаг 2</div>
+              </div>
+            </div>
+            <p>
+              Мы свяжемся с вами 
+для подтверждения заказа
+            </p>
+          </div>
+          <div class="s10-item-list">
+            <div class="s10-item-img">
+              <img src="img/s10-3.png" alt="" />
+              <div class="s10-red">
+                <div>Шаг 3</div>
+              </div>
+            </div>
+            <p>
+              Через несколько дней 
+мы доставим вам товар
+            </p>
+          </div>
+          </div>
+          </div>
+       
+    </section>
+
+    <section class="s1 footer">
+      <div class="s1-title">
+        <h1>Встречайте BoostUp!</h1>
+        <div class="s1-title-bottom">
+          Высокотехнологичная присадка для моторного масла
+        </div>
+      </div>
+
+      <div class="s1-block-img">
+        <div class="s1-block-text-top">Только сейчас</div>
+        <div class="s1-block-text-bottom">скидка 50%</div>
+      </div>
+
+      <div class="s1-block-bottom">
+        <img src="img/icon-medal.png" alt="" />
+        <p>
+          <span class="s1-block-top-text">Присадка №1 </span><br />
+          <span class="s1-block-bottom-text">по версии «За Рулем» 2020 </span>
+        </p>
+      </div>
+
+      <div class="s1-list">
+        <div class="s1-list-item">
+          <img src="img/s1-list-1.png" alt="" />
+          <div class="s1-list-text">Увеличивает мощность двигателя</div>
+        </div>
+        <div class="s1-list-item">
+          <img src="img/s1-list-2.png" alt="" />
+          <div class="s1-list-text">Сокращает расход топлива</div>
+        </div>
+        <div class="s1-list-item">
+          <img src="img/s1-list-3.png" alt="" />
+          <div class="s1-list-text">Препятствует износу и коррозии</div>
+        </div>
+      </div>
+      <img class="gif" src="gif/1.gif" alt="" />
+      <div class="form-wrapper">
+       
+
+        <p class="date-title">
+          <span>Акция проходит: </span>
+          <span>с</span>
+          <span class="date_1"></span>
+          <span>по</span>
+          <span class="date_2"></span>
+        </p>
+
+        <div class="price">
+          <div class="price-block">
+            <div class="price-text">Обычная цена:</div>
+            <div class="price-old">
+              <div class="price-old-val oldproductsum"></div>
+            </div>
+          </div>
+
+          <div class="price-discount">скидка <span>50%</span></div>
+
+          <div class="price-block">
+            <div class="price-text">Новая цена:</div>
+            <div class="price-new">
+              <span class="price-new-val productsum"></span>
+            </div>
+          </div>
+        </div>
+      
+
+        <form action="#" method="post" class="orderformcdn" id="form">
+          <div class="form-item">
+            <select
+              name="country"
+              class="countryselect form-control location"
+            >
+              <option value="RU" selected disabled>Россия</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <input
+              type="text"
+              name="name"
+              class="field form-control userneme"
+              placeholder="Ваше имя..."
+              value=""
+            />
+          </div>
+          <div class="form-item">
+            <input
+              type="text"
+              name="phone"
+              class="field form-control phone"
+              placeholder="Ваш телефон..."
+              value=""
+            />
+          </div>
+          <input
+            type="hidden"
+            name="productsum"
+            class="productsum"
+            value="1 руб."
+          />
+          <input type="hidden" name="delivery" value="0 руб." />
+          <input
+            type="hidden"
+            name="totalsum"
+            class="productsum"
+            value="1 руб."
+          />
+          <input type="hidden" name="user" value="1" />
+          <input type="hidden" name="address" value="Уточнить у покупателя" />
+    
+          <div class="reolader form-item">
+            <button
+              type="submit"
+              class="form-btn mm_button"
+              onclick="checkFields(event, this);"
+            >
+              Заказать сейчас
+            </button>
+            <div class="ajax_loader_block">
+              <img
+                class="ajax_loader"
+                src="img/ajax-loader.gif"
+                alt="Идет отправка данных"
+              />
+              <span class="ajax_loader">Идет отправка данных</span>
+            </div>
+          </div>
+        </form>
+        <div class="timer">
+          <div class="timer-title">До окончания акции осталось:</div>
+          <div class="countbox"></div>
+          <div class="timer-body">
+            <div class="timer-item">
+              <div class="timer-val">
+                <div class="timer-num">0</div>
+                <div class="timer-num">0</div>
+              </div>
+              <div class="timer-name">Часов</div>
+            </div>
+            <div class="timer-separate">:</div>
+            <div class="timer-item">
+              <div class="timer-val">
+                <div class="timer-num">0</div>
+                <div class="timer-num">0</div>
+              </div>
+              <div class="timer-name">Минут</div>
+            </div>
+            <div class="timer-separate">:</div>
+            <div class="timer-item">
+              <div class="timer-val">
+                <div class="timer-num">0</div>
+                <div class="timer-num">0</div>
+              </div>
+              <div class="timer-name">Секунд</div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+      <div class="s1-politika">
+        Политика конфиденциальности
+      </div>
+    </section>
+
+    </main>
+    
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s9-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left-2" src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right-2" src="img/BTN_arrow_next.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>
