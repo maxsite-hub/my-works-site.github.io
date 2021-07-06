@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Titanium</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-10);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM");
+        date_2 = date_2.toString("dd.MM");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="container">
+          <div class="s1-title">
+            <p class="s1-title-top">Жидкий металл</p>
+            <h1>Titanium</h1>
+            <p class="s1-title-bottom">
+              <span class="color-orange">Самый мощный</span> <br />
+              соединитель в мире!
+            </p>
+          </div>
+          <div class="s1-subtitle">Для любых поверхностей!</div>
+          <div class="s1-discount">-50% SALE</div>
+        </div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Легкое применение</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Невероятная прочность</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Быстрое высыхание</p>
+          </div>
+        </div>
+        <div class="container">
+          <img class="gif" src="gif/1.gif" alt="" />
+          <div class="form-wrapper">
+            <div class="price">
+              <div class="price-new">
+                <div><s class="oldproductsum"></s></div>
+                <span class="price-new-val productsum color-orange"></span>
+              </div>
+            </div>
+            <div class="timer">
+              <div class="timer-title">Cкидка 40%</div>
+              <div class="timer-subtitle">на первый заказ</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">ч</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">м</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">с</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="">
+            <div class="reolader form-item">
+              <a class="form-btn mm_button" href="#form">Заказать сейчас</a>
+            </div>
+            <p class="date-title">
+              Акция проходит:
+              <span>с</span>
+              <span class="date_1"></span>
+              <span>по</span>
+              <span class="date_2"></span>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img-top" src="img/s2-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Откажитесь от <span class="color-orange">дорогого ремонта</span> и
+            вызова мастера!
+          </h2>
+        </div>
+        <img src="img/s2.jpg" alt="" />
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>Прорвало трубу? Появилась трещина в корпусе автомобиля?</h2>
+          <div class="s3-top">Не беда!</div>
+          <br />
+
+         <div class="s3-top-2">
+          Что бы ни случилось, теперь Вы можете исправить это самостоятельно
+          вместе с Titanium!
+         </div>
+       
+        </div>
+
+        <div class="s3-item">
+          <img class="gif" src="gif/2.gif" alt="" />
+          <p class="s3-text">
+            <span
+              >Titanium - это инновационная высокоэффективная металлическая
+              паста,</span
+            >
+            работающая по методу холодной сварки. Прочность такого соединения
+            очень высока и сопоставима со сварным соединением!
+          </p>
+        </div>
+        <div class="s3-item">
+          <img class="gif" src="gif/3.gif" alt="" />
+          <p class="s3-text">
+            Просто выдавите равное количество смеси из 2-х тюбиков, хорошо
+            смешайте, нанесите на ремонтируемую поверхность и дайте высохнуть в
+            течение 5 минут.
+          </p>
+        </div>
+        <div class="s3-item">
+          <img class="gif" src="gif/4.gif" alt="" />
+          <div class="s3-footer">Готово!</div>
+
+          <div class="s3-footer-block">
+            Не каждый умеет варить, но каждый сможет произвести ремонт с помощью
+            высокоустойчивой металлической пасты!
+          </div>
+        </div>
+        <div class="container">
+          <a class="form-btn mm_button" href="#form">Заказать сейчас</a>
+        </div>
+      </section>
+
+      <section class="s4">
+        <img class="img-top" src="img/s4-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Почему Titanium оценили уже
+            <span class="color-orange">более 1000000 покупателей?</span>
+          </h2>
+
+          <div class="s4-block-list">
+            <div class="s4-list">
+              <div class="s4-list-item">
+                <img src="img/s4-1.jpg" alt="" />
+                <p>
+                  <b>Прочный, как сталь</b> <br />Соединение обладает высокой
+                  устойчивостью к механическим и ударным нагрузкам, и не
+                  поддается даже сверлению!
+                </p>
+              </div>
+              <div class="s4-list-item">
+                <img src="img/s4-3.jpg" alt="" />
+                <p>
+                  <b>Стабильный</b> <br />Titanium не деформируется при
+                  высыхании и от воздействия температур. Термостойкость от -60°
+                  до 220°.
+                </p>
+              </div>
+              <div class="s4-text-block">
+                <p>
+                  <b>Влагоустойчивый</b> <br />Соединение абсолютно устойчиво к
+                  воздействию влаги и не повреждается даже кислотными и
+                  химическими чистящими средствами.
+                </p>
+              </div>
+            </div>
+            <div class="s4-list">
+              <div class="s4-list-item">
+                <img src="img/s4-2.jpg" alt="" />
+                <p>
+                  <b> Долговечный</b> <br />Соединения, выполненные с помощью
+                  Titanium, служат не менее 20 лет!
+                </p>
+              </div>
+              <div class="s4-list-item">
+                <img src="img/s4-4.jpg" alt="" />
+                <p>
+                  <b>Экономичный</b><br />
+                  При своей невысокой стоимости, Titanium сэкономит Вам кучу
+                  денег на вызов мастеров и дорогостоящий ремонт.
+                </p>
+              </div>
+              <div class="s4-list-item-2">
+                <img class="img" src="img/s4-5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="s4-footer">
+            Мы не продаемся ни в одном строительном магазине!
+          </div>
+
+          <img class="s4-img" src="img/s4-7.png" alt="" />
+
+          <div class="s4-footer-block">
+            <div class="s4-footer-img">
+              <img src="img/icon-shield.png" alt="" />
+              <p>
+                <span>100%</span>
+                <br />
+                Original
+              </p>
+            </div>
+            <div class="s4-footer-block-p">
+              Гарантия оригинального продукта от единственного официального
+              дистрибьютора в России.
+            </div>
+          </div>
+
+          <a class="form-btn mm_button" href="#form">Заказать сейчас</a>
+        </div>
+      </section>
+
+      <section class="s5">
+        <img class="img-top" src="img/s5-top.jpg" alt="" />
+        <div class="container">
+          <h2>
+            Titanium отлично <span class="color-orange">подойдет для:</span>
+          </h2>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <img src="img/s5-1.png" alt="" />
+              <p>Металлы</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-2.png" alt="" />
+              <p>Пластик</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-3.png" alt="" />
+              <p>Камень</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-4.png" alt="" />
+              <p>Ремонт труб</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-5.png" alt="" />
+              <p>Ремонт автозапчастей</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-6.png" alt="" />
+              <p>Закрытие течи</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-7.png" alt="" />
+              <p>Ремонт систем охлаждения</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-8.png" alt="" />
+              <p>Ремонт отопительных систем</p>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-9.png" alt="" />
+              <p>Ремонт резервуаров с водой</p>
+            </div>
+          </div>
+          <div class="s5-footer">
+            <div class="s5-footer-top">И сотен других применений,</div>
+            <div class="s5-footer-bottom">
+              какие только могут прийти Вам в голову!
+            </div>
+          </div>
+        </div>
+        <img class="gif" src="gif/5.gif" alt="" />
+      </section>
+
+      <section class="s7">
+        <img class="img" src="img/s7-top.jpg" alt="" />
+        <div class="s7-container">
+          <div class="container">
+            <h2>
+              <span class="color-orange">Гарантия возврата</span><br />
+              средств!
+            </h2>
+          </div>
+          <div class="s7-item">
+            <div class="s7-item-block">
+              Мы абсолютно уверены в качестве нашего продукта и заинтересованы в
+              его улучшении. Поэтому, если Вы останетесь недовольны, мы 100%
+              вернем Вам деньги в течение 30 дней с момента покупки.
+            </div>
+            <img class="s7-grant" src="img/s7-grant.png" alt="" />
+            <img src="img/s7-1.jpg" alt="" />
+          </div>
+          <div class="s7-orange">
+            Titanium - адгезив холодной сварки №1 в мире!
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <img class="img-top" src="img/s8-top.jpg" alt="" />
+        <h2>Отзывы довольных <span class="color-orange">клиентов</span></h2>
+       
+          <div class="reviews__slider">
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s8-1.jpg" alt="" />
+
+              <div class="block-name">
+                <img src="img/s8-icon.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Коготарь Екатерина </b><br />
+                    г. Москва
+                  </p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Для меня эта паста - настоящая находка. Я одна с 2-мя детьми.
+                Все самой приходится. Я и велосипед ребенку починила, и все
+                старые ведра на даче залатала. И самое главное, никаких особых
+                умений не надо. Просто смешиваешь в крышечке, мажешь куда надо,
+                и через несколько минут - все готово! Всем одиноким хозяйкам
+                рекомендую!
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s8-2.jpg" alt="" />
+
+              <div class="block-name">
+                <img src="img/s8-icon.png" alt="" />
+                <div class="name">
+                  <p>
+                    <b>Гирин Михаил </b><br />
+                    г. Воронеж
+                  </p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Работаю в автосервисе, случаи разные бывают. Теперь вместо того,
+                чтобы доставать сварку, я использую Titanium. Качество
+                соединений получается точно не хуже, а времени и сил экономит
+                кучу. И ни один клиент еще не жаловался. Домой себе тоже взял,
+                часто пригождается в быту. Отличный адгезив, всем советую.
+              </p>
+            </div>
+            <div class="reviews-block white-block">
+              <img class="reviews-img" src="img/s8-3.jpg" alt="" />
+
+              <div class="block-name">
+                <img src="img/s8-icon.png" alt="" />
+                <div class="name">
+                  <p><b>Северин Геннадий </b><br />г. Архангельск</p>
+                </div>
+              </div>
+              <p class="reviews-text">
+                Моё лучшее приобретение 2021 года! Очень пригождается и в
+                гараже, и по дому. Ремонт действительно стал в удовольствие.
+                Очень много вещей, которые кажутся на выброс, можно
+                реанимировать. Я и ручки к старым сковородкам приделал, и
+                водопровод на даче укрепил, и вешалки в прихожей починил. Короче
+                говоря, очень универсальная и полезная вещь. Однозначно
+                рекомендую!
+              </p>
+            </div>
+          </div>
+      
+      </section>
+
+      <section class="s9">
+        <img class="img-top" src="img/s9-top.jpg" alt="">
+      
+        <h2>
+          Как сделать
+          <span class="color-orange">заказ? </span>
+        </h2>
+          <div class="s9-list">
+            <div class="s9-list-item">
+              <div class="s9-num">01</div>
+              <img src="img/s9-1.jpg" alt="" />
+              <span class="s9-text">Заявка</span>
+              <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+            </div>
+            <div class="s9-list-item">
+              <div class="s9-num">02</div>
+              <img src="img/s9-2.jpg" alt="" />
+              <span class="s9-text">Подтверждение</span>
+              <p>
+                Наш менеджер перезвонит вам для уточнения деталей и мы отправим
+                ваш товар
+              </p>
+            </div>
+            <div class="s9-list-item">
+              <div class="s9-num">03</div>
+              <img src="img/s9-3.jpg" alt="" />
+              <span class="s9-text">Получение</span>
+              <p>Оплатите вашу посылку при получении на почте</p>
+            </div>
+          </div>
+      
+      </section>
+
+      <section class="s1">
+        <div class="container">
+          <div class="s1-title">
+            <p class="s1-title-top">Жидкий металл</p>
+            <h1>Titanium</h1>
+            <p class="s1-title-bottom">
+              <span class="color-orange">Самый мощный</span> <br />
+              соединитель в мире!
+            </p>
+          </div>
+          <div class="s1-subtitle">Для любых поверхностей!</div>
+          <div class="s1-discount">-50% SALE</div>
+        </div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Легкое применение</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Невероятная прочность</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Быстрое высыхание</p>
+          </div>
+        </div>
+        <div class="container">
+          <img class="gif" src="gif/1.gif" alt="" />
+          <div class="form-wrapper">
+            <div class="price">
+              <div class="price-new">
+                <div><s class="oldproductsum"></s></div>
+                <span class="price-new-val productsum color-orange"></span>
+              </div>
+            </div>
+            <div class="timer">
+              <div class="timer-title">Cкидка 40%</div>
+              <div class="timer-subtitle">на первый заказ</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">ч</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">м</div>
+                </div>
+                <div class="timer-separate"></div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">с</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form action="#" method="post" class="orderformcdn" id="form">
+            <div class="form-item">
+              <select
+                name="country"
+                class="countryselect form-control location"
+              >
+                <option value="RU" selected disabled>Выберите вашу страну</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                name="name"
+                class="field form-control userneme"
+                placeholder="Введите ваше имя"
+                value=""
+              />
+            </div>
+            <div class="form-item">
+              <input
+                type="text"
+                name="phone"
+                class="field form-control phone"
+                placeholder="Введите ваш телефон"
+                value=""
+              />
+            </div>
+            <input
+              type="hidden"
+              name="productsum"
+              class="productsum"
+              value="1 руб."
+            />
+            <input type="hidden" name="delivery" value="0 руб." />
+            <input
+              type="hidden"
+              name="totalsum"
+              class="productsum"
+              value="1 руб."
+            />
+            <input type="hidden" name="user" value="1" />
+            <input type="hidden" name="address" value="Уточнить у покупателя" />
+      
+            <div class="reolader form-item">
+              <button
+                type="submit"
+                class="form-btn mm_button"
+                onclick="checkFields(event, this);"
+              >
+                Заказать сейчас
+              </button>
+              <div class="ajax_loader_block">
+                <img
+                  class="ajax_loader"
+                  src="img/ajax-loader.gif"
+                  alt="Идет отправка данных"
+                />
+                <span class="ajax_loader">Идет отправка данных</span>
+              </div>
+            </div>
+            <p class="date-title">
+              Акция проходит:
+              <span>с</span>
+              <span class="date_1"></span>
+              <span>по</span>
+              <span class="date_2"></span>
+            </p>
+          </form>
+         
+        </div>
+      </section>
+    </main>
+  
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".reviews__slider").slick({
+          dots: true,
+          dotsClass: "header-dots",
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-reviews_left" <img src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-reviews_right" src="img/BTN_arrow_next.png" alt="">',
+        });
+      });
+    </script>
+  </body>
+</html>
