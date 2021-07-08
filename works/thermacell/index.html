@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>«ThermaCell»</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: " \u0440\u0443\u0431",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-block-title">
+          <h1 class="s1-title">
+            <span class="s1-title-top">Противомоскитная лампа </span>
+            <br />
+            <span class="s1-title-bottom">«ThermaCell»</span>
+          </h1>
+          <div class="s1-subtitle">
+            Настоящее спасение от назойливых насекомых
+          </div>
+        </div>
+        <div class="s1-block-img">
+          <div class="discount-top">2в1</div>
+          <div class="discount-bottom">
+            <span>Акция!</span><span class="num">-50%</span>
+          </div>
+        </div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Отпугивает комаров и мошек</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Освещает пространство</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Радиус работы - 20м²</p>
+          </div>
+        </div>
+        <img class="gif" src="gif/1.gif" alt="" />
+        <div class="form-wrapper">
+          <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">секунд</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-price">
+            <div class="price">
+              <div class="price-block">
+                <div class="price-text">Обычная цена:</div>
+                <div class="price-old">
+                  <div class="price-old-val oldproductsum"></div>
+                </div>
+              </div>
+
+              <div class="price-discount">скидка <span>-50%</span></div>
+
+              <div class="price-block">
+                <div class="price-text">Новая цена:</div>
+                <div class="price-new">
+                  <span class="price-new-val productsum"></span>
+                </div>
+              </div>
+            </div>
+            <p class="timer-date">
+              <span>Акция проходит: с </span>
+              <span class="date_1"></span>
+              <span>по</span>
+              <span class="date_2"></span>
+            </p>
+            <a href="#form" class="form-btn mm_button"> Заказать со скидкой </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <div class="container">
+          <h2>
+            Наслаждайтесь отдыхом
+            <br />
+            <span class="color-gray"> на природе на полную!</span>
+          </h2>
+          <div class="s2-item">
+            <div class="s2-item-list">
+              <img src="img/s2-1.png" alt="" />
+              <div class="s2-text">
+                Лампа TermaCell - это новейшее оружие против комаров и москитов.
+              </div>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-2.png" alt="" />
+              <div class="s2-text">
+                Она защищает от насекомых в радиусе до 20 м², а также прекрасно
+                работает как кемпинговый светильник!
+              </div>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-3.png" alt="" />
+              <div class="s2-text">
+                Она защищает от насекомых в радиусе до 20 м², а также прекрасно
+                работает как кемпинговый светильник!
+              </div>
+            </div>
+            <div class="s2-item-list">
+              <img src="img/s2-4.png" alt="" />
+              <div class="s2-text">
+                Лампа полностью экологична, не выделяет запаха и абсолютно
+                безопасна для аллергиков, в отличие от кремов, лосьонов и
+                спреев. нести в руке.
+              </div>
+            </div>
+          </div>
+          <div class="s2-footer">
+            + вы получаете яркий беспроводной источник света, на который не
+            слетаются комары!
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать по акции </a>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>Как работает <span class="color-yellow">ThermaCell</span></h2>
+          <div class="s3-text">
+            Лампа ThermaCell - это фумигатор, но в отличие от своих аналогов она
+            не требует подключения к электричеству, что делает её по настоящему
+            мобильной!
+          </div>
+          <img class="img" src="img/s3.png" alt="" />
+          <div class="s3-text">
+            Специальная пластина, пропитанная репеллентом нагревается с помощью
+            миниатюрного газового картриджа, что и создает неблагоприятную для
+            москитов, но абсолютно безопасную для человека среду!
+          </div>
+          <img class="gif" src="gif/2.gif" alt="" />
+          <div class="s3-footer">
+            Газовый баллончик и 3 пластинки идут в комплекте с прибором!
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать со скидкой </a>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>Преимущества TermaCell</h2>
+        </div>
+        <img src="img/s4.png" alt="" />
+
+        <div class="s4-item">
+          <div class="s4-item-list">
+            <div class="s4-img">
+              <img src="img/s4-1.png" alt="" />
+            </div>
+            <div class="s4-item-text">
+              <p class="s4-title">Водонепроницаемость</p>
+              <p class="s4-text">
+                Лампа надежно защищена от воздействия влаги и может спокойно
+                пережить любой ливень
+              </p>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-img">
+              <img src="img/s4-2.png" alt="" />
+            </div>
+            <div class="s4-item-text">
+              <p class="s4-title">Мобильность</p>
+              <p class="s4-text">
+                Лампа весит всего 300 грамм и не требует подключения, что
+                позволяет легко брать её с собой и переносить в руке.
+              </p>
+            </div>
+          </div>
+          <div class="s4-item-list">
+            <div class="s4-img">
+              <img src="img/s4-3.png" alt="" />
+            </div>
+            <div class="s4-item-text">
+              <p class="s4-title">Надежность</p>
+              <p class="s4-text">
+                Прочная прорезиненная защита корпуса позволяет легко переживать
+                падения и удары.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>
+            Где может пригодиться
+            <span class="color-orange">лампа ThermaCell</span>
+          </h2>
+          <div class="s5-item">
+            <div class="s5-item-list">
+              <img src="img/s5-1.png" alt="" />
+              <div class="s5-text">В походе</div>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-2.png" alt="" />
+              <div class="s5-text">На даче</div>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-3.png" alt="" />
+              <div class="s5-text">На рыбалке</div>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-4.png" alt="" />
+              <div class="s5-text">На охоте</div>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-5.png" alt="" />
+              <div class="s5-text">На шашлыках</div>
+            </div>
+            <div class="s5-item-list">
+              <img src="img/s5-6.png" alt="" />
+              <div class="s5-text">На пикнике</div>
+            </div>
+          </div>
+          <div class="s5-footer">
+            И больше никакие надоедливые насекомые не испортят Вам уикенд!
+          </div>
+          <a href="#form" class="form-btn mm_button"> Заказать сейчас </a>
+        </div>
+      </section>
+
+      <section class="s6">
+        <h2>Смотрите видео!</h2>
+        <div class="container">
+          <iframe
+            width="450"
+            height="270"
+            src="https://www.youtube.com/embed/P1uaZt60Lrc?start=7"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="s7">
+       
+       
+          <h2>Характеристики</h2>
+          <img class="s7-top" src="img/s7.jpg" alt="">
+          <div class="container">
+          <ul class="list">
+            <li>
+              <p class="title">
+                Источник света - <span>Светодиодная лампа</span>
+              </p>
+            </li>
+
+            <li>
+              <p class="title">
+                Время действия пластины - <span>12 часов</span>
+              </p>
+            </li>
+            <li>
+              <p class="title">
+                Размеры, см - <span>15,24 х 12,7 х 26,16</span>
+              </p>
+            </li>
+            <li>
+              <p class="title">Пьезоподжиг - <span>Есть</span></p>
+            </li>
+            <li>
+              <p class="title">
+                Тип средства от насекомых -
+                <span>Отпугиватель (фумигатор)</span>
+              </p>
+            </li>
+            <li>
+              <p class="title">
+                Время работы картриджа - <span>48 часов</span>
+              </p>
+            </li>
+            <li>
+              <p class="title">Вес (кг) - <span>0,3</span></p>
+            </li>
+            <li>
+              <p class="title">Зона действия (кв.м.) - <span>20м2</span></p>
+            </li>
+            <li>
+              <p class="title">
+                Питание - <span>Батарейки АА х 4 + газ бутан</span>
+              </p>
+            </li>
+            <li>
+              <p class="title">Гарантия - <span>1 год</span></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+   
+
+      <section class="s8">
+        <h2>Отзывы покупателей</h2>
+
+        <div class="s8-slider">
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-1.png" alt="" />
+
+            <span class="block-name"> <b>Миляев Сергей, Уфа</b></span> <br />
+
+            <img class="s8-icon-img" src="img/icon-stars.png" alt="" />
+            <p>
+              Выбираюсь на рыбалку с мужиками, каждые выходные. Комары конечно - проблема известная. До этого пользовался спреями, но они воняют, кончаются быстро, часто надо обновлять. И однажды товарищ привез с собой эту лампу. Очень полезная вещь! Про спреи можно забыть сразу. В лагере ни одного комара, да еще и светит ярко, в принципе полностью заменяет обычный фонарь. Я недолго думая тоже заказал, и не пожалел. Спреи больше не покупаю, от комаров не страдаю, спасибо!
+            </p>
+          </div>
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-2.png" alt="" />
+
+            <span class="block-name"> <b>Старцева Галина, Наро-Фоминск</b></span> <br />
+
+            <img class="s8-icon-img" src="img/icon-stars.png" alt="" />
+
+            <p>
+              Любим вечерние посиделки на даче с друзьями. Мошки достали. Слетаются на свет, садятся на еду, неприятно. Плюс комары грызут. Мы конечно пользуемся спреями, спирали жжем, но надолго
+это помогает. Приходится постоянно об этом помнить. Фонарь ThermaCell стал настоящим спасением! После включения 5 минут, и ни одной летающей живности вокруг стола на несколько метров. И запаха никакого нет, в отличие от спирали,
+аппетит не портит. А главное экономия какая! В общем, этот фонарь теперь постоянный гостьна нашей даче, спасибо Вам!
+            </p>
+          </div>
+          <div class="s8-block white-block">
+            <img class="s8-img" src="img/s8-3.png" alt="" />
+
+            <span class="block-name"> <b>Трофимова Татьяна, Краснодар</b></span> <br />
+
+            <img class="s8-icon-img" src="img/icon-stars.png" alt="" />
+
+            <p>
+              Ходили недавно на сплав по реке. Подруга 
+дала с собой этот ThermaCell. Говорит, про комаров забудешь. И оказалась права! Очень удобная, легкая, я вешала её прям в тамбуре палатки, фонарь выключала, и никаких комаров всю ночь. А если надо выйти куда по нужде, зажигала
+и брала её с собой, очень удобно, вместо фонарика, 2 в 1. Приехала со сплава и заказала себе такую же. На природе вещь незаменимая.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <h2>Как заказать товар?</h2>
+        <div class="s9-item">
+          <div class="s9-item-list">
+            <img src="img/s9-1.png" alt="" />
+            <div class="s9-text">
+              <span>Шаг 1</span><br />
+              Оставьте заявку на заказ 
+через форму ниже
+            </div>
+          </div>
+          <div class="s9-item-list">
+                <img src="img/s9-2.png" alt="" />
+            <div class="s9-text">
+              <span>Шаг 2</span><br />
+              Мы свяжемся с вами 
+для подтверждения заказа
+            </div>
+      
+          </div>
+          <div class="s9-item-list">
+            <img src="img/s9-3.png" alt="" />
+            <div class="s9-text">
+              <span>Шаг 3</span><br />
+              Через несколько дней 
+мы доставим вам товар
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+        <section class="s1 footer">
+        <div class="s1-block-title">
+          <h1 class="s1-title">
+            <span class="s1-title-top">Противомоскитная лампа </span>
+            <br />
+            <span class="s1-title-bottom">«ThermaCell»</span>
+          </h1>
+          <div class="s1-subtitle">
+            Настоящее спасение от назойливых насекомых
+          </div>
+        </div>
+        <div class="s1-block-img">
+          <div class="discount-top">2в1</div>
+          <div class="discount-bottom">
+            <span>Акция!</span><span class="num">-50%</span>
+          </div>
+        </div>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-1.png" alt="" />
+            <p>Отпугивает комаров и мошек</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-2.png" alt="" />
+            <p>Освещает пространство</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-3.png" alt="" />
+            <p>Радиус работы - 20м²</p>
+          </div>
+        </div>
+   
+        <div class="form-wrapper">
+        
+
+          <div class="block-price">
+            <div class="price">
+              <div class="price-block">
+                <div class="price-text">Обычная цена:</div>
+                <div class="price-old">
+                  <div class="price-old-val oldproductsum"></div>
+                </div>
+              </div>
+
+              <div class="price-discount">скидка <span>-50%</span></div>
+
+              <div class="price-block">
+                <div class="price-text">Новая цена:</div>
+                <div class="price-new">
+                  <span class="price-new-val productsum"></span>
+                </div>
+              </div>
+            </div>
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option value="RU" selected disabled>Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Ваше имя..."
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Ваш телефон..."
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+ <p class="timer-date">
+              <span>Акция проходит: с </span>
+              <span class="date_1"></span>
+              <span>по</span>
+              <span class="date_2"></span>
+            </p>
+              <div class="reolader form-item">
+                <a
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </a>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+           
+             <div class="timer">
+            <div class="timer-title">До окончания акции осталось:</div>
+            <div class="countbox"></div>
+            <div class="timer-body">
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">часов</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">минут</div>
+              </div>
+              <div class="timer-separate">:</div>
+              <div class="timer-item">
+                <div class="timer-val">
+                  <div class="timer-num">0</div>
+                  <div class="timer-num">0</div>
+                </div>
+                <div class="timer-name">секунд</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+ 
+     
+    </main>
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s8-slider").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          prevArrow:
+            '<img class="slider-icon_left" src="img/BTN_arrow_back.png" alt="">',
+          nextArrow:
+            '<img class="slider-icon_right" src="img/BTN_arrow_next.png" alt="">',
+        });
+
+        let filter = $("[data-filter]");
+
+        filter.on("click", function (event) {
+          event.preventDefault();
+
+          let cat = $(this).data("filter");
+
+          $("[data-cat]").each(function () {
+            let workCat = $(this).data("cat");
+
+            if (workCat != cat) {
+              $(this).removeClass("show");
+            } else {
+              $(this).addClass("show");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
