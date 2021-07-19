@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>GardenLife</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            date = Date.today().addDays(-10);
+            date_2 = Date.today();
+
+            date = date.toString("dd.MM");
+            date_2 = date_2.toString("dd.MM");
+
+            $(".date_1").html(date);
+            $(".date_2").html(date_2);
+        });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+        $jsonData = {
+            RU: {
+                currency: "\u0440.",
+                productsum: 1890,
+                oldproductsum: 6300,
+                delivery: 0,
+                totalsum: "1890",
+            },
+        };
+    </script>
+
+    <style>
+        .ajax_loader {
+            display: none;
+        }
+        
+        .form-btn {
+            animation: pulse 1s infinite;
+        }
+        
+        .form-btn:hover {
+            animation: none;
+        }
+        
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-box-shadow: 0 0 0 0 rgba(255, 234, 42, 0.7);
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                -moz-box-shadow: 0 0 0 0 rgba(255, 234, 42, 0.7);
+                box-shadow: 0 0 0 0 rgba(255, 234, 42, 0.7);
+            }
+            70% {
+                -moz-box-shadow: 0 0 0 12px rgba(255, 114, 0, 0);
+                box-shadow: 0 0 0 12px rgba(255, 114, 0, 0);
+            }
+            100% {
+                -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+                box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="s1">
+            <div class="s1-title">
+                <h1>Садовые электроножницы</h1>
+                <br />
+                <p class="s1-suptitle">
+                    <span class="color-yellow">GardenLife</span>
+                </p>
+            </div>
+
+            <div class="s1-present">
+                3 насадки <br /> в подарок!
+            </div>
+
+            <div class="s1-discount">Скидка 70%</div>
+
+            <div class="s1-list">
+                <div class="s1-list-item">
+                    <img src="img/s1-1.png" alt="" />
+                    <p>Защита рук и пальцев</p>
+                </div>
+                <div class="s1-list-item">
+                    <img src="img/s1-2.png" alt="" />
+                    <p>Стрижка без усилий</p>
+                </div>
+                <div class="s1-list-item">
+                    <img src="img/s1-3.png" alt="" />
+                    <p>Сверхбыстрая работа</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="form-wrapper">
+                    <h3>
+                        Активирован промокод <span>GL21</span> на
+                        <span class="color-orange">скидку 70%</span>
+                    </h3>
+                    <div class="timer">
+                        <div class="timer-title">До конца акции:</div>
+                        <div class="countbox"></div>
+                        <div class="timer-body">
+                            <div class="timer-item">
+                                <div class="timer-val">
+                                    <div class="timer-num">0</div>
+                                    <div class="timer-num">0</div>
+                                </div>
+                                <div class="timer-name">ч</div>
+                            </div>
+                            <div class="timer-separate"></div>
+                            <div class="timer-item">
+                                <div class="timer-val">
+                                    <div class="timer-num">0</div>
+                                    <div class="timer-num">0</div>
+                                </div>
+                                <div class="timer-name">м</div>
+                            </div>
+                            <div class="timer-separate"></div>
+                            <div class="timer-item">
+                                <div class="timer-val">
+                                    <div class="timer-num">0</div>
+                                    <div class="timer-num">0</div>
+                                </div>
+                                <div class="timer-name">с</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <!--Container-->
+
+                        <div class="price">
+                            <div class="price-title">Супер цена!</div>
+                            <div class="price-block">
+                                <div class="price-old">
+                                    <span class="price-old-val oldproductsum"><s></s></span>
+                                </div>
+                                <div class="price-new">
+                                    <span class="price-new-val productsum color-orange"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+                    </div>
+
+                    <p class="timer-date">
+                        <span>Акция действует</span>
+                        <span>с</span>
+                        <span class="date_1"></span>
+                        <span>по</span>
+                        <span class="date_2"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s2">
+            <div class="container">
+                <h2>
+                    Вам знакомы эти проблемы
+                    <span class="color-yellow">на вашем дачном участке?</span>
+                </h2>
+                <div class="s2-item">
+                    <div class="s2-item-list">
+                        <img src="img/s2-1.png" alt="" />
+                        <div class="s2-text">
+                            Необходимость часто подстригать растения
+                        </div>
+                    </div>
+                    <div class="s2-item-list">
+                        <img src="img/s2-2.png" alt="" />
+                        <div class="s2-text">Стрижка кустов занимает много времени</div>
+                    </div>
+                    <div class="s2-item-list">
+                        <img src="img/s2-3.png" alt="" />
+                        <div class="s2-text">Сорняки растут в труднодоступных местах</div>
+                    </div>
+                    <div class="s2-item-list">
+                        <img src="img/s2-4.png" alt="" />
+                        <div class="s2-text">
+                            Трудно придать растениям идеальную форму
+                        </div>
+                    </div>
+                    <div class="s2-item-list">
+                        <img src="img/s2-5.png" alt="" />
+                        <div class="s2-text">Секатор "не берет" толстые ветки</div>
+                    </div>
+                    <div class="s2-item-list">
+                        <img src="img/s2-6.png" alt="" />
+                        <div class="s2-text">Руки быстро устают от работы</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s3">
+            <div class="container">
+                <h2>
+                    <span class="color-orange">Забудьте!</span>
+                    <br /> Теперь это в прошлом!
+                </h2>
+            </div>
+            <img src="img/s3.jpg" alt="" />
+            <p class="s3-text">
+                <span>GardenLife –</span> это революционные электроножницы для Вашего загородного участка, призванные упростить вашу жизнь и превратить скучный процесс стрижки травы и кустарников в легкий и приятный творческий процесс!
+            </p>
+            <img src="gif/1.gif" alt="" />
+            <p class="s3-text">
+                Электроножницы <span>GardenLife</span> оснащены двумя рядами острых лезвий, помогающих без труда срезать ветки диаметром
+                <span class="color-orange">до 80 мм.</span> А мощный аккумулятор позволяет работать на протяжении 8-ми часов без перерыва!
+            </p>
+            <div class="s3-footer">
+                <h3>Смотрите видео!</h3>
+            </div>
+            <div class="video">
+                <div class="click-for-video">
+                    <img src="img/s3-1.jpg" alt="" />
+                </div>
+                <div class="youtube">
+                    <iframe class="youtube"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <div class="container">
+                <h2>
+                    Преимущества электроножниц
+                    <span class="color-yellow">GardenLife</span>
+                </h2>
+            </div>
+            <div class="s4-item">
+                <img src="img/s4-1.jpg" alt="" />
+                <div class="s4-item-list">
+                    <div class="s4-title">Острые лезвия</div>
+                    <div class="s4-text">
+                        Заточенные лазером лезвия из высококачественной стали марки SK-5 способны разрезать ветви самых твердых пород деревьев, например, дуба.
+                    </div>
+                </div>
+            </div>
+            <div class="s4-item">
+                <img src="img/s4-2.jpg" alt="" />
+                <div class="s4-item-list">
+                    <div class="s4-title">Тихая работа</div>
+                    <div class="s4-text">
+                        Практически бесшумный электродвигатель нового поколения обеспечивает приятную тишину во время обрезки.
+                    </div>
+                </div>
+            </div>
+            <div class="s4-item">
+                <img src="img/s4-3.jpg" alt="" />
+                <div class="s4-item-list">
+                    <div class="s4-title">Продуманная конструкция</div>
+                    <div class="s4-text">
+                        Специальная геометрия ножей позволяет идеально ровно подстричь траву даже в самых труднодоступных местах.
+                    </div>
+                </div>
+            </div>
+            <div class="s4-item">
+                <img src="img/s4-4.jpg" alt="" />
+                <div class="s4-item-list">
+                    <div class="s4-title">Мощный аккумулятор</div>
+                    <div class="s4-text">
+                        21-вольтный аккумулятор позволяет использовать электроножницы GardenLife без шнура. Время автономной работы – 8 часов, время полной зарядки – 2 часа.
+                    </div>
+                </div>
+            </div>
+            <div class="s4-item">
+                <img src="img/s4-5.jpg" alt="" />
+                <div class="s4-item-list">
+                    <div class="s4-title">Защита рук и пальцев</div>
+                    <div class="s4-text">
+                        Система интеллектуальной защиты блокирует лезвия, когда в них попадает палец или другая часть тела. Электроножницами GardenLife практически невозможно пораниться.
+                    </div>
+                </div>
+            </div>
+            <div class="s4-item">
+                <img src="img/s4-6.jpg" alt="" />
+                <div class="s4-item-list">
+                    <div class="s4-title">Идеальная эргономика</div>
+                    <div class="s4-text">
+                        Электроножницы GardenLife обеспечивают максимально удобный захват и отсутствие проскальзываний, благодаря чему ваша рука во время работы совершенно не устает.
+                    </div>
+                </div>
+            </div>
+            <div class="s4-footer">
+                <img class="img" src="img/s4-7.png" alt="" />
+            </div>
+
+            <div class="container">
+                <a href="#form" class="form-btn mm_button"> Сделать заказ </a>
+            </div>
+        </section>
+
+        <section class="s5">
+            <div class="container">
+                <h2>Почему именно <span class="color-orange"> GardenLife?</span></h2>
+                <div class="s5-item">
+                    <div class="s5-item-list">
+                        <img src="img/s5-1.png" alt="" />
+                        <div class="s5-text">Аккуратная стрижка газона</div>
+                    </div>
+                    <div class="s5-item-list">
+                        <img src="img/s5-2.png" alt="" />
+                        <div class="s5-text">Декоративная стрижка кустарников</div>
+                    </div>
+                    <div class="s5-item-list">
+                        <img src="img/s5-3.png" alt="" />
+                        <div class="s5-text">Обрезка плодовых деревьев</div>
+                    </div>
+                    <div class="s5-item-list">
+                        <img src="img/s5-4.png" alt="" />
+                        <div class="s5-text">Придание участку ухоженного вида</div>
+                    </div>
+                    <div class="s5-item-list">
+                        <img src="img/s5-5.png" alt="" />
+                        <div class="s5-text">Удаление нежелательных растений</div>
+                    </div>
+                    <div class="s5-item-list">
+                        <img src="img/s5-6.png" alt="" />
+                        <div class="s5-text">
+                            Формирование формы куба или шара у кустов
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="img/s5-footer.jpg" alt="" />
+        </section>
+
+        <section class="s6">
+            <div class="container">
+                <h2>
+                    <span>Электроножницы</span><br />
+                    <span class="color-orange"> GardenLife </span><br /> уже зарекомендовали себя в 18 странах мира!
+                </h2>
+            </div>
+            <img src="img/s6-1.png" alt="" />
+            <div class="container">
+                <h3>
+                    Теперь они <span class="color-orange">доступны</span> и в России!
+                </h3>
+                <ul class="list">
+                    <li>Лидер продаж в США и Европе</li>
+                    <li>Рекомендован сертифицированными агрономами</li>
+                    <li>Победитель 23 международных конкурсов и выставок</li>
+                </ul>
+                <div class="s6-item">
+                    <img src="img/s6-2.png" alt="" />
+                    <div class="s6-text">
+                        Победитель техновыставки Techno-Frontier 2021 в Японии
+                    </div>
+                </div>
+                <div class="s6-item">
+                    <img src="img/s6-3.png" alt="" />
+                    <div class="s6-text">
+                        Номинант на премию "Товар года" на выставке гаджетов IFA Berlin 2021 (Берлин, Германия)
+                    </div>
+                </div>
+                <div class="s6-item">
+                    <img src="img/s6-4.png" alt="" />
+                    <div class="s6-text">
+                        Рекомендации от самых авторитетных садоводческих изданий
+                    </div>
+                </div>
+            </div>
+            <img src="img/s6-footer.jpg" alt="" />
+        </section>
+
+        <section class="s7">
+            <div class="container">
+                <h2>Что думают эксперты?</h2>
+                <div class="s7-item">
+                    <img src="img/s7-1.png" alt="" />
+                    <div class="s7-title">Хлебин Юрий Геннадьевич</div>
+                    <div class="s7-text">Агроном, садовод | Стаж 28 лет</div>
+                    <img src="img/icon-dots.png" alt="" />
+                    <p>
+                        <span> Электроножницы GardenLife –</span> это лучшее сочетание цены, качества, функциональности и продуктивности на сегодняшний день. Сейчас на рынке просто не существует настолько же качественного аналога в этом ценовом сегменте.
+                    </p>
+                    <p>
+                        Безусловно, <span>GardenLife</span> намного удобнее любого ручного инструмента для стрижки травы или кустов, так как позволяет выполнять работу без усилий и очень быстро, в том числе в самых труднодоступных местах участка (например,
+                        в углах на стыке газона и стены дома или тротуарной плитки). Что касается кустовых растений и деревьев, то такой метод подрезки для самих растений даже предпочтительнее, так как электроножницы
+                        <span>GardenLife</span> не повреждают само растение, как например, при использовании секатора.
+                    </p>
+
+                    <p>
+                        Как следствие, при использовании <span>GardenLife</span> кусты и деревья не травмируются и не болеют, а сам участок принимает аккуратный и опрятный вид.
+                    </p>
+                </div>
+            </div>
+            <img src="img/s7-2.jpg" alt="" />
+        </section>
+
+        <section class="s8">
+            <h2>Отзывы наших <span class="color-yellow"> покупателей</span></h2>
+
+            <div class="s8__slider">
+                <div class="s8-block white-block">
+                    <img class="s8-img" src="img/s8-1.jpg" alt="" />
+
+                    <div class="block-name">
+                        <img src="img/s8-icon-1.png" alt="" />
+                        <div class="name">
+                            <p>
+                                <b>Владимир </b><br /> 43 года
+                            </p>
+                        </div>
+                    </div>
+                    <p class="s8-text">
+                        Данный триммер не первый, до этого был другого производителя, после работы с которым руки ещё час тряслись от вибрации. С GardenLife проблем с вибрацией нет – работать комфортно. Люфта также не наблюдается. В комплекте 3 насадки: для травы, для кустов
+                        и пульверизатор. Отличный инструмент!
+                    </p>
+                </div>
+                <div class="s8-block white-block">
+                    <img class="s8-img" src="img/s8-2.jpg" alt="" />
+
+                    <div class="block-name">
+                        <img src="img/s8-icon-2.png" alt="" />
+                        <div class="name">
+                            <p>
+                                <b>Семён </b><br /> 37 лет
+                            </p>
+                        </div>
+                    </div>
+                    <p class="s8-text">
+                        Лучший инструмент для стрижки кустов, который делает идеально ровные контуры шара или куба. Также использую для подстригания травы возле дачного домика. Очень удобно держать в руке, мягкие вставочки защищают от натирания. Вибрация почти не ощущается.
+                        Очень доволен покупкой.
+                    </p>
+                </div>
+                <div class="s8-block white-block">
+                    <img class="s8-img" src="img/s8-3.jpg" alt="" />
+
+                    <div class="block-name">
+                        <img src="img/s8-icon-3.png" alt="" />
+                        <div class="name">
+                            <p>
+                                <b>Людмила </b><br /> 59 лет
+                            </p>
+                        </div>
+                    </div>
+                    <p class="s8-text">
+                        К своим 59 годам попробовала много садового инструмента. Но вот ваши ножницы действительно удивили: после 3х часов работы ими я совершенно не чувствовала усталости. Ни руки, ни запястья, ни пальцы не болели от напряжения. Кроме того, результат самой работы
+                        выглядит безупречно: газон ровный, а кусты аккуратные. Всем рекомендую!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s9">
+            <div class="container">
+                <h2>Комплектация:</h2>
+                <img src="img/s9-1.jpg" alt="" />
+                <ul class="list">
+                    <li>Садовые ножницы ISIO 3</li>
+                    <li>Зарядное устройство</li>
+                    <li>Нож для кустореза</li>
+                    <li>Нож для травы</li>
+                    <li>Пульверизатор</li>
+                    <li>Мягкий защитный чехол для удобного хранения</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="s10">
+            <div class="container">
+                <h2>Как сделать <span class="color-yellow">заказ?</span></h2>
+                <div class="s10-item">
+                    <img src="img/s10-1.png" alt="" />
+                    <div class="s10-title">Заявка</div>
+                    <div class="s10-text">
+                        Оставьте заявку на нашем сайте, заполнив форму заказа
+                    </div>
+                </div>
+                <div class="s10-item">
+                    <img src="img/s10-2.png" alt="" />
+                    <div class="s10-title">Подтверждение</div>
+                    <div class="s10-text">
+                        Наш менеджер перезвонит вам для уточнения деталей и мы отправим ваш товар
+                    </div>
+                </div>
+                <div class="s10-item">
+                    <img src="img/s10-3.png" alt="" />
+                    <div class="s10-title">Получение</div>
+                    <div class="s10-text">
+                        Оплатите вашу посылку при получении на почте или у курьера
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s1">
+            <div class="s1-title">
+                <h1>Садовые электроножницы</h1>
+                <br />
+                <p class="s1-suptitle">
+                    <span class="color-yellow">GardenLife</span>
+                </p>
+            </div>
+
+            <div class="s1-present">
+                3 насадки <br /> в подарок!
+            </div>
+
+            <div class="s1-discount">Скидка 70%</div>
+
+            <div class="s1-list">
+                <div class="s1-list-item">
+                    <img src="img/s1-1.png" alt="" />
+                    <p>Защита рук и пальцев</p>
+                </div>
+                <div class="s1-list-item">
+                    <img src="img/s1-2.png" alt="" />
+                    <p>Стрижка без усилий</p>
+                </div>
+                <div class="s1-list-item">
+                    <img src="img/s1-3.png" alt="" />
+                    <p>Сверхбыстрая работа</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="form-wrapper">
+                    <h3>
+                        Активирован промокод <span>GL21</span> на
+                        <span class="color-orange">скидку 70%</span>
+                    </h3>
+                    <div class="timer">
+                        <div class="timer-title">До конца акции:</div>
+                        <div class="countbox"></div>
+                        <div class="timer-body">
+                            <div class="timer-item">
+                                <div class="timer-val">
+                                    <div class="timer-num">0</div>
+                                    <div class="timer-num">0</div>
+                                </div>
+                                <div class="timer-name">ч</div>
+                            </div>
+                            <div class="timer-separate"></div>
+                            <div class="timer-item">
+                                <div class="timer-val">
+                                    <div class="timer-num">0</div>
+                                    <div class="timer-num">0</div>
+                                </div>
+                                <div class="timer-name">м</div>
+                            </div>
+                            <div class="timer-separate"></div>
+                            <div class="timer-item">
+                                <div class="timer-val">
+                                    <div class="timer-num">0</div>
+                                    <div class="timer-num">0</div>
+                                </div>
+                                <div class="timer-name">с</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <!--Container-->
+
+                        <div class="price">
+                            <div class="price-title">Супер цена!</div>
+                            <div class="price-block">
+                                <div class="price-old">
+                                    <span class="price-old-val oldproductsum"><s></s></span>
+                                </div>
+                                <div class="price-new">
+                                    <span class="price-new-val productsum color-orange"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form method="post" id="form">
+                            <div class="form-item">
+                                <select name="country" class="countryselect form-control location">
+                    <option selected value="RU">Россия</option>
+                    <option selected value="RU">Выберите вашу страну</option>
+                  </select>
+                            </div>
+                            <div class="form-item">
+                                <input type="text" name="name" class="field form-control userneme" placeholder="Введите ваше имя" value="" />
+                            </div>
+                            <div class="form-item">
+                                <input type="text" name="phone" class="field form-control phone" placeholder="Введите ваш телефон" value="" />
+                            </div>
+
+                            <input type="hidden" name="productsum" class="productsum" value="1 руб." />
+                            <input type="hidden" name="delivery" value="0 руб." />
+                            <input type="hidden" name="totalsum" class="productsum" value="1 руб." />
+                            <input type="hidden" name="user" value="1" />
+                            <input type="hidden" name="address" value="Уточнить у покупателя" />
+
+                            <div class="reolader form-item">
+                                <button type="submit" class="form-btn mm_button" onclick="checkFields(event, this);">
+                    Сделать заказ
+                  </button>
+                                <div class="ajax_loader_block">
+                                    <img class="ajax_loader" src="img/ajax-loader.gif" alt="Идет отправка данных" />
+                                    <span class="ajax_loader">Идет отправка данных</span>
+                                </div>
+                            </div>
+                            <p class="timer-date">
+                                <span>Акция действует</span>
+                                <span>с</span>
+                                <span class="date_1"></span>
+                                <span>по</span>
+                                <span class="date_2"></span>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(function() {
+            CountBox();
+            $(".slider-arrows").html("");
+
+            $("a[href^='#']").click(function() {
+                var _href = $(this).attr("href");
+                $("html, body").animate({
+                    scrollTop: $(_href).offset().top + "px",
+                });
+
+                return false;
+            });
+
+            $(".s3-slider").slick({
+                dots: false,
+
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+
+                prevArrow: '<img class="slider-s3_left" <img src="img/icon-arrow-left.png" alt="">',
+                nextArrow: '<img class="slider-s3_right" src="img/icon-arrow-right.png" alt="">',
+            });
+
+            $(".s6-slider").slick({
+                dots: true,
+                dotsClass: "title-dots",
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+
+                prevArrow: '<img class="slider-s6_left" <img src="img/icon-arrow-green-left.png" alt="">',
+                nextArrow: '<img class="slider-s6_right" src="img/icon-arrow-green-right.png" alt="">',
+            });
+
+            $(".s8__slider").slick({
+                dots: true,
+                dotsClass: "header-dots",
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+
+                prevArrow: '<img class="slider-s8_left" <img src="img/icon-arrow-left.png" alt="">',
+                nextArrow: '<img class="slider-s8_right" src="img/icon-arrow-right.png" alt="">',
+            });
+
+            $(".s11-slider").slick({
+                dots: false,
+
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+
+                prevArrow: '<img class="slider-s11_left" <img src="img/icon-arrow-left.png" alt="">',
+                nextArrow: '<img class="slider-s11_right" src="img/icon-arrow-right.png" alt="">',
+            });
+
+            $(".click-for-video").click(function() {
+                this.style.display = "none";
+                $("div.youtube").css("display", "block");
+                $("iframe.youtube").prop(
+                    "src",
+                    "https://www.youtube.com/embed/kKEMtdkTGi0;autoplay=1&;controls=0&;showinfo=0"
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>
