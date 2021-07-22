@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Invisible Bra</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 6640,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+      .form-btn:hover {
+        animation: none;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-title-top">
+            <p class="s1-title-top__block">Невидимый бюстгальтер</p>
+            <br />
+            <p class="s1-title-top__block">
+              с эффектом
+              <span class="color-yellow">Push-Up</span>
+            </p>
+          </div>
+
+          <h1>
+            <span>Invisible</span><br />
+            <span>Bra</span>
+          </h1>
+        </div>
+
+        <div class="s1-block">Универсальный размер</div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Совершенно незаметный</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Идеальная поддержка груди</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Подходит к любой одежде</p>
+          </div>
+        </div>
+
+        <p class="discount">
+          <span>-70%</span>
+          <span>Активирована скидка</span>
+        </p>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer">
+              <div class="timer-title">Предложение действует:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">часов</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">минут</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">секунд</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="price-title">
+              Активирована скидка 70%<br />
+              по промокоду <span class="color-orange">sale21</span>
+            </p>
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selected value="RU">Выберите вашу страну</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+            <p class="timer-date">
+              *акция действует:
+              <span>до</span>
+              <span class="date_2"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <h2>
+          Вам знакомы<br />
+          <span class="color-red">эти проблемы?</span>
+        </h2>
+        <div class="s2-slider">
+          <div class="s2-slide">
+            <img src="img/s2-1.png" alt="" />
+            <div class="s2-text">
+              Необходимость выбирать цвет и модель под желаемую одежду
+            </div>
+          </div>
+          <div class="s2-slide">
+            <img src="img/s2-2.png" alt="" />
+            <div class="s2-text">Сложно подобрать свой размер в магазине</div>
+          </div>
+          <div class="s2-slide">
+            <img src="img/s2-3.png" alt="" />
+            <div class="s2-text">
+              Бюстгальтер доставляет дискомфорт при долгой носке
+            </div>
+          </div>
+          <div class="s2-slide">
+            <img src="img/s2-4.png" alt="" />
+            <div class="s2-text">Бретельки заметны под одеждой</div>
+          </div>
+          <div class="s2-slide">
+            <img src="img/s2-5.png" alt="" />
+            <div class="s2-text">Не наденешь с открытой одеждой</div>
+          </div>
+        </div>
+        <img src="img/s2-footer.jpg" alt="" />
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>
+            <span class="color-red"> Забудьте! <br /> </span> Теперь есть
+            решение!
+          </h2>
+        </div>
+        <img src="img/s3.png" alt="" />
+        <div class="container">
+          <p class="s3-block">
+            <span class="color-red"> InvisibleBra </span> - ваш новый идеальный
+            бюстгальтер!
+          </p>
+          <div class="s3-block-gif">
+            <img src="gif/1a.gif" alt="" />
+            <p class="s3-gif-text">
+              Бюстгальтер <span>InvisibleBra</span> можно надеть с любой
+              одеждой, <span class="color-red">даже с самой открытой!</span>
+            </p>
+          </div>
+          <p class="s3-footer-text">
+            Благодаря технологии <span>Upper-Flex,</span> бюстгальтер
+            InvisibleBra создает мягкую и безопасную поддержку вашей груди,
+            обеспечивая комфорт на целый день!
+          </p>
+        </div>
+        <img src="gif/2.gif" alt="" />
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <h2>
+            Особенности бюстгальтера
+            <span class="color-red"> InvisibleBra </span>
+          </h2>
+          <div class="s4-item">
+            <div class="s4-item-list">
+              <img src="img/s4-1.png" alt="" />
+              <p class="s4-title">Технология Upper-Flex</p>
+              <p class="s4-text">
+                Усиленные застежки обеспечивают максимальную поддержку и эффект
+                Push-Up
+              </p>
+            </div>
+            <div class="s4-item-list">
+              <img src="img/s4-2.png" alt="" />
+              <p class="s4-title">Внутренняя строчка SmartSilicone®</p>
+              <p class="s4-text">
+                Специальная строчка из медицинского силикона по бокам удерживает
+                бюстгальтер на месте и не дает ему сползать
+              </p>
+            </div>
+            <div class="s4-item-list">
+              <img src="img/s4-3.png" alt="" />
+              <p class="s4-title">Silk-Touch покрытие</p>
+              <p class="s4-text">
+                Дышащий материал из Eco-Хлопка приятно прилегает к коже и не
+                вызывает раздражения и потливости
+              </p>
+            </div>
+            <div class="s4-item-list">
+              <img src="img/s4-4.png" alt="" />
+              <p class="s4-title">Дизайн InvisibleBra®</p>
+              <p class="s4-text">
+                Благодаря запатентованному дизайну, бюстгальтер InvisibleBra не
+                заметен под одеждой, но в то же время выглядит элегантно и
+                утонченно на вас
+              </p>
+            </div>
+            <div class="s4-video">
+              <div class="video">
+                <div class="click-for-video">
+                  <h4>Смотрите <span class="color-yellow">видео</span></h4>
+                  <img src="img/s4-5.png" alt="" />
+                </div>
+                <div class="youtube">
+                  <iframe class="youtube"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="img/s4-6.jpg" alt="" />
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>Преимущества <span class="color-red"> очевидны!</span></h2>
+        </div>
+        <div class="s5-item">
+          <div class="s5-item-left">
+            <img src="img/s5-1.png" alt="" />
+            <div class="s5-item-title">Обычные бюстгальтеры</div>
+            <ul class="list false">
+              <li>Сложно подобрать свой размер</li>
+              <li>Сдавливают грудь при долгой носке</li>
+              <li>Кожа потеет и не дышит</li>
+              <li>Сложно подобрать цвет под одежду</li>
+              <li>При постоянной носке могут вызывать заболевания груди</li>
+            </ul>
+          </div>
+          <div class="s5-item-right">
+            <img src="img/s5-2.png" alt="" />
+            <div class="s5-item-title">Бюстгальтер InvisibleBra</div>
+            <ul class="list true">
+              <li>Универсальный размер</li>
+              <li>Совершенно не ощущается на теле</li>
+              <li>На 100% дышащий материал</li>
+              <li>Не заметен под одеждой</li>
+              <li>Абсолютно безопасен для здоровья</li>
+            </ul>
+          </div>
+        </div>
+        <img src="img/s5-3.jpg" alt="" />
+      </section>
+
+      <section class="s6">
+        <div class="container">
+          <h2>
+            Отзывы наших
+            <span class="color-red">покупательниц</span>
+          </h2>
+          <div class="s6-item">
+            <img src="img/s6-1.png" alt="" />
+            <div class="s6-item-inner">
+              <div class="s6-name">
+                <div class="s6-name-text">
+                  <p class="author">Автор:</p>
+                  <p>Анжела | 29 лет</p>
+                </div>
+                <div class="s6-name-text">
+                  <p class="rating">Оценка:</p>
+                  <div>
+                    <img src="img/icon-stars.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="s6-text">
+                Я долго искала бюстгальтер, который не будет видно под открытой
+                одеждой и кажется я его нашла! InvisibleBra идеально скрывается
+                под платьем и шикарно подчеркивает грудь. Отлично что в наличии
+                есть несколько цветов, и можно взять набор довольно выгодно.
+                Рекомендую!
+              </div>
+            </div>
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-2.png" alt="" />
+            <div class="s6-item-inner">
+              <div class="s6-name">
+                <div class="s6-name-text">
+                  <p class="author">Автор:</p>
+                  <p>Мишель | 35 лет</p>
+                </div>
+                <div class="s6-name-text">
+                  <p class="rating">Оценка:</p>
+                  <div>
+                    <img src="img/icon-stars.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="s6-text">
+                Недавно мне пришлось быть подружкой невесты. Купила шикарное
+                платье, где плечи были открыты. Заказывала бюстгальтер
+                InvisibleBra на этом сайте, очень довольна - никто и не заметил
+                его под моим платьем. Бюстгальтер оказался очень удобным и кроме
+                всего прочего, очень качественным. Посоветовала подруге, теперь
+                она тоже ждет свою посылку с этим бюстгальтером.
+              </div>
+            </div>
+          </div>
+          <div class="s6-item">
+            <img src="img/s6-3.png" alt="" />
+            <div class="s6-item-inner">
+              <div class="s6-name">
+                <div class="s6-name-text">
+                  <p class="author">Автор:</p>
+                  <p>Верона | 24 года</p>
+                </div>
+                <div class="s6-name-text">
+                  <p class="rating">Оценка:</p>
+                  <div>
+                    <img src="img/icon-stars.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="s6-text">
+                Очень удобный и мягкий бюстгальтер. Купила по акции, выглядит
+                очень женственно, отлично сочетается с любой одеждой из моего
+                гардероба. Сам бюстгальтер совсем не сползает с тела и
+                практически не ощущается под одеждой.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <div class="container">
+          <h2>Доставка и <span class="color-red">оплата</span></h2>
+          <div class="s7-item">
+            <div class="s7-img"></div>
+            <img src="img/s7-1.png" alt="" />
+            <div class="s7-text">
+              Доставка почтой в течение 3-10 рабочих дней. Стоимость доставки
+              товара от 350р.
+            </div>
+          </div>
+          <div class="s7-item">
+            <div class="s7-img"></div>
+            <img src="img/s7-2.png" alt="" />
+            <div class="s7-text">
+              Оплата заказов осуществляется по факту получения товара
+            </div>
+          </div>
+          <div class="s7-item">
+            <div class="s7-img"></div>
+            <img src="img/s7-3.png" alt="" />
+            <div class="s7-text">
+              Мы всегда проверяем товар перед отправкой и гарантируем 100%
+              качество
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-title-top">
+            <p class="s1-title-top__block">Невидимый бюстгальтер</p>
+            <br />
+            <p class="s1-title-top__block">
+              с эффектом
+              <span class="color-yellow">Push-Up</span>
+            </p>
+          </div>
+
+          <h1>
+            <span>Invisible</span><br />
+            <span>Bra</span>
+          </h1>
+        </div>
+
+        <div class="s1-block">Универсальный размер</div>
+
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Совершенно незаметный</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Идеальная поддержка груди</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Подходит к любой одежде</p>
+          </div>
+        </div>
+
+        <p class="discount">
+          <span>-70%</span>
+          <span>Активирована скидка</span>
+        </p>
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer">
+              <div class="timer-title">Предложение действует:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">часов</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">минут</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">секунд</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="price-title">
+              Активирована скидка 70%<br />
+              по промокоду <span class="color-orange">sale21</span>
+            </p>
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selected value="RU">Выберите вашу страну</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+            <p class="timer-date">
+              *акция действует:
+              <span>до</span>
+              <span class="date_2"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+
+        $(".s2-slider").slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dotsClass: "s2-dots",
+          arrows: false,
+        });
+
+        $(".click-for-video").click(function () {
+          this.style.display = "none";
+          $("div.youtube").css("display", "block");
+          $("iframe.youtube").prop("src", "video.mp4");
+        });
+      });
+    </script>
+  </body>
+</html>
