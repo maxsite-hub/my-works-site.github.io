@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+binoculars-sale.bestsales2020.ru	TRUE	/	FALSE	1999999999	PHPSESSID	1s1120cfgsrm9j0hrbbc5tlpl7
+binoculars-sale.bestsales2020.ru	TRUE	/	FALSE	1999999999	lttracking	deleted
+
