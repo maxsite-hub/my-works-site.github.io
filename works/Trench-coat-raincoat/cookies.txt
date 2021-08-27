@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+monroe-formic.bestseller-2020.ru	TRUE	/	FALSE	1999999999	PHPSESSID	29q772i1dih6lsr9lvm1jqpks6
+monroe-formic.bestseller-2020.ru	TRUE	/	FALSE	1999999999	lttracking	deleted
+

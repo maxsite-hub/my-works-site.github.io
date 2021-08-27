@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subsetMontserrat%20Light.html') format('woff2'), url('subsetMontserrat%20Light-2.html') format('woff'), url('subsetMontserrat%20Light-3.html') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subsetMontserrat%20Regular.html') format('woff2'), url('subsetMontserrat%20Regular-2.html') format('woff'), url('subsetMontserrat%20Regular-3.html') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subsetMontserrat%20Italic.html') format('woff2'), url('subsetMontserrat%20Italic-2.html') format('woff'), url('subsetMontserrat%20Italic-3.html') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subsetMontserrat%20Medium.html') format('woff2'), url('subsetMontserrat%20Medium-2.html') format('woff'), url('subsetMontserrat%20Medium-3.html') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subsetMontserrat%20Bold.html') format('woff2'), url('subsetMontserrat%20Bold-2.html') format('woff'), url('subsetMontserrat%20Bold-3.html') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subsetMontserrat%20Black.html') format('woff2'), url('subsetMontserrat%20Black-2.html') format('woff'), url('subsetMontserrat%20Black-3.html') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
