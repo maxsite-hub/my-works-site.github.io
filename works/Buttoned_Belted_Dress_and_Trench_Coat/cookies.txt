@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+costume-miranda.bestsales2020.ru	TRUE	/	FALSE	1999999999	PHPSESSID	j0bh0f5v91qechle07hi8fhh50
+costume-miranda.bestsales2020.ru	TRUE	/	FALSE	1999999999	lttracking	deleted
+
