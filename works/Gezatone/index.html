@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Gezatone</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/date.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        date = Date.today().addDays(-7);
+        date_2 = Date.today();
+
+        date = date.toString("dd.MM.yyyy");
+        date_2 = date_2.toString("dd.MM.yyyy");
+
+        $(".date_1").html(date);
+        $(".date_2").html(date_2);
+      });
+    </script>
+    <script type="text/javascript" src="js/lt_landing_valid_form.js"></script>
+    <script type="text/javascript" src="js/lt_landing_script.js"></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: "\u0440.",
+          productsum: 1990,
+          oldproductsum: 3980,
+          delivery: 0,
+          totalsum: "1990",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+
+      .form-btn {
+        animation: pulse 1s infinite;
+      }
+      .form-btn:hover {
+        animation: none;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0.7);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 10px rgba(255, 114, 0, 0);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+          box-shadow: 0 0 0 0 rgba(255, 114, 0, 0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-title-top">Омолаживающий массажер</div>
+
+          <h1>Gezatone</h1>
+        </div>
+
+        <div class="s1-block">
+          <span class="color-red">Минус 10 лет</span>
+          <span>без инъекций и операций!</span>
+        </div>
+        <div class="s1-block-2">
+          <span>Результат</span>
+          <span class="color-yellow">после первого</span>
+          <span>применения!</span>
+        </div>
+        <p class="discount">
+          <span>Акция!</span>
+          <span class="num">-50%</span>
+          <span>скидка</span>
+        </p>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Мгновенно разглаживает морщины</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Устраняет все возрастные дефекты</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Глубоко питает и увлажняет кожу</p>
+          </div>
+        </div>
+
+        <img class="gif" src="gif/2.gif" alt="gif" />
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer">
+              <div class="timer-title">Предложение действует:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">часов</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">минут</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">секунд</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+
+            <a class="form-btn" href="#form"> Заказать сейчас </a>
+            <p class="timer-date">
+              Акция проходит:
+              <span class="color-orange">с</span>
+              <span class="date_1 color-orange"></span>
+              <span class="color-orange">до</span>
+              <span class="date_2 color-orange"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s2">
+        <img class="img-top" src="img/s2-top.jpg" alt="" />
+
+        <div class="container">
+          <h2>
+            5 режимов для
+            <span class="color-orange"> "салонного" ухода</span> на дому!
+          </h2>
+
+          <div class="s2-item">
+            <div class="s2-item__text">
+              <span>Мезопорация</span>
+              Внутрикожное введение косметических средств с помощью
+              электрических импульсов улучшает цвет лица и текстуру кожи сразу
+              после применения.
+            </div>
+            <div class="s2-item__img">
+              <img src="img/s2-1.png" alt="" />
+            </div>
+          </div>
+
+          <div class="s2-item">
+            <div class="s2-item__img">
+              <img src="img/s2-2.png" alt="" />
+            </div>
+            <div class="s2-item__text">
+              <span>Электропорация</span>
+              Моделированный импульсный ток стимулирует обменные процессы,
+              синтез коллагена, эластина, гиалуроновой кислоты.
+            </div>
+          </div>
+          <div class="s2-item">
+            <div class="s2-item__text">
+              <span>Биотоки</span><br />
+              Создают стойкий видимый лифтинг-эффект, повышают тонус кожи.
+            </div>
+            <div class="s2-item__img">
+              <img src="img/s2-3.png" alt="" />
+            </div>
+          </div>
+
+          <div class="s2-item">
+            <div class="s2-item__img">
+              <img src="img/s2-4.png" alt="" />
+            </div>
+            <div class="s2-item__text">
+              <span>Миостимуляция</span>
+              Делает кожу более плотной и эластичной, разглаживает морщины,
+              подтягивает контур лица.
+            </div>
+          </div>
+
+          <div class="s2-item">
+            <div class="s2-item__text">
+              <span>Хромотерапия</span>
+              Световые частицы проникают через кожу и оказывают стимулирующее
+              действие на клетки, ускоряя процессы обновления.
+            </div>
+            <div class="s2-item__img">
+              <img src="img/s2-5.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3">
+        <div class="container">
+          <h2>Исследования говорят сами за себя!</h2>
+          <div class="s3-item">
+            <div class="s3-item__list">
+              <img src="img/s3-1.png" alt="" />
+              <span>На 94%</span>
+              <p>Сокращение глубины морщин</p>
+            </div>
+            <div class="s3-item__list">
+              <img src="img/s3-2.png" alt="" />
+              <span>На 89%</span>
+              <p>Уменьшение количества морщин</p>
+            </div>
+            <div class="s3-item__list">
+              <img src="img/s3-3.png" alt="" />
+              <span>На 98%</span>
+              <p>Выравнивание кожного микрорельефа</p>
+            </div>
+            <div class="s3-item__list">
+              <img src="img/s3-4.png" alt="" />
+              <span>На 400%</span>
+              <p>Повышение эффективности косметических средств</p>
+            </div>
+          </div>
+          <div class="s3-footer">
+            Цвет лица становится более ярким, а тон кожи более ровным
+            <span class="s3-footer__text"> в 100% случаев!</span>
+          </div>
+          <div class="s3-footer__two">
+            *данные по результатам тестирования группы женщин 30-60 лет в
+            течение 3-х месяцев
+          </div>
+        </div>
+      </section>
+
+      <section class="s4">
+        <div class="container">
+          <div class="s4-block">
+            <h2>Мнение косметолога</h2>
+            <img src="img/s4-1.png" alt="" />
+            <div class="s4-name">Юлия Чеботарева</div>
+            <div class="s4-prof">Косметолог</div>
+            <div class="s4-desc">
+              Главный врач и владелица клиники результативной косметологии
+              «Эстелаб»
+            </div>
+            <img src="img/s4-2.png" alt="" />
+            <div class="s4-text">
+              Gezatone полностью заменяет мезотерапию более безопасным и
+              действенным методом мезопорации. А также имеет в своем арсенале
+              еще 4 методики для омоложения кожи лица без шприцов и уколов. Я
+              рекомендую всем женщинам за 30 использовать Gezatone на постоянной
+              основе. И деньги на салонах сэкономите, и молодость продлите, ведь
+              ухаживать за кожей нужно начинать, как можно раньше.
+            </div>
+            <div class="s4-text__footer">Vogue, интервью 2020</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5">
+        <div class="container">
+          <h2>Посмотрите наш видеообзор и убедитесь сами!</h2>
+          <iframe
+            width="420"
+            height="260"
+            src="https://www.youtube.com/embed/6XoWBarRSE8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <img class="s5-img" src="img/s5.png" alt="" />
+        <a class="form-btn" href="#form"> Заказать сейчас </a>
+      </section>
+
+      <section class="s6">
+        <img class="img-top" src="img/s6-top.jpg" alt="" />
+        <div class="container">
+          <h2>Как использовать Gezatone?</h2>
+          <div class="s6-item">
+            <div class="s6-item__img">
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <div class="s6-item__text">
+              <span>01</span><br />
+              Очистите кожу от макияжа и внешних загрязнений
+            </div>
+          </div>
+          <div class="s6-item">
+            <div class="s6-item__img">
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <div class="s6-item__text">
+              <span>02</span><br />
+              Нанесите коллагеновую сыворотку для хромотерапии
+            </div>
+          </div>
+          <div class="s6-item">
+            <div class="s6-item__img">
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <div class="s6-item__text">
+              <span>03</span><br />
+              Включите прибор кнопкой включения и выберите режим
+            </div>
+          </div>
+          <div class="s6-item">
+            <div class="s6-item__img">
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <div class="s6-item__text">
+              <span>04</span><br />
+              Плотно прижмите насадку к коже и плавными движениями обработайте
+              всё лицо и шею.
+            </div>
+          </div>
+          <div class="s6-item">
+            <div class="s6-item__img">
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <div class="s6-item__text">
+              <span>05</span><br />
+              Смойте остатки геля с кожи и сделайте восстанавливающую маску
+            </div>
+          </div>
+          <div class="s6-item">
+            <div class="s6-item__img">
+              <img src="img/s6-1.png" alt="" />
+            </div>
+            <div class="s6-item__text">
+              <span class="s6-text">Готово!</span><br />
+              Вы заметите эффект сразу же после первого применения!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s7">
+        <img class="img-top" src="img/s7-top.jpg" alt="" />
+        <div class="container">
+          <h2>Преимущества Gezatone</h2>
+          <div class="s7-item">
+            <div class="s7-item__list">
+              <img src="img/s7-1.png" alt="" />
+              <div class="s7-item__text">
+                <span>Безопасность</span><br />
+                Процедура абсолютно безболезненна и комфортна
+              </div>
+            </div>
+            <div class="s7-item__list">
+              <img src="img/s7-2.png" alt="" />
+              <div class="s7-item__text">
+                <span>Универсальность</span><br />
+                Gezatone подходит для любого возраста и любого типа кожи
+              </div>
+            </div>
+            <div class="s7-item__list">
+              <img src="img/s7-3.png" alt="" />
+              <div class="s7-item__text">
+                <span>Комплексность</span><br />
+                Все методы воздействуют на кожу одновременно, усиливая результат
+                от процедуры к процедуре
+              </div>
+            </div>
+            <div class="s7-item__list">
+              <img src="img/s7-4.png" alt="" />
+              <div class="s7-item__text">
+                <span>Экономия</span><br />
+                Повышает эффективность косметических средств до 400%, сокращая
+                их расход
+              </div>
+            </div>
+          </div>
+          <div class="s7-footer">
+            <span>Попробуйте и Вы!</span>
+          </div>
+        </div>
+      </section>
+      <section class="s8">
+        <img class="img-top" src="img/s8-top.jpg" alt="" />
+        <div class="container">
+          <h2>Отзывы женщин</h2>
+          <div class="s8-item">
+            <img src="img/s8-1.png" alt="" />
+            <div class="s8-item-inner">
+              <div class="s8-name">
+                <div class="s8-name-text">
+                  <p class="author">Автор:</p>
+                  <p>Светлана | 46 лет</p>
+                </div>
+                <div class="s8-name-text">
+                  <p class="rating">Оценка:</p>
+                  <div>
+                    <img src="img/icon-stars.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="s8-text">
+                Старение, к сожалению, отменить нельзя. Я уже 2 раза делала
+                хирургическую подтяжку лица. Хожу к косметологу регулярно, трачу
+                кучу денег на дорогостоящую косметику, но результатом все равно
+                не удовлетворена. Полгода назад подруга посоветовала мне
+                Gezatone. Я сначала не поверила, но чего не сделаешь ради
+                красоты, заказала. И я до сих пор не могу поверить своим глазам!
+                Кожа стала, как в 30 лет. Складки почти ушли. Мелких морщинок
+                вообще теперь нет. Цвет лица здоровый. Да и процедура сама по
+                себе очень приятная, особенно после тяжелого дня, расслабляет.
+                Теперь я к хирургу - ни ногой, только Gezatone!
+              </div>
+            </div>
+          </div>
+          <div class="s8-item">
+            <img src="img/s8-2.png" alt="" />
+            <div class="s8-item-inner">
+              <div class="s8-name">
+                <div class="s8-name-text">
+                  <p class="author">Автор:</p>
+                  <p>Мария | 35 лет</p>
+                </div>
+                <div class="s8-name-text">
+                  <p class="rating">Оценка:</p>
+                  <div>
+                    <img src="img/icon-stars.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="s8-text">
+                Начала использовать Gezatone 3 месяца назад, сама себя не узнаю!
+                К косметологу перестала ходить, тональника гораздо меньше
+                уходит. Такое ощущение, что мне снова 25! На работе все просто в
+                восторге, удивляются, спрашивают. Никогда бы не подумала, что
+                можно без операций и нъекций достичь такого результата просто
+                сидя дома! Всем рекомендую!
+              </div>
+            </div>
+          </div>
+          <div class="s8-item">
+            <img src="img/s8-3.png" alt="" />
+            <div class="s8-item-inner">
+              <div class="s8-name">
+                <div class="s8-name-text">
+                  <p class="author">Автор:</p>
+                  <p>Евгения | 52 года</p>
+                </div>
+                <div class="s8-name-text">
+                  <p class="rating">Оценка:</p>
+                  <div>
+                    <img src="img/icon-stars.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="s8-text">
+                С возрастом начали появляться пигментные пятна. Цвет лица не
+                ровный, приходилось все это замазывать. Не говорю уж про
+                морщины, лицо стало дряблым, требует постоянной поддержки.
+                Благодаря Gezatone я решила все эти проблемы всего за 2 месяца!
+                Уже после первого раза был заметен эффект. Но после всего курса
+                меня просто не узнать! Морщины ушли, контуры лица снова четкие,
+                тон выровнялся. Теперь я занимаюсь всего 10 минут в неделю, и
+                эффект никуда не уходит! Вот уж чудеса! Спасибо Вам большое!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s9">
+        <div class="container">
+          <h2>Доставка и оплата</h2>
+          <div class="s9-item">
+            <div class="s9-img"></div>
+            <img src="img/s9-1.png" alt="" />
+            <div class="s9-text">
+              Доставка почтой в течение 3-10 рабочих дней. Стоимость доставки
+              товара от 350р.
+            </div>
+          </div>
+          <div class="s9-item">
+            <div class="s9-img"></div>
+            <img src="img/s9-2.png" alt="" />
+            <div class="s9-text">
+              Оплата заказов осуществляется по факту получения товара
+            </div>
+          </div>
+          <div class="s9-item">
+            <div class="s9-img"></div>
+            <img src="img/s9-3.png" alt="" />
+            <div class="s9-text">
+              Мы всегда проверяем товар перед отправкой и гарантируем 100%
+              качество
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s1">
+        <div class="s1-title">
+          <div class="s1-title-top">Омолаживающий массажер</div>
+
+          <h1>Gezatone</h1>
+        </div>
+
+        <div class="s1-block">
+          <span class="color-red">Минус 10 лет</span>
+          <span>без инъекций и операций!</span>
+        </div>
+        <div class="s1-block-2">
+          <span>Результат</span>
+          <span class="color-yellow">после первого</span>
+          <span>применения!</span>
+        </div>
+        <p class="discount">
+          <span>Акция!</span>
+          <span class="num">-50%</span>
+          <span>скидка</span>
+        </p>
+        <div class="s1-list">
+          <div class="s1-list-item">
+            <img src="img/s1-list-1.png" alt="" />
+            <p>Мгновенно разглаживает морщины</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-2.png" alt="" />
+            <p>Устраняет все возрастные дефекты</p>
+          </div>
+          <div class="s1-list-item">
+            <img src="img/s1-list-3.png" alt="" />
+            <p>Глубоко питает и увлажняет кожу</p>
+          </div>
+        </div>
+
+        <img class="gif" src="gif/1.gif" alt="gif" />
+
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="timer">
+              <div class="timer-title">Предложение действует:</div>
+              <div class="countbox"></div>
+              <div class="timer-body">
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">часов</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">минут</div>
+                </div>
+                <div class="timer-separate">:</div>
+                <div class="timer-item">
+                  <div class="timer-val">
+                    <div class="timer-num">0</div>
+                    <div class="timer-num">0</div>
+                  </div>
+                  <div class="timer-name">секунд</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price">
+              <div class="price-old">
+                <div>Обычная цена:</div>
+                <div class="price-old-val oldproductsum"></div>
+              </div>
+              <div class="price-new">
+                <span class="price-new-val productsum"></span>
+              </div>
+            </div>
+
+            <form action="#" method="post" class="orderformcdn" id="form">
+              <div class="form-item">
+                <select
+                  name="country"
+                  class="countryselect form-control location"
+                >
+                  <option selected value="RU">Выберите вашу страну</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control userneme"
+                  placeholder="Введите ваше имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control phone"
+                  placeholder="Введите ваш телефон"
+                  value=""
+                />
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+            </form>
+            <p class="timer-date">
+              Акция проходит:
+              <span class="color-orange">с</span>
+              <span class="date_1 color-orange"></span>
+              <span class="color-orange">до</span>
+              <span class="date_2 color-orange"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

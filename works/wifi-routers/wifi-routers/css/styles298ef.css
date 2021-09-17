@@ -395,6 +395,7 @@ h2 {
 	text-align: center;
 }
 .products_list .product_item {
+	padding-bottom: 20px;
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 1% 20px;
@@ -445,7 +446,7 @@ h2 {
 	z-index: 10;
 }
 .product_item .content {
-	padding: 25px 22px;
+	padding: 25px 22px 0;
 }
 .catalog_section .product_item .title_block {
 	margin: 0 20px 12px;

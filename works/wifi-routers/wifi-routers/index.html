@@ -7,7 +7,7 @@
     <meta name="description" content="Распродажа Wi-Fi роутеров." />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="favicon19b61.ico" />
+    <link rel="icon" type="image/png" href="wifi.ico" />
     <link rel="stylesheet" href="css/MuseoSansd6ed0.css" />
     <link rel="stylesheet" href="css/owl.carousel.mine2943.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min86de7.css" />
@@ -16,11 +16,7 @@
     <meta property="og:title" content="Распродажа Wi-Fi роутеров" />
     <meta property="og:description" content="Распродажа Wi-Fi роутеров." />
 
-    <script
-      src="../code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
     <script>
       $(document).ready(function () {
@@ -33,15 +29,15 @@
 
     <link
       rel="stylesheet"
-      href="../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     />
     <link
       rel="stylesheet"
-      href="../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
     />
     <script
       type="text/javascript"
-      src="../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     ></script>
 
     <script
@@ -63,11 +59,7 @@
         },
       };
     </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"
-      integrity="sha512-/n/dTQBO8lHzqqgAQvy0ukBQ0qLmGzxKhn8xKrz4cn7XJkZzy+fAtzjnOQd5w55h4k1kUC+8oIe6WmrGUYwODA=="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
 
     <script>
       $(document).ready(function () {
@@ -386,7 +378,7 @@
           while (i < 29) {
             let old = price_arr[price_arr_i];
 
-            let name = product_name[product_name_i];
+            let name_t = product_name[product_name_i];
             product_name_i = product_name_i + 1;
 
             let frequencies = product_frequencies[product_frequencies_i];
@@ -425,7 +417,13 @@
               `_3.jpg" class="b-lazy next_slide" alt>
                   		</div>
                   		<div class="content">
-                  			<p class="prod_t">Wi-Fi роутер</p>
+                  			<p class="prod_t">
+                        
+                              ` +
+              name_t +
+              `
+                            
+                      </p>
                   			<div class="vendor_code">Артикул: <span class="art_n">` +
               art +
               `</span></div>
@@ -437,11 +435,7 @@
                   			</div><div id="table-template">
                              <hr>
                              <div class="table-template table">
-                             <div class="name" style="color: #000;">
-                              ` +
-              name +
-              `
-                             </div>
+                          
                                <div class="frequencies" style="color: rgb(0, 26, 52);">
                                  <span>Частоты Wi-Fi:    </span> <b>` +
               frequencies +
@@ -475,7 +469,7 @@
                              </div>
                              <hr>
                            </div>
-                  			<br></div>
+                  		</div>
                   			<div class="price_block clearfix" style="margin-top:20px;">
                   				<div class="price_item old">` +
               old +
@@ -616,11 +610,11 @@
             <div class="info-action">Сомневаетесь с выбором?</div>
             <div class="order-consult">
               Оставьте заявку сейчас и наш консультант поможет вам с выбором
-              модели и размера
+              модели
             </div>
 
             <form
-              action="https://woman-jackets-tt.online-shop2021.com/success/"
+              action="#"
               id="order_form"
               class="main-order-form order_form"
               method="post"
@@ -731,12 +725,7 @@
     <script type="text/javascript" src="js/plugins12e11.js"></script>
     <script type="text/javascript" src="js/libe9a41.js"></script>
 
-    <c-cart
-      currency="₽"
-      fab="1"
-      action="https://woman-jackets-tt.online-shop2021.com/success/"
-      method="POST"
-    ></c-cart>
+    <c-cart currency="₽" fab="1" action="#" method="POST"></c-cart>
     <script src="js/blazy.min04d9c.js"></script>
     <script src="js/owl.carousel.minf15ec.js"></script>
     <script src="js/jquery.fancybox.min83121.js"></script>

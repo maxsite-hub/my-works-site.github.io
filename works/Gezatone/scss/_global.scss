@@ -1,0 +1,130 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.33;
+  color: #222222;
+  background-color: #fff;
+}
+p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.33;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+.img-top {
+  display: block;
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.gif {
+  width: 100%;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  font-size: 18px;
+  position: relative;
+  padding-left: 38px;
+
+  text-align: left;
+  margin-top: 17px;
+  line-height: 24px;
+}
+
+.list.true li {
+  padding-right: 0px;
+}
+
+.list.true li::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  width: 40px;
+  height: 40px;
+  background: url(../img/icon-true.png) no-repeat;
+}
+
+.list.false li::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 3px;
+  width: 40px;
+  height: 40px;
+  background: url(../img/icon-false.png) no-repeat;
+}
+
+main {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container {
+  padding: 0 30px;
+}
+
+.color-yellow {
+  color: #ffd200;
+}
+
+.color-red {
+  color: #fe6052;
+}
+
+.color-orange {
+  color: #ff7054;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h2,
+h3 {
+  color: #222;
+  margin: 0;
+  margin-bottom: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  line-height: normal;
+  color: #041f33;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-image: url(../img/h2-subtitle.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -20px;
+    left: 40%;
+    right: 50%;
+
+    z-index: 5;
+  }
+}

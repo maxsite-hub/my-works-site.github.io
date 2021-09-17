@@ -1,5 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-woman-jackets-tt.online-shop2021.com	TRUE	/	FALSE	1999999999	PHPSESSID	pb66a5q76as47tpvm4r46bmjn3
-woman-jackets-tt.online-shop2021.com	TRUE	/	FALSE	1999999999	lttracking	deleted
-
