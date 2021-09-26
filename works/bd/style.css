@@ -1,0 +1,161 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+body {
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: #000;
+}
+
+.container {
+    padding: 0 20px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+
+    -ms-flex-pack: center;
+
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: center;
+    height: 93vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.block {
+    display: none;
+}
+.block.visible {
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin-bottom: 25px;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    height: 50px;
+    line-height: 46px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #444;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0px 6px rgb(65 132 144 / 90%), 0 1px 3px rgb(0 0 0 / 9%);
+    box-shadow: 0 0px 6px rgb(65 132 144 / 90%), 0 1px 3px rgb(0 0 0 / 9%);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    vertical-align: top;
+    -webkit-transition: -webkit-box-shadow 0.2s;
+    transition: -webkit-box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.btn:focus-visible {
+    border: 1px solid #4c51f9;
+    outline: none;
+}
+.btn:hover {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+    box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn:active {
+    background-color: #808080;
+}
+.btn:disabled {
+    background-color: #eee;
+    border-color: #eee;
+    color: #444;
+    cursor: not-allowed;
+}
+
+.question {
+    margin-bottom: 40px;
+}
+
+#modalWrapper {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 98;
+    padding-top: 160px;
+}
+#modalWindow {
+    margin: auto;
+    min-width: 300px;
+    background: white;
+    border-radius: 2px;
+    position: relative;
+    padding: 10px;
+    z-index: 99;
+}
+
+#modalTitle {
+    padding: 5px;
+
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+#modalContent {
+    padding-top: 5px;
+}
+
+.modalBtn {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+#modalYes {
+    -webkit-box-shadow: 0 0px 6px rgb(12 173 0 / 90%), 0 1px 3px rgb(0 0 0 / 9%);
+    box-shadow: 0 0px 6px rgb(12 173 0 / 90%), 0 1px 3px rgb(0 0 0 / 9%);
+}
+#modalNo {
+    -webkit-box-shadow: 0 0px 6px rgb(255 0 0 / 90%), 0 1px 3px rgb(0 0 0 / 9%);
+    box-shadow: 0 0px 6px rgb(255 0 0 / 90%), 0 1px 3px rgb(0 0 0 / 9%);
+}
