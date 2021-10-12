@@ -136,6 +136,46 @@
         -o-animation: none;
         animation: none;
       }
+
+      .btnb {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+
+        overflow: hidden;
+      }
+
+      .btnb::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.25s ease;
+      }
+
+      .btnb::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.25s ease;
+      }
+      .btnb::after {
+        box-shadow: inset 0 0 0 1px #333;
+      }
+      .btnb::before {
+        background: #333;
+        box-shadow: inset 0 0 0 red;
+      }
+      .btnb:hover::before {
+        box-shadow: inset 0 0 0 1px red;
+      }
     </style>
   </head>
 
@@ -213,6 +253,7 @@
         >wifi-routers</a
       >
       <a class="btn" href="Gezatone/index.html" target="_tablet">Gezatone</a>
+      <a class="btnb">123</a>
     </div>
   </body>
 </html>
